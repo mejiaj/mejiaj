@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Page Not Found</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet'>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+	<style>
+
+		html {
+			background-color: #14AF6D;
+			color: #333;
+			display: table;
+			font: 1.25em/1.5 "Asap", sans-serif;
+			height: 100%;
+			text-align: center;
+			width: 100%;
+		}
+
+		body {
+			display: table-cell;
+			vertical-align: middle;
+			margin: 1.5em auto;
+		}
+
+		a {
+		  color: #333;
+		  font-weight: 700;
+		  position: relative;
+		  text-decoration: none; }
+		  a:after {
+			background-color: #18D986;
+			content: '';
+			height: 2px;
+			margin: auto;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			-webkit-transform: scale(0, 1);
+			-ms-transform: scale(0, 1);
+			transform: scale(0, 1);
+			-webkit-transition: all 0.25s 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+			transition: all 0.25s 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+			width: 100%; }
+			a:hover:after {
+				-webkit-transform: scale(1);
+				-ms-transform: scale(1);
+				transform: scale(1);
+				-webkit-transition-delay: 0s;
+				transition-delay: 0s; }
+
+				p {
+					margin: 0 auto;
+					max-width: 461px;
+				}
+
+				@media only screen and (max-width: 280px) {
+
+					body, p {
+						width: 95%;
+					}
+
+					h1 {
+						font-size: 1.5em;
+						margin: 0 0 0.3em;
+					}
+
+				}
+
+			</style>
+		</head>
+		<body>
+			<img src="/img/bawss.gif" alt="Bulldog on a jetski">
+			<h1>Unavailable</h1>
+			<p>Yo! The page isn't here right now. Try again later.</p>
+			<a href="\">Return to Homepage</a>
+
+			<script>
+				(function(i, s, o, g, r, a, m) {
+					i['GoogleAnalyticsObject'] = r;
+					i[r] = i[r] || function() {
+						(i[r].q = i[r].q || []).push(arguments)
+					}, i[r].l = 1 * new Date();
+					a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+					a.async = 1;
+					a.src = g;
+					m.parentNode.insertBefore(a, m)
+				})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+				ga('create', 'UA-50373766-1', 'auto');
+				ga('send', 'pageview');
+			</script>
+		</body>
+		</html>
+		<!-- IE needs 512+ bytes: http://blogs.msdn.com/b/ieinternals/archive/2010/08/19/http-error-pages-in-internet-explorer.aspx -->

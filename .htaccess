@@ -1,0 +1,7 @@
+
+RewriteEngine on
+
+RewriteCond %{HTTP_HOST} ^jmejia\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.jmejia\.com$
+RewriteRule ^404$ "http\:\/\/jmejia\.com\/404\.html" [R=301,L]
+
