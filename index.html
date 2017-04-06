@@ -8,14 +8,14 @@
 	<title>James Mejia - Designer</title>
 	<link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet'>
 	<!-- <link rel="stylesheet" href="/css/base.css"> -->
-	<link rel="stylesheet" href="/css/build/base.min.css">
+	<link rel="stylesheet" href="/css/base.css">
 	<script src="/js/vendor/modernizr.custom.44036.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/1.1.3/lazysizes.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/3.0.0/lazysizes.min.js"></script>
 	<!-- Picturefill -->
 	<script>
-		document.createElement('picture');		
+		document.createElement('picture');
 	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/2.3.1/picturefill.min.js" async></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/picturefill/3.0.3/picturefill.js" async></script>
 	<!-- Favicons -->
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
@@ -41,8 +41,8 @@
 	<header class="main-header" role="banner">
 		<div class="wrap">
 			<div class="intro h1" id="about">
-				<div>James Mejia</div>
-				<div>Web Designer</div>
+				<div class="intro__loud">James Mejia</div>
+				<div>Design & Development</div>
 				<div>Currently @ Third & Grove</div>
 			</div>
 			<small>Previously @ Spectrum Brands</small>
@@ -72,6 +72,29 @@
 				<div class="col col-1 col-md-2-3">
 					<picture>
 						 <!--[if IE 9]><video style="display: none;"><![endif]-->
+						<source data-srcset="/img/tpg--lg.jpg" media="(min-width: 646px)" class="lazyload">
+						 <!--[if IE 9]></video><![endif]-->
+						<img data-srcset="/img/tpg--sm.jpg" alt="Product Page for George Foreman 360 Evolve Grill" class="lazyload">
+					</picture>
+				</div>
+				<div class="col col-1 col-md-1-3">
+					<h3 class="h2">Texas Pacific Group</h3>
+					<ul class="project-roles h4 nav nav-inline">
+						<li class="role">HTML/Twig</li>
+						<li class="role">CSS</li>
+						<li class="role">JS</li>
+					</ul>
+					<p>
+						This was one of the <b>first</b> Drupal 8 sites. As well my first Drupal site. This new homepage on the left uses responsive images to only serve the image you need. The image is randomly selected from 4 pieces of content.
+					</p>
+					<a href="https://www.tpg.com/">View Site</a>
+				</div>
+			</div>
+			<hr>
+			<div class="project row">
+				<div class="col col-1 col-md-2-3">
+					<picture>
+						 <!--[if IE 9]><video style="display: none;"><![endif]-->
 						<source data-srcset="/img/onboarding--lg.jpg" media="(min-width: 646px)" class="lazyload">
 						 <!--[if IE 9]></video><![endif]-->
 						<img data-srcset="/img/onboarding--sm.jpg" alt="About page of Spectrum Onboarding Site" class="lazyload">
@@ -88,29 +111,6 @@
 					<p>
 						I collaborated with Spectrum's HR department to design and build a new onboarding site. The main goal for this webpage is to introduce new employees to the company and engage them in a friendly way.
 					</p>
-				</div>
-			</div>
-			<hr>
-			<div class="project row">
-				<div class="col col-1 col-md-2-3">
-					<picture>
-						 <!--[if IE 9]><video style="display: none;"><![endif]-->
-						<source data-srcset="/img/gfevolve--lg.jpg" media="(min-width: 646px)" class="lazyload">
-						 <!--[if IE 9]></video><![endif]-->
-						<img data-srcset="/img/gfevolve--sm.jpg" alt="Product Page for George Foreman 360 Evolve Grill" class="lazyload">
-					</picture>
-				</div>
-				<div class="col col-1 col-md-1-3">
-					<h3 class="h2">George Foreman Evolve</h3>
-					<ul class="project-roles h4 nav nav-inline">
-						<li class="role">HTML</li>
-						<li class="role">CSS</li>
-						<li class="role">Design</li>
-					</ul>
-					<p>
-						The primary goal of this design was to present information in easily digestible chunks. As lead designer, it was my responisbility to introduce the goal and follow through.
-					</p>
-					<a href="http://www.georgeforemancooking.com/evolve/evolve-grill.aspx">View Site</a>
 				</div>
 			</div>
 			<hr>
@@ -161,7 +161,7 @@
 			</div>
 		</div>
 	</footer>
-	
+
 	<script>
 		(function(i, s, o, g, r, a, m) {
 			i['GoogleAnalyticsObject'] = r;
