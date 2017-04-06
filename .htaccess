@@ -1,7 +1,9 @@
 
 RewriteEngine on
 
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://www.jmejia.com/$1 [R,L]
 RewriteCond %{HTTP_HOST} ^jmejia\.com$ [OR]
 RewriteCond %{HTTP_HOST} ^www\.jmejia\.com$
-RewriteRule ^404$ "http\:\/\/jmejia\.com\/404\.html" [R=301,L]
+RewriteRule ^404$ "https\:\/\/jmejia\.com\/404\.html" [R=301,L]
 
