@@ -6,15 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://j_mejia@bitbucket.org/j_mejia/card-prototype.git"
-  },
-  "keywords": [
-    "portfolio",
-    "personal",
-    "site"
-  ],
   "author": "James Mejia",
   "license": "ISC",
   "homepage": "https://bitbucket.org/j_mejia/card-prototype#readme",
