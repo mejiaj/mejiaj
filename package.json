@@ -6,15 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://j_mejia@bitbucket.org/j_mejia/card-prototype.git"
-  },
-  "keywords": [
-    "portfolio",
-    "personal",
-    "site"
-  ],
   "author": "James Mejia",
   "license": "ISC",
   "homepage": "https://bitbucket.org/j_mejia/card-prototype#readme",
@@ -23,6 +14,9 @@
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-notify": "^2.2.0",
-    "gulp-sass": "^2.1.1"
-  }
+    "gulp-sass": "^2.1.1",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-sourcemaps": "^2.6.4"
+  },
+  "dependencies": {}
 }

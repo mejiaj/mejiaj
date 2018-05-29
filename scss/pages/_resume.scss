@@ -1,0 +1,45 @@
+.page--resume {
+  border-top: 20px solid $c-primary;
+  padding-top: 1.5rem;
+}
+
+.resume__header-inner {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.resume__header .h-card {
+  order: 2;
+  width: 100%;
+}
+
+.resume__header h1 {
+  margin-bottom: 0;
+}
+
+.resume__header .h2 {
+  margin-top: 0;
+}
+
+.resume__header .h-card {
+
+  @include mq('md') {
+    display: flex;
+    align-items: last baseline;
+    justify-content: space-between;
+  }
+}
+
+// Experience
+.resume__employment-title {
+  margin-bottom: 0;
+}
+
+.resume__role {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.resume__time-spent {
+  font-size: 85%;
+}

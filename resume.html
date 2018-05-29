@@ -21,105 +21,76 @@
 	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
 </head>
-<body class="page page--home">
-	<header class="main-header" role="banner">
-		<div class="wrap">
-			<div class="intro h1" id="about">
-				<div class="intro__loud">James Mejia</div>
-				<div>Design & Development</div>
-				<div>Currently @ Third & Grove</div>
+<body class="page page--resume">
+	<header class="resume__header" role="banner">
+		<div class="wrap resume__header-inner">
+			<div class="h-card">
+				<div class="h-card__intro" id="about">
+					<h1 class="h-card__name p-name">James Mejia</h1>
+					<div class="h-card__title p-job-title h2">Designer & Front-End Developer</div>
+				</div>
+				<div class="h-card__contact">
+					<div class="h-card__tel contact-info__telephone p-tel">608.745.2962</div>
+					<a href="jmejia.com" class="h-card__url u-url plain-link">www.jmejia.com</a>
+					<a href="mailto:me@jmejia.com" class="h-card__email u-email plain-link">me@jmejia.com</a>
+				</div>
 			</div>
-			<small>Previously @ Spectrum Brands</small>
+			<a href="\" class="resume__header-back">← Return to Homepage</a>
 		</div>
 	</header>
-	<nav class="main-nav-wrap" role="navigation">
-		<div class="wrap">
-			<ul class="main-nav nav nav-inline">
-				<li><a href="#about">About</a></li>
-				<li><a href="#work">Work</a></li>
-				<li><a href="#contact">Contact</a></li>
-				<li><a href="resume.html">Resume</a></li>
-			</ul>
-		</div>
-	</nav>
 	<main role="main">
 		<div class="wrap">
-			<div id="about">
-				<div class="lead-in text-center" id="about">
+			<div class="resume__greeting">
+				<div class="lead-in">
+					<h2>Hi!</h2>
 					<p>
-						I have the skills and passion to create unique and intuitive user experiences. With my expertise in complex CSS architecture and development, my websites will perform well and look great at any shape or size.
+						I’m a designer/Front-End Developer based in Madison, Wisconsin. My designs are straightforward, honest, and user-focused. I'm an enthusiastic self-starter and I consistently strive to master my craft. My expertise lies in complex CSS architecture and development, my websites will perform well and look great at any shape or size.
 					</p>
 				</div>
 			</div>
-			<hr>
-			<h2 class="h3" id="work">Work</h2>
-			<div class="project row">
-				<div class="col col-1 col-md-2-3">
-					<picture>
-						 <!--[if IE 9]><video style="display: none;"><![endif]-->
-						<source data-srcset="/img/tpg--lg.jpg" media="(min-width: 646px)" class="lazyload">
-						 <!--[if IE 9]></video><![endif]-->
-						<img data-srcset="/img/tpg--sm.jpg" alt="Homepage for Texas Pacific Group" class="lazyload">
-					</picture>
-				</div>
-				<div class="col col-1 col-md-1-3">
-					<h3 class="h2">Texas Pacific Group</h3>
-					<ul class="project-roles h4 nav nav-inline">
-						<li class="role">HTML/Twig</li>
-						<li class="role">CSS</li>
-						<li class="role">JS</li>
+			<div class="row">
+				<section class="col col-1 col-md-3-4">
+					<div class="resume__experience">
+						<h3 class="h2">Experience</h3>
+							<div class="resume__history">
+								<h4 class="resume__employment-title">Third & Grove</h4>
+							<h5 class="resume__role">Front-End Engineer</h5>
+							<div class="resume__time-spent">September 2015 - Present</div>
+							<p>
+								I’m part of a distrubuted team for one of the leading Drupal agencies in the world. We work with clients of all shapes and sizes, across several industries. We build and design mobile-first websites using Drupal. The work is fast-paced and being remote you have to be disciplined, take initiative, and especially communicative.
+							</p>
+						</div>
+						<div class="resume__history">
+							<h4 class="resume__employment-title">Spectrum Brands</h4>
+							<h5 class="resume__role">Web Designer</h5>
+							<div class="resume__time-spent">2012-2015</div>
+							<p>
+								I was part of a small development team that was responsible for 30+ brand websites. Household brands such as: Rayovac, Black & Decker Appliances, and Remington Hair Products.
+							</p>
+							<p>
+								I helped introduce styleguide driven- development, mobile-first design, and SCSS into our workflow. This helped us tremendously in creating maintainable, mobile-friendly, websites that serve hundreds of thousands of people efficiently.
+							</p>
+						</div>
+					</div>
+				</section>
+				<section class="col col-1 col-md-1-4">
+					<h3 class="h2">Skills</h3>
+					<ul>
+						<li>HTML/Twig</li>
+						<li>SCSS/CSS</li>
+						<li>jQuery/JavaScript</li>
+						<li>Mobile-first Design</li>
+						<li>UI/UX Design</li>
+						<li>Typography</li>
+						<li>Photoshop, Illustrator, InDesign</li>
+						<li>Sketch</li>
+						<li>Affinity Designer</li>
+						<li>WordPress</li>
+						<li>Shopify</li>
+						<li>Drupal 7 & 8 Theming</li>
+						<li>.NET Theming</li>
 					</ul>
-					<p>
-						This was one of the <b>first</b> Drupal 8 sites. As well my first Drupal site. This new homepage on the left uses responsive images to only serve the image you need. The image is randomly selected from 4 pieces of content.
-					</p>
-					<a href="https://www.tpg.com/">View Site</a>
-				</div>
-			</div>
-			<hr>
-			<div class="project row">
-				<div class="col col-1 col-md-2-3">
-					<picture>
-						 <!--[if IE 9]><video style="display: none;"><![endif]-->
-						<source data-srcset="/img/onboarding--lg.jpg" media="(min-width: 646px)" class="lazyload">
-						 <!--[if IE 9]></video><![endif]-->
-						<img data-srcset="/img/onboarding--sm.jpg" alt="About page of Spectrum Onboarding Site" class="lazyload">
-					</picture>
-				</div>
-				<div class="col col-1 col-md-1-3">
-					<h3 class="h2">Spectrum Onboarding</h3>
-					<ul class="project-roles h4 nav nav-inline">
-						<li class="role">Design</li>
-						<li class="role">HTML</li>
-						<li class="role">CSS</li>
-						<li class="role">JS</li>
-					</ul>
-					<p>
-						I collaborated with Spectrum's HR department to design and build a new onboarding site. The main goal for this webpage is to introduce new employees to the company and engage them in a friendly way.
-					</p>
-				</div>
-			</div>
-			<hr>
-			<div class="project row">
-				<div class="col col-1 col-md-2-3">
-					<picture>
-						<!--[if IE 9]><video style="display: none;"><![endif]-->
-						<source data-srcset="/img/rov-home--lg.jpg" media="(min-width: 646px)" class="lazyload">
-						<!--[if IE 9]></video><![endif]-->
-						<img data-srcset="/img/rov-home--sm.jpg" alt="Rayovac Homepage" class="lazyload">
-					</picture>
-				</div>
-				<div class="col col-1 col-md-1-3">
-					<h3 class="h2">Rayovac</h3>
-					<ul class="project-roles h4 nav nav-inline">
-						<li class="role">HTML</li>
-						<li class="role">CSS</li>
-						<li class="role">JS</li>
-					</ul>
-					<p>
-						This design balances the aesthetic demands of the brand with performance on any device. I created a living styleguide to keep the design consistent in the future and give content creators more control.
-					</p>
-					<a href="http://www.rayovac.com">View Site</a>
-				</div>
+				</section>
 			</div>
 		</div>
 	</main>
@@ -163,6 +134,7 @@
 		</symbol>
 	</svg>
 	<!-- /Icons -->
+
 	<script>
 		(function(i, s, o, g, r, a, m) {
 			i['GoogleAnalyticsObject'] = r;
