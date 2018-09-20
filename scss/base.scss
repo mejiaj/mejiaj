@@ -2,6 +2,7 @@
 @import 'global/*';
 @import 'components/*';
 @import 'pages/*';
+@import 'print';
 
 .row:before,
 .row:after {
@@ -198,6 +199,11 @@ select {
 .cssanimations .main-nav > li:nth-of-type(3) {
   -webkit-animation-delay: 1.2s;
   animation-delay: 1.2s;
+}
+
+.cssanimations .main-nav > li:nth-of-type(4) {
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
 }
 
 
