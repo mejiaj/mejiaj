@@ -2,6 +2,8 @@ var gulp          = require('gulp');
 var notify        = require('gulp-notify');
 var fs            = require('fs');
 var sass          = require('gulp-sass');
+var sassGlob      = require('gulp-sass-glob');
+var sourcemaps    = require('gulp-sourcemaps');
 var autoprefixer  = require('gulp-autoprefixer');
 var browserSync   = require('browser-sync').create();
 
@@ -34,12 +36,17 @@ gulp.task('serve', ['scss'], function () {
 
 gulp.task('scss', function () {
   gulp.src('scss/**/*.scss')
-    .pipe(sass())
+    .pipe(sourcemaps.init())
+    .pipe(sassGlob())
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }))
     .on('error', notify.onError({
       message: 'Error: <%= error.message %>'
-    }))
+      }))
     .pipe(autoprefixer())
-    .pipe(gulp.dest('css/'))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('./dest'))
     .pipe(notify({ message: 'SCSS task complete' }))
     .pipe(browserSync.stream());
 });
