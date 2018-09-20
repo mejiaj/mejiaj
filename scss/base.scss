@@ -201,6 +201,11 @@ select {
   animation-delay: 1.2s;
 }
 
+.cssanimations .main-nav > li:nth-of-type(4) {
+  -webkit-animation-delay: 1.4s;
+  animation-delay: 1.4s;
+}
+
 
 @media (min-width: 490px) {
   .col-sm-1-3 {
