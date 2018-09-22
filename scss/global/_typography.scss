@@ -1,10 +1,8 @@
 body {
-  color: #333;
+  color: $c-offblack;
   font: 1em/1.5 "Asap", sans-serif;
   margin: 0;
   padding: 0;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
 
@@ -104,13 +102,13 @@ em {
 }
 
 a {
-  color: #14AF6D;
+  color: $c-primary;
   font-weight: 700;
   position: relative;
   text-decoration: none;
 
   &::after {
-    background-color: #333;
+    background-color: $c-offblack;
     content: '';
     height: 2px;
     margin: auto;
@@ -121,7 +119,7 @@ a {
     left: 0;
     transform: scale(0, 1);
     transform-origin: top right;
-    transition: all 0.2s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.2s 0.2s $bezier;
     width: 100%;
   }
 
