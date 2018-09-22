@@ -19,13 +19,13 @@ html {
 }
 
 ::-moz-selection {
-  background-color: #333;
+  background-color: $c-offblack;
   color: #19DD89;
   text-shadow: none;
 }
 
 ::selection {
-  background-color: #333;
+  background-color: $c-offblack;
   color: #19DD89;
   text-shadow: none;
 }
@@ -141,7 +141,7 @@ select {
 }
 
 .main-nav-wrap {
-  background-color: #14AF6D;
+  background-color: $c-primary;
   margin-bottom: 6em;
 }
 

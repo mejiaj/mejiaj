@@ -44,7 +44,9 @@ gulp.task('scss', function () {
     .on('error', notify.onError({
       message: 'Error: <%= error.message %>'
       }))
-    .pipe(autoprefixer())
+    .pipe(autoprefixer({
+      browsers: ['last 3 versions']
+    }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dest'))
     .pipe(notify({ message: 'SCSS task complete' }))
