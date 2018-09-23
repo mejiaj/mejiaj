@@ -79,7 +79,7 @@ select {
   font-family: inherit;
 }
 
-@media (min-width: 900px) {
+@include mq(lg) {
   body {
     font-size: 1.125em;
   }
@@ -119,10 +119,8 @@ select {
 
 .main-header {
   background-color: #19DD89;
-  background-image: -webkit-radial-gradient(center, circle, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.2) 85%);
-  background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.2) 85%);
+  background-image: radial-gradient(circle at center, rgba($c-white, 0), rgba($c-black, 0.2) 85%);
   padding: 5em 0 3em;
-  -webkit-transition: padding 0.3s ease-in-out;
   transition: padding 0.3s ease-in-out;
 }
 
@@ -170,39 +168,32 @@ select {
 }
 
 .cssanimations .intro div {
-  -webkit-animation: bounce 0.25s forwards;
   animation: bounce 0.25s forwards;
   opacity: 0;
 }
 
 .cssanimations .intro div:nth-of-type(2) {
-  -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s;
 }
 
 .cssanimations .intro div:nth-of-type(3) {
-  -webkit-animation-delay: 0.6s;
   animation-delay: 0.6s;
 }
 
 .cssanimations .main-nav > li {
-  -webkit-animation: bounce 0.25s 0.8s forwards;
   animation: bounce 0.25s 0.8s forwards;
   opacity: 0;
 }
 
 .cssanimations .main-nav > li:nth-of-type(2) {
-  -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
 
 .cssanimations .main-nav > li:nth-of-type(3) {
-  -webkit-animation-delay: 1.2s;
   animation-delay: 1.2s;
 }
 
 .cssanimations .main-nav > li:nth-of-type(4) {
-  -webkit-animation-delay: 1.4s;
   animation-delay: 1.4s;
 }
 
