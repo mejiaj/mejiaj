@@ -20,13 +20,13 @@ html {
 
 ::-moz-selection {
   background-color: $c-offblack;
-  color: #19DD89;
+  color: $c-green-2;
   text-shadow: none;
 }
 
 ::selection {
   background-color: $c-offblack;
-  color: #19DD89;
+  color: $c-green-2;
   text-shadow: none;
 }
 
@@ -118,24 +118,30 @@ select {
 }
 
 .main-header {
-  background-color: #19DD89;
+  background-color: $c-green-2;
   background-image: radial-gradient(circle at center, rgba($c-white, 0), rgba($c-black, 0.2) 85%);
   padding: 5em 0 3em;
   transition: padding 0.3s ease-in-out;
 }
 
 .nav {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
 
-.nav-inline > li {
-  display: inline-block;
+.nav-inline {
+  margin-left: -0.375em;
+  margin-right: -0.375em;
 }
 
-.nav-inline > li ~ li {
-  margin-left: 0.75em;
+.nav-inline li {
+  padding-left: 0.375em;
+  padding-right: 0.375em;
 }
 
 .main-nav-wrap {
@@ -144,12 +150,16 @@ select {
 }
 
 .main-nav {
+  justify-content: center;
+  margin-left: -1.5em;
+  margin-right: -1.5em;
   font-weight: 700;
   text-align: center;
 }
 
-.main-nav > li ~ li {
-  margin-left: 1.5em;
+.main-nav li {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 
 .main-nav a {
@@ -160,7 +170,7 @@ select {
 }
 
 .main-nav a:after {
-  background-color: #19DD89;
+  background-color: $c-green-2;
 }
 
 .main-footer {
