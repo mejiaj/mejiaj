@@ -1,22 +1,26 @@
-var gulp          = require('gulp');
-var notify        = require('gulp-notify');
-var fs            = require('fs');
-var sass          = require('gulp-sass');
-var sassGlob      = require('gulp-sass-glob');
-var sourcemaps    = require('gulp-sourcemaps');
-var autoprefixer  = require('gulp-autoprefixer');
-var browserSync   = require('browser-sync').create();
-var reload        = browserSync.reload;
+var gulp = require('gulp');
+var notify = require('gulp-notify');
+var fs = require('fs');
+var sass = require('gulp-sass');
+var sassGlob = require('gulp-sass-glob');
+var sourcemaps = require('gulp-sourcemaps');
+var autoprefixer = require('gulp-autoprefixer');
+var browserSync = require('browser-sync').create();
+var imageMin = require('gulp-imagemin');
+var reload = browserSync.reload;
 
 const paths = {
   scripts: {
-    src: 'js/**/*.js',
-    },
+    src: 'js/**/*.js'
+  },
   styles: {
-    src: 'scss/**/*.scss',
+    src: 'scss/**/*.scss'
   },
   markup: {
     src: '*.html'
+  },
+  images: {
+    src: './img/**/*'
   }
 };
 
@@ -25,7 +29,7 @@ gulp.task('serve', () => {
     server: {
       baseDir: './'
     }
-  })
+  });
 });
 
 gulp.task('watch', () => {
@@ -35,22 +39,78 @@ gulp.task('watch', () => {
 });
 
 gulp.task('scss', () => {
-  return gulp.src(paths.styles.src)
+  return gulp
+    .src(paths.styles.src)
     .pipe(sourcemaps.init())
     .pipe(sassGlob())
-    .pipe(sass({
-      outputStyle: 'compressed'
-    }))
-    .on('error', notify.onError({
-      message: 'Error: <%= error.message %>'
-      }))
-    .pipe(autoprefixer({
-      browsers: ['last 3 versions']
-    }))
+    .pipe(
+      sass({
+        outputStyle: 'compressed'
+      })
+    )
+    .on(
+      'error',
+      notify.onError({
+        message: 'Error: <%= error.message %>'
+      })
+    )
+    .pipe(
+      autoprefixer({
+        grid: true,
+        browsers: ['last 3 versions']
+      })
+    )
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dest'))
     .pipe(notify({ message: 'SCSS task complete' }))
     .pipe(browserSync.stream());
 });
 
+gulp.task('optimize-images', () => {
+  return gulp.src(paths.images.src, { base: '.' }).pipe(imagemin());
+});
+
+gulp.task('eslint', () => {
+  return gulp
+    .src(paths.scripts.src)
+    .pipe(
+      eslint({
+        parser: 'babel-eslint',
+        rules: {
+          'no-mutable-exports': 0
+        },
+        globals: ['jQuery', '$'],
+        envs: ['browser']
+      })
+    )
+    .pipe(eslint.format());
+});
+
+gulp.task('scripts', () => {
+  return gulp
+    .src(paths.scripts.src)
+    .pipe(
+      plumber({
+        errorHandler: function(err) {
+          notify.onError({
+            title: 'Gulp error in ' + err.plugin,
+            message: err.toString()
+          })(err);
+          beeper();
+        }
+      })
+    )
+    .pipe(
+      babel({
+        presets: ['env']
+      })
+    )
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(sourcemaps.write('./maps'))
+    .pipe(gulp.dest('js/dist'))
+    .pipe(reload({ stream: true }));
+});
+
+gulp.task('build-scripts', gulp.series('scripts', 'eslint'));
 gulp.task('default', gulp.parallel('scss', 'serve', 'watch'));
