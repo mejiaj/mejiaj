@@ -1,0 +1,17 @@
+.nav {
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav--inline {
+  @include mq(md) {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+.nav--inline .nav__item:not(:first-of-type) {
+  @include mq(md) {
+    margin-left: px-to-rem(20);
+  }
+}

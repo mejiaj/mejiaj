@@ -1,0 +1,21 @@
+// ==========================================================================
+// Header
+// ==========================================================================
+.main-header {
+  @extend %h5-style;
+}
+
+.main-header__inner {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.main-header__name {
+  color: $c-primary;
+  line-height: 1.2;
+  margin-bottom: 0;
+
+  @include mq(lg) {
+    letter-spacing: -6px;
+  }
+}
