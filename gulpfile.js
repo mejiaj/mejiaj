@@ -6,7 +6,9 @@ var sassGlob = require('gulp-sass-glob');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
-var imageMin = require('gulp-imagemin');
+var imagemin = require('gulp-imagemin');
+var webp = require('gulp-webp');
+var rename = require('gulp-rename');
 var reload = browserSync.reload;
 
 const paths = {
@@ -56,8 +58,7 @@ gulp.task('scss', () => {
     )
     .pipe(
       autoprefixer({
-        grid: true,
-        browsers: ['last 3 versions']
+        grid: true
       })
     )
     .pipe(sourcemaps.write())
@@ -67,7 +68,30 @@ gulp.task('scss', () => {
 });
 
 gulp.task('optimize-images', () => {
-  return gulp.src(paths.images.src, { base: '.' }).pipe(imagemin());
+  return gulp.src(paths.images.src).pipe(
+    imagemin({
+      progressive: true,
+      optimizationLevel: 9
+    })
+  );
+});
+
+gulp.task('jpg', () => {
+  return gulp
+    .src('img/convert_to_webp/*.png')
+    .pipe(rename(path => (path.extname = '.jpg')))
+    .pipe(gulp.dest('img/jpg'));
+});
+
+gulp.task('webp', () => {
+  return gulp
+    .src('img/convert_to_webp/*.{png,jpg}')
+    .pipe(
+      webp({
+        quality: 90
+      })
+    )
+    .pipe(gulp.dest('img/webp'));
 });
 
 gulp.task('eslint', () => {
@@ -112,5 +136,6 @@ gulp.task('scripts', () => {
     .pipe(reload({ stream: true }));
 });
 
+gulp.task('images', gulp.series('optimize-images', 'jpg', 'webp'));
 gulp.task('build-scripts', gulp.series('scripts', 'eslint'));
 gulp.task('default', gulp.parallel('scss', 'serve', 'watch'));
