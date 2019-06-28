@@ -6,36 +6,36 @@ var sassGlob      = require('gulp-sass-glob');
 var sourcemaps    = require('gulp-sourcemaps');
 var autoprefixer  = require('gulp-autoprefixer');
 var browserSync   = require('browser-sync').create();
+var reload        = browserSync.reload;
 
-gulp.task('serve', ['scss'], function () {
+const paths = {
+  scripts: {
+    src: 'js/**/*.js',
+    },
+  styles: {
+    src: 'scss/**/*.scss',
+  },
+  markup: {
+    src: '*.html'
+  }
+};
+
+gulp.task('serve', () => {
   browserSync.init({
     server: {
       baseDir: './'
-    },
-    files: ['./**/*.html'],
-    rewriteRules: [
-      {
-        match: /@include\("(.+?)"\)/g,
-        fn: function (match, filename) {
-          if (fs.existsSync(filename)) {
-            return fs.readFileSync(filename);
-          } else {
-            return '<span style="color: red">'+filename+' not found.</span>';
-          }
-        }
-      }
-    ]
-  });
-
-  gulp.watch('scss/**/*.scss', ['scss']);
-  gulp.watch('js/**/*.js').on('change', browserSync.reload);
-  gulp.watch('*.html').on('change', browserSync.reload);
-
+    }
+  })
 });
 
+gulp.task('watch', () => {
+  gulp.watch(paths.styles.src, gulp.series('scss'));
+  gulp.watch(paths.scripts.src).on('change', reload);
+  gulp.watch(paths.markup.src).on('change', reload);
+});
 
-gulp.task('scss', function () {
-  gulp.src('scss/**/*.scss')
+gulp.task('scss', () => {
+  return gulp.src(paths.styles.src)
     .pipe(sourcemaps.init())
     .pipe(sassGlob())
     .pipe(sass({
@@ -44,11 +44,13 @@ gulp.task('scss', function () {
     .on('error', notify.onError({
       message: 'Error: <%= error.message %>'
       }))
-    .pipe(autoprefixer())
+    .pipe(autoprefixer({
+      browsers: ['last 3 versions']
+    }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dest'))
     .pipe(notify({ message: 'SCSS task complete' }))
     .pipe(browserSync.stream());
 });
 
-gulp.task('default', ['serve']);
+gulp.task('default', gulp.parallel('scss', 'serve', 'watch'));

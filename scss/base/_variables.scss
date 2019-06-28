@@ -2,7 +2,10 @@
 // Colors
 //
 $c-green: #14AF6D;
-
+$c-green-2: #19DD89;
+$c-offblack: #333;
+$c-black: #000;
+$c-white: #fff;
 $c-primary: $c-green;
 
 
@@ -10,8 +13,9 @@ $c-primary: $c-green;
 // Breakpoints
 //
 $breakpoints: (
-  sm:  490px,
-  md:  710px,
-  lg:  900px,
+  sm:  30.625em,  // 490px
+  md:  44.375em,  // 710px
+  lg:  56.25em,   // 900px
 );
 
+$bezier: cubic-bezier(0.68, -0.55, 0.265, 1.55);
