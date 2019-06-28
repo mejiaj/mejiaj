@@ -1,0 +1,44 @@
+// ==========================================================================
+// Projects
+// ==========================================================================
+.project {
+  @include mq(lg) {
+    display: grid;
+    grid-template-areas: 'screenshot . body';
+    grid-template-columns: 1fr 20px 1fr;
+    max-width: 95%;
+  }
+
+  @include mq(lg) {
+    grid-template-columns: 2fr 20px 1fr;
+  }
+}
+
+.project__img {
+  display: block;
+  margin-bottom: px-to-rem(30);
+
+  @include mq(lg) {
+    grid-area: screenshot;
+  }
+}
+
+.project__img img {
+  display: block;
+}
+
+.project__body {
+  max-width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq(lg) {
+    grid-area: body;
+    margin: 0;
+    max-width: none;
+  }
+}
+
+.project__title {
+  margin-top: 0;
+}

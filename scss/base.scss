@@ -9,15 +9,15 @@ html {
 }
 
 ::-moz-selection {
-  background-color: $c-offblack;
-  color: $c-primary-dk;
-  text-shadow: none;
+  background-color: $c-primary;
+  color: $c-black;
+  font-weight: 400;
 }
 
 ::selection {
-  background-color: $c-offblack;
-  color: $c-primary-dk;
-  text-shadow: none;
+  background-color: $c-primary;
+  color: $c-black;
+  font-weight: 400;
 }
 
 *,

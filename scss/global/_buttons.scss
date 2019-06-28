@@ -17,7 +17,6 @@
 }
 
 .btn--inverse {
-  border: 3px double rgba($c-white, 0.15);
   transition: 0.3s $ease-primary;
 
   @include is-active {

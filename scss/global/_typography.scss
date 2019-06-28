@@ -87,10 +87,6 @@ h6 {
   font-size: px-to-rem(20);
   line-height: 1.5;
   transition: font-size 0.25s $ease-primary;
-
-  @include mq(lg) {
-    font-size: px-to-rem(20);
-  }
 }
 
 .display {
@@ -100,9 +96,6 @@ h6 {
   @include mq(md) {
     font-size: px-to-rem(76.3);
   }
-  @include mq(lg) {
-    font-size: px-to-rem(119);
-  }
 }
 
 b,
@@ -111,6 +104,7 @@ strong {
 }
 
 p {
+  max-width: 60ch;
   margin-bottom: px-to-rem(30);
   font-size: px-to-rem(20);
   line-height: 1.5;
@@ -128,7 +122,14 @@ hr {
 }
 
 .lead-in {
-  font-size: 1.25em;
+  margin-top: 0;
+
+  @include mq(md) {
+    font-size: px-to-rem(25);
+  }
+  @include mq(lg) {
+    font-size: px-to-rem(30);
+  }
 }
 
 p,
@@ -172,21 +173,39 @@ em {
 
 a {
   color: $c-primary;
-  font-weight: 400;
+  display: inline-block;
+  font-weight: 300;
   position: relative;
   text-decoration: none;
+  transition: 0.2s $ease-primary;
+
+  &::after {
+    content: '';
+    border-bottom: 1px dotted;
+    display: block;
+    transform: scaleX(0);
+    transition: transform 0.2s $ease-primary;
+  }
 
   @include is-active {
     color: $c-visited;
-    outline: 3px dotted $c-visited;
+    outline: none;
+    text-shadow: 0 0 8px rgba($c-primary, 0.8), 0 0 40px rgba($c-primary, 0.1);
+
+    &::after {
+      transform: scaleX(0.9);
+    }
   }
 }
 
-a.plain-link {
-  color: inherit;
-  font-weight: normal;
+.skip-to-content {
+  position: relative;
+  left: 8.3%;
+  top: px-to-rem(62);
+  opacity: 0;
+  transition: opacity $ease-primary;
 
-  &::after {
-    content: none;
+  &:focus {
+    opacity: 1;
   }
 }

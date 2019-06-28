@@ -7,30 +7,79 @@
 .main-nav__trigger {
   background-color: $c-black;
   font-size: px-to-rem(12);
+  font-weight: 300;
   letter-spacing: 2px;
-  padding: px-to-rem(14) px-to-rem(10) px-to-rem(12);
+  padding: px-to-rem(28) px-to-rem(10) px-to-rem(12);
+
+  @include is-active {
+    text-shadow: 0 0 8px rgba($c-primary, 068), 0 0 40px rgba($c-primary, 0.1);
+
+    .line__wrap::before,
+    .line__wrap::after {
+      box-shadow: 0 0 8px rgba($c-primary, 0.6), 0 0 40px rgba($c-primary, 0.1);
+    }
+  }
 }
 
-.line {
+.line__wrap {
   background-color: $c-primary;
   display: block;
   height: px-to-rem(3);
   width: 100%;
-  margin-bottom: px-to-rem(6);
+  position: relative;
+  transition: 0.3s $ease-primary;
+
+  &::before,
+  &::after {
+    content: '';
+    background-color: $c-primary;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: inherit;
+  }
+}
+
+.line__wrap::before {
+  top: px-to-rem(-9);
+}
+
+.line__wrap::after {
+  bottom: px-to-rem(-9);
+}
+
+.is-active .line__wrap {
+  background-color: transparent;
+  width: 90%;
+
+  &::before,
+  &::after {
+    box-shadow: 0 0 8px rgba($c-primary, 0.6), 0 0 40px rgba($c-primary, 0.1);
+  }
+
+  &::before {
+    transform: rotate(45deg) translate(6px, 2px);
+  }
+
+  &::after {
+    transform: rotate(-45deg) translate(12px, -5px);
+  }
 }
 
 .trigger__label {
   display: block;
-  margin-top: px-to-rem(8);
+  margin-top: px-to-rem(16);
 }
 
 .main-nav__menu {
   background-color: $c-primary;
-  // border-radius: px-to-rem(5);
   box-shadow: $shadow;
   color: $c-black;
-  padding-top: px-to-rem(16);
-  padding-bottom: px-to-rem(16);
+  padding: px-to-rem(24);
+  padding-bottom: px-to-rem(20);
+  right: 0;
   position: absolute;
   top: px-to-rem(100);
   left: 0;
@@ -38,12 +87,29 @@
   margin-top: 0;
   margin-bottom: 0;
   z-index: z(menu);
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+
+  @include mq(xs) {
+    left: auto;
+    max-width: px-to-rem(250);
+  }
+}
+
+.main-nav__menu.is-active {
   animation: round-to-square 0.4s $ease-primary;
+  visibility: visible;
+  opacity: 1;
 }
 
 .main-nav__menu .nav__link {
   color: inherit;
   display: inline-block;
-  padding: px-to-rem(8) px-to-rem(32);
+  margin-top: px-to-rem(10);
+  margin-bottom: px-to-rem(10);
+  padding-left: px-to-rem(3);
+  padding-right: px-to-rem(3);
   font-size: px-to-rem(18);
+  transition: 0.2s $ease-primary;
 }
