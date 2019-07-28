@@ -1,0 +1,27 @@
+.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  // border-radius: px-to-rem(5);
+  color: inherit;
+  font: inherit;
+  font-size: px-to-rem(16);
+  font-weight: 400;
+  padding: px-to-rem(10) px-to-rem(20);
+  text-transform: uppercase;
+
+  @include is-active {
+    color: $c-visited;
+    outline: 3px dotted $c-visited;
+  }
+}
+
+.btn--inverse {
+  transition: 0.3s $ease-primary;
+
+  @include is-active {
+    border-color: $c-primary;
+    color: $c-primary;
+    outline: none;
+  }
+}

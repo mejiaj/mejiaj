@@ -1,0 +1,36 @@
+// ==========================================================================
+// Header
+// ==========================================================================
+.main-header {
+  @extend %h5-style;
+}
+
+.main-header__inner {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.main-header__name {
+  color: $c-primary;
+  line-height: 1.2;
+  margin-bottom: 0;
+  text-indent: px-to-rem(-3);
+
+  @include mq(lg) {
+    letter-spacing: -3px;
+  }
+}
+
+.main-header__title {
+  margin-top: 0;
+  font-size: px-to-rem(30);
+
+  @include mq(md) {
+    font-size: px-to-rem(39.1);
+  }
+}
+
+.main-header .lead-in {
+  margin-top: px-to-rem(31);
+  order: -1;
+}

@@ -1,0 +1,30 @@
+// ==========================================================================
+// Homepage
+// ==========================================================================
+
+//
+// Intro
+// ==========================================================================
+.page--home .main-header {
+  min-height: 85vh;
+}
+
+.page--home .main-header__name,
+.page--home .main-header__title,
+.page--home .lead-in,
+.page--home .main-nav {
+  animation: bounce 0.25s forwards;
+  opacity: 0;
+}
+
+.page--home .main-header__title {
+  animation-delay: 0.4s;
+}
+
+.page--home .lead-in {
+  animation-delay: 0.6s;
+}
+
+.page--home .main-nav {
+  animation-delay: 0.8s;
+}
