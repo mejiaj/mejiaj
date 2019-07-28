@@ -1,16 +1,35 @@
+// ==========================================================================
+// Resume Page
+// ==========================================================================
 .page--resume {
-  border-top: 20px solid $c-primary;
+  border-top: 15px solid $c-primary;
   padding-top: 1.5rem;
 }
 
+//
+// Header
+// ==========================================================================
 .resume__header-inner {
   display: flex;
   flex-flow: row wrap;
 }
 
 .resume__header .h-card {
+  margin-top: px-to-rem(50);
   order: 2;
   width: 100%;
+
+  @include mq('md') {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+  }
+}
+
+.resume__header .h-card__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .resume__header h1 {
@@ -21,13 +40,24 @@
   margin-top: 0;
 }
 
-.resume__header .h-card {
-
-  @include mq('md') {
-    display: flex;
-    align-items: last baseline;
-    justify-content: space-between;
+//
+// Experience & Skills
+// ==========================================================================
+.resume__info {
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 2rem;
   }
+}
+
+.resume__history,
+.resume__skills {
+  list-style: none;
+}
+
+.history__item {
+  margin-bottom: px-to-rem(60);
 }
 
 // Experience

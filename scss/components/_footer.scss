@@ -1,0 +1,110 @@
+// ==========================================================================
+// Footer
+// ==========================================================================
+.main-footer {
+  margin-top: px-to-rem(100);
+}
+
+//
+// Generic Styles
+// ==========================================================================
+.main-footer a {
+  color: $c-black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: px-to-rem(12);
+  cursor: pointer;
+  padding: px-to-rem(20);
+  text-align: center;
+
+  @include mq(xs) {
+    font-size: px-to-rem(14);
+  }
+
+  @include mq(md) {
+    flex-direction: row;
+    font-size: px-to-rem(20);
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: z(under);
+  }
+
+  &::before {
+    background-color: $c-primary;
+    top: 0;
+    width: 100%;
+  }
+
+  &::after {
+    content: '';
+    background-color: $c-black;
+    border-bottom: 1px solid;
+    height: 100%;
+    transform: scale(1, 0);
+    transform-origin: bottom left;
+    transition: transform 0.2s $ease-primary;
+    z-index: z(under);
+  }
+
+  @include is-active {
+    color: $c-primary;
+    font-weight: 400;
+    outline: none;
+
+    &::after {
+      transform: scale(1, 0.98);
+    }
+  }
+}
+
+//
+// Contact Nav
+// ==========================================================================
+.footer-nav__menu {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+}
+
+.footer-nav__menu-item {
+  flex: 1 1 33.33%;
+}
+
+.footer-nav__menu-item--top-link {
+  flex: 0 1 10%;
+}
+
+.footer-nav__menu-link {
+  height: 100%;
+}
+
+.footer__icon {
+  display: inline-block;
+  fill: currentColor;
+  height: 2.8em;
+  width: 2.8em;
+  vertical-align: middle;
+
+  @include mq(md) {
+    margin-right: px-to-rem(5);
+  }
+}
+
+.footer__icon--no-text {
+  @include mq(md) {
+    margin-right: 0;
+  }
+}
