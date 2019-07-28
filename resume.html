@@ -10,7 +10,7 @@
     <meta name="msvalidate.01" content="78F25BA9CB8A744B0E3C891CE2F772E8" />
     <title>James Mejia - Designer & Front-End Developer</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Asap:400,700"
+      href="https://fonts.googleapis.com/css?family=Aleo:300,400"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/dest/base.css" />
@@ -72,21 +72,22 @@
             </p>
           </div>
         </div>
-        <div class="row">
-          <section class="col col-1 col-md-3-4">
-            <div class="resume__experience">
-              <h3 class="h2">Experience</h3>
-              <div class="resume__history">
+        <div class="resume__info">
+          <section class="resume__experience">
+            <h3 class="h2">Experience</h3>
+            <ol class="resume__history history">
+              <li class="history__item">
                 <h4 class="resume__employment-title">Bixal</h4>
                 <h5 class="resume__role">Front-End Developer</h5>
                 <div class="resume__time-spent">September 2018 - Present</div>
                 <p>
-                  I work remotely ensuring our clients websites are 508
-                  compliant, mobile-friendly, and use the latest web
-                  technologies where appropriate.
+                  I work remotely ensuring the websites we produce are
+                  accessible, mobile-friendly, and fast. We apply the best tech
+                  for the job, some of those might include GraphQL, React, and
+                  Drupal 8.
                 </p>
-              </div>
-              <div class="resume__history">
+              </li>
+              <li class="history__item">
                 <h4 class="resume__employment-title">Third & Grove</h4>
                 <h5 class="resume__role">Front-End Engineer</h5>
                 <div class="resume__time-spent">
@@ -100,8 +101,8 @@
                   being remote you have to be disciplined, take initiative, and
                   especially communicative.
                 </p>
-              </div>
-              <div class="resume__history">
+              </li>
+              <li class="history__item">
                 <h4 class="resume__employment-title">Spectrum Brands</h4>
                 <h5 class="resume__role">Web Designer</h5>
                 <div class="resume__time-spent">2012-2015</div>
@@ -117,15 +118,15 @@
                   websites that serve hundreds of thousands of people
                   efficiently.
                 </p>
-              </div>
-            </div>
+              </li>
+            </ol>
           </section>
-          <section class="col col-1 col-md-1-4">
+          <section>
             <h3 class="h2">Skills</h3>
-            <ul>
+            <ul class="resume__skills">
               <li>HTML/Twig</li>
               <li>SCSS/CSS</li>
-              <li>JavaScript</li>
+              <li>jQuery/JavaScript</li>
               <li>Mobile-first Design</li>
               <li>UI/UX Design</li>
               <li>Typography</li>
@@ -135,39 +136,50 @@
               <li>WordPress</li>
               <li>Shopify</li>
               <li>Drupal 7 & 8 Theming</li>
-              <li>React (some)</li>
+              <li>.NET Theming</li>
             </ul>
           </section>
         </div>
       </div>
     </main>
-    <hr />
+
     <footer class="main-footer" role="contentinfo">
-      <div class="wrap">
-        <h2 class="h3" id="contact">Contact</h2>
-        <div class="row">
-          <div class="col col-1 col-sm-1-3">
-            <a href="mailto:me@jmejia.com">
-              <svg class="icon icon-email"><use xlink:href="#email"></use></svg
+      <nav class="nav footer-nav">
+        <ul class="footer-nav__menu">
+          <li class="footer-nav__menu-item footer-nav__menu-item--top-link">
+            <a href="#" class="footer-nav__menu-link">
+              <svg class="footer__icon footer__icon--no-text icon icon-up">
+                <use xlink:href="#up-arrow"></use>
+              </svg>
+              <span class="visually-hidden">Back to Top</span>
+            </a>
+          </li>
+          <li class="footer-nav__menu-item">
+            <a href="mailto:me@jmejia.com" class="footer-nav__menu-link">
+              <svg class="footer__icon icon icon-email">
+                <use xlink:href="#email"></use></svg
               >Email
             </a>
-          </div>
-          <div class="col col-1 col-sm-1-3">
-            <a href="https://codepen.io/mejiaj/">
-              <svg class="icon icon-social-codepen">
+          </li>
+          <li class="footer-nav__menu-item">
+            <a href="https://codepen.io/mejiaj/" class="footer-nav__menu-link">
+              <svg class="footer__icon icon icon-social-codepen">
                 <use xlink:href="#social-codepen"></use></svg
               >Codepen
             </a>
-          </div>
-          <div class="col col-1 col-sm-1-3">
-            <a href="https://www.linkedin.com/in/mejiajames/en">
-              <svg class="icon icon-social-linkedin">
+          </li>
+          <li class="footer-nav__menu-item">
+            <a
+              href="https://www.linkedin.com/in/mejiajames/en"
+              class="footer-nav__menu-link"
+            >
+              <svg class="footer__icon icon icon-social-linkedin">
                 <use xlink:href="#social-linkedin"></use></svg
               >LinkedIn
             </a>
-          </div>
-        </div>
-      </div>
+          </li>
+        </ul>
+      </nav>
     </footer>
 
     <!-- Icons -->
@@ -188,6 +200,12 @@
         <title>social-linkedin icon</title>
         <path
           d="M417.2 64H96.8C79.3 64 64 76.6 64 93.9V415c0 17.4 15.3 32.9 32.8 32.9h320.3c17.6 0 30.8-15.6 30.8-32.9V93.9C448 76.6 434.7 64 417.2 64zM183 384h-55V213h55v171zm-25.6-197h-.4c-17.6 0-29-13.1-29-29.5 0-16.7 11.7-29.5 29.7-29.5s29 12.7 29.4 29.5c0 16.4-11.4 29.5-29.7 29.5zM384 384h-55v-93.5c0-22.4-8-37.7-27.9-37.7-15.2 0-24.2 10.3-28.2 20.3-1.5 3.6-1.9 8.5-1.9 13.5V384h-55V213h55v23.8c8-11.4 20.5-27.8 49.6-27.8 36.1 0 63.4 23.8 63.4 75.1V384z"
+        />
+      </symbol>
+      <symbol id="up-arrow" viewBox="0 0 512 512">
+        <title>up arrow</title>
+        <path
+          d="M348.3 216.4c-5 5.1-13.3 5.1-18.4.1L269 155.8v231.3c0 7.1-5.8 12.9-13 12.9s-13-5.8-13-12.9V155.8l-60.9 60.8c-5.1 5-13.3 4.9-18.4-.1-5-5.1-5-13.2.1-18.3l83-82.4c1.2-1.1 2.5-2 4.1-2.7 1.6-.7 3.3-1 5-1 3.4 0 6.6 1.3 9.1 3.7l83 82.4c5.2 4.9 5.3 13.1.3 18.2z"
         />
       </symbol>
     </svg>

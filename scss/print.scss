@@ -1,12 +1,16 @@
 @media print {
-
   body {
     background: none;
     color: #000;
-    font-size: 10pt;
+    font-size: 12pt;
+    font-weight: 400 !important;
     margin: 0 !important;
     padding: 0 !important;
     width: 100% !important;
+  }
+
+  p {
+    font-weight: inherit;
   }
 
   h1,
@@ -25,7 +29,48 @@
     widows: 3;
   }
 
+  h1 {
+    font-size: 20pt;
+  }
+
+  h2 {
+    font-size: 18pt;
+  }
+
+  h3 {
+    font-size: 16pt;
+  }
+
+  h4 {
+    font-size: 12pt;
+  }
+
+  h5 {
+    font-size: 14pt;
+  }
+
   a img {
     border: none;
+  }
+
+  .resume__header .h-card {
+    display: flex;
+    align-items: first baseline;
+    justify-content: space-between;
+  }
+
+  .resume__info {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: 2rem;
+  }
+
+  .resume__header-back,
+  .page--resume .main-footer {
+    display: none !important;
+  }
+
+  .page--resume .h-card__name {
+    margin-top: 0;
   }
 }
