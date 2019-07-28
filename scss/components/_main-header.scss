@@ -22,6 +22,9 @@
 }
 
 .main-header__title {
+  margin-top: 0;
+  font-size: px-to-rem(30);
+
   @include mq(md) {
     font-size: px-to-rem(39.1);
   }

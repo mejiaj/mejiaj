@@ -88,8 +88,10 @@
   margin-bottom: 0;
   z-index: z(menu);
   width: 100%;
+  transform: translateY(30%);
   visibility: hidden;
   opacity: 0;
+  transition: 0.2s $ease-primary;
 
   @include mq(xs) {
     left: auto;
@@ -98,18 +100,24 @@
 }
 
 .main-nav__menu.is-active {
-  animation: round-to-square 0.4s $ease-primary;
+  transform: translateY(0);
   visibility: visible;
   opacity: 1;
+}
+
+.main-nav__menu.active-out {
+  transform: translateY(30%);
+  visibility: hidden;
+  opacity: 0;
 }
 
 .main-nav__menu .nav__link {
   color: inherit;
   display: inline-block;
+  font-size: px-to-rem(25);
   margin-top: px-to-rem(10);
   margin-bottom: px-to-rem(10);
   padding-left: px-to-rem(3);
   padding-right: px-to-rem(3);
-  font-size: px-to-rem(18);
   transition: 0.2s $ease-primary;
 }

@@ -3,14 +3,10 @@
 }
 
 .nav--inline {
-  @include mq(md) {
-    display: flex;
-    flex-flow: row wrap;
-  }
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .nav--inline .nav__item:not(:first-of-type) {
-  @include mq(md) {
-    margin-left: px-to-rem(20);
-  }
+  margin-left: px-to-rem(8);
 }
