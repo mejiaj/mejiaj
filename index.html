@@ -17,7 +17,10 @@
 
     <link rel="stylesheet" href="/dest/base.css" />
     <script src="/js/vendor/modernizr.custom.44036.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/4.1.2/lazysizes.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.0/lazysizes.min.js"
+      async
+    ></script>
     <!-- Picturefill -->
     <script>
       document.createElement('picture');
@@ -39,7 +42,7 @@
         <!-- Intro -->
         <div class="intro" id="intro">
           <h1 class="display main-header__name">James Mejia</h1>
-          <div class="main-header__title">Design & Development</div>
+          <h2 class="main-header__title">Design & Development</h2>
         </div>
         <!-- /Intro -->
 
@@ -69,10 +72,9 @@
         <!-- /Main Nav -->
 
         <p class="lead-in">
-          I have the skills and passion to create unique and intuitive user
-          experiences. With my expertise in complex CSS architecture and
-          development, my websites will perform well and look great at any shape
-          or size.
+          I create unique and intuitive user experiences. With my expertise in
+          complex CSS architecture and development, my websites will perform
+          well and look great at any shape or size.
         </p>
       </div>
     </header>
@@ -80,16 +82,18 @@
     <!-- Brands I've worked with: Remington Hair Producs, Rayovac, Black + Decker -->
     <main role="main" id="main-content">
       <article id="about">
-        <div class="wrap"><h2 class="h3" id="work">Work</h2></div>
+        <h3 id="work"><div class="wrap">Work</div></h3>
         <section class="project">
           <picture class="project__img">
             <source
-              srcset="/img/webp/aero_1200.webp"
+              data-srcset="/img/webp/aero_1200.webp"
               media="(min-width: 750px)"
+              class="lazyload"
             />
             <source
-              srcset="/img/convert_to_webp/aero_1200.jpg"
+              data-srcset="/img/convert_to_webp/aero_1200.jpg"
               media="(min-width: 750px)"
+              class="lazyload"
             />
             <source data-srcset="/img/webp/aero_750.webp" class="lazyload" />
             <img
@@ -100,29 +104,33 @@
           </picture>
 
           <div class="project__body">
-            <h3 class="project__title">Aerospace</h3>
-            <ul class="project-roles h4 nav nav-inline">
-              <li class="role">Drupal 8</li>
-              <li class="role">Front-End</li>
+            <h4 class="project__title">Aerospace</h4>
+            <ul class="project-roles h4 nav nav--inline">
+              <li class="nav__item project-role">Drupal 8,</li>
+              <li class="nav__item project-role">Front-End</li>
             </ul>
             <p>
-              Another component based build for Drupal 8. The main challenges
-              were keeping the big beautiful imagery beautiful, while keeping
-              the site fast.
+              A component based build for Drupal 8 using bricks. The main
+              challenges were keeping the big beautiful imagery beautiful, while
+              keeping the site fast.
             </p>
-            <a href="https://www.aerospace.org/">Visit Site</a>
+            <a href="https://www.aerospace.org/">
+              Visit <span class="visually-hidden">Aerospace</span> Site
+            </a>
           </div>
         </section>
         <hr />
         <section class="project">
           <picture class="project__img">
             <source
-              srcset="/img/webp/pernod_1200.webp"
+              data-srcset="/img/webp/pernod_1200.webp"
               media="(min-width: 750px)"
+              class="lazyload"
             />
             <source
-              srcset="/img/convert_to_webp/pernod_1200.jpg"
+              data-srcset="/img/convert_to_webp/pernod_1200.jpg"
               media="(min-width: 750px)"
+              class="lazyload"
             />
             <source data-srcset="/img/webp/pernod_750.webp" class="lazyload" />
             <img
@@ -133,29 +141,35 @@
           </picture>
 
           <div class="project__body">
-            <h3 class="project__title">Drinks & Co USA</h3>
-            <ul class="project-roles h4 nav nav-inline">
-              <li class="role">Design</li>
-              <li class="role">Front-End</li>
+            <h4 class="project__title">Drinks & Co USA</h4>
+            <ul class="project-roles h4 nav nav--inline">
+              <li class="nav__item project-role">Drupal 8,</li>
+              <li class="nav__item project-role">Shopify,</li>
+              <li class="nav__item project-role">Front-End</li>
             </ul>
             <p>
-              I collaborated with Spectrum's HR department to design and build a
-              new onboarding site. The main goal for this webpage is to
-              introduce new employees to the company and engage them in a
-              friendly way.
+              A hybrid site using Drupal 8 and Shopify. The front-end portion
+              was done in collaboration with several developers, including
+              another front-end. This was a fun site where I started using the
+              power of CSS grid for some of the more complex components.
             </p>
+            <a href="https://www.drinksandco.us/">
+              Visit <span class="visually-hidden">Drinks & Co USA</span> Site
+            </a>
           </div>
         </section>
         <hr />
         <section class="project">
           <picture class="project__img">
             <source
-              srcset="/img/webp/draper_1200.webp"
+              data-srcset="/img/webp/draper_1200.webp"
               media="(min-width: 750px)"
+              class="lazyload"
             />
             <source
-              srcset="/img/convert_to_webp/draper_1200.jpg"
+              data-srcset="/img/convert_to_webp/draper_1200.jpg"
               media="(min-width: 750px)"
+              class="lazyload"
             />
             <source
               data-srcset="/img/webp/draper_750.webp"
@@ -170,29 +184,33 @@
             />
           </picture>
           <div class="project__body">
-            <h3 class="project__title">Draperlabs</h3>
-            <ul class="project-roles h4 nav nav-inline">
-              <li class="role">Drupal 8</li>
-              <li class="role">Front-End</li>
+            <h4 class="project__title">Draperlabs</h4>
+            <ul class="project-roles h4 nav nav--inline">
+              <li class="nav__item project-role">Drupal 8,</li>
+              <li class="nav__item project-role">Front-End</li>
             </ul>
             <p>
               A component based approach using bricks. This allowed us to give
               content editors much more control over the site, without messing
               with the integrity of the design.
             </p>
-            <a href="https://www.draper.com/">Visit Site</a>
+            <a href="https://www.draper.com/">
+              Visit <span class="visually-hidden">Draper Labs</span> Site
+            </a>
           </div>
         </section>
         <hr />
         <section class="project">
           <picture class="project__img">
             <source
-              srcset="/img/webp/zmags_1200.webp"
+              data-srcset="/img/webp/zmags_1200.webp"
               media="(min-width: 750px)"
+              class="lazyload"
             />
             <source
-              srcset="/img/convert_to_webp/zmags_1200.jpg"
+              data-srcset="/img/convert_to_webp/zmags_1200.jpg"
               media="(min-width: 750px)"
+              class="lazyload"
             />
             <source data-srcset="/img/webp/zmags_750.webp" class="lazyload" />
             <img
@@ -202,55 +220,63 @@
             />
           </picture>
           <div class="project__body">
-            <h3 class="project__title">Zmags</h3>
-            <ul class="project-roles h4 nav nav-inline">
-              <li class="role">Drupal 8</li>
-              <li class="role">Front-End</li>
+            <h4 class="project__title">Zmags</h4>
+            <ul class="project-roles h4 nav nav--inline">
+              <li class="nav__item project-role">WordPress,</li>
+              <li class="nav__item project-role">Front-End</li>
             </ul>
             <p>
-              Zmags info
+              A slight refresh to an existing site. I collaborated with a
+              Designer to implement some animations and UX improvements to the
+              header. As well as making some layout improvements throughout the
+              site and making sure 3<sup>rd</sup> party components look
+              seamless.
             </p>
-            <a href="#">Zmags link</a>
+            <a href="https://zmags.com/">
+              Visit <span class="visually-hidden">Zmags</span> Site
+            </a>
           </div>
         </section>
       </article>
     </main>
 
-    <a href="#top">Back to Top</a>
     <footer class="main-footer" role="contentinfo">
-      <div class="wrap">
-        <h2 class="h3" id="contact">
-          Contact
-        </h2>
-        <nav class="nav footer-nav">
-          <ul class="footer-nav__menu">
-            <li class="footer-nav__item">
-              <a href="mailto:me@jmejia.com" class="footer-nav__link">
-                <svg class="icon icon-email">
-                  <use xlink:href="#email"></use></svg
-                >Email
-              </a>
-            </li>
-            <li class="footer-nav__item">
-              <a href="https://codepen.io/mejiaj/" class="footer-nav__link">
-                <svg class="icon icon-social-codepen">
-                  <use xlink:href="#social-codepen"></use></svg
-                >Codepen
-              </a>
-            </li>
-            <li class="footer-nav__item">
-              <a
-                href="https://www.linkedin.com/in/mejiajames/en"
-                class="footer-nav__link"
-              >
-                <svg class="icon icon-social-linkedin">
-                  <use xlink:href="#social-linkedin"></use></svg
-                >LinkedIn
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <nav class="nav footer-nav">
+        <ul class="footer-nav__menu">
+          <li class="footer-nav__menu-item footer-nav__menu-item--top-link">
+            <a href="#" class="footer-nav__menu-link">
+              <svg class="footer__icon footer__icon--no-text icon icon-up">
+                <use xlink:href="#up-arrow"></use>
+              </svg>
+              <span class="visually-hidden">Back to Top</span>
+            </a>
+          </li>
+          <li class="footer-nav__menu-item">
+            <a href="mailto:me@jmejia.com" class="footer-nav__menu-link">
+              <svg class="footer__icon icon icon-email">
+                <use xlink:href="#email"></use></svg
+              >Email
+            </a>
+          </li>
+          <li class="footer-nav__menu-item">
+            <a href="https://codepen.io/mejiaj/" class="footer-nav__menu-link">
+              <svg class="footer__icon icon icon-social-codepen">
+                <use xlink:href="#social-codepen"></use></svg
+              >Codepen
+            </a>
+          </li>
+          <li class="footer-nav__menu-item">
+            <a
+              href="https://www.linkedin.com/in/mejiajames/en"
+              class="footer-nav__menu-link"
+            >
+              <svg class="footer__icon icon icon-social-linkedin">
+                <use xlink:href="#social-linkedin"></use></svg
+              >LinkedIn
+            </a>
+          </li>
+        </ul>
+      </nav>
     </footer>
 
     <!-- Icons -->
@@ -271,6 +297,12 @@
         <title>social-linkedin icon</title>
         <path
           d="M417.2 64H96.8C79.3 64 64 76.6 64 93.9V415c0 17.4 15.3 32.9 32.8 32.9h320.3c17.6 0 30.8-15.6 30.8-32.9V93.9C448 76.6 434.7 64 417.2 64zM183 384h-55V213h55v171zm-25.6-197h-.4c-17.6 0-29-13.1-29-29.5 0-16.7 11.7-29.5 29.7-29.5s29 12.7 29.4 29.5c0 16.4-11.4 29.5-29.7 29.5zM384 384h-55v-93.5c0-22.4-8-37.7-27.9-37.7-15.2 0-24.2 10.3-28.2 20.3-1.5 3.6-1.9 8.5-1.9 13.5V384h-55V213h55v23.8c8-11.4 20.5-27.8 49.6-27.8 36.1 0 63.4 23.8 63.4 75.1V384z"
+        />
+      </symbol>
+      <symbol id="up-arrow" viewBox="0 0 512 512">
+        <title>up arrow</title>
+        <path
+          d="M348.3 216.4c-5 5.1-13.3 5.1-18.4.1L269 155.8v231.3c0 7.1-5.8 12.9-13 12.9s-13-5.8-13-12.9V155.8l-60.9 60.8c-5.1 5-13.3 4.9-18.4-.1-5-5.1-5-13.2.1-18.3l83-82.4c1.2-1.1 2.5-2 4.1-2.7 1.6-.7 3.3-1 5-1 3.4 0 6.6 1.3 9.1 3.7l83 82.4c5.2 4.9 5.3 13.1.3 18.2z"
         />
       </symbol>
     </svg>
