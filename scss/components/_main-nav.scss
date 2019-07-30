@@ -10,15 +10,6 @@
   font-weight: 300;
   letter-spacing: 2px;
   padding: px-to-rem(28) px-to-rem(10) px-to-rem(12);
-
-  @include is-active {
-    text-shadow: 0 0 8px rgba($c-primary, 068), 0 0 40px rgba($c-primary, 0.1);
-
-    .line__wrap::before,
-    .line__wrap::after {
-      box-shadow: 0 0 8px rgba($c-primary, 0.6), 0 0 40px rgba($c-primary, 0.1);
-    }
-  }
 }
 
 .line__wrap {
@@ -53,11 +44,6 @@
 .is-active .line__wrap {
   background-color: transparent;
   width: 90%;
-
-  &::before,
-  &::after {
-    box-shadow: 0 0 8px rgba($c-primary, 0.6), 0 0 40px rgba($c-primary, 0.1);
-  }
 
   &::before {
     transform: rotate(45deg) translate(6px, 2px);
@@ -103,6 +89,7 @@
   transform: translateY(0);
   visibility: visible;
   opacity: 1;
+  z-index: z(layer-2);
 }
 
 .main-nav__menu.active-out {
