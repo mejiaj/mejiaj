@@ -37,3 +37,14 @@
     transform: scale(1.1);
   }
 }
+
+[data-scroll] {
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+  transition: 1s;
+}
+
+[data-scroll='in'] {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
