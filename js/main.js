@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollToElement = e => {
       e.preventDefault();
 
-      let clickedElement = document.querySelector(`${e.target.hash}`);
+      let clickedElement = document.querySelector(`${e.currentTarget.hash}`);
 
       clickedElement.scrollIntoView({
         behavior: 'smooth'
