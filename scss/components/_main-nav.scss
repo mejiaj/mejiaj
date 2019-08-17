@@ -18,6 +18,7 @@
   height: px-to-rem(3);
   width: 100%;
   position: relative;
+  pointer-events: none;
   transition: 0.3s $ease-primary;
 
   &::before,
@@ -57,14 +58,15 @@
 .trigger__label {
   display: block;
   margin-top: px-to-rem(16);
+  pointer-events: none;
 }
 
 .main-nav__menu {
   background-color: $c-primary;
   box-shadow: $shadow;
   color: $c-black;
-  padding: px-to-rem(24);
-  padding-bottom: px-to-rem(20);
+  padding-top: px-to-rem(12);
+  padding-bottom: px-to-rem(12);
   right: 0;
   position: absolute;
   top: px-to-rem(100);
@@ -100,11 +102,20 @@
 
 .main-nav__menu .nav__link {
   color: inherit;
-  display: inline-block;
+  display: block;
   font-size: px-to-rem(25);
-  margin-top: px-to-rem(10);
-  margin-bottom: px-to-rem(10);
-  padding-left: px-to-rem(3);
-  padding-right: px-to-rem(3);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: px-to-rem(10) px-to-rem(24);
   transition: 0.2s $ease-primary;
+
+  &::after {
+    background-color: $c-black;
+    left: px-to-rem(1);
+    right: px-to-rem(1);
+  }
+
+  @include is-active {
+    color: $c-primary;
+  }
 }
