@@ -1,8 +1,8 @@
 @media print {
   body {
     background: none;
-    color: #000;
-    font-size: 12pt;
+    color: #000000;
+    font-size: 10pt;
     font-weight: 400 !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -49,20 +49,39 @@
     font-size: 14pt;
   }
 
+  p {
+    margin-top: 0.16in;
+    margin-bottom: 0.16in;
+  }
+
   a img {
     border: none;
+  }
+
+  .page--resume {
+    padding-top: 10mm;
   }
 
   .resume__header .h-card {
     display: flex;
     align-items: first baseline;
     justify-content: space-between;
+    margin-top: 0.25in;
   }
 
   .resume__info {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-column-gap: 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .resume__experience {
+    width: 65%;
+  }
+
+  .resume__skills {
+    width: 30%;
+    margin-left: 5%;
   }
 
   .resume__header-back,
@@ -72,5 +91,9 @@
 
   .page--resume .h-card__name {
     margin-top: 0;
+  }
+
+  .page--resume .history__item {
+    margin-bottom: 0;
   }
 }
