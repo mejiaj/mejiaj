@@ -28,7 +28,8 @@
     "gulp-sass": "^4.0.2",
     "gulp-sass-glob": "^1.1.0",
     "gulp-sourcemaps": "^2.6.5",
-    "gulp-webp": "^4.0.1"
+    "gulp-webp": "^4.0.1",
+    "js-yaml": ">=3.13.1"
   },
   "dependencies": {}
 }
