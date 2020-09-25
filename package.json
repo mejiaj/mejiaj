@@ -11,10 +11,10 @@
   ],
   "author": "James Mejia",
   "license": "ISC",
-  "homepage": "https://bitbucket.org/j_mejia/card-prototype#readme",
+  "homepage": "https://www.jmejia.com/",
   "devDependencies": {
-    "autoprefixer": "^9.8.5",
-    "browser-sync": "^2.26.10",
+    "autoprefixer": "^10.0.0",
+    "browser-sync": "^2.26.12",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-babel": "^8.0.0",
