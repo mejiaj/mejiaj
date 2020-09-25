@@ -1,8 +1,11 @@
+@use 'sass:map';
+@use 'variables' as *;
+
 // Media Queries from _variables.scss
 @mixin mq($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
     // Goes to $breakpoints map and gets the $breakpoint value
-    @media only screen and ( min-width: #{map-get( $breakpoints, $breakpoint )} ) {
+    @media only screen and ( min-width: #{map.get( $breakpoints, $breakpoint )} ) {
       @content;
     }
   }
