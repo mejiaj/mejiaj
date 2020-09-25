@@ -11,6 +11,8 @@ var webp = require('gulp-webp');
 var rename = require('gulp-rename');
 var reload = browserSync.reload;
 
+sass.compiler = require('sass');
+
 const paths = {
   scripts: {
     src: 'js/**/*.js'
