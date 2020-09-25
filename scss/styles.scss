@@ -1,8 +1,8 @@
-@import 'base/*';
-@import 'global/*';
-@import 'components/*';
-@import 'pages/*';
-@import 'print';
+@use "base" as *;
+@use 'global';
+@use 'components';
+@use 'pages';
+@use 'print';
 
 html {
   box-sizing: border-box;
