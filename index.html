@@ -15,9 +15,21 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="/dest/base.css" />
+    <link rel="stylesheet" href="/dest/styles.css" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-50373766-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-50373766-1');
+    </script>
+
+    <!-- Lazysizes -->
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.0/lazysizes.min.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js"
       async
     ></script>
     <!-- Picturefill -->
@@ -74,27 +86,83 @@
         </p>
       </div>
     </header>
-    <!-- Potential projects: Aerospace, TPG, Granite, drinksandco.us, draper -->
+    <!-- Potential projects: Aerospace, TPG, Granite -->
     <!-- Brands I've worked with: Remington Hair Producs, Rayovac, Black + Decker -->
     <main id="main-content">
       <h3 id="work"><div class="wrap">Work</div></h3>
-      <section class="project" data-scroll>
+      <section id="project-uswds" class="project" data-scroll>
+        <picture class="project__img">
+          <source
+            data-srcset="/img/webp/uswds--desktop.webp"
+            media="(min-width: 750px)"
+            class="lazyload"
+            width="1145"
+            height="686"
+          />
+          <source
+            data-srcset="/img/convert_to_webp/uswds--desktop.jpeg"
+            media="(min-width: 750px)"
+            class="lazyload"
+            width="1145"
+            height="686"
+          />
+          <source
+            data-srcset="/img/webp/uswds--mobile.webp"
+            class="lazyload"
+            width="881"
+            height="528"
+          />
+          <img
+            data-srcset="/img/convert_to_webp/uswds--mobile.jpeg"
+            alt="Aerolab homepage"
+            class="lazyload"
+            width="881"
+            height="528"
+          />
+        </picture>
+
+        <div class="project__body">
+          <h4 class="project__title">US Web Design System</h4>
+          <ul class="project-roles h4 nav nav--inline">
+            <li class="nav__item project-role">Developer</li>
+          </ul>
+          <p>
+            A great project with lots of variety, USWDS empowers agencies to develop better government websites. There are multiple repo's to develop for and maintain besides the actual framework code. The work varies from accessibility, to squashing bugs, site improvements, component development, process improvements, and much more.
+          </p>
+          <a href="https://designsystem.digital.gov/">
+            Visit <span class="visually-hidden">USWDS</span> Site
+          </a>
+        </div>
+      </section>
+      <hr>
+      <section id="project-aero" class="project" data-scroll>
         <picture class="project__img">
           <source
             data-srcset="/img/webp/aero_1200.webp"
             media="(min-width: 750px)"
             class="lazyload"
+            width="1145"
+            height="686"
           />
           <source
             data-srcset="/img/convert_to_webp/aero_1200.jpg"
             media="(min-width: 750px)"
             class="lazyload"
+            width="1145"
+            height="686"
           />
-          <source data-srcset="/img/webp/aero_750.webp" class="lazyload" />
+          <source
+            data-srcset="/img/webp/aero_750.webp"
+            class="lazyload"
+            width="881"
+            height="528"
+          />
           <img
             data-srcset="/img/convert_to_webp/aero_750.jpg"
-            alt="Aerolab homepage."
+            alt="Aerolab homepage"
             class="lazyload"
+            width="881"
+            height="528"
           />
         </picture>
 
@@ -115,23 +183,34 @@
         </div>
       </section>
       <hr />
-      <section class="project" data-scroll>
+      <section id="project-pernod" class="project" data-scroll>
         <picture class="project__img">
           <source
             data-srcset="/img/webp/pernod_1200.webp"
             media="(min-width: 750px)"
             class="lazyload"
+            width="1145"
+            height="686"
           />
           <source
             data-srcset="/img/convert_to_webp/pernod_1200.jpg"
             media="(min-width: 750px)"
             class="lazyload"
+            width="1145"
+            height="686"
           />
-          <source data-srcset="/img/webp/pernod_750.webp" class="lazyload" />
+          <source
+            data-srcset="/img/webp/pernod_750.webp"
+            class="lazyload"
+            width="881"
+            height="528"
+          />
           <img
             data-srcset="/img/convert_to_webp/pernod_750.jpg"
-            alt="Homepage for Drinks & Co US."
+            alt="Homepage for Drinks & Co US"
             class="lazyload"
+            width="881"
+            height="528"
           />
         </picture>
 
@@ -154,28 +233,35 @@
         </div>
       </section>
       <hr />
-      <section class="project" data-scroll>
+      <section id="project-draper" class="project" data-scroll>
         <picture class="project__img">
           <source
             data-srcset="/img/webp/draper_1200.webp"
             media="(min-width: 750px)"
             class="lazyload"
+            width="1145"
+            height="641"
           />
           <source
             data-srcset="/img/convert_to_webp/draper_1200.jpg"
             media="(min-width: 750px)"
             class="lazyload"
+            width="1145"
+            height="641"
           />
           <source
             data-srcset="/img/webp/draper_750.webp"
             media="(min-width: 751px)"
             class="lazyload"
+            width="881"
+            height="528"
           />
-          <source data-srcset="/img/webp/draper_750.webp" class="lazyload" />
           <img
             data-srcset="/img/convert_to_webp/draper_750.jpg"
-            alt="Draperlabs homepage."
+            alt="Draperlabs homepage"
             class="lazyload"
+            width="881"
+            height="528"
           />
         </picture>
         <div class="project__body">
@@ -194,67 +280,50 @@
           </a>
         </div>
       </section>
-      <hr />
-      <section class="project" data-scroll>
-        <picture class="project__img">
-          <source
-            data-srcset="/img/webp/zmags_1200.webp"
-            media="(min-width: 750px)"
-            class="lazyload"
-          />
-          <source
-            data-srcset="/img/convert_to_webp/zmags_1200.jpg"
-            media="(min-width: 750px)"
-            class="lazyload"
-          />
-          <source data-srcset="/img/webp/zmags_750.webp" class="lazyload" />
-          <img
-            data-srcset="/img/convert_to_webp/zmags_750.jpg"
-            alt="Homepage for Zmags."
-            class="lazyload"
-          />
-        </picture>
-        <div class="project__body">
-          <h4 class="project__title">Zmags</h4>
-          <ul class="project-roles h4 nav nav--inline">
-            <li class="nav__item project-role">WordPress,</li>
-            <li class="nav__item project-role">Front-End</li>
-          </ul>
-          <p>
-            A slight refresh to an existing site. I collaborated with a
-            Designer to implement some animations and UX improvements to the
-            header. As well as making some layout improvements throughout the
-            site and making sure 3<sup>rd</sup> party components look
-            seamless.
-          </p>
-          <a href="https://zmags.com/">
-            Visit <span class="visually-hidden">Zmags</span> Site
-          </a>
-        </div>
-      </section>
     </main>
 
     <footer class="main-footer" role="contentinfo" id="contact">
       <nav class="nav footer-nav" aria-label="Footer menu">
         <ul class="footer-nav__menu">
           <li class="footer-nav__menu-item footer-nav__menu-item--top-link">
-            <a href="#top" class="footer-nav__menu-link">
-              <svg class="footer__icon footer__icon--no-text icon icon-up">
+            <a
+              href="#top"
+              class="footer-nav__menu-link"
+              aria-label="Return to top of the page"
+            >
+              <svg
+                role="img"
+                aria-hidden="true"
+                class="footer__icon footer__icon--no-text icon icon-up">
                 <use xlink:href="#up-arrow"></use>
               </svg>
               <span class="visually-hidden">Back to Top</span>
             </a>
           </li>
           <li class="footer-nav__menu-item">
-            <a href="mailto:me@jmejia.com" class="footer-nav__menu-link">
-              <svg class="footer__icon icon icon-email">
+            <a
+              href="mailto:me@jmejia.com"
+              class="footer-nav__menu-link"
+              aria-label="Email link">
+              <svg
+                role="img"
+                aria-hidden="true"
+                class="footer__icon icon icon-email"
+              >
                 <use xlink:href="#email"></use></svg
               >Email
             </a>
           </li>
           <li class="footer-nav__menu-item">
-            <a href="https://codepen.io/mejiaj/" class="footer-nav__menu-link">
-              <svg class="footer__icon icon icon-social-codepen">
+            <a
+              href="https://codepen.io/mejiaj/"
+              class="footer-nav__menu-link"
+              aria-label="My codepen profile page"
+            >
+              <svg
+                role="img"
+                aria-hidden="true"
+                class="footer__icon icon icon-social-codepen">
                 <use xlink:href="#social-codepen"></use></svg>
                 Codepen
             </a>
@@ -263,8 +332,12 @@
             <a
               href="https://www.linkedin.com/in/mejiajames/en"
               class="footer-nav__menu-link"
+              aria-label="My linkedin profile page"
             >
-              <svg class="footer__icon icon icon-social-linkedin">
+              <svg
+                role="img"
+                aria-hidden="true"
+                class="footer__icon icon icon-social-linkedin">
                 <use xlink:href="#social-linkedin"></use></svg
               >LinkedIn
             </a>
@@ -301,30 +374,6 @@
       </symbol>
     </svg>
     <!-- /Icons -->
-    <script>
-      (function(i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        (i[r] =
-          i[r] ||
-          function() {
-            (i[r].q = i[r].q || []).push(arguments);
-          }),
-          (i[r].l = 1 * new Date());
-        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m);
-      })(
-        window,
-        document,
-        'script',
-        '//www.google-analytics.com/analytics.js',
-        'ga'
-      );
-
-      ga('create', 'UA-50373766-1', 'auto');
-      ga('send', 'pageview');
-    </script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
     <script src="js/main.js"></script>
   </body>
