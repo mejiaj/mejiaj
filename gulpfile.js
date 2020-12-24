@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const notify = require('gulp-notify');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
@@ -46,28 +45,21 @@ function watch(done) {
 
 function scss() {
   return gulp
-  .src(paths.styles.src)
-  .pipe(sourcemaps.init())
-  .pipe(
-    sass({
-      outputStyle: 'compressed'
-    })
-  )
-  .on(
-    'error',
-    notify.onError({
-      message: 'Error: <%= error.message %>'
-    })
-  )
-  .pipe(
-    autoprefixer({
-      grid: true
-    })
-  )
-  .pipe(sourcemaps.write())
-  .pipe(gulp.dest('./dest'))
-  .pipe(notify({ message: 'SCSS task complete' }))
-  .pipe(browserSync.stream());
+    .src(paths.styles.src)
+    .pipe(sourcemaps.init())
+    .pipe(
+      sass({
+        outputStyle: "compressed",
+      })
+    )
+    .pipe(
+      autoprefixer({
+        grid: true,
+      })
+    )
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest("./dest"))
+    .pipe(browserSync.stream());
 }
 
 function optimizeImages() {
@@ -119,10 +111,7 @@ function buildScripts() {
     .pipe(
       plumber({
         errorHandler: function(err) {
-          notify.onError({
-            title: 'Gulp error in ' + err.plugin,
-            message: err.toString()
-          })(err);
+          console.error(err.toString());
           beeper();
         }
       })
