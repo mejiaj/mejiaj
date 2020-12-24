@@ -80,7 +80,7 @@ function convertJpg() {
 
 function convertWebP() {
   return gulp
-    .src('img/convert_to_webp/*.{png,jpg}')
+    .src('img/convert_to_webp/*.{png,jpg,jpeg}')
     .pipe(
       webp({
         quality: 90
