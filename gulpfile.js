@@ -1,21 +1,21 @@
-var gulp = require('gulp');
-var notify = require('gulp-notify');
-var fs = require('fs');
-var sass = require('gulp-sass');
-var sassGlob = require('gulp-sass-glob');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var browserSync = require('browser-sync').create();
-var imagemin = require('gulp-imagemin');
-var webp = require('gulp-webp');
-var rename = require('gulp-rename');
-var reload = browserSync.reload;
+const gulp = require('gulp');
+const notify = require('gulp-notify');
+const sass = require('gulp-sass');
+const sourcemaps = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
+const browserSync = require('browser-sync').create();
+const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
+const rename = require('gulp-rename');
+const plumber = require('gulp-plumber');
+const babel = require('gulp-babel');
+const reload = browserSync.reload;
 
 sass.compiler = require('sass');
 
 const paths = {
   scripts: {
-    src: 'js/**/*.js'
+    src: 'js/*.js'
   },
   styles: {
     src: 'scss/**/*.scss'
@@ -28,64 +28,65 @@ const paths = {
   }
 };
 
-gulp.task('serve', () => {
+function serve(done) {
   browserSync.init({
     server: {
       baseDir: './'
     }
   });
-});
+  done();
+}
 
-gulp.task('watch', () => {
-  gulp.watch(paths.styles.src, gulp.series('scss'));
-  gulp.watch(paths.scripts.src).on('change', reload);
+function watch(done) {
+  gulp.watch(paths.styles.src, scss);
+  gulp.watch(paths.scripts.src, buildScripts);
   gulp.watch(paths.markup.src).on('change', reload);
-});
+  done();
+}
 
-gulp.task('scss', () => {
+function scss() {
   return gulp
-    .src(paths.styles.src)
-    .pipe(sourcemaps.init())
-    .pipe(sassGlob())
-    .pipe(
-      sass({
-        outputStyle: 'compressed'
-      })
-    )
-    .on(
-      'error',
-      notify.onError({
-        message: 'Error: <%= error.message %>'
-      })
-    )
-    .pipe(
-      autoprefixer({
-        grid: true
-      })
-    )
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./dest'))
-    .pipe(notify({ message: 'SCSS task complete' }))
-    .pipe(browserSync.stream());
-});
+  .src(paths.styles.src)
+  .pipe(sourcemaps.init())
+  .pipe(
+    sass({
+      outputStyle: 'compressed'
+    })
+  )
+  .on(
+    'error',
+    notify.onError({
+      message: 'Error: <%= error.message %>'
+    })
+  )
+  .pipe(
+    autoprefixer({
+      grid: true
+    })
+  )
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest('./dest'))
+  .pipe(notify({ message: 'SCSS task complete' }))
+  .pipe(browserSync.stream());
+}
 
-gulp.task('optimize-images', () => {
+function optimizeImages() {
   return gulp.src(paths.images.src).pipe(
     imagemin({
       progressive: true,
       optimizationLevel: 9
     })
   );
-});
+}
 
-gulp.task('jpg', () => {
+function convertJpg() {
   return gulp
     .src('img/convert_to_webp/*.png')
     .pipe(rename(path => (path.extname = '.jpg')))
     .pipe(gulp.dest('img/jpg'));
-});
+};
 
-gulp.task('webp', () => {
+function convertWebP() {
   return gulp
     .src('img/convert_to_webp/*.{png,jpg}')
     .pipe(
@@ -93,10 +94,10 @@ gulp.task('webp', () => {
         quality: 90
       })
     )
-    .pipe(gulp.dest('img/webp'));
-});
+  .pipe(gulp.dest('img/webp'));
+}
 
-gulp.task('eslint', () => {
+function eslint() {
   return gulp
     .src(paths.scripts.src)
     .pipe(
@@ -110,9 +111,9 @@ gulp.task('eslint', () => {
       })
     )
     .pipe(eslint.format());
-});
+}
 
-gulp.task('scripts', () => {
+function buildScripts() {
   return gulp
     .src(paths.scripts.src)
     .pipe(
@@ -128,7 +129,7 @@ gulp.task('scripts', () => {
     )
     .pipe(
       babel({
-        presets: ['env']
+        presets: ['@babel/preset-env']
       })
     )
     .pipe(plumber())
@@ -136,8 +137,8 @@ gulp.task('scripts', () => {
     .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('js/dist'))
     .pipe(reload({ stream: true }));
-});
+}
 
-gulp.task('images', gulp.series('optimize-images', 'jpg', 'webp'));
-gulp.task('build-scripts', gulp.series('scripts', 'eslint'));
-gulp.task('default', gulp.parallel('scss', 'serve', 'watch'));
+exports.images = gulp.series(optimizeImages, convertJpg, convertWebP);
+exports.buildScripts = gulp.series(buildScripts, eslint);
+exports.default = gulp.series(scss, serve, watch);

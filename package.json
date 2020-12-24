@@ -13,6 +13,8 @@
   "license": "ISC",
   "homepage": "https://www.jmejia.com/",
   "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
     "autoprefixer": "^10.0.0",
     "browser-sync": "^2.26.12",
     "gulp": "^4.0.2",
