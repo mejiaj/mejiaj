@@ -2,14 +2,13 @@
 // Color Variables
 // ==========================================================================
 $c-green: #12d178;
-$c-green-2: #00a676;
+$c-green-60: #00a676;
 $c-black: #121619;
 $c-white: #c8d3d5;
-$c-primary: $c-green;
-$c-visited: $c-green-2;
+$c-visited: $c-green-60;
 
 $c-primary: $c-green;
-$c-primary-dk: $c-green-2;
+$c-primary-dk: $c-green-60;
 
 // ==========================================================================
 // Breakpoints
@@ -18,9 +17,9 @@ $breakpoints: (
   xs: 21.875em,
   sm: 30.625em,
   // 490px
-    md: 46.875em,
+  md: 46.875em,
   // 750px
-    lg: 56.25em,
+  lg: 56.25em,
   // 900px
 );
 

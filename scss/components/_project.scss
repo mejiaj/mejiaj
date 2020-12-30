@@ -15,45 +15,45 @@
   @include mq(lg) {
     grid-template-columns: 2fr 5% 1fr;
   }
-}
 
-.project__img {
-  display: block;
-  margin-bottom: px-to-rem(30);
+  &__img {
+    display: block;
+    margin-bottom: px-to-rem(30);
 
-  @include mq(lg) {
-    grid-area: screenshot;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    @include mq(lg) {
+      grid-area: screenshot;
+    }
   }
-}
 
-.project__img img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
+  &__body {
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
 
-.project__body {
-  max-width: 85%;
-  margin-left: auto;
-  margin-right: auto;
-
-  @include mq(lg) {
-    grid-area: body;
-    margin: 0;
-    max-width: none;
+    @include mq(lg) {
+      grid-area: body;
+      margin: 0;
+      max-width: none;
+    }
   }
-}
 
-.project__title {
-  margin-top: 0;
-  margin-bottom: 0;
-}
+  &__title {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
-.project-roles {
-  margin-top: 0;
-}
+  &-roles {
+    margin-top: 0;
+  }
 
-.project-role {
-  font-size: px-to-rem(18);
+  &-role {
+    font-size: px-to-rem(18);
+  }
 }

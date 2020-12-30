@@ -5,8 +5,8 @@
 .nav--inline {
   display: flex;
   flex-flow: row wrap;
-}
 
-.nav--inline .nav__item:not(:first-of-type) {
-  margin-left: px-to-rem(8);
+  .nav__item:not(:first-of-type) {
+    margin-left: px-to-rem(8);
+  }
 }

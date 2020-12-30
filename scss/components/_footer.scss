@@ -52,8 +52,8 @@
     background-color: $c-black;
     border-bottom: 1px solid;
     height: 100%;
-    transform: scale(1, 0);
     transform-origin: bottom left;
+    transform: scale(1, 0);
     transition: transform 0.2s $ease-primary;
     z-index: z(under);
   }
