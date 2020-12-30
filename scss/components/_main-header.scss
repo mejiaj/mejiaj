@@ -20,7 +20,7 @@
   text-indent: px-to-rem(-3);
 
   @include mq(lg) {
-    letter-spacing: -3px;
+    letter-spacing: -2px;
   }
 }
 

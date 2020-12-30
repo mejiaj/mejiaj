@@ -16,6 +16,10 @@ body {
   @include mq(xl) {
     font-size: px-to-rem(25);
   }
+
+  @supports (font-size-adjust: 1) {
+    font-size-adjust: 0.5;
+  }
 }
 
 h1,
