@@ -1,0 +1,123 @@
+---
+import MainHead from '../components/MainHead.astro';
+import Footer from '../components/Footer/index.astro'
+---
+<MainHead title="James Mejia - Resume" />
+<body class="page page--resume">
+  <header class="resume__header" role="banner">
+    <div class="wrap resume__header-inner">
+      <div class="h-card">
+        <div class="h-card__intro" id="about">
+          <h1 class="h-card__name p-name">James Mejia</h1>
+          <div class="h-card__title p-job-title h2">
+            Designer & Front-End Developer
+          </div>
+        </div>
+        <div class="h-card__contact">
+          <a
+            href="tel:6087452962"
+            class="h-card__tel contact-info__telephone p-tel"
+          >
+            608.745.2962
+          </a>
+          <a
+            href="/"
+            class="h-card__url u-url plain-link"
+          >
+            www.jmejia.com
+          </a>
+          <a
+            href="mailto:me@jmejia.com"
+            class="h-card__email u-email plain-link"
+          >
+            me@jmejia.com
+          </a>
+        </div>
+      </div>
+      <a href="\" class="resume__header-back">← Return to Homepage</a>
+    </div>
+  </header>
+  <main role="main">
+    <div class="wrap">
+      <div class="resume__greeting">
+        <div class="lead-in">
+          <h2>Hi!</h2>
+          <p>
+            I’m a designer/Front-End Developer based in Madison, Wisconsin. My
+            designs are straightforward, honest, and user-focused. I'm an
+            enthusiastic self-starter and I consistently strive to master my
+            craft. My expertise lies in complex CSS architecture and
+            development, my websites will perform well and look great at any
+            shape or size.
+          </p>
+        </div>
+      </div>
+      <div class="resume__info">
+        <section class="resume__experience">
+          <h3 class="h2">Experience</h3>
+          <ol class="resume__history history">
+            <li class="history__item">
+              <h4 class="resume__employment-title">Bixal</h4>
+              <h5 class="resume__role">Front-End Developer</h5>
+              <div class="resume__time-spent">September 2018 - Present</div>
+              <p>
+                I work to ensure the websites we produce are
+                accessible, mobile-friendly, and fast. We mainly produce work for the government sector. We apply the best tech for the job, some of those might include Drupal, React, or both.
+              </p>
+              <p>
+                Lately my work has focused on development for the US Web Design system. Which empowers developers across all agencies to easily create modern looking accessible websites.
+              </p>
+            </li>
+            <li class="history__item">
+              <h4 class="resume__employment-title">Third & Grove</h4>
+              <h5 class="resume__role">Front-End Engineer</h5>
+              <div class="resume__time-spent">
+                September 2015 - September 2018
+              </div>
+              <p>
+                I was part of a distributed team for a leading Drupal
+                agency. We worked with clients of all shapes and
+                sizes, across several industries. We designed and developed
+                mobile-first websites using Drupal and WordPress. The work was fast-paced and being remote you have to be disciplined, take initiative, and especially communicative.
+              </p>
+            </li>
+            <li class="history__item">
+              <h4 class="resume__employment-title">Spectrum Brands</h4>
+              <h5 class="resume__role">Web Designer</h5>
+              <div class="resume__time-spent">2012-2015</div>
+              <p>
+                I was part of a small development team that was responsible
+                for 30+ brand websites. Household brands such as: Rayovac,
+                Black & Decker Appliances, and Remington Hair Products.
+              </p>
+              <p>
+                I introduced and implemented (at the time) novel techniques like styleguide driven-development, mobile-first
+                design, and SCSS into our workflow. This helped us
+                tremendously in creating maintainable, mobile-friendly,
+                websites that serve hundreds of thousands of people
+                efficiently.
+              </p>
+            </li>
+          </ol>
+        </section>
+        <section class="resume__skills">
+          <h3 class="h2">Skills</h3>
+          <ul class="resume__skills-list">
+            <li>Drupal 8 certified themer</li>
+            <li>WordPress</li>
+            <li>Shopify</li>
+            <li>SCSS/CSS</li>
+            <li>JavaScript</li>
+            <li>Accessibility</li>
+            <li>Mobile-first design</li>
+            <li>UI/UX design</li>
+            <li>Typography</li>
+            <li>Photoshop, Illustrator, InDesign</li>
+            <li>.NET Theming</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</body>

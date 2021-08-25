@@ -1,0 +1,43 @@
+---
+// Component Imports:
+import MainHead from '../components/MainHead.astro';
+import Nav from '../components/Nav/index.astro';
+import Hero from '../components/Hero/index.astro';
+import PorfolioPreview from '../components/PortfolioPreview/index.astro';
+import Footer from '../components/Footer/index.astro';
+
+// Data Fetching: List all Markdown posts in the repo.
+const projectPreviews = Astro.fetchContent('./project/**/*.md');
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+<html lang="en">
+  <head>
+    <!-- Not necessary if using defaults, keeping for future use -->
+    <!-- <MainHead title="James Mejia - Designer & Front-End Developer" /> -->
+    <MainHead />
+  </head>
+  <body class="page page--home">
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+    <header class="main-header" role="banner">
+      <div class="main-header__inner wrap">
+        <Hero />
+
+        <!-- Main Nav -->
+        <Nav />
+        <!-- /Main Nav -->
+
+        <p class="lead-in" id="about">
+          I create uniquely engaging and intuitive user experiences. Due to an expertise in complex CSS architecture design and development, my websites offer cutting-edge performance at any scale.
+        </p>
+      </div>
+    </header>
+    <main id="main-content">
+      {projectPreviews.map((project, index) => {
+        return <PorfolioPreview project={project} />
+      })}
+    </main>
+    <Footer />
+  </body>
+</html>

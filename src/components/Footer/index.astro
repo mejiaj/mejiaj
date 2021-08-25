@@ -1,0 +1,57 @@
+---
+import Icons from '../Icons/index.astro';
+
+const footerItems = [
+  {
+    url: "#top",
+    icon: "#up-arrow",
+    aria_label: "Return to top of the page",
+  },
+  {
+    url: "mailto:me@jmejia.com",
+    icon: "#email",
+    label: "Email",
+    aria_label: "Email link",
+  },
+  {
+    url: "https://codepen.io/mejiaj/",
+    icon: "#social-codepen",
+    label: "Codepen",
+    aria_label: "My codepen profile page",
+  },
+  {
+    url: "https://www.linkedin.com/in/mejiajames/en",
+    icon: "#social-linkedin",
+    label: "LinkedIn",
+    aria_label: "My linkedin profile page",
+  },
+]
+---
+
+<footer class="main-footer" role="contentinfo" id="contact">
+  <nav class="nav footer-nav" aria-label="Footer menu">
+    <ul class="footer-nav__menu">
+      {footerItems.map((footerItem, index) => (
+        <li class="footer-nav__menu-item">
+          <a
+            href="{ footerItem.url }"
+            class="footer-nav__menu-link"
+            aria-label="{ footerItem.aria_label }"
+          >
+            <svg
+              role="img"
+              aria-hidden="true"
+              class="footer__icon footer__icon--no-text icon">
+              <use xlink:href={`${footerItem.icon}`}></use>
+            </svg>
+              { footerItem.label }
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</footer>
+
+<Icons />
+<script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+<script src="/js/main.js"></script>
