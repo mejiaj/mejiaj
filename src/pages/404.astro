@@ -1,0 +1,74 @@
+---
+import MainHead from '../components/MainHead.astro';
+---
+
+<style lang="scss">
+  html {
+    display: table;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+  }
+
+  body {
+    background-color: #14AF6D;
+    color: #333;
+    display: table-cell;
+    font: 1.25em/1.5 "Aleo", sans-serif;
+    font-weight: 400;
+    vertical-align: middle;
+    margin: 1.5em auto;
+  }
+
+  a {
+    color: #333;
+    font-weight: inherit;
+    margin-top: 1.5rem;
+    position: relative;
+    text-decoration: none;
+
+    &::after {
+      background-color: #333;
+    }
+
+    &:hover {
+      color: #14AF6D;
+    }
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-weight: inherit;
+    margin: 0 auto;
+    max-width: 461px;
+  }
+
+  @media only screen and (max-width: 280px) {
+
+    body, p {
+      width: 95%;
+    }
+
+    h1 {
+      font-size: 1.5em;
+      margin: 0 0 0.3em;
+    }
+
+  }
+</style>
+
+<html lang="en">
+  <head>
+    <MainHead title="Not Found" />
+  </head>
+  <body>
+    <img src="/img/bawss.gif" alt="Bulldog on a jetski">
+    <h1>Uh oh.</h1>
+    <p>Yo! The page isn't here right now. Try again later.</p>
+    <a href="/">← Return to Homepage</a>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+---
+const { title = 'James Mejia - Designer & Front-End Developer' } = Astro.props;
+---
+
+<!-- Meta -->
+<meta charset="UTF-8">
+<meta
+  name="description"
+  content="Portfolio of James Mejia, Designer & Front-End Developer"
+/>
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1"
+/>
+<meta
+  name="msvalidate.01"
+  content="78F25BA9CB8A744B0E3C891CE2F772E8"
+/>
+<!-- /Meta -->
+
+<!-- Title -->
+<title>{title}</title>
+<!-- /Title -->
+
+<!-- Styles -->
+
+<link rel="stylesheet" href="/global.css" />
+<link rel="stylesheet" href="/scss/styles.css" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Aleo:wght@300;400&display=swap" rel="stylesheet">
+<!-- /Styles -->
+
+<!-- Scripts -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-50373766-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-50373766-1');
+</script>
+<!-- /Scripts -->
+
+<!-- Favicons -->
+<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<!-- /Favicons -->

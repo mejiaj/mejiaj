@@ -1,0 +1,39 @@
+---
+const { project } = Astro.props;
+console.log(project);
+---
+
+<section id={ project.id } class="project">
+  <picture class="project__img" aria-hidden="true">
+    <source
+      srcset={ project.img.desktop }
+      media="(min-width: 750px)"
+      width="1145"
+      height="686"
+    />
+    <source
+      srcset={ project.img.mobile }
+      width="881"
+      height="528"
+    />
+    <img
+      srcset={ project.img.mobile }
+      width="881"
+      height="528"
+      loading="lazy"
+    />
+  </picture>
+
+  <div class="project__body">
+    <h4 class="project__title">{ project.title }</h4>
+    <ul class="project-roles h4 nav nav--inline">
+      <li class="nav__item project-role">{ project.role }</li>
+    </ul>
+    <p>
+      { project.description }
+    </p>
+    <a href={ project.cta }>
+      Visit <span class="visually-hidden">{ project.title }</span> Site
+    </a>
+  </div>
+</section>
