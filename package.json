@@ -1,36 +1,14 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "Portfolio site for James Mejia",
-  "main": "index.html",
+  "name": "@mejiaj/portfolio",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build"
   },
-  "browserslist": [
-    "last 3 versions"
-  ],
-  "author": "James Mejia",
-  "license": "ISC",
-  "homepage": "https://www.jmejia.com/",
   "devDependencies": {
-    "@babel/core": "^7.14.3",
-    "@babel/preset-env": "^7.14.2",
-    "autoprefixer": "^10.2.5",
-    "browser-sync": "^2.26.14",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-babel": "^8.0.0",
-    "gulp-eslint": "^6.0.0",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-jpeg-2000": "^1.1.4",
-    "gulp-plumber": "^1.2.1",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.1.0",
-    "gulp-sass-glob": "^1.1.0",
-    "gulp-sourcemaps": "^3.0.0",
-    "gulp-webp": "^4.0.1",
-    "js-yaml": "^4.1.0",
-    "sass": "^1.34.0"
-  },
-  "dependencies": {}
+    "astro": "^0.19.1",
+    "@astrojs/renderer-preact": "^0.2.1"
+  }
 }
