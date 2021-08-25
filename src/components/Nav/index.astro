@@ -1,0 +1,34 @@
+---
+const navItems = [
+  {
+    label: "Work",
+    url: "#work",
+  },
+  {
+    label: "Contact",
+    url: "#contact",
+  },
+  {
+    label: "Resume",
+    url: "/resume"
+  }
+]
+---
+
+<nav class="main-nav" role="navigation">
+  <div class="main-nav__inner">
+    <button class="js-nav-trigger main-nav__trigger btn btn--inverse">
+      <span class="line__wrap"></span>
+      <span class="trigger__label">Menu</span>
+    </button>
+    <ul class="js-nav main-nav__menu nav">
+      {navItems.map(navItem => (
+        <li class="nav__item">
+          <a href="{ navItem.url }" class="nav__link">
+            { navItem.label }
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</nav>
