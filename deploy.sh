@@ -13,7 +13,7 @@ cd dist
 touch .nojekyll
 
 # if you are deploying to a custom domain
-echo 'www.jmejia.com' > CNAME
+echo 'jmejia.com' > CNAME
 
 git init
 git add -A
