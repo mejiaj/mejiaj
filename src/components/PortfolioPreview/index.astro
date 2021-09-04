@@ -2,7 +2,7 @@
 const { project } = Astro.props;
 ---
 
-<section id={ project.id } class="project">
+<section id={ project.id } class="project" data-scroll>
   <picture class="project__img" aria-hidden="true">
     <source
       srcset={ project.img.desktop }

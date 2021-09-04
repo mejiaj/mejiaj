@@ -8,7 +8,10 @@
     "build": "astro build"
   },
   "devDependencies": {
-    "astro": "^0.19.1",
-    "@astrojs/renderer-preact": "^0.2.1"
+    "@astrojs/renderer-preact": "^0.2.1",
+    "astro": "^0.19.1"
+  },
+  "dependencies": {
+    "scroll-out": "^2.2.12"
   }
 }
