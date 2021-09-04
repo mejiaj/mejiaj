@@ -1,14 +1,52 @@
+@use "sass:map";
+
 // ==========================================================================
 // Color Variables
 // ==========================================================================
-$c-green: #12d178;
-$c-green-60: #00a676;
-$c-black: #121619;
-$c-white: #c8d3d5;
-$c-visited: $c-green-60;
+$colors: (
+  "green": #12d178,
+  "green-60": #00a676,
+  "black": #121619,
+  "white": #c8d3d5
+);
 
-$c-primary: $c-green;
-$c-primary-dk: $c-green-60;
+$state-colors: (
+  "visited": map.get($colors, "green-60")
+);
+
+$theme-colors: (
+  "primary": map.get($colors, "green"),
+  "primary-dark": map.get($colors, "green-60")
+);
+
+// TODO - Replace these variables with a color function
+$c-green: map.get($colors, "green");
+$c-green-60: map.get($colors, "green-60");
+$c-black: map.get($colors, "black");
+$c-white: map.get($colors, "white");
+$c-visited: map.get($state-colors, "visited");
+$c-primary: map.get($theme-colors, "primary");
+$c-primary-dk: map.get($theme-colors, "primary-dark");
+
+// ==========================================================================
+// Spacing units
+// ==========================================================================
+$spacing: (
+  3px,
+  4px,
+  6px,
+  9px,
+  12px,
+  20px,
+  24px,
+  27px,
+  30px,
+  45px,
+  72px,
+  75px,
+  120px
+);
+
 
 // ==========================================================================
 // Breakpoints
