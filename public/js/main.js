@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let mainMenu = document.querySelector('.js-nav');
     let activeClass = 'is-active';
 
+    if (!mainMenu) {
+      return;
+    }
+
     const toggleNav = () => {
       let active = document.querySelector(`.js-nav.${activeClass}`);
 
