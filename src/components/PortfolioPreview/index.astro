@@ -2,21 +2,22 @@
 const { project } = Astro.props;
 ---
 
-<section id={ project.id } class="project" data-scroll>
+
+<section id={ project.frontmatter.id } class="project" data-scroll>
   <picture class="project__img" aria-hidden="true">
     <source
-      srcset={ project.img.desktop }
+      srcset={ project.frontmatter.img.desktop }
       media="(min-width: 750px)"
       width="1145"
       height="686"
     />
     <source
-      srcset={ project.img.mobile }
+      srcset={ project.frontmatter.img.mobile }
       width="881"
       height="528"
     />
     <img
-      srcset={ project.img.mobile }
+      srcset={ project.frontmatter.img.mobile }
       width="881"
       height="528"
       loading="lazy"
@@ -24,15 +25,15 @@ const { project } = Astro.props;
   </picture>
 
   <div class="project__body">
-    <h4 class="project__title">{ project.title }</h4>
+    <h4 class="project__title">{ project.frontmatter.title }</h4>
     <ul class="project-roles h4 nav nav--inline">
-      <li class="nav__item project-role">{ project.role }</li>
+      <li class="nav__item project-role">{ project.frontmatter.role }</li>
     </ul>
     <p>
-      { project.description }
+      { project.frontmatter.description }
     </p>
-    <a href={ project.cta }>
-      Visit <span class="visually-hidden">{ project.title }</span> Site
+    <a href={ project.frontmatter.cta }>
+      Visit <span class="visually-hidden">{ project.frontmatter.title }</span> Site
     </a>
   </div>
 </section>
