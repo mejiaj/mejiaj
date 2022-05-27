@@ -34,9 +34,11 @@ const projectPreviews = Astro.fetchContent('./project/**/*.md');
       </div>
     </header>
     <main id="main-content">
-      {projectPreviews.map((project, index) => {
-        return <PorfolioPreview project={project} />
-      })}
+      <div id="work">
+        {projectPreviews.map((project, index) => {
+          return <PorfolioPreview project={project} />
+        })}
+      </div>
     </main>
     <Footer />
   </body>

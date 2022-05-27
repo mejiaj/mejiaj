@@ -5,10 +5,16 @@ const SmoothScroll = () => {
     return;
   }
 
-  const scrollToElement = e => {
+  const scrollToElement = (e) => {
     e.preventDefault();
 
-    let clickedElement = document.querySelector(`${e.currentTarget.hash}`);
+    const anchorHash = e.currentTarget.hash;
+    let clickedElement = document.querySelector(`${anchorHash}`);
+
+    if (!clickedElement) {
+      console.error(`Element doesn't exist with id ${anchorHash}`)
+      return;
+    }
 
     clickedElement.scrollIntoView({
       behavior: 'smooth'
@@ -21,9 +27,7 @@ const SmoothScroll = () => {
   };
 
   const init = () => {
-    links.forEach(link => {
-      link.addEventListener('click', scrollToElement);
-    });
+    links.forEach(link => link.addEventListener('click', scrollToElement));
   };
 
   return init();
