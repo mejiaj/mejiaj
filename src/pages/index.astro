@@ -3,11 +3,11 @@
 import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav/index.astro';
 import Hero from '../components/Hero/index.astro';
-import PorfolioPreview from '../components/PortfolioPreview/index.astro';
+import PortfolioPreview from '../components/PortfolioPreview/index.astro';
 import Footer from '../components/Footer/index.astro';
 
 // Data Fetching: List all Markdown posts in the repo.
-const projectPreviews = Astro.fetchContent('./project/**/*.md');
+const projectPreviews = await Astro.glob('./project/**/*.md');
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -36,7 +36,7 @@ const projectPreviews = Astro.fetchContent('./project/**/*.md');
     <main id="main-content">
       <div id="work">
         {projectPreviews.map((project, index) => {
-          return <PorfolioPreview project={project} />
+          return <PortfolioPreview project={project} />
         })}
       </div>
     </main>
