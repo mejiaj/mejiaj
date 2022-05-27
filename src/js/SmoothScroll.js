@@ -21,9 +21,6 @@ const SmoothScroll = () => {
     });
 
     clickedElement.focus();
-
-    // @TODO: make this work with SmoothScroll.
-    // window.location.hash = `${e.target.hash}`;
   };
 
   const init = () => {
