@@ -1,0 +1,10 @@
+---
+const posts = await Astro.glob('./posts/*.md');
+---
+
+{posts.map((post) => (
+  <Fragment>
+    <h2>{post.frontmatter.title}</h2>
+    <p>{posts.map((post) =>  post.frontmatter.description )}</p>
+  </Fragment>
+))}
