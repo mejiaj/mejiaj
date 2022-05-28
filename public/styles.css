@@ -81,7 +81,6 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  padding-top: 2.5rem;
   text-size-adjust: 100%;
   transition: font-size 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -281,49 +280,6 @@ a.is-active::after, a:focus::after, a:active::after, a:hover::after {
   transform: scale(1);
 }
 
-.skip-to-content {
-  position: relative;
-  left: 8.3%;
-  top: 3.875rem;
-  opacity: 0;
-  transition: opacity cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-.skip-to-content:focus {
-  opacity: 1;
-}
-
-.main-header__inner {
-  display: flex;
-  flex-direction: column-reverse;
-}
-
-.main-header__name {
-  color: #12d178;
-  line-height: 1.2;
-  margin-bottom: 0;
-  text-indent: -0.187rem;
-}
-@media only screen and (min-width: 56.25em) {
-  .main-header__name {
-    letter-spacing: -2px;
-  }
-}
-
-.main-header__title {
-  margin-top: 0;
-  font-size: 1.875rem;
-}
-@media only screen and (min-width: 46.875em) {
-  .main-header__title {
-    font-size: 2.444rem;
-  }
-}
-
-.main-header .lead-in {
-  margin-top: 1.938rem;
-  order: -1;
-}
-
 .main-footer {
   margin-top: 6.25rem;
 }
@@ -421,16 +377,36 @@ a.is-active::after, a:focus::after, a:active::after, a:hover::after {
   }
 }
 
-.nav {
-  list-style: none;
+.main-header__inner {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
-.nav--inline {
-  display: flex;
-  flex-flow: row wrap;
+.main-header__name {
+  color: #c8d3d5;
+  line-height: 1.2;
+  margin-bottom: 0;
+  text-indent: -0.187rem;
 }
-.nav--inline .nav__item:not(:first-of-type) {
-  margin-left: px-to-rem(8);
+@media only screen and (min-width: 56.25em) {
+  .main-header__name {
+    letter-spacing: -2px;
+  }
+}
+
+.main-header__title {
+  margin-top: 0;
+  font-size: 1.875rem;
+}
+@media only screen and (min-width: 46.875em) {
+  .main-header__title {
+    font-size: 2.444rem;
+  }
+}
+
+.main-header .lead-in {
+  margin-top: 1.938rem;
+  order: -1;
 }
 
 .main-nav__inner {
@@ -440,7 +416,10 @@ a.is-active::after, a:focus::after, a:active::after, a:hover::after {
 }
 
 .main-nav__trigger {
-  background-color: #121619;
+  background-color: transparent;
+  border: none;
+  color: #c8d3d5;
+  cursor: pointer;
   font-size: 0.75rem;
   letter-spacing: 2px;
   padding: 1.75rem 0.625rem 0.75rem;
@@ -549,6 +528,18 @@ a.is-active::after, a:focus::after, a:active::after, a:hover::after {
   color: #12d178;
 }
 
+.nav {
+  list-style: none;
+}
+
+.nav--inline {
+  display: flex;
+  flex-flow: row wrap;
+}
+.nav--inline .nav__item:not(:first-of-type) {
+  margin-left: px-to-rem(8);
+}
+
 @media only screen and (min-width: 56.25em) {
   .project {
     display: grid;
@@ -601,14 +592,28 @@ a.is-active::after, a:focus::after, a:active::after, a:hover::after {
   font-size: 1.125rem;
 }
 
+.skip-to-content {
+  position: absolute;
+  left: 8.3%;
+  top: 3.875rem;
+  opacity: 0;
+  transition: opacity cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  z-index: 500;
+}
+.skip-to-content:focus {
+  opacity: 1;
+}
+
 .page--home .main-header {
+  background-image: linear-gradient(to top, #121619, transparent), url("../../../img/background.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
   min-height: 85vh;
 }
 
 .page--home .main-header__name,
 .page--home .main-header__title,
-.page--home .lead-in,
-.page--home .main-nav {
+.page--home .lead-in {
   animation: bounce 0.65s forwards;
   opacity: 0;
 }
