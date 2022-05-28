@@ -1,4 +1,3 @@
-
 // ==========================================================================
 // Homepage
 // ==========================================================================
@@ -7,13 +6,20 @@
 // Intro
 // ==========================================================================
 .page--home .main-header {
+  background-image: linear-gradient(
+      to top,
+      #121619,
+      transparent
+    ),
+    url("../../../img/background.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
   min-height: 85vh;
 }
 
 .page--home .main-header__name,
 .page--home .main-header__title,
-.page--home .lead-in,
-.page--home .main-nav {
+.page--home .lead-in {
   animation: bounce 0.65s forwards;
   opacity: 0;
 }

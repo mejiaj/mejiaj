@@ -9,7 +9,6 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  padding-top: px-to-rem(40);
   text-size-adjust: 100%;
   transition: font-size 0.25s $ease-primary;
 
@@ -210,14 +209,3 @@ a {
   }
 }
 
-.skip-to-content {
-  position: relative;
-  left: 8.3%;
-  top: px-to-rem(62);
-  opacity: 0;
-  transition: opacity $ease-primary;
-
-  &:focus {
-    opacity: 1;
-  }
-}

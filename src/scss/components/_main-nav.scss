@@ -7,7 +7,10 @@
 }
 
 .main-nav__trigger {
-  background-color: $c-black;
+  background-color: transparent;
+  border: none;
+  color: $c-white;
+  cursor: pointer;
   font-size: px-to-rem(12);
   letter-spacing: 2px;
   padding: px-to-rem(28) px-to-rem(10) px-to-rem(12);
