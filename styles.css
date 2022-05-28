@@ -409,6 +409,10 @@ a.is-active::after, a:focus::after, a:active::after, a:hover::after {
   order: -1;
 }
 
+.main-nav {
+  font-weight: 400;
+}
+
 .main-nav__inner {
   display: flex;
   justify-content: flex-end;
@@ -444,11 +448,9 @@ a.is-active::after, a:focus::after, a:active::after, a:hover::after {
   right: 0;
   transition: inherit;
 }
-
 .line__wrap::before {
   top: -0.562rem;
 }
-
 .line__wrap::after {
   bottom: -0.562rem;
 }
@@ -471,9 +473,9 @@ a.is-active::after, a:focus::after, a:active::after, a:hover::after {
 }
 
 .main-nav__menu {
-  background-color: #12d178;
+  background-color: #121619;
   box-shadow: 0 0 8px rgba(18, 22, 25, 0.8), 0 0 40px rgba(18, 22, 25, 0.1);
-  color: #121619;
+  color: #12d178;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   right: 0;
@@ -520,12 +522,12 @@ a.is-active::after, a:focus::after, a:active::after, a:hover::after {
   transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .main-nav__menu .nav__link::after {
-  background-color: #121619;
+  background-color: #12d178;
   left: 0.063rem;
   right: 0.063rem;
 }
 .main-nav__menu .nav__link.is-active, .main-nav__menu .nav__link:focus, .main-nav__menu .nav__link:active, .main-nav__menu .nav__link:hover {
-  color: #12d178;
+  color: #121619;
 }
 
 .nav {
