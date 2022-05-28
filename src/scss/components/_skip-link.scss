@@ -1,0 +1,14 @@
+@use "../base" as *;
+
+.skip-to-content {
+  position: absolute;
+  left: 8.3%;
+  top: px-to-rem(62);
+  opacity: 0;
+  transition: opacity $ease-primary;
+  z-index: 500;
+
+  &:focus {
+    opacity: 1;
+  }
+}

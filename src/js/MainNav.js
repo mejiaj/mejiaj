@@ -12,6 +12,7 @@ const Nav = () => {
 
     if (!active) {
       mainTrigger.classList.add(activeClass);
+      mainTrigger.setAttribute("aria-expanded", true);
       mainMenu.classList.add(activeClass);
     } else {
       closeNav();
@@ -21,6 +22,7 @@ const Nav = () => {
   const closeNav = () => {
     mainTrigger.classList.remove(activeClass);
     mainMenu.classList.add('active-out');
+    mainTrigger.setAttribute("aria-expanded", false);
     mainMenu.addEventListener('transitionend', () => {
       mainMenu.classList.remove('active-out');
     });
