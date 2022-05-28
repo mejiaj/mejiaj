@@ -1,5 +1,9 @@
 @use "../../scss/base/" as *;
 
+.main-nav {
+  font-weight: 400;
+}
+
 .main-nav__inner {
   display: flex;
   justify-content: flex-end;
@@ -36,15 +40,16 @@
     right: 0;
     transition: inherit;
   }
+
+  &::before {
+    top: px-to-rem(-9);
+  }
+
+  &::after {
+    bottom: px-to-rem(-9);
+  }
 }
 
-.line__wrap::before {
-  top: px-to-rem(-9);
-}
-
-.line__wrap::after {
-  bottom: px-to-rem(-9);
-}
 
 .is-active .line__wrap {
   background-color: transparent;
@@ -66,9 +71,9 @@
 }
 
 .main-nav__menu {
-  background-color: $c-primary;
+  background-color: $c-black;
   box-shadow: $shadow;
-  color: $c-black;
+  color: $c-primary;
   padding-top: px-to-rem(12);
   padding-bottom: px-to-rem(12);
   right: 0;
@@ -114,12 +119,12 @@
   transition: 0.2s $ease-primary;
 
   &::after {
-    background-color: $c-black;
+    background-color: $c-primary;
     left: px-to-rem(1);
     right: px-to-rem(1);
   }
 
   @include is-active {
-    color: $c-primary;
+    color: $c-black;
   }
 }
