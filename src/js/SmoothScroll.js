@@ -1,5 +1,5 @@
 const SmoothScroll = () => {
-  let links = document.querySelectorAll("a[href^='#']");
+  let links = document.querySelectorAll("a[href*='#']");
 
   if (!links.length) {
     return;
