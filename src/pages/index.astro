@@ -21,22 +21,17 @@ const projectPreviews = await Astro.glob('./project/**/*.md');
 
   <body class="page page--home">
     <a href="#main-content" class="skip-to-content">Skip to content</a>
-    <header id="top" class="main-header" role="banner">
+    <header id="top" class="main-header">
       <div class="main-header__inner wrap">
         <Nav />
-
         <Hero />
-
-        <p class="lead-in" id="about">
-          I create uniquely engaging and intuitive user experiences. Due to an expertise in complex CSS architecture design and development, my websites offer cutting-edge performance at any scale.
-        </p>
       </div>
     </header>
     <main id="main-content">
       <div id="work">
-        {projectPreviews.map((project, index) => {
-          return <PortfolioPreview project={project} />
-        })}
+        {
+          projectPreviews.map((project, index) => <PortfolioPreview project={project} />)
+        }
       </div>
     </main>
     <Footer />
