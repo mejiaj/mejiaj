@@ -43,12 +43,27 @@ const Nav = () => {
     }
   };
 
+  const toggleCurrent = () => {
+    const currentPath = window.location.pathname;
+
+    if (currentPath == "/") {
+      mainMenu
+        .firstElementChild
+        .firstElementChild
+        .classList.add(activeClass);
+    } else {
+      const activeItem = mainMenu.querySelector(`[href="${currentPath}"]`);
+      activeItem.classList.add(activeClass);
+    }
+  }
+
   const addListeners = () => {
     mainTrigger.addEventListener('click', toggleNav);
     document.documentElement.addEventListener('click', hideOnUnfocus);
   };
 
   const init = () => {
+    toggleCurrent();
     addListeners();
   };
 
