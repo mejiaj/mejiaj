@@ -32,19 +32,19 @@ $c-primary-dk: map.get($theme-colors, "primary-dark");
 // Spacing units
 // ==========================================================================
 $spacing: (
-  3px,
-  4px,
-  6px,
-  9px,
-  12px,
-  20px,
-  24px,
-  27px,
-  30px,
-  45px,
-  72px,
-  75px,
-  120px
+  1: 3px,
+  2: 4px,
+  3: 6px,
+  4: 9px,
+  5: 12px,
+  6: 20px,
+  7: 24px,
+  8: 27px,
+  9: 30px,
+  10: 45px,
+  11: 72px,
+  12: 75px,
+  13: 120px
 );
 
 
