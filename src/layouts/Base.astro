@@ -3,29 +3,26 @@ import MainHead from "../components/MainHead.astro";
 import Nav from "../components/Nav/index.astro";
 import Footer from "../components/Footer/index.astro";
 
-const { content } = Astro.props;
-const prettyDate = new Date(content.date);
+const { title } = Astro.props;
+
 ---
 
 <html lang="en">
-
-<head>
-  <MainHead title={ content.title } />
-<body>
-  <a href="#main-content" class="skip-to-content">Skip to content</a>
-  <header id="top" class="main-header" role="banner">
-    <div class="main-header__inner wrap">
-      <Nav />
-    </div>
-  </header>
-  <main id="main-content">
-    <div class="wrap">
-      <h1>{ content.title }</h1>
-      <time datetime={ content.date }>{ prettyDate.toDateString() }</time>
-      <slot />
-    </div>
-  </main>
-  <Footer />
-</body>
-</head>
+  <head>
+    <MainHead title={ title } />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+    <header id="top" class="main-header" role="banner">
+      <div class="main-header__inner wrap">
+        <Nav />
+      </div>
+    </header>
+    <main id="main-content">
+      <div class="wrap">
+        <slot />
+      </div>
+    </main>
+    <Footer />
+  </body>
 </html>

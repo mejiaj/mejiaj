@@ -1,10 +1,17 @@
 ---
+import Base from "../../layouts/Base.astro";
+
 const posts = await Astro.glob('./posts/*.md');
+posts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
+let firstPage = posts.slice(0, 2);
 ---
 
-{posts.map((post) => (
-  <Fragment>
-    <h2>{post.frontmatter.title}</h2>
-    <p>{posts.map((post) =>  post.frontmatter.description )}</p>
-  </Fragment>
-))}
+<Base title="Blog">
+  {posts.map((post) => (
+    <Fragment>
+      <h2>{post.frontmatter.title}</h2>
+      <div>{ post.frontmatter.date }</div>
+      <p>{posts.map((post) => post.frontmatter.description )}</p>
+    </Fragment>
+  ))}
+</Base>
