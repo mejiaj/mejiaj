@@ -517,12 +517,6 @@ a.is-active::after, a:focus::after, a:active::after, a:hover::after {
   z-index: 2;
 }
 
-.main-nav__menu.active-out {
-  transform: translateY(30%);
-  visibility: hidden;
-  opacity: 0;
-}
-
 .main-nav__menu .nav__link {
   color: inherit;
   display: block;

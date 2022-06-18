@@ -21,16 +21,8 @@ const Nav = () => {
 
   const closeNav = () => {
     mainTrigger.classList.remove(activeClass);
-    mainMenu.classList.add('active-out');
     mainTrigger.setAttribute("aria-expanded", false);
-    mainMenu.addEventListener('transitionend', () => {
-      mainMenu.classList.remove('active-out');
-    });
-
-    setTimeout(() => {
-      mainMenu.classList.remove(activeClass);
-      clearTimeout();
-    }, 200);
+    mainMenu.classList.remove(activeClass);
   };
 
   // Hides when menu or body is clicked.
@@ -44,15 +36,17 @@ const Nav = () => {
   };
 
   const toggleCurrent = () => {
-    const currentPath = window.location.pathname;
+    const currentURL = window.location.pathname;
+    const currentPath = currentURL.split('/');
 
-    if (currentPath == "/") {
+    // If we're on the homepage
+    if (currentURL == "/") {
       mainMenu
         .firstElementChild
         .firstElementChild
         .classList.add(activeClass);
     } else {
-      const activeItem = mainMenu.querySelector(`[href="${currentPath}"]`);
+      const activeItem = mainMenu.querySelector(`[href="/${currentPath[1]}"]`);
       activeItem.classList.add(activeClass);
     }
   }
