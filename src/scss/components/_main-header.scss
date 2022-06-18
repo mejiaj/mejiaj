@@ -4,10 +4,6 @@
 // ==========================================================================
 // Header
 // ==========================================================================
-.main-header {
-  @extend %h5-style;
-}
-
 .main-header__inner {
   display: flex;
   flex-direction: column-reverse;
@@ -35,5 +31,4 @@
 
 .main-header .lead-in {
   margin-top: px-to-rem(31);
-  order: -1;
 }

@@ -103,12 +103,6 @@
   z-index: z(layer-2);
 }
 
-.main-nav__menu.active-out {
-  transform: translateY(30%);
-  visibility: hidden;
-  opacity: 0;
-}
-
 .main-nav__menu .nav__link {
   color: inherit;
   display: block;

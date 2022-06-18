@@ -1,8 +1,9 @@
 @use "base" as *;
-@use 'global';
-@use 'components';
-@use 'pages';
-@use 'print';
+@use "global";
+@use "components";
+@use "pages";
+@use "print";
+@forward "utils";
 
 html {
   box-sizing: border-box;
@@ -27,10 +28,23 @@ html {
 }
 
 .wrap {
-  max-width: 57.665em;
-  margin: 0 auto;
+  display: grid;
+  grid-column-gap: units(10);
+  grid-template-columns:
+    1fr
+    min(60ch, calc(100% - 90px))
+    1fr;
   position: relative;
-  width: 85%;
+
+  > * {
+    grid-column: 2;
+  }
+}
+
+.full-bleed {
+  background-color: red;
+  width: 100%;
+  grid-column: 1 / -1;
 }
 
 img {

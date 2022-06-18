@@ -1,0 +1,19 @@
+---
+import Base from "../../layouts/Base.astro";
+import PostPreview from "../../components/PostPreview/PostPreview.astro";
+
+const posts = await Astro.glob('./post/*.md');
+posts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
+let firstPage = posts.slice(0, 2);
+---
+
+<Base title="Blog">
+  <h1>Posts</h1>
+  <ul class="posts u-list--unstyled">
+    {posts.map((post) => (
+      <li class="posts__item">
+        <PostPreview post={ post } />
+      </li>
+    ))}
+  </ul>
+</Base>
