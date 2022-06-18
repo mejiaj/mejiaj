@@ -3,6 +3,7 @@
 @use "components";
 @use "pages";
 @use "print";
+@forward "utils";
 
 html {
   box-sizing: border-box;
