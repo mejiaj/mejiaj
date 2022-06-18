@@ -1,0 +1,10 @@
+---
+const { post } = Astro.props;
+const timestamp = new Date(post.frontmatter.date);
+---
+
+<article>
+  <h2><a href={ post.url }>{post.frontmatter.title}</a></h2>
+  <time datetime={ timestamp.toISOString() }>{ post.frontmatter.date }</time>
+  <p>{ post.frontmatter.description }</p>
+</article>

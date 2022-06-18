@@ -2,11 +2,12 @@
 import Base from "./Base.astro";
 
 const { content } = Astro.props;
-let prettyDate = (new Date(content.date).toDateString());
+let timestamp = new Date(content.date);
+
 ---
 
 <Base title={ content.title }>
   <h1>{ content.title }</h1>
-  <time datetime={ content.date }>{ prettyDate }</time>
+  <time datetime={ timestamp.toISOString() }>{ content.date }</time>
   <slot />
 </Base>
