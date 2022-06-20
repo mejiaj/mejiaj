@@ -34,10 +34,6 @@ In August of 2021 I discovered [AstroJS](https://astro.build/) and was immediate
 
 I even have [releases](https://github.com/mejiaj/mejiaj/releases) to capture the history of the site, [issues](https://github.com/mejiaj/mejiaj/issues) to track work, and pull requests explaining the things I've done.
 
-### Upgrading AstroJS
-
-When I originally implemented AstroJS it was on version `0.20.12`, when I came back it was already in 1x beta. Upgrading wasn't going to be straightforward, but it wasn't too bad.
-
 #### Differences moving to beta
 
 ##### Simpler configs
