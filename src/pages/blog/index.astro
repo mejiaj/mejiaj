@@ -10,10 +10,14 @@ let firstPage = posts.slice(0, 2);
 <Base title="Blog">
   <h1>Posts</h1>
   <ul class="posts u-list--unstyled">
-    {posts.map((post) => (
-      <li class="posts__item">
-        <PostPreview post={ post } />
-      </li>
-    ))}
+    {posts.map((post) => {
+      if (!post.frontmatter.draft) {
+        return (
+        <li class="posts__item">
+          <PostPreview post={ post } />
+        </li>
+        );
+      }
+    })}
   </ul>
 </Base>
