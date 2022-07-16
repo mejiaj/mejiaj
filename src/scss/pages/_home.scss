@@ -2,17 +2,21 @@
 // Homepage
 // ==========================================================================
 
-//
-// Intro
-// ==========================================================================
-.page--home .main-header {
-  background-image: linear-gradient(
-      to top,
-      #121619,
-      transparent
-    ),
-    url("../../../img/background.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 85vh;
+.page--home {
+  .main-header {
+    background-image: linear-gradient(
+        to top,
+        #121619,
+        transparent
+      ),
+      url("../../../img/background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2vh 6vw;
+  }
+
+  .blog-section {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
 }
