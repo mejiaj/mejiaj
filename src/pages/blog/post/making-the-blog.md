@@ -2,10 +2,10 @@
 layout: ../../../layouts/BlogPostBase.astro
 title: Making the blog
 date: July 9, 2022
-description: How I created the blog and lessons learned.
+description: How I created the blog and lessons learned. The intro blog post was 184 characters (31 words) or so the character/word count tool tells me. Despite the low word count, a lot of work went into creating the blog. More than I had originally anticipated.
 ---
 
-The [intro blog](/blog/post/intro) post was 184 characters (31 words) or so the character/word count tool tells me. Despite the low word count, a lot of work went into creating the blog. Much more than I had originally anticipated.
+The [intro blog](/blog/post/intro) post was 184 characters (31 words) or so the character/word count tool tells me. Despite the low word count, a lot of work went into creating the blog. More than I had originally anticipated.
 
 Initially this website was created with static HTML/CSS. It only existed to describe myself and show a few select pieces of work. There were brief times I wanted to re-do it using a more flashy technology, but the site was fast and did everything it was supposed to do. There wasn't much benefit of recreating it in a framework when I wasn't going to do any active development on it.
 
