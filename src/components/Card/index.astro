@@ -7,7 +7,7 @@ const timestamp = date ? new Date(date) : null;
 <article class={`card ${variantClass}`}>
   <header class="card__header">
     <h3 class="card__title">
-      <a href={ url } class="card__title-link">{title}</a>
+      {title}
     </h3>
     <time class="card__date" datetime={ timestamp.toISOString() }>
       { date }
@@ -16,4 +16,9 @@ const timestamp = date ? new Date(date) : null;
   <div class="card__body">
     <p>{ description }</p>
   </div>
+  <footer class="card__footer">
+    <a href={ url } class="card__cta">
+      Read { title.toLowerCase() }
+    </a>
+  </footer>
 </article>
