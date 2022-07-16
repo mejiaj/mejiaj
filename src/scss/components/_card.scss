@@ -22,15 +22,23 @@ $card-border-color: rgba(map.get($colors, "white"), 0.6);
 
 .card {
   border: 2px solid $card-border-color;
+  display: flex;
+  flex-direction: column;
   margin-top: units(6);
   height: 100%;
   padding: units(4) units(6);
 
   &__header {
+    min-height: px-to-rem(100);
     margin-bottom: units(8);
   }
 
   &__title {
     font-size: px-to-rem(31.25);
+  }
+
+  &__footer {
+    margin-top: auto;
+    margin-bottom: units(8);
   }
 }
