@@ -292,6 +292,17 @@ a.is-active::after, a:focus::after, a:active::after, a:hover::after {
   transform: scale(1);
 }
 
+.astro-code,
+code,
+pre {
+  font-family: "Fira code", monospace;
+  font-size: 0.9rem;
+}
+
+.astro-code {
+  padding: 0.375rem;
+}
+
 .main-footer {
   margin-top: 6.25rem;
 }
