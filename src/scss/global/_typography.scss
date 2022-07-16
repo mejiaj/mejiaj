@@ -221,3 +221,14 @@ a {
     }
   }
 }
+
+.astro-code,
+code,
+pre {
+  font-family: "Fira code", monospace;
+  font-size: 0.9rem;
+}
+
+.astro-code {
+  padding: units(3);
+}

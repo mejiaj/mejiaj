@@ -5,7 +5,11 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://www.jmejia.com/",
   markdown: {
-    drafts: true
+    drafts: true,
+    shikiConfig: {
+      theme: "github-dark",
+      wrap: true,
+    }
   },
   integrations: [sitemap()]
 });
