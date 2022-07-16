@@ -30,8 +30,7 @@
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
 <!-- /Favicons -->
 
-  <script type="module" src="/entry.c1e4c2fa.js"></script>
-</head>
+  <script type="module" src="/hoisted.baea1369.js"></script></head>
   <body>
     <a href="#main-content" class="skip-to-content">Skip to content</a>
     <header id="top" class="main-header" role="banner">
@@ -116,11 +115,11 @@
 <span class="line"><span style="color: #C9D1D9">import Base from &quot;./Base.astro&quot;;</span></span>
 <span class="line"><span style="color: #C9D1D9">---</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #C9D1D9">{</span><span style="color: #8B949E">/*&lt;!-- Set a custom page title --&gt;*/</span><span style="color: #C9D1D9">}</span></span>
+<span class="line"><span style="color: #8B949E">&lt;!-- Set a custom page title --&gt;</span></span>
 <span class="line"><span style="color: #C9D1D9">&lt;</span><span style="color: #7EE787">Base</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">title</span><span style="color: #C9D1D9">={ content.title }&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  {</span><span style="color: #8B949E">/*&lt;!-- Set the header based on frontmatter title --&gt;*/</span><span style="color: #C9D1D9">}</span></span>
+<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #8B949E">&lt;!-- Set the header based on frontmatter title --&gt;</span></span>
 <span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">h1</span><span style="color: #C9D1D9">&gt;{ content.title }&lt;/</span><span style="color: #7EE787">h1</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  {</span><span style="color: #8B949E">/*&lt;!-- Slot is where the rest of the content will fit in --&gt;*/</span><span style="color: #C9D1D9">}</span></span>
+<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #8B949E">&lt;!-- Slot is where the rest of the content will fit in --&gt;</span></span>
 <span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">slot</span><span style="color: #C9D1D9"> /&gt;</span></span>
 <span class="line"><span style="color: #C9D1D9">&lt;/</span><span style="color: #7EE787">Base</span><span style="color: #C9D1D9">&gt;</span></span></code></pre><p>Thanks to layouts I was able to reuse page markup to create a simple layout for individual blog posts.</p><pre class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #C9D1D9">// layouts/BlogPostBase.astro</span></span>
 <span class="line"><span style="color: #C9D1D9">---</span></span>
@@ -145,7 +144,7 @@
 <span class="line"><span style="color: #C9D1D9">The reason for creating this is mostly selfish. I want to improve my writing skills, share what I&#39;ve learned, and things I&#39;ve worked on.</span></span>
 <span class="line"></span>
 <span class="line"><span style="color: #C9D1D9">Plus, writing in markdown is surprisingly fun!</span></span>
-<span class="line"></span></code></pre><h2 id="dealing-with-dates">Dealing with dates</h2><p>If you look at the example above you’ll see a date entry. That’s used in blog listings and posts in a <code><time /></code> element. This is intentional and is part of the push for more semantic markup on the site. It was also a good refresher on working with dates with native javascript.</p><p>The <code><time /></code> represents a specific point in time. You can have a human readable date inside, but you need to specify a valid timestamp in the <code>datetime</code> attribute.</p><p>Initially I used <code>date.toDateString()</code> to get something like <code>Sun Jun 19 2022</code>. This was great <strong>until</strong> I realized that it was showing the incorrect date. The <code>toDateString()</code> function didn’t include a timezone or additional data, so it wasn’t returning an accurate date. What worked was switching to <code>toISOString()</code> for the timestamp instead of trying to prettify the date.</p><p>Yes, I could’ve used a date library to handle all of this. If I did that then I wouldn’t have learned anything and I’d have yet another dependency to worry about.</p><h2 id="accessibility-updates">Accessibility updates</h2><p>Accessibility is important to me. This site is still a work in progress, but I felt I needed to dedicate an accessibility pass to all components I touched.</p><p>Some work involved</p><ul>
+<span class="line"></span></code></pre><h2 id="dealing-with-dates">Dealing with dates</h2><p>If you look at the example above you’ll see a date entry. That’s used in blog listings and posts in a <code>&lt;time /&gt;</code> element. This is intentional and is part of the push for more semantic markup on the site. It was also a good refresher on working with dates with native javascript.</p><p>The <code>&lt;time /&gt;</code> represents a specific point in time. You can have a human readable date inside, but you need to specify a valid timestamp in the <code>datetime</code> attribute.</p><p>Initially I used <code>date.toDateString()</code> to get something like <code>Sun Jun 19 2022</code>. This was great <strong>until</strong> I realized that it was showing the incorrect date. The <code>toDateString()</code> function didn’t include a timezone or additional data, so it wasn’t returning an accurate date. What worked was switching to <code>toISOString()</code> for the timestamp instead of trying to prettify the date.</p><p>Yes, I could’ve used a date library to handle all of this. If I did that then I wouldn’t have learned anything and I’d have yet another dependency to worry about.</p><h2 id="accessibility-updates">Accessibility updates</h2><p>Accessibility is important to me. This site is still a work in progress, but I felt I needed to dedicate an accessibility pass to all components I touched.</p><p>Some work involved</p><ul>
 <li>Removing unnecessary roles (like banner on header element)</li>
 <li>Adding aria attributes to navigation dropdown</li>
 <li>Ensure the use of semantic markup</li>

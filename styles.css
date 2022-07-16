@@ -706,11 +706,9 @@ pre {
     padding: 0 !important;
     width: 100% !important;
   }
-
   p {
     font-weight: inherit;
   }
-
   h1,
 h2,
 h3,
@@ -719,78 +717,62 @@ h5,
 h6 {
     page-break-after: avoid;
   }
-
   p,
 h2,
 h3 {
     orphans: 3;
     widows: 3;
   }
-
   h1 {
     font-size: 20pt;
   }
-
   h2 {
     font-size: 18pt;
   }
-
   h3 {
     font-size: 16pt;
   }
-
   h4 {
     font-size: 12pt;
   }
-
   h5 {
     font-size: 14pt;
   }
-
   p {
     margin-top: 0.16in;
     margin-bottom: 0.16in;
   }
-
   a img {
     border: none;
   }
-
   .page--resume {
     padding-top: 10mm;
   }
-
   .resume__header .h-card {
     display: flex;
     align-items: first baseline;
     justify-content: space-between;
     margin-top: 0.25in;
   }
-
   .resume__info {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
   }
-
   .resume__experience {
     width: 65%;
   }
-
   .resume__skills {
     width: 30%;
     margin-left: 5%;
   }
-
   .resume__header-back,
 .page--resume .main-footer {
     display: none !important;
   }
-
   .page--resume .h-card__name {
     margin-top: 0;
   }
-
   .page--resume .history__item {
     margin-bottom: 0;
   }
