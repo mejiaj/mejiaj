@@ -10,10 +10,10 @@
     "build": "astro build"
   },
   "devDependencies": {
-    "@astrojs/preact": "^0.1.2",
-    "@astrojs/sitemap": "^0.1.0",
+    "@astrojs/sitemap": "^0.1.2",
     "astro": "^1.0.0-beta.36",
-    "sass": "^1.52.1"
+    "sass": "^1.53.0",
+    "scroll-out": "^2.2.12"
   },
   "dependencies": {
     "scroll-out": "^2.2.12"
