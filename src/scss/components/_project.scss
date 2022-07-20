@@ -3,57 +3,48 @@
 // ==========================================================================
 // Projects
 // ==========================================================================
+
+.projects {
+  // background-color: rgba($c-white, 0.1);
+  // padding-top: 2rem;
+  // padding-bottom: 2rem;
+}
+
+
+.project-group {
+  place-items: center;
+  display: grid;
+  grid-template-columns: repeat(
+    8,
+    148px
+  );
+  grid-column-gap: units(6);
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: units(4);
+
+  &__item {
+    margin-bottom: units(6);
+    width: 100%;
+  }
+}
+
 .project {
-  @include mq(lg) {
-    display: grid;
-    grid-template-areas: 'screenshot . body';
-    grid-template-columns: 1fr 5% 1fr;
-    max-width: 95%;
-    align-items: center;
+  display: grid;
+  place-items: center;
+  filter: grayscale(1);
+  font-size: 75%;
+  letter-spacing: 0.5px;
+  min-height: px-to-rem(150);
+  text-align: center;
+  transition: 0.26s ease-in-out;
+
+  &:hover,
+  &:focus {
+    filter: none;
   }
 
-  @include mq(lg) {
-    grid-template-columns: 2fr 5% 1fr;
-  }
-
-  &__img {
-    display: block;
-    margin-bottom: px-to-rem(30);
-
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-    }
-
-    @include mq(lg) {
-      grid-area: screenshot;
-    }
-  }
-
-  &__body {
-    max-width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-
-    @include mq(lg) {
-      grid-area: body;
-      margin: 0;
-      max-width: none;
-    }
-  }
-
-  &__title {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  &-roles {
-    margin-top: 0;
-  }
-
-  &-role {
-    font-size: px-to-rem(18);
+  &__name {
+    line-height: 1.1;
   }
 }

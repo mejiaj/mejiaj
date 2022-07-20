@@ -41,6 +41,11 @@ html {
   }
 }
 
+.wrap--xl {
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+
 .full-bleed {
   background-color: red;
   width: 100%;
@@ -49,7 +54,6 @@ html {
 
 img {
   max-width: 100%;
-  height: auto;
 }
 
 article,
@@ -66,10 +70,6 @@ nav,
 section,
 summary {
   display: block;
-}
-
-img {
-  border: none;
 }
 
 input,

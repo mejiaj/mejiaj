@@ -590,56 +590,35 @@ pre {
   margin-left: px-to-rem(8);
 }
 
-@media only screen and (min-width: 56.25em) {
-  .project {
-    display: grid;
-    grid-template-areas: "screenshot . body";
-    grid-template-columns: 1fr 5% 1fr;
-    max-width: 95%;
-    align-items: center;
-  }
-}
-@media only screen and (min-width: 56.25em) {
-  .project {
-    grid-template-columns: 2fr 5% 1fr;
-  }
-}
-.project__img {
-  display: block;
-  margin-bottom: 1.875rem;
-}
-.project__img img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-@media only screen and (min-width: 56.25em) {
-  .project__img {
-    grid-area: screenshot;
-  }
-}
-.project__body {
-  max-width: 85%;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media only screen and (min-width: 56.25em) {
-  .project__body {
-    grid-area: body;
-    margin: 0;
-    max-width: none;
-  }
-}
-.project__title {
-  margin-top: 0;
+.project-group {
+  place-items: center;
+  display: grid;
+  grid-template-columns: repeat(8, 148px);
+  grid-column-gap: 1.25rem;
+  list-style: none;
   margin-bottom: 0;
+  margin-top: 0.563rem;
 }
-.project-roles {
-  margin-top: 0;
+.project-group__item {
+  margin-bottom: 1.25rem;
+  width: 100%;
 }
-.project-role {
-  font-size: 1.125rem;
+
+.project {
+  display: grid;
+  place-items: center;
+  filter: grayscale(1);
+  font-size: 75%;
+  letter-spacing: 0.5px;
+  min-height: 9.375rem;
+  text-align: center;
+  transition: 0.26s ease-in-out;
+}
+.project:hover, .project:focus {
+  filter: none;
+}
+.project__name {
+  line-height: 1.1;
 }
 
 .skip-to-content {
@@ -658,11 +637,8 @@ pre {
   background-image: linear-gradient(to top, #121619, transparent), url("../../../img/background.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 2vh 6vw;
-}
-.page--home .blog-section {
-  padding-left: 6vw;
-  padding-right: 6vw;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 
 .page--resume {
@@ -817,6 +793,11 @@ h3 {
   list-style: none;
 }
 
+.overflow-x {
+  width: 100%;
+  overflow-x: auto;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -849,6 +830,11 @@ html {
   grid-column: 2;
 }
 
+.wrap--xl {
+  padding-left: 6vw;
+  padding-right: 6vw;
+}
+
 .full-bleed {
   background-color: red;
   width: 100%;
@@ -857,7 +843,6 @@ html {
 
 img {
   max-width: 100%;
-  height: auto;
 }
 
 article,
@@ -874,10 +859,6 @@ nav,
 section,
 summary {
   display: block;
-}
-
-img {
-  border: none;
 }
 
 input,
