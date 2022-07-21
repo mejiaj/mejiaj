@@ -1,4 +1,20 @@
+@use "sass:color";
+
+@use "../base" as *;
+
 .overflow-x {
   width: 100%;
   overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: color.scale($c-black, $lightness: 15%);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: color.scale($c-black, $lightness: 30%);
+  }
 }

@@ -14,10 +14,7 @@
 .project-group {
   place-items: center;
   display: grid;
-  grid-template-columns: repeat(
-    8,
-    148px
-  );
+  grid-template-columns: repeat(6, minmax(200px, 1fr));
   grid-column-gap: units(6);
   list-style: none;
   margin-bottom: 0;
@@ -35,16 +32,23 @@
   filter: grayscale(1);
   font-size: 75%;
   letter-spacing: 0.5px;
-  min-height: px-to-rem(150);
+  min-height: px-to-rem(100);
   text-align: center;
   transition: 0.26s ease-in-out;
 
   &:hover,
   &:focus {
     filter: none;
+
+    .project__name {
+      opacity: 0.8;
+    }
   }
 
   &__name {
     line-height: 1.1;
+    margin-top: auto;
+    opacity: 0.4;
+    transition: opacity 0.25s ease-in-out;
   }
 }

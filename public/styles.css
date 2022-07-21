@@ -593,7 +593,7 @@ pre {
 .project-group {
   place-items: center;
   display: grid;
-  grid-template-columns: repeat(8, 148px);
+  grid-template-columns: repeat(6, minmax(200px, 1fr));
   grid-column-gap: 1.25rem;
   list-style: none;
   margin-bottom: 0;
@@ -610,15 +610,21 @@ pre {
   filter: grayscale(1);
   font-size: 75%;
   letter-spacing: 0.5px;
-  min-height: 9.375rem;
+  min-height: 6.25rem;
   text-align: center;
   transition: 0.26s ease-in-out;
 }
 .project:hover, .project:focus {
   filter: none;
 }
+.project:hover .project__name, .project:focus .project__name {
+  opacity: 0.8;
+}
 .project__name {
   line-height: 1.1;
+  margin-top: auto;
+  opacity: 0.4;
+  transition: opacity 0.25s ease-in-out;
 }
 
 .skip-to-content {
@@ -718,9 +724,11 @@ pre {
     padding: 0 !important;
     width: 100% !important;
   }
+
   p {
     font-weight: inherit;
   }
+
   h1,
 h2,
 h3,
@@ -729,62 +737,78 @@ h5,
 h6 {
     page-break-after: avoid;
   }
+
   p,
 h2,
 h3 {
     orphans: 3;
     widows: 3;
   }
+
   h1 {
     font-size: 20pt;
   }
+
   h2 {
     font-size: 18pt;
   }
+
   h3 {
     font-size: 16pt;
   }
+
   h4 {
     font-size: 12pt;
   }
+
   h5 {
     font-size: 14pt;
   }
+
   p {
     margin-top: 0.16in;
     margin-bottom: 0.16in;
   }
+
   a img {
     border: none;
   }
+
   .page--resume {
     padding-top: 10mm;
   }
+
   .resume__header .h-card {
     display: flex;
     align-items: first baseline;
     justify-content: space-between;
     margin-top: 0.25in;
   }
+
   .resume__info {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
   }
+
   .resume__experience {
     width: 65%;
   }
+
   .resume__skills {
     width: 30%;
     margin-left: 5%;
   }
+
   .resume__header-back,
 .page--resume .main-footer {
     display: none !important;
   }
+
   .page--resume .h-card__name {
     margin-top: 0;
   }
+
   .page--resume .history__item {
     margin-bottom: 0;
   }
@@ -796,6 +820,15 @@ h3 {
 .overflow-x {
   width: 100%;
   overflow-x: auto;
+}
+.overflow-x::-webkit-scrollbar {
+  width: 10px;
+}
+.overflow-x::-webkit-scrollbar-track {
+  background-color: #2f3a42;
+}
+.overflow-x::-webkit-scrollbar-thumb {
+  background-color: #4d5e6a;
 }
 
 html {
