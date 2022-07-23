@@ -3,37 +3,102 @@
 import MainHead from '../components/MainHead.astro';
 import Nav from '../components/Nav/index.astro';
 import Hero from '../components/Hero/index.astro';
-import PortfolioPreview from '../components/PortfolioPreview/index.astro';
+import Card from "../components/Card/index.astro"
 import Footer from '../components/Footer/index.astro';
 
-// Data Fetching: List all Markdown posts in the repo.
-const projectPreviews = await Astro.glob('./project/**/*.md');
+// Data Fetching: List all blog posts
+const blogPosts = await Astro.glob('./blog/post/*.md');
+
+blogPosts.sort(
+  (a, b) => (
+    new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf()
+  )
+);
+
+let latestPosts = blogPosts.slice(0, 3);
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
-<html lang="en">
-  <head>
-    <!-- Not necessary if using defaults, keeping for future use -->
-    <!-- <MainHead title="James Mejia - Designer & Front-End Developer" /> -->
-    <MainHead />
-  </head>
 
-  <body class="page page--home">
-    <a href="#main-content" class="skip-to-content">Skip to content</a>
-    <header id="top" class="main-header">
-      <div class="main-header__inner wrap">
-        <Nav />
-        <Hero />
+<html lang="en">
+
+<head>
+  <!-- Not necessary if using defaults, keeping for future use -->
+  <!-- <MainHead title="James Mejia - Designer & Front-End Developer" /> -->
+  <MainHead />
+</head>
+
+<body class="page page--home">
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
+  <header id="top" class="main-header wrap--xl">
+    <div class="main-header__inner">
+      <Nav />
+      <Hero />
+    </div>
+  </header>
+  <main id="main-content">
+    <section class="projects wrap--xl">
+      <h3>Projects</h3>
+      <div class="overflow-x">
+        <ul class="project-group">
+          <li class="project-group__item">
+            <div class="project">
+              <img src="./img/project-logos/uswds-4c-lg-on-black.svg" alt="" loading="lazy" class="project__logo" height="45" width="45">
+              <div class="project__name">US Web Design System</div>
+            </div>
+          </li>
+          <li class="project-group__item">
+            <div class="project">
+              <img src="./img/project-logos/wioa-logo.svg" alt="" loading="lazy" class="project__logo" height="55" width="140">
+              <div class="project__name">WIOA State Plan Portal</div>
+            </div>
+          </li>
+          <li class="project-group__item">
+            <div class="project">
+              <img src="./img/project-logos/usda-logo.svg" alt="" loading="lazy" class="project__logo" height="55" width="55">
+              <div class="project__name">USDA</div>
+            </div>
+          </li>
+          <li class="project-group__item">
+            <div class="project">
+              <img src="./img/project-logos/aerospace-logo.svg" alt="" loading="lazy" class="project__logo" height="55" width="140">
+              <div class="project__name">Aerospace</div>
+            </div>
+          </li>
+          <li class="project-group__item">
+            <div class="project">
+              <img src="./img/project-logos/remington-logo.jpeg" alt="" loading="lazy" class="project__logo" height="28" width="140">
+              <div class="project__name">Remington</div>
+            </div>
+          </li>
+          <li class="project-group__item">
+            <div class="project">
+              <img src="./img/project-logos/bd-logo.png" alt="" loading="lazy" class="project__logo" height="25" width="140">
+              <div class="project__name">Black+Decker</div>
+            </div>
+          </li>
+        </ul>
       </div>
-    </header>
-    <main id="main-content">
-      <div id="work">
-        {
-          projectPreviews.map((project, index) => <PortfolioPreview project={project} />)
-        }
-      </div>
-    </main>
-    <Footer />
-  </body>
+    </section>
+    <section class="blog-section wrap--xl">
+      <h3>Latest posts</h3>
+      <ul class="card-group card-group--thirds">
+        { latestPosts.map((post, index) => (
+          <li class="card-group__item">
+            <Card
+              variant="xs"
+              title={ post.frontmatter.title }
+              url={ post.url }
+              date={ post.frontmatter.date }
+              description={ post.frontmatter.description }
+            />
+          </li>
+        )) }
+      </ul>
+    </section>
+  </main>
+  <Footer />
+</body>
+
 </html>

@@ -1,0 +1,43 @@
+@use "sass:map";
+
+@use "../base" as *;
+
+$card-border-color: rgba(map.get($colors, "white"), 0.6);
+
+.card-group {
+  list-style: none;
+
+  @include mq(md) {
+    align-items: stretch;
+    display: grid;
+    column-gap: units(4);
+  }
+}
+
+.card-group--thirds {
+  @include mq(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  border: 2px solid $card-border-color;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: units(4) units(6);
+
+  &__header {
+    min-height: px-to-rem(100);
+    margin-bottom: units(8);
+  }
+
+  &__title {
+    font-size: px-to-rem(31.25);
+  }
+
+  &__footer {
+    margin-top: auto;
+    margin-bottom: units(8);
+  }
+}

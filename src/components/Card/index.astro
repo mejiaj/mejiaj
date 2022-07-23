@@ -1,0 +1,24 @@
+---
+const { variant, title, url, date, description } = Astro.props;
+const variantClass = variant ? `card--${variant}` : '';
+const timestamp = date ? new Date(date) : null;
+---
+
+<article class={`card ${variantClass}`}>
+  <header class="card__header">
+    <h3 class="card__title">
+      {title}
+    </h3>
+    <time class="card__date" datetime={ timestamp.toISOString() }>
+      { date }
+    </time>
+  </header>
+  <div class="card__body">
+    <p>{ description }</p>
+  </div>
+  <footer class="card__footer">
+    <a href={ url } class="card__cta">
+      Read { title.toLowerCase() }
+    </a>
+  </footer>
+</article>
