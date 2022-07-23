@@ -93,7 +93,7 @@ body {
 h1 {
   font-weight: 400;
   margin-top: 1.875rem;
-  margin-bottom: 0;
+  margin-bottom: 0.563rem;
   font-size: 3.813rem;
   line-height: 1.47;
   transition: font-size 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -109,7 +109,7 @@ h2 {
   font-size: 3.052rem;
   line-height: 1.22;
   margin-top: 1.875rem;
-  margin-bottom: 0;
+  margin-bottom: 0.563rem;
   transition: font-size 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 @media only screen and (min-width: 56.25em) {
@@ -122,7 +122,7 @@ h3 {
   font-weight: 400;
   font-size: 2.442rem;
   margin-top: 1.875rem;
-  margin-bottom: 0;
+  margin-bottom: 0.563rem;
   line-height: 1.22;
   transition: font-size 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
@@ -135,7 +135,7 @@ h3 {
 h4 {
   font-weight: 400;
   margin-top: 1.875rem;
-  margin-bottom: 0;
+  margin-bottom: 0.563rem;
   font-size: 1.954rem;
   line-height: 1.22;
   transition: font-size 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -149,7 +149,7 @@ h4 {
 h5 {
   font-weight: 400;
   margin-top: 1.875rem;
-  margin-bottom: 0;
+  margin-bottom: 0.563rem;
   font-size: 1.563rem;
   line-height: 1.22;
   transition: font-size 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -163,7 +163,7 @@ h5 {
 h6 {
   font-weight: 400;
   margin-top: 1.875rem;
-  margin-bottom: 0;
+  margin-bottom: 0.563rem;
   font-size: 1.25rem;
   line-height: 1.22;
   transition: font-size 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -324,7 +324,6 @@ pre {
   border: 2px solid rgba(200, 211, 213, 0.6);
   display: flex;
   flex-direction: column;
-  margin-top: 1.25rem;
   height: 100%;
   padding: 0.563rem 1.25rem;
 }
@@ -590,6 +589,10 @@ pre {
   margin-left: px-to-rem(8);
 }
 
+.projects {
+  margin-bottom: 4.688rem;
+}
+
 .project-group {
   place-items: center;
   display: grid;
@@ -724,11 +727,9 @@ pre {
     padding: 0 !important;
     width: 100% !important;
   }
-
   p {
     font-weight: inherit;
   }
-
   h1,
 h2,
 h3,
@@ -737,78 +738,62 @@ h5,
 h6 {
     page-break-after: avoid;
   }
-
   p,
 h2,
 h3 {
     orphans: 3;
     widows: 3;
   }
-
   h1 {
     font-size: 20pt;
   }
-
   h2 {
     font-size: 18pt;
   }
-
   h3 {
     font-size: 16pt;
   }
-
   h4 {
     font-size: 12pt;
   }
-
   h5 {
     font-size: 14pt;
   }
-
   p {
     margin-top: 0.16in;
     margin-bottom: 0.16in;
   }
-
   a img {
     border: none;
   }
-
   .page--resume {
     padding-top: 10mm;
   }
-
   .resume__header .h-card {
     display: flex;
     align-items: first baseline;
     justify-content: space-between;
     margin-top: 0.25in;
   }
-
   .resume__info {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
   }
-
   .resume__experience {
     width: 65%;
   }
-
   .resume__skills {
     width: 30%;
     margin-left: 5%;
   }
-
   .resume__header-back,
 .page--resume .main-footer {
     display: none !important;
   }
-
   .page--resume .h-card__name {
     margin-top: 0;
   }
-
   .page--resume .history__item {
     margin-bottom: 0;
   }
