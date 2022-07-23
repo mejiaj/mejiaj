@@ -6,7 +6,7 @@ let timestamp = new Date(content.date);
 
 ---
 
-<Base title={ content.title }>
+<Base title={ content.title } description={ content.description }>
   <h1>{ content.title }</h1>
   <time datetime={ timestamp.toISOString() }>{ content.date }</time>
   <slot />

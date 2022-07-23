@@ -1,21 +1,15 @@
 ---
-const { title = 'James Mejia - Designer & Front-End Developer' } = Astro.props;
+const {
+  title = 'James Mejia - Designer & Front-End Developer',
+  description = "Portfolio of James Mejia, Designer & Front-End Developer"
+} = Astro.props;
 ---
 
 <!-- Meta -->
 <meta charset="UTF-8">
-<meta
-  name="description"
-  content="Portfolio of James Mejia, Designer & Front-End Developer"
-/>
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1"
-/>
-<meta
-  name="msvalidate.01"
-  content="78F25BA9CB8A744B0E3C891CE2F772E8"
-/>
+<meta name="description" content={ description } />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="msvalidate.01" content="78F25BA9CB8A744B0E3C891CE2F772E8" />
 <!-- /Meta -->
 
 <!-- Title -->
