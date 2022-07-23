@@ -24,7 +24,6 @@ $card-border-color: rgba(map.get($colors, "white"), 0.6);
   border: 2px solid $card-border-color;
   display: flex;
   flex-direction: column;
-  margin-top: units(6);
   height: 100%;
   padding: units(4) units(6);
 
