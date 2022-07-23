@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Not necessary if using defaults, keeping for future use -->
-    <!-- <MainHead title="James Mejia - Designer & Front-End Developer" /> -->
-    <!-- Meta --><meta charset="UTF-8">
+
+<head>
+  <!-- Not necessary if using defaults, keeping for future use -->
+  <!-- <MainHead title="James Mejia - Designer & Front-End Developer" /> -->
+  <!-- Meta --><meta charset="UTF-8">
 <meta name="description" content="Portfolio of James Mejia, Designer & Front-End Developer">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="msvalidate.01" content="78F25BA9CB8A744B0E3C891CE2F772E8">
@@ -32,13 +33,13 @@
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
 <!-- /Favicons -->
 
-  <script type="module" src="/hoisted.baea1369.js"></script></head>
+<script type="module" src="/hoisted.baea1369.js"></script></head>
 
-  <body class="page page--home">
-    <a href="#main-content" class="skip-to-content">Skip to content</a>
-    <header id="top" class="main-header">
-      <div class="main-header__inner wrap">
-        <nav class="main-nav" role="navigation">
+<body class="page page--home">
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
+  <header id="top" class="main-header wrap--xl">
+    <div class="main-header__inner">
+      <nav class="main-nav" role="navigation">
   <div class="main-nav__inner">
     <button class="js-nav-trigger main-nav__trigger" type="button" aria-expanded="false" aria-label="Menu toggle" aria-controls="main-nav">
       <span class="line__wrap"></span>
@@ -65,7 +66,7 @@
     </ul>
   </div>
 </nav>
-        <div class="intro">
+      <div class="intro">
   <h1 class="display main-header__name">James Mejia</h1>
   <h2 class="main-header__title">Design & Development</h2>
   <p class="lead-in" id="about">
@@ -91,74 +92,117 @@
 }
 
 export default Hero; -->
+    </div>
+  </header>
+  <main id="main-content">
+    <section class="projects wrap--xl">
+      <h3>Projects</h3>
+      <div class="overflow-x">
+        <ul class="project-group">
+          <li class="project-group__item">
+            <div class="project">
+              <img src="./img/project-logos/uswds-4c-lg-on-black.svg" alt="" loading="lazy" class="project__logo" height="45" width="45">
+              <div class="project__name">US Web Design System</div>
+            </div>
+          </li>
+          <li class="project-group__item">
+            <div class="project">
+              <img src="./img/project-logos/wioa-logo.svg" alt="" loading="lazy" class="project__logo" height="55" width="140">
+              <div class="project__name">WIOA State Plan Portal</div>
+            </div>
+          </li>
+          <li class="project-group__item">
+            <div class="project">
+              <img src="./img/project-logos/usda-logo.svg" alt="" loading="lazy" class="project__logo" height="55" width="55">
+              <div class="project__name">USDA</div>
+            </div>
+          </li>
+          <li class="project-group__item">
+            <div class="project">
+              <img src="./img/project-logos/aerospace-logo.svg" alt="" loading="lazy" class="project__logo" height="55" width="140">
+              <div class="project__name">Aerospace</div>
+            </div>
+          </li>
+          <li class="project-group__item">
+            <div class="project">
+              <img src="./img/project-logos/remington-logo.jpeg" alt="" loading="lazy" class="project__logo" height="28" width="140">
+              <div class="project__name">Remington</div>
+            </div>
+          </li>
+          <li class="project-group__item">
+            <div class="project">
+              <img src="./img/project-logos/bd-logo.png" alt="" loading="lazy" class="project__logo" height="25" width="140">
+              <div class="project__name">Black+Decker</div>
+            </div>
+          </li>
+        </ul>
       </div>
-    </header>
-    <main id="main-content">
-      <div id="work">
-        <section id="uswds" class="project" data-scroll>
-  <picture class="project__img" aria-hidden="true">
-    <source srcset="/img/webp/uswds--desktop.webp" media="(min-width: 750px)" width="1145" height="686">
-    <source srcset="/img/webp/uswds--mobile.webp" width="881" height="528">
-    <img srcset="/img/webp/uswds--mobile.webp" width="881" height="528" loading="lazy">
-  </picture>
-
-  <div class="project__body">
-    <h4 class="project__title">US Web Design System</h4>
-    <ul class="project-roles h4 nav nav--inline">
-      <li class="nav__item project-role">Developer</li>
-    </ul>
-    <p>
-      USWDS empowers agencies to produce better government and public sector websites. I lead development and maintenance of multiple repo&#39;s in addition to management of the actual framework. From advocating for accessibility to squashing everyday bugs, my work demonstrates advanced knowledge in areas such as interactive component development, transparent process improvements, client and customer relationship building, and much more.
-
-    </p>
-    <a href="https://designsystem.digital.gov/">
-      Visit <span class="visually-hidden">US Web Design System</span> Site
-    </a>
+    </section>
+    <section class="blog-section wrap--xl">
+      <h3>Latest posts</h3>
+      <ul class="card-group card-group--thirds">
+        <li class="card-group__item">
+            <article class="card card--xs">
+  <header class="card__header">
+    <h3 class="card__title">
+      Making the blog
+    </h3>
+    <time class="card__date" datetime="2022-07-09T00:00:00.000Z">
+      July 9, 2022
+    </time>
+  </header>
+  <div class="card__body">
+    <p>How I created the blog and lessons learned. The intro blog post was 184 characters (31 words) or so the character/word count tool tells me. Despite the low word count, a lot of work went into creating the blog. More than I had originally anticipated.</p>
   </div>
-</section><section id="aerospace" class="project" data-scroll>
-  <picture class="project__img" aria-hidden="true">
-    <source srcset="/img/webp/aero_1200.webp" media="(min-width: 750px)" width="1145" height="686">
-    <source srcset="/img/webp/aero_750.webp" width="881" height="528">
-    <img srcset="/img/webp/aero_750.webp" width="881" height="528" loading="lazy">
-  </picture>
-
-  <div class="project__body">
-    <h4 class="project__title">Aerospace</h4>
-    <ul class="project-roles h4 nav nav--inline">
-      <li class="nav__item project-role">Front-end, Theming</li>
-    </ul>
-    <p>
-      A component-based build for Drupal 8 using bricks. As a developer, I kept the code clean and harnessed the beauty of dramatic imagery.
-
-    </p>
-    <a href="https://www.aerospace.org/">
-      Visit <span class="visually-hidden">Aerospace</span> Site
+  <footer class="card__footer">
+    <a href="/blog/post/making-the-blog" class="card__cta">
+      Read making the blog
     </a>
+  </footer>
+</article>
+          </li><li class="card-group__item">
+            <article class="card card--xs">
+  <header class="card__header">
+    <h3 class="card__title">
+      Updating to AstroJS 1x beta
+    </h3>
+    <time class="card__date" datetime="2022-06-20T00:00:00.000Z">
+      June 20, 2022
+    </time>
+  </header>
+  <div class="card__body">
+    <p>When I originally implemented AstroJS it was on version 0.20.12, when I came back it was already in 1.0.0-beta.36. This post describes the issues and solutions in updating this little site.</p>
   </div>
-</section><section id="draperlabs" class="project" data-scroll>
-  <picture class="project__img" aria-hidden="true">
-    <source srcset="/img/webp/draper_1200.webp" media="(min-width: 750px)" width="1145" height="686">
-    <source srcset="/img/webp/draper_750.webp" width="881" height="528">
-    <img srcset="/img/webp/draper_750.webp" width="881" height="528" loading="lazy">
-  </picture>
-
-  <div class="project__body">
-    <h4 class="project__title">Draperlabs</h4>
-    <ul class="project-roles h4 nav nav--inline">
-      <li class="nav__item project-role">Drupal 8, Front-end, Theming</li>
-    </ul>
-    <p>
-      Another component-based site using bricks. This approach empowered content editors through an increase in site control without messing with the integrity of the design.
-
-    </p>
-    <a href="https://www.draper.com/">
-      Visit <span class="visually-hidden">Draperlabs</span> Site
+  <footer class="card__footer">
+    <a href="/blog/post/updating-to-astro-1x-beta" class="card__cta">
+      Read updating to astrojs 1x beta
     </a>
+  </footer>
+</article>
+          </li><li class="card-group__item">
+            <article class="card card--xs">
+  <header class="card__header">
+    <h3 class="card__title">
+      The blog
+    </h3>
+    <time class="card__date" datetime="2022-06-10T00:00:00.000Z">
+      June 10, 2022
+    </time>
+  </header>
+  <div class="card__body">
+    <p>This is where I&#39;ll share things like what I&#39;ve learned, things I&#39;ve worked on, and improve my writing skills at the same time.</p>
   </div>
-</section>
-      </div>
-    </main>
-    <footer class="main-footer" role="contentinfo" id="contact">
+  <footer class="card__footer">
+    <a href="/blog/post/intro" class="card__cta">
+      Read the blog
+    </a>
+  </footer>
+</article>
+          </li>
+      </ul>
+    </section>
+  </main>
+  <footer class="main-footer" role="contentinfo" id="contact">
   <nav class="nav footer-nav" aria-label="Footer menu">
     <ul class="footer-nav__menu">
       <li class="footer-nav__menu-item">
@@ -213,4 +257,4 @@ export default Hero; -->
   </symbol>
 </svg>
 
-  </body></html>
+</body></html>
