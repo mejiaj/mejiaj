@@ -25,7 +25,7 @@ h1,
 %h1-style {
   font-weight: 400;
   margin-top: px-to-rem(30);
-  margin-bottom: 0;
+  margin-bottom: units(4);
   font-size: px-to-rem(61);
   line-height: 1.47;
   transition: font-size 0.25s $ease-primary;
@@ -41,7 +41,7 @@ h2,
   font-size: px-to-rem(48.83);
   line-height: 1.22;
   margin-top: px-to-rem(30);
-  margin-bottom: 0;
+  margin-bottom: units(4);
   transition: font-size 0.25s $ease-primary;
 
   @include mq(lg) {
@@ -53,7 +53,7 @@ h3 {
   font-weight: 400;
   font-size: px-to-rem(39.06);
   margin-top: px-to-rem(30);
-  margin-bottom: 0;
+  margin-bottom: units(4);
   line-height: 1.22;
   transition: font-size 0.25s $ease-primary;
 
@@ -65,7 +65,7 @@ h3 {
 h4 {
   font-weight: 400;
   margin-top: px-to-rem(30);
-  margin-bottom: 0;
+  margin-bottom: units(4);
   font-size: px-to-rem(31.25);
   line-height: 1.22;
   transition: font-size 0.25s $ease-primary;
@@ -78,7 +78,7 @@ h4 {
 h5 {
   font-weight: 400;
   margin-top: px-to-rem(30);
-  margin-bottom: 0;
+  margin-bottom: units(4);
   font-size: px-to-rem(25);
   line-height: 1.22;
   transition: font-size 0.25s $ease-primary;
@@ -91,7 +91,7 @@ h5 {
 h6 {
   font-weight: 400;
   margin-top: px-to-rem(30);
-  margin-bottom: 0;
+  margin-bottom: units(4);
   font-size: px-to-rem(20);
   line-height: 1.22;
   transition: font-size 0.25s $ease-primary;
