@@ -29,8 +29,7 @@
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
 <!-- /Favicons -->
-
-  <script type="module" src="/hoisted.baea1369.js"></script></head>
+  <script type="module" src="/_astro/hoisted.02f6918a.js"></script></head>
   <body>
     <a href="#main-content" class="skip-to-content">Skip to content</a>
     <header id="top" class="main-header" role="banner">
@@ -66,68 +65,90 @@
     </header>
     <main id="main-content">
       <div class="wrap">
-        <h1>Updating to AstroJS 1x beta</h1><time datetime="2022-06-20T00:00:00.000Z">June 20, 2022</time><p>When I originally implemented <a href="https://astro.build/">AstroJS</a> on this site, it was on version <code>0.20.12</code>. Almost a year later, I wanted to update to the latest version before I started implementing bigger features.</p><p>Based on semantic versioning the jump from <code>0.20.12</code> to <code>1.0.0-beta.36</code> is pretty big. Thankfully, the upgrade process wasn’t too bad.</p><h2 id="differences">Differences</h2><p>Configs had changed and my site wouldn’t run after upgrading. This was a bit of a surprise, but not unexpected. I headed over to the release changelogs found my version, <a href="https://github.com/withastro/astro/blob/main/packages/astro/CHANGELOG.md#02012"><code>0.20.12</code></a>. From there I started working my way up to see if I could find anything that would help me debug.</p><p>Below are some changes I did to get this little site working again.</p><h3 id="simpler-configs">Simpler configs</h3><p>Configs seemed to require less, that’s great! What I didn’t realize was part of making simpler configs was breaking up stuff that was previously built in. I now needed to import <code>defineConfig</code> from <code>astro/config</code>, pass my overrides, and export that.</p><pre class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #C9D1D9">// astro.config.mjs</span></span>
+        <h1>Updating to AstroJS 1x beta</h1><time datetime="2022-06-20T00:00:00.000Z">June 20, 2022</time><p>When I originally implemented <a href="https://astro.build/">AstroJS</a> on this site, it was on version <code>0.20.12</code>. Almost a year later, I wanted to update to the latest version before I started implementing bigger features.</p>
+<p>Based on semantic versioning the jump from <code>0.20.12</code> to <code>1.0.0-beta.36</code> is pretty big. Thankfully, the upgrade process wasn’t too bad.</p>
+<h2 id="differences">Differences</h2>
+<p>Configs had changed and my site wouldn’t run after upgrading. This was a bit of a surprise, but not unexpected. I headed over to the release changelogs found my version, <a href="https://github.com/withastro/astro/blob/main/packages/astro/CHANGELOG.md#02012"><code>0.20.12</code></a>. From there I started working my way up to see if I could find anything that would help me debug.</p>
+<p>Below are some changes I did to get this little site working again.</p>
+<h3 id="simpler-configs">Simpler configs</h3>
+<p>Configs seemed to require less, that’s great! What I didn’t realize was part of making simpler configs was breaking up stuff that was previously built in. I now needed to import <code>defineConfig</code> from <code>astro/config</code>, pass my overrides, and export that.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #C9D1D9">// astro.config.mjs</span></span>
 <span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span> export default {</span></span>
 <span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>   …Your overrides</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> import { defineConfig } from &quot;astro/config&quot;;</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> import { defineConfig } from "astro/config";</span></span>
 <span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span></span></span>
 <span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> // https://astro.build/config</span></span>
 <span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> export default defineConfig({</span></span>
 <span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>   …Your overrides</span></span>
 <span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> });</span></span>
-<span class="line"><span style="color: #C9D1D9">};</span></span></code></pre><p>Sitemaps are also no longer built-in. That’s now a plugin that you need to install and load separately. That makes sense, why load something by default that you might not even use.</p><pre class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #FF7B72">import</span><span style="color: #C9D1D9"> { defineConfig } </span><span style="color: #FF7B72">from</span><span style="color: #C9D1D9"> </span><span style="color: #A5D6FF">&quot;astro/config&quot;</span><span style="color: #C9D1D9">;</span></span>
-<span class="line"><span style="color: #FF7B72">import</span><span style="color: #C9D1D9"> sitemap </span><span style="color: #FF7B72">from</span><span style="color: #C9D1D9"> </span><span style="color: #A5D6FF">&quot;@astrojs/sitemap&quot;</span><span style="color: #C9D1D9">;</span></span>
+<span class="line"><span style="color: #C9D1D9">};</span></span></code></pre>
+<p>Sitemaps are also no longer built-in. That’s now a plugin that you need to install and load separately. That makes sense, why load something by default that you might not even use.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #FF7B72">import</span><span style="color: #C9D1D9"> { defineConfig } </span><span style="color: #FF7B72">from</span><span style="color: #C9D1D9"> </span><span style="color: #A5D6FF">"astro/config"</span><span style="color: #C9D1D9">;</span></span>
+<span class="line"><span style="color: #FF7B72">import</span><span style="color: #C9D1D9"> sitemap </span><span style="color: #FF7B72">from</span><span style="color: #C9D1D9"> </span><span style="color: #A5D6FF">"@astrojs/sitemap"</span><span style="color: #C9D1D9">;</span></span>
 <span class="line"></span>
 <span class="line"><span style="color: #8B949E">// https://astro.build/config</span></span>
 <span class="line"><span style="color: #FF7B72">export</span><span style="color: #FFA657"> </span><span style="color: #FF7B72">default</span><span style="color: #FFA657"> </span><span style="color: #D2A8FF">defineConfig</span><span style="color: #FFA657">({</span></span>
 <span class="line"><span style="color: #FFA657">  </span><span style="color: #C9D1D9">integrations: [</span><span style="color: #D2A8FF">sitemap</span><span style="color: #C9D1D9">()]</span></span>
-<span class="line"><span style="color: #FFA657">})</span><span style="color: #C9D1D9">;</span></span></code></pre><p>This website was originally a 1-page site, so there wasn’t much to it. Here’s a full diff of changes. You can see how much was no longer needed.</p><pre class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #C9D1D9">// astro.config.mjs</span></span>
+<span class="line"><span style="color: #FFA657">})</span><span style="color: #C9D1D9">;</span></span></code></pre>
+<p>This website was originally a 1-page site, so there wasn’t much to it. Here’s a full diff of changes. You can see how much was no longer needed.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #C9D1D9">// astro.config.mjs</span></span>
 <span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span> export default {</span></span>
-<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>  // projectRoot: &#39;.&#39;,     // Where to resolve all URLs relative to. Useful if you have a monorepo project.</span></span>
-<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>  pages: &#39;./src/pages&#39;, // Path to Astro components, pages, and data</span></span>
-<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>  dist: &#39;./dist&#39;,       // When running `astro build`, path to final static output</span></span>
-<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>  public: &#39;./public&#39;,   // A folder of static files Astro will copy to the root. Useful for favicons, images, and other files that don’t need processing.</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>  // projectRoot: '.',     // Where to resolve all URLs relative to. Useful if you have a monorepo project.</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>  pages: './src/pages', // Path to Astro components, pages, and data</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>  dist: './dist',       // When running `astro build`, path to final static output</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>  public: './public',   // A folder of static files Astro will copy to the root. Useful for favicons, images, and other files that don’t need processing.</span></span>
 <span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>  buildOptions: {</span></span>
-<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>    site: &#39;https://www.jmejia.com/&#39;,  // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.</span></span>
-<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>    sitemap: true,      // Generate sitemap (set to &quot;false&quot; to disable)</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>    site: 'https://www.jmejia.com/',  // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>    sitemap: true,      // Generate sitemap (set to "false" to disable)</span></span>
 <span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>  },</span></span>
 <span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>  devOptions: {</span></span>
 <span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>    // port: 3000,         // The port to run the dev server on.</span></span>
-<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>    // tailwindConfig: &#39;&#39;, // Path to tailwind.config.js if used, e.g. &#39;./tailwind.config.js&#39;</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>    // tailwindConfig: '', // Path to tailwind.config.js if used, e.g. './tailwind.config.js'</span></span>
 <span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>  },</span></span>
-<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>  renderers: [&#39;@astrojs/renderer-preact&#39;],</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>  renderers: ['@astrojs/renderer-preact'],</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>  import { defineConfig } from &quot;astro/config&quot;;</span></span>
-<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>  import sitemap from &quot;@astrojs/sitemap&quot;;</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>  import { defineConfig } from "astro/config";</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>  import sitemap from "@astrojs/sitemap";</span></span>
 <span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span></span></span>
 <span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>  // https://astro.build/config</span></span>
 <span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>  export default defineConfig({</span></span>
-<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>    site: &quot;https://www.jmejia.com/&quot;,</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>    site: "https://www.jmejia.com/",</span></span>
 <span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>    integrations: [sitemap()]</span></span>
 <span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>  });</span></span>
-<span class="line"><span style="color: #C9D1D9">};</span></span></code></pre><h3 id="fetching-data">Fetching data</h3><p>Data fetching in Portfolio examples also stopped working because that had changed as well. You now need to call an async function in <code>Astro.glob</code>, instead of <code>fetchContent</code>.</p><pre class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span> const projectPreviews = Astro.fetchContent(&#39;./project/**/*.md&#39;);</span></span>
-<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> const projectPreviews = await Astro.glob(&#39;./project/**/*.md&#39;);</span></span></code></pre><h3 id="template-changes">Template changes</h3><p>Once that I got rid of those initial <code>npm start</code> errors, I ran into a few more because of required template changes.</p><p>Using data inside of HTML elements no longer required quotes.</p><pre class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span> &lt;a href=&quot;{ navItem.url }&quot; class=&quot;nav__link&quot;&gt;</span></span>
-<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> &lt;a href={ navItem.url } class=&quot;nav__link&quot;&gt;</span></span></code></pre><p>The site examples on the homepage are powered by markdown files that include basic information like the project title, my role, a brief description of the work involved, and a link to visit the site.</p><p>That stopped working because I now needed to reference the markdown file’s frontmatter.</p><pre class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span> &lt;h4 class=&quot;project__title&quot;&gt;{ project.title }&lt;/h4&gt;</span></span>
-<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span> &lt;ul class=&quot;project-roles h4 nav nav--inline&quot;&gt;</span></span>
-<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>   &lt;li class=&quot;nav__item project-role&quot;&gt;{ project.role }&lt;/li&gt;</span></span>
-<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span> &lt;/ul&gt;</span></span>
-<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span> &lt;p&gt;</span></span>
+<span class="line"><span style="color: #C9D1D9">};</span></span></code></pre>
+<h3 id="fetching-data">Fetching data</h3>
+<p>Data fetching in Portfolio examples also stopped working because that had changed as well. You now need to call an async function in <code>Astro.glob</code>, instead of <code>fetchContent</code>.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span> const projectPreviews = Astro.fetchContent('./project/**/*.md');</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> const projectPreviews = await Astro.glob('./project/**/*.md');</span></span></code></pre>
+<h3 id="template-changes">Template changes</h3>
+<p>Once that I got rid of those initial <code>npm start</code> errors, I ran into a few more because of required template changes.</p>
+<p>Using data inside of HTML elements no longer required quotes.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span> &#x3C;a href="{ navItem.url }" class="nav__link"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> &#x3C;a href={ navItem.url } class="nav__link"></span></span></code></pre>
+<p>The site examples on the homepage are powered by markdown files that include basic information like the project title, my role, a brief description of the work involved, and a link to visit the site.</p>
+<p>That stopped working because I now needed to reference the markdown file’s frontmatter.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span> &#x3C;h4 class="project__title">{ project.title }&#x3C;/h4></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span> &#x3C;ul class="project-roles h4 nav nav--inline"></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>   &#x3C;li class="nav__item project-role">{ project.role }&#x3C;/li></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span> &#x3C;/ul></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span> &#x3C;p></span></span>
 <span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>   { project.description }</span></span>
-<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span> &lt;/p&gt;</span></span>
-<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span> &lt;a href={ project.cta }&gt;</span></span>
-<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>   Visit &lt;span class=&quot;visually-hidden&quot;&gt;{ project.title }&lt;/span&gt; Site</span></span>
-<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span> &lt;/a&gt;</span></span>
-<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> &lt;h4 class=&quot;project__title&quot;&gt;{ project.frontmatter.title }&lt;/h4&gt;</span></span>
-<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> &lt;ul class=&quot;project-roles h4 nav nav--inline&quot;&gt;</span></span>
-<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>   &lt;li class=&quot;nav__item project-role&quot;&gt;{ project.frontmatter.role }&lt;/li&gt;</span></span>
-<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> &lt;/ul&gt;</span></span>
-<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> &lt;p&gt;</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span> &#x3C;/p></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span> &#x3C;a href={ project.cta }></span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span>   Visit &#x3C;span class="visually-hidden">{ project.title }&#x3C;/span> Site</span></span>
+<span class="line"><span style="color: #FFA198"><span style="user-select: none;">-</span> &#x3C;/a></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> &#x3C;h4 class="project__title">{ project.frontmatter.title }&#x3C;/h4></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> &#x3C;ul class="project-roles h4 nav nav--inline"></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>   &#x3C;li class="nav__item project-role">{ project.frontmatter.role }&#x3C;/li></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> &#x3C;/ul></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> &#x3C;p></span></span>
 <span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>   { project.frontmatter.description }</span></span>
-<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> &lt;/p&gt;</span></span>
-<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> &lt;a href={ project.frontmatter.cta }&gt;</span></span>
-<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>   Visit &lt;span class=&quot;visually-hidden&quot;&gt;{ project.frontmatter.title }&lt;/span&gt; Site</span></span>
-<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> &lt;/a&gt;</span></span></code></pre><p>These template updates weren’t the worst, but definitely wished for a migration guide. You can view the full list of changes in the pull request <a href="https://github.com/mejiaj/mejiaj/pull/24">Upgrade to Astro 1x beta</a>.</p>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> &#x3C;/p></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> &#x3C;a href={ project.frontmatter.cta }></span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>   Visit &#x3C;span class="visually-hidden">{ project.frontmatter.title }&#x3C;/span> Site</span></span>
+<span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> &#x3C;/a></span></span></code></pre>
+<p>These template updates weren’t the worst, but definitely wished for a migration guide. You can view the full list of changes in the pull request <a href="https://github.com/mejiaj/mejiaj/pull/24">Upgrade to Astro 1x beta</a>.</p>
       </div>
     </main>
     <footer class="main-footer" role="contentinfo" id="contact">
@@ -136,28 +157,28 @@
       <li class="footer-nav__menu-item">
           <a href="#top" class="footer-nav__menu-link" aria-label="{ footerItem.aria_label }">
             <svg role="img" aria-hidden="true" class="footer__icon footer__icon--no-text icon">
-              <use xlink: href="#up-arrow"></use>
+              <use  xlink:href="#up-arrow"></use>
             </svg>
               
           </a>
         </li><li class="footer-nav__menu-item">
           <a href="mailto:me@jmejia.com" class="footer-nav__menu-link" aria-label="{ footerItem.aria_label }">
             <svg role="img" aria-hidden="true" class="footer__icon footer__icon--no-text icon">
-              <use xlink: href="#email"></use>
+              <use  xlink:href="#email"></use>
             </svg>
               Email
           </a>
         </li><li class="footer-nav__menu-item">
           <a href="https://codepen.io/mejiaj/" class="footer-nav__menu-link" aria-label="{ footerItem.aria_label }">
             <svg role="img" aria-hidden="true" class="footer__icon footer__icon--no-text icon">
-              <use xlink: href="#social-codepen"></use>
+              <use  xlink:href="#social-codepen"></use>
             </svg>
               Codepen
           </a>
         </li><li class="footer-nav__menu-item">
           <a href="https://www.linkedin.com/in/mejiajames/en" class="footer-nav__menu-link" aria-label="{ footerItem.aria_label }">
             <svg role="img" aria-hidden="true" class="footer__icon footer__icon--no-text icon">
-              <use xlink: href="#social-linkedin"></use>
+              <use  xlink:href="#social-linkedin"></use>
             </svg>
               LinkedIn
           </a>
@@ -184,5 +205,4 @@
     <path d="M348.3 216.4c-5 5.1-13.3 5.1-18.4.1L269 155.8v231.3c0 7.1-5.8 12.9-13 12.9s-13-5.8-13-12.9V155.8l-60.9 60.8c-5.1 5-13.3 4.9-18.4-.1-5-5.1-5-13.2.1-18.3l83-82.4c1.2-1.1 2.5-2 4.1-2.7 1.6-.7 3.3-1 5-1 3.4 0 6.6 1.3 9.1 3.7l83 82.4c5.2 4.9 5.3 13.1.3 18.2z"></path>
   </symbol>
 </svg>
-
   </body></html>

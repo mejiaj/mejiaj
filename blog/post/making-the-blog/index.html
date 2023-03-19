@@ -29,8 +29,7 @@
 <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
 <!-- /Favicons -->
-
-  <script type="module" src="/hoisted.baea1369.js"></script></head>
+  <script type="module" src="/_astro/hoisted.02f6918a.js"></script></head>
   <body>
     <a href="#main-content" class="skip-to-content">Skip to content</a>
     <header id="top" class="main-header" role="banner">
@@ -66,7 +65,15 @@
     </header>
     <main id="main-content">
       <div class="wrap">
-        <h1>Making the blog</h1><time datetime="2022-07-09T00:00:00.000Z">July 9, 2022</time><p>The <a href="/blog/post/intro">intro blog</a> post was 184 characters (31 words) or so the character/word count tool tells me. Despite the low word count, a lot of work went into creating the blog. More than I had originally anticipated.</p><p>Initially this website was created with static HTML/CSS. It only existed to describe myself and show a few select pieces of work. There were brief times I wanted to re-do it using a more flashy technology, but the site was fast and did everything it was supposed to do. There wasn’t much benefit of recreating it in a framework when I wasn’t going to do any active development on it.</p><p>In August of 2021 I discovered <a href="https://astro.build/">AstroJS</a> and was immediately drawn to it. The freedom the framework offered and I was impressed by how easy it was to get started. I <em>needed</em> to implement it on my site.</p><p>I decided that if I wanted to implement a framework I needed to get serious about developing on this site. I created issues <a href="https://github.com/mejiaj/mejiaj/issues">issues</a> to track work. Major features have their own pull request. I even have <a href="https://github.com/mejiaj/mejiaj/releases">releases</a> to capture the history of the site.</p><h2 id="may-28-2022">May 28, 2022</h2><p>The original date of the <a href="https://github.com/mejiaj/mejiaj/issues/26">GitHub issue</a> for creating the blog. That’s 22 days ago from when the blog originally launched.</p><p>When I created the issue I understood there’d be a lot of things I’d need to figure out and of course like anything in development there were bumps in the road.</p><p>Things like:</p><ul>
+        <h1>Making the blog</h1><time datetime="2022-07-09T00:00:00.000Z">July 9, 2022</time><p>The <a href="/blog/post/intro">intro blog</a> post was 184 characters (31 words) or so the character/word count tool tells me. Despite the low word count, a lot of work went into creating the blog. More than I had originally anticipated.</p>
+<p>Initially this website was created with static HTML/CSS. It only existed to describe myself and show a few select pieces of work. There were brief times I wanted to re-do it using a more flashy technology, but the site was fast and did everything it was supposed to do. There wasn’t much benefit of recreating it in a framework when I wasn’t going to do any active development on it.</p>
+<p>In August of 2021 I discovered <a href="https://astro.build/">AstroJS</a> and was immediately drawn to it. The freedom the framework offered and I was impressed by how easy it was to get started. I <em>needed</em> to implement it on my site.</p>
+<p>I decided that if I wanted to implement a framework I needed to get serious about developing on this site. I created issues <a href="https://github.com/mejiaj/mejiaj/issues">issues</a> to track work. Major features have their own pull request. I even have <a href="https://github.com/mejiaj/mejiaj/releases">releases</a> to capture the history of the site.</p>
+<h2 id="may-28-2022">May 28, 2022</h2>
+<p>The original date of the <a href="https://github.com/mejiaj/mejiaj/issues/26">GitHub issue</a> for creating the blog. That’s 22 days ago from when the blog originally launched.</p>
+<p>When I created the issue I understood there’d be a lot of things I’d need to figure out and of course like anything in development there were bumps in the road.</p>
+<p>Things like:</p>
+<ul>
 <li>Re-familiarizing myself with AstroJS</li>
 <li>Upgrading AstroJS — <code>1.0.0-beta.36</code> from <code>0.20.12</code>!</li>
 <li>Creating a basic <a href="/styleguide">styleguide</a> to standardize styles</li>
@@ -75,80 +82,118 @@
 <li>Improving navigation so it shows current page (even if it’s nested like this one)</li>
 <li>Refactoring markup to be more semantic</li>
 <li>Other accessibility improvements</li>
-</ul><h2 id="upgrading-astro">Upgrading astro</h2><p>In my day to day work we take security very seriously. Part of that is constantly looking at our dependencies and making sure they’re up-to-date. Before any serious development started on this new blog I needed to make sure all of my dependencies were up-to-date. You can read more about updating astro in this blog post - <a href="./updating-to-astro-1x-beta">Updating to Astro 1x beta</a></p><h2 id="creating-a-basic-styleguide">Creating a basic styleguide</h2><p>So now with an up-to-date environment I could finally re-familiarize myself with the design of the site. I migrated to SASS modules a few months before. There was a lot of work done that I wasn’t completely happy with. I still have an issue open for a complete refactor of the SASS, but one problem at a time.</p><p>I created this initial <a href="/styleguide">styleguide</a> to take an inventory of what I had available and what I needed to adjust or remove.</p><p>If I was going to start adding more to the site I needed a solid foundation of styles. Specifically spacing and sizing tokens. Then those required their own SASS functions so I could use them easily in my SASS. I didn’t want to start implementing features and get burned out because the basics required rewrites.</p><p>An example of tokens in SASS</p><pre class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #7EE787">ul</span><span style="color: #C9D1D9"> {</span></span>
+</ul>
+<h2 id="upgrading-astro">Upgrading astro</h2>
+<p>In my day to day work we take security very seriously. Part of that is constantly looking at our dependencies and making sure they’re up-to-date. Before any serious development started on this new blog I needed to make sure all of my dependencies were up-to-date. You can read more about updating astro in this blog post - <a href="./updating-to-astro-1x-beta">Updating to Astro 1x beta</a></p>
+<h2 id="creating-a-basic-styleguide">Creating a basic styleguide</h2>
+<p>So now with an up-to-date environment I could finally re-familiarize myself with the design of the site. I migrated to SASS modules a few months before. There was a lot of work done that I wasn’t completely happy with. I still have an issue open for a complete refactor of the SASS, but one problem at a time.</p>
+<p>I created this initial <a href="/styleguide">styleguide</a> to take an inventory of what I had available and what I needed to adjust or remove.</p>
+<p>If I was going to start adding more to the site I needed a solid foundation of styles. Specifically spacing and sizing tokens. Then those required their own SASS functions so I could use them easily in my SASS. I didn’t want to start implementing features and get burned out because the basics required rewrites.</p>
+<p>An example of tokens in SASS</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #7EE787">ul</span><span style="color: #C9D1D9"> {</span></span>
 <span class="line"><span style="color: #C9D1D9">  </span><span style="color: #79C0FF">margin-top</span><span style="color: #C9D1D9">: </span><span style="color: #D2A8FF">units(</span><span style="color: #79C0FF">4</span><span style="color: #D2A8FF">)</span><span style="color: #C9D1D9">;</span></span>
-<span class="line"><span style="color: #C9D1D9">}</span></span></code></pre><p>This gets a value from a predefined list of spacing units, strips the <code>px</code> unit, and finally converts it to <code>rem</code> units. So now my spacing and sizing is consistent.</p><h3 id="creating-the-blog-sections">Creating the blog sections</h3><p>With a working environment and some solid basic styles in place, I was excited to start creating the blog. I knew I needed to create two pages.</p><ol>
+<span class="line"><span style="color: #C9D1D9">}</span></span></code></pre>
+<p>This gets a value from a predefined list of spacing units, strips the <code>px</code> unit, and finally converts it to <code>rem</code> units. So now my spacing and sizing is consistent.</p>
+<h3 id="creating-the-blog-sections">Creating the blog sections</h3>
+<p>With a working environment and some solid basic styles in place, I was excited to start creating the blog. I knew I needed to create two pages.</p>
+<ol>
 <li>A page collecting all posts</li>
 <li>Pages for individual posts</li>
-</ol><p>I know Astro offers scaffolding several types of projects, but since I had gone with the bare bones setup in the beginning I didn’t want to scrap my work.</p><p>What was <strong>really</strong> helpful was the astro examples in their GitHub repo, specifically:</p><ul>
+</ol>
+<p>I know Astro offers scaffolding several types of projects, but since I had gone with the bare bones setup in the beginning I didn’t want to scrap my work.</p>
+<p>What was <strong>really</strong> helpful was the astro examples in their GitHub repo, specifically:</p>
+<ul>
 <li><a href="https://github.com/withastro/astro/tree/main/examples/blog">blog example [github]</a></li>
 <li><a href="https://github.com/withastro/astro/tree/main/examples/blog-multiple-authors">blog-multiple-authors [github]</a></li>
-</ul><p>So I created a new folder called <code>blog</code> with a <code>post</code> directory inside for markdown files.</p><p>I also created some basic reusable <a href="https://docs.astro.build/en/core-concepts/layouts/">layouts</a> for cleaner and more reusable templates.</p><p>A basic layout for creating a page looks like this:</p><pre class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #C9D1D9">// layouts/Base.astro</span></span>
+</ul>
+<p>So I created a new folder called <code>blog</code> with a <code>post</code> directory inside for markdown files.</p>
+<p>I also created some basic reusable <a href="https://docs.astro.build/en/core-concepts/layouts/">layouts</a> for cleaner and more reusable templates.</p>
+<p>A basic layout for creating a page looks like this:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #C9D1D9">// layouts/Base.astro</span></span>
 <span class="line"><span style="color: #C9D1D9">---</span></span>
-<span class="line"><span style="color: #C9D1D9">import MainHead from &quot;../components/MainHead.astro&quot;;</span></span>
-<span class="line"><span style="color: #C9D1D9">import Nav from &quot;../components/Nav/index.astro&quot;;</span></span>
-<span class="line"><span style="color: #C9D1D9">import Footer from &quot;../components/Footer/index.astro&quot;;</span></span>
+<span class="line"><span style="color: #C9D1D9">import MainHead from "../components/MainHead.astro";</span></span>
+<span class="line"><span style="color: #C9D1D9">import Nav from "../components/Nav/index.astro";</span></span>
+<span class="line"><span style="color: #C9D1D9">import Footer from "../components/Footer/index.astro";</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #C9D1D9">const { title } = Astro.props;</span></span>
-<span class="line"><span style="color: #C9D1D9">---</span></span>
-<span class="line"></span>
-<span class="line"><span style="color: #C9D1D9">&lt;</span><span style="color: #7EE787">html</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">lang</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;en&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">head</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">MainHead</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">title</span><span style="color: #C9D1D9">={ title } /&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;/</span><span style="color: #7EE787">head</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">body</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">a</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">href</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;#main-content&quot;</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;skip-to-content&quot;</span><span style="color: #C9D1D9">&gt;Skip to content&lt;/</span><span style="color: #7EE787">a</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">header</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">id</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;top&quot;</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;main-header&quot;</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">role</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;banner&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">      &lt;</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;main-header__inner wrap&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">        &lt;</span><span style="color: #7EE787">Nav</span><span style="color: #C9D1D9"> /&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">      &lt;/</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;/</span><span style="color: #7EE787">header</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">main</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">id</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;main-content&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">      &lt;</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">&quot;wrap&quot;</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">        &lt;</span><span style="color: #7EE787">slot</span><span style="color: #C9D1D9"> /&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">      &lt;/</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;/</span><span style="color: #7EE787">main</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">    &lt;</span><span style="color: #7EE787">Footer</span><span style="color: #C9D1D9"> /&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;/</span><span style="color: #7EE787">body</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">&lt;/</span><span style="color: #7EE787">html</span><span style="color: #C9D1D9">&gt;</span></span></code></pre><p>And you can re-use in another astro component like so:</p><pre class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #C9D1D9">// Example template</span></span>
-<span class="line"><span style="color: #C9D1D9">---</span></span>
-<span class="line"><span style="color: #C9D1D9">import Base from &quot;./Base.astro&quot;;</span></span>
+<span class="line"><span style="color: #C9D1D9">const </span><span style="color: #FF7B72">{</span><span style="color: #C9D1D9"> title </span><span style="color: #FF7B72">}</span><span style="color: #C9D1D9"> = Astro.props;</span></span>
 <span class="line"><span style="color: #C9D1D9">---</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #8B949E">&lt;!-- Set a custom page title --&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">&lt;</span><span style="color: #7EE787">Base</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">title</span><span style="color: #C9D1D9">={ content.title }&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #8B949E">&lt;!-- Set the header based on frontmatter title --&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">h1</span><span style="color: #C9D1D9">&gt;{ content.title }&lt;/</span><span style="color: #7EE787">h1</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #8B949E">&lt;!-- Slot is where the rest of the content will fit in --&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">slot</span><span style="color: #C9D1D9"> /&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">&lt;/</span><span style="color: #7EE787">Base</span><span style="color: #C9D1D9">&gt;</span></span></code></pre><p>Thanks to layouts I was able to reuse page markup to create a simple layout for individual blog posts.</p><pre class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #C9D1D9">// layouts/BlogPostBase.astro</span></span>
+<span class="line"><span style="color: #C9D1D9">&#x3C;</span><span style="color: #7EE787">html</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">lang</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">"en"</span><span style="color: #C9D1D9">></span></span>
+<span class="line"><span style="color: #C9D1D9">  &#x3C;</span><span style="color: #7EE787">head</span><span style="color: #C9D1D9">></span></span>
+<span class="line"><span style="color: #C9D1D9">    &#x3C;</span><span style="color: #7EE787">MainHead</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">title</span><span style="color: #C9D1D9">=</span><span style="color: #FF7B72">{</span><span style="color: #C9D1D9"> title </span><span style="color: #FF7B72">}</span><span style="color: #C9D1D9"> /></span></span>
+<span class="line"><span style="color: #C9D1D9">  &#x3C;/</span><span style="color: #7EE787">head</span><span style="color: #C9D1D9">></span></span>
+<span class="line"><span style="color: #C9D1D9">  &#x3C;</span><span style="color: #7EE787">body</span><span style="color: #C9D1D9">></span></span>
+<span class="line"><span style="color: #C9D1D9">    &#x3C;</span><span style="color: #7EE787">a</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">href</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">"#main-content"</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">"skip-to-content"</span><span style="color: #C9D1D9">>Skip to content&#x3C;/</span><span style="color: #7EE787">a</span><span style="color: #C9D1D9">></span></span>
+<span class="line"><span style="color: #C9D1D9">    &#x3C;</span><span style="color: #7EE787">header</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">id</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">"top"</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">"main-header"</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">role</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">"banner"</span><span style="color: #C9D1D9">></span></span>
+<span class="line"><span style="color: #C9D1D9">      &#x3C;</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">"main-header__inner wrap"</span><span style="color: #C9D1D9">></span></span>
+<span class="line"><span style="color: #C9D1D9">        &#x3C;</span><span style="color: #7EE787">Nav</span><span style="color: #C9D1D9"> /></span></span>
+<span class="line"><span style="color: #C9D1D9">      &#x3C;/</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9">></span></span>
+<span class="line"><span style="color: #C9D1D9">    &#x3C;/</span><span style="color: #7EE787">header</span><span style="color: #C9D1D9">></span></span>
+<span class="line"><span style="color: #C9D1D9">    &#x3C;</span><span style="color: #7EE787">main</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">id</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">"main-content"</span><span style="color: #C9D1D9">></span></span>
+<span class="line"><span style="color: #C9D1D9">      &#x3C;</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">class</span><span style="color: #C9D1D9">=</span><span style="color: #A5D6FF">"wrap"</span><span style="color: #C9D1D9">></span></span>
+<span class="line"><span style="color: #C9D1D9">        &#x3C;</span><span style="color: #7EE787">slot</span><span style="color: #C9D1D9"> /></span></span>
+<span class="line"><span style="color: #C9D1D9">      &#x3C;/</span><span style="color: #7EE787">div</span><span style="color: #C9D1D9">></span></span>
+<span class="line"><span style="color: #C9D1D9">    &#x3C;/</span><span style="color: #7EE787">main</span><span style="color: #C9D1D9">></span></span>
+<span class="line"><span style="color: #C9D1D9">    &#x3C;</span><span style="color: #7EE787">Footer</span><span style="color: #C9D1D9"> /></span></span>
+<span class="line"><span style="color: #C9D1D9">  &#x3C;/</span><span style="color: #7EE787">body</span><span style="color: #C9D1D9">></span></span>
+<span class="line"><span style="color: #C9D1D9">&#x3C;/</span><span style="color: #7EE787">html</span><span style="color: #C9D1D9">></span></span></code></pre>
+<p>And you can re-use in another astro component like so:</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #C9D1D9">// Example template</span></span>
 <span class="line"><span style="color: #C9D1D9">---</span></span>
-<span class="line"><span style="color: #C9D1D9">import Base from &quot;./Base.astro&quot;;</span></span>
+<span class="line"><span style="color: #C9D1D9">import Base from "./Base.astro";</span></span>
+<span class="line"><span style="color: #C9D1D9">---</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #C9D1D9">const { content } = Astro.props;</span></span>
+<span class="line"><span style="color: #8B949E">&#x3C;!-- Set a custom page title --></span></span>
+<span class="line"><span style="color: #C9D1D9">&#x3C;</span><span style="color: #7EE787">Base</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">title</span><span style="color: #C9D1D9">=</span><span style="color: #FF7B72">{</span><span style="color: #C9D1D9"> content.title </span><span style="color: #FF7B72">}</span><span style="color: #C9D1D9">></span></span>
+<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #8B949E">&#x3C;!-- Set the header based on frontmatter title --></span></span>
+<span class="line"><span style="color: #C9D1D9">  &#x3C;</span><span style="color: #7EE787">h1</span><span style="color: #C9D1D9">></span><span style="color: #FF7B72">{</span><span style="color: #C9D1D9"> content.title </span><span style="color: #FF7B72">}</span><span style="color: #C9D1D9">&#x3C;/</span><span style="color: #7EE787">h1</span><span style="color: #C9D1D9">></span></span>
+<span class="line"><span style="color: #C9D1D9">  </span><span style="color: #8B949E">&#x3C;!-- Slot is where the rest of the content will fit in --></span></span>
+<span class="line"><span style="color: #C9D1D9">  &#x3C;</span><span style="color: #7EE787">slot</span><span style="color: #C9D1D9"> /></span></span>
+<span class="line"><span style="color: #C9D1D9">&#x3C;/</span><span style="color: #7EE787">Base</span><span style="color: #C9D1D9">></span></span></code></pre>
+<p>Thanks to layouts I was able to reuse page markup to create a simple layout for individual blog posts.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #C9D1D9">// layouts/BlogPostBase.astro</span></span>
+<span class="line"><span style="color: #C9D1D9">---</span></span>
+<span class="line"><span style="color: #C9D1D9">import Base from "./Base.astro";</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C9D1D9">const </span><span style="color: #FF7B72">{</span><span style="color: #C9D1D9"> content </span><span style="color: #FF7B72">}</span><span style="color: #C9D1D9"> = Astro.props;</span></span>
 <span class="line"><span style="color: #C9D1D9">let timestamp = new Date(content.date);</span></span>
 <span class="line"><span style="color: #C9D1D9">---</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #C9D1D9">&lt;</span><span style="color: #7EE787">Base</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">title</span><span style="color: #C9D1D9">={ content.title }&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">h1</span><span style="color: #C9D1D9">&gt;{ content.title }&lt;/</span><span style="color: #7EE787">h1</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">time</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">datetime</span><span style="color: #C9D1D9">={ timestamp.</span><span style="color: #D2A8FF">toISOString</span><span style="color: #C9D1D9">() }&gt;{ content.date }&lt;/</span><span style="color: #7EE787">time</span><span style="color: #C9D1D9">&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">  &lt;</span><span style="color: #7EE787">slot</span><span style="color: #C9D1D9"> /&gt;</span></span>
-<span class="line"><span style="color: #C9D1D9">&lt;/</span><span style="color: #7EE787">Base</span><span style="color: #C9D1D9">&gt;</span></span></code></pre><p><code>BlogPostBase.astro</code> allows me to have pure markdown posts, I just need specify what layout I want to use.</p><pre class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #C9D1D9">// pages/blog/post/intro.md</span></span>
-<span class="line"><span style="color: #79C0FF; font-weight: bold">---</span></span>
+<span class="line"><span style="color: #C9D1D9">&#x3C;</span><span style="color: #7EE787">Base</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">title</span><span style="color: #C9D1D9">=</span><span style="color: #FF7B72">{</span><span style="color: #C9D1D9"> content.title </span><span style="color: #FF7B72">}</span><span style="color: #C9D1D9">></span></span>
+<span class="line"><span style="color: #C9D1D9">  &#x3C;</span><span style="color: #7EE787">h1</span><span style="color: #C9D1D9">></span><span style="color: #FF7B72">{</span><span style="color: #C9D1D9"> content.title </span><span style="color: #FF7B72">}</span><span style="color: #C9D1D9">&#x3C;/</span><span style="color: #7EE787">h1</span><span style="color: #C9D1D9">></span></span>
+<span class="line"><span style="color: #C9D1D9">  &#x3C;</span><span style="color: #7EE787">time</span><span style="color: #C9D1D9"> </span><span style="color: #79C0FF">datetime</span><span style="color: #C9D1D9">=</span><span style="color: #FF7B72">{</span><span style="color: #C9D1D9"> timestamp.</span><span style="color: #D2A8FF">toISOString</span><span style="color: #C9D1D9">() </span><span style="color: #FF7B72">}</span><span style="color: #C9D1D9">></span><span style="color: #FF7B72">{</span><span style="color: #C9D1D9"> content.date </span><span style="color: #FF7B72">}</span><span style="color: #C9D1D9">&#x3C;/</span><span style="color: #7EE787">time</span><span style="color: #C9D1D9">></span></span>
+<span class="line"><span style="color: #C9D1D9">  &#x3C;</span><span style="color: #7EE787">slot</span><span style="color: #C9D1D9"> /></span></span>
+<span class="line"><span style="color: #C9D1D9">&#x3C;/</span><span style="color: #7EE787">Base</span><span style="color: #C9D1D9">></span></span></code></pre>
+<p><code>BlogPostBase.astro</code> allows me to have pure markdown posts, I just need specify what layout I want to use.</p>
+<pre is:raw="" class="astro-code" style="background-color: #0d1117; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;"><code><span class="line"><span style="color: #C9D1D9">// pages/blog/post/intro.md</span></span>
+<span class="line"><span style="color: #79C0FF; font-style: italic">---</span></span>
 <span class="line"><span style="color: #C9D1D9">layout: ../../../layouts/BlogPostBase.astro</span></span>
 <span class="line"><span style="color: #C9D1D9">title: The blog</span></span>
 <span class="line"><span style="color: #C9D1D9">date: June 10, 2022</span></span>
-<span class="line"><span style="color: #C9D1D9">description: This is where I&#39;ll share things like what I&#39;ve learned, things I&#39;ve worked on, and improve my writing skills at the same time.</span></span>
-<span class="line"><span style="color: #79C0FF; font-weight: bold">---</span></span>
+<span class="line"><span style="color: #C9D1D9">description: This is where I'll share things like what I've learned, things I've worked on, and improve my writing skills at the same time.</span></span>
+<span class="line"><span style="color: #79C0FF; font-style: italic">---</span></span>
 <span class="line"></span>
-<span class="line"><span style="color: #C9D1D9">The reason for creating this is mostly selfish. I want to improve my writing skills, share what I&#39;ve learned, and things I&#39;ve worked on.</span></span>
+<span class="line"><span style="color: #C9D1D9">The reason for creating this is mostly selfish. I want to improve my writing skills, share what I've learned, and things I've worked on.</span></span>
 <span class="line"></span>
 <span class="line"><span style="color: #C9D1D9">Plus, writing in markdown is surprisingly fun!</span></span>
-<span class="line"></span></code></pre><h2 id="dealing-with-dates">Dealing with dates</h2><p>If you look at the example above you’ll see a date entry. That’s used in blog listings and posts in a <code>&lt;time /&gt;</code> element. This is intentional and is part of the push for more semantic markup on the site. It was also a good refresher on working with dates with native javascript.</p><p>The <code>&lt;time /&gt;</code> represents a specific point in time. You can have a human readable date inside, but you need to specify a valid timestamp in the <code>datetime</code> attribute.</p><p>Initially I used <code>date.toDateString()</code> to get something like <code>Sun Jun 19 2022</code>. This was great <strong>until</strong> I realized that it was showing the incorrect date. The <code>toDateString()</code> function didn’t include a timezone or additional data, so it wasn’t returning an accurate date. What worked was switching to <code>toISOString()</code> for the timestamp instead of trying to prettify the date.</p><p>Yes, I could’ve used a date library to handle all of this. If I did that then I wouldn’t have learned anything and I’d have yet another dependency to worry about.</p><h2 id="accessibility-updates">Accessibility updates</h2><p>Accessibility is important to me. This site is still a work in progress, but I felt I needed to dedicate an accessibility pass to all components I touched.</p><p>Some work involved</p><ul>
+<span class="line"></span></code></pre>
+<h2 id="dealing-with-dates">Dealing with dates</h2>
+<p>If you look at the example above you’ll see a date entry. That’s used in blog listings and posts in a <code>&#x3C;time /></code> element. This is intentional and is part of the push for more semantic markup on the site. It was also a good refresher on working with dates with native javascript.</p>
+<p>The <code>&#x3C;time /></code> represents a specific point in time. You can have a human readable date inside, but you need to specify a valid timestamp in the <code>datetime</code> attribute.</p>
+<p>Initially I used <code>date.toDateString()</code> to get something like <code>Sun Jun 19 2022</code>. This was great <strong>until</strong> I realized that it was showing the incorrect date. The <code>toDateString()</code> function didn’t include a timezone or additional data, so it wasn’t returning an accurate date. What worked was switching to <code>toISOString()</code> for the timestamp instead of trying to prettify the date.</p>
+<p>Yes, I could’ve used a date library to handle all of this. If I did that then I wouldn’t have learned anything and I’d have yet another dependency to worry about.</p>
+<h2 id="accessibility-updates">Accessibility updates</h2>
+<p>Accessibility is important to me. This site is still a work in progress, but I felt I needed to dedicate an accessibility pass to all components I touched.</p>
+<p>Some work involved</p>
+<ul>
 <li>Removing unnecessary roles (like banner on header element)</li>
 <li>Adding aria attributes to navigation dropdown</li>
 <li>Ensure the use of semantic markup</li>
-</ul><p>One of my goals is to integrate automated accessibility testing so I can make sure the site stays accessible.</p><h2 id="conclusion">Conclusion</h2><p>As you can see from this long writeup <strong>a lot</strong> of work went into this blog. I enjoyed the challenge and appreciate the lessons learned!</p><p>Looking forward to improving the site over time and writing more about what I’ve learned. Thanks for reading.</p>
+</ul>
+<p>One of my goals is to integrate automated accessibility testing so I can make sure the site stays accessible.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>As you can see from this long writeup <strong>a lot</strong> of work went into this blog. I enjoyed the challenge and appreciate the lessons learned!</p>
+<p>Looking forward to improving the site over time and writing more about what I’ve learned. Thanks for reading.</p>
       </div>
     </main>
     <footer class="main-footer" role="contentinfo" id="contact">
@@ -157,28 +202,28 @@
       <li class="footer-nav__menu-item">
           <a href="#top" class="footer-nav__menu-link" aria-label="{ footerItem.aria_label }">
             <svg role="img" aria-hidden="true" class="footer__icon footer__icon--no-text icon">
-              <use xlink: href="#up-arrow"></use>
+              <use  xlink:href="#up-arrow"></use>
             </svg>
               
           </a>
         </li><li class="footer-nav__menu-item">
           <a href="mailto:me@jmejia.com" class="footer-nav__menu-link" aria-label="{ footerItem.aria_label }">
             <svg role="img" aria-hidden="true" class="footer__icon footer__icon--no-text icon">
-              <use xlink: href="#email"></use>
+              <use  xlink:href="#email"></use>
             </svg>
               Email
           </a>
         </li><li class="footer-nav__menu-item">
           <a href="https://codepen.io/mejiaj/" class="footer-nav__menu-link" aria-label="{ footerItem.aria_label }">
             <svg role="img" aria-hidden="true" class="footer__icon footer__icon--no-text icon">
-              <use xlink: href="#social-codepen"></use>
+              <use  xlink:href="#social-codepen"></use>
             </svg>
               Codepen
           </a>
         </li><li class="footer-nav__menu-item">
           <a href="https://www.linkedin.com/in/mejiajames/en" class="footer-nav__menu-link" aria-label="{ footerItem.aria_label }">
             <svg role="img" aria-hidden="true" class="footer__icon footer__icon--no-text icon">
-              <use xlink: href="#social-linkedin"></use>
+              <use  xlink:href="#social-linkedin"></use>
             </svg>
               LinkedIn
           </a>
@@ -205,5 +250,4 @@
     <path d="M348.3 216.4c-5 5.1-13.3 5.1-18.4.1L269 155.8v231.3c0 7.1-5.8 12.9-13 12.9s-13-5.8-13-12.9V155.8l-60.9 60.8c-5.1 5-13.3 4.9-18.4-.1-5-5.1-5-13.2.1-18.3l83-82.4c1.2-1.1 2.5-2 4.1-2.7 1.6-.7 3.3-1 5-1 3.4 0 6.6 1.3 9.1 3.7l83 82.4c5.2 4.9 5.3 13.1.3 18.2z"></path>
   </symbol>
 </svg>
-
   </body></html>
