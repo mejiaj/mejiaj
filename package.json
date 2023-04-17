@@ -10,9 +10,9 @@
     "build": "astro build"
   },
   "devDependencies": {
-    "@astrojs/sitemap": "^1.2.1",
-    "astro": "^2.1.3",
-    "sass": "^1.59.3",
+    "@astrojs/sitemap": "^1.2.2",
+    "astro": "^2.3.0",
+    "sass": "^1.62.0",
     "scroll-out": "^2.2.12"
   },
   "dependencies": {
