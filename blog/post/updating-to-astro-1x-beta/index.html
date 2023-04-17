@@ -65,7 +65,10 @@
     </header>
     <main id="main-content">
       <div class="wrap">
-        <h1>Updating to AstroJS 1x beta</h1><time datetime="2022-06-20T00:00:00.000Z">June 20, 2022</time><p>When I originally implemented <a href="https://astro.build/">AstroJS</a> on this site, it was on version <code>0.20.12</code>. Almost a year later, I wanted to update to the latest version before I started implementing bigger features.</p>
+        
+  <h1>Updating to AstroJS 1x beta</h1>
+  <time datetime="2022-06-20T00:00:00.000Z">June 20, 2022</time>
+  <p>When I originally implemented <a href="https://astro.build/">AstroJS</a> on this site, it was on version <code>0.20.12</code>. Almost a year later, I wanted to update to the latest version before I started implementing bigger features.</p>
 <p>Based on semantic versioning the jump from <code>0.20.12</code> to <code>1.0.0-beta.36</code> is pretty big. Thankfully, the upgrade process wasn’t too bad.</p>
 <h2 id="differences">Differences</h2>
 <p>Configs had changed and my site wouldn’t run after upgrading. This was a bit of a surprise, but not unexpected. I headed over to the release changelogs found my version, <a href="https://github.com/withastro/astro/blob/main/packages/astro/CHANGELOG.md#02012"><code>0.20.12</code></a>. From there I started working my way up to see if I could find anything that would help me debug.</p>
@@ -149,6 +152,7 @@
 <span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span>   Visit &#x3C;span class="visually-hidden">{ project.frontmatter.title }&#x3C;/span> Site</span></span>
 <span class="line"><span style="color: #7EE787"><span style="user-select: none;">+</span> &#x3C;/a></span></span></code></pre>
 <p>These template updates weren’t the worst, but definitely wished for a migration guide. You can view the full list of changes in the pull request <a href="https://github.com/mejiaj/mejiaj/pull/24">Upgrade to Astro 1x beta</a>.</p>
+
       </div>
     </main>
     <footer class="main-footer" role="contentinfo" id="contact">
