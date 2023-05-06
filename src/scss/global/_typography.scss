@@ -194,7 +194,7 @@ a {
   transition: 0.2s $ease-primary;
 
   &::after {
-    content: '';
+    content: "";
     background-color: $c-primary;
     border-bottom: 1px solid;
     position: absolute;

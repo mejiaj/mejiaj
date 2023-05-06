@@ -31,7 +31,7 @@
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     background-color: $c-primary;
     width: inherit;
     height: inherit;
@@ -49,7 +49,6 @@
     bottom: px-to-rem(-9);
   }
 }
-
 
 .is-active .line__wrap {
   background-color: transparent;

@@ -21,7 +21,7 @@
   order: 2;
   width: 100%;
 
-  @include mq('md') {
+  @include mq("md") {
     display: flex;
     align-items: end;
     justify-content: space-between;
