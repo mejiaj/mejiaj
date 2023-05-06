@@ -5,15 +5,20 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev & npm run watch:sass",
+    "lint:sass": "npx stylelint '**/*.scss'",
+    "prettier:sass": "npx prettier --write '**/*.scss'",
     "build:sass": "sass './src/scss/styles.scss' './public/styles.css'",
     "watch:sass": "sass './src/scss/styles.scss' './public/styles.css' --watch",
     "build": "astro build"
   },
   "devDependencies": {
+    "@18f/identity-stylelint-config": "^2.0.0",
     "@astrojs/sitemap": "^1.2.2",
     "astro": "^2.3.0",
+    "prettier": "^2.8.8",
     "sass": "^1.62.0",
-    "scroll-out": "^2.2.12"
+    "scroll-out": "^2.2.12",
+    "stylelint": "^15.6.1"
   },
   "dependencies": {
     "scroll-out": "^2.2.12"
