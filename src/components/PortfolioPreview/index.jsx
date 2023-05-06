@@ -19,7 +19,7 @@
 //           ))}
 //         </div>
 //         <a className={Styles.link} href={project.url}>
-//           <span className={Styles.linkInner}>View</span>
+//           <span className={Styles.link__inner}>View</span>
 //         </a>
 //       </div>
 //     </div>
