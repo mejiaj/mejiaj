@@ -12,19 +12,19 @@ const SmoothScroll = () => {
     let clickedElement = document.querySelector(`${anchorHash}`);
 
     if (!clickedElement) {
-      console.error(`Element doesn't exist with id ${anchorHash}`)
+      console.error(`Element doesn't exist with id ${anchorHash}`);
       return;
     }
 
     clickedElement.scrollIntoView({
-      behavior: 'smooth'
+      behavior: "smooth",
     });
 
     clickedElement.focus();
   };
 
   const init = () => {
-    links.forEach(link => link.addEventListener('click', scrollToElement));
+    links.forEach((link) => link.addEventListener("click", scrollToElement));
   };
 
   return init();

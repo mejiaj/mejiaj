@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "start": "astro dev & npm run watch:sass",
     "lint:sass": "npx stylelint '**/*.scss'",
+    "prettier:js": "npx prettier --write './src/**/*.js'",
     "prettier:sass": "npx prettier --write '**/*.scss'",
     "build:sass": "sass './src/scss/styles.scss' './public/styles.css'",
     "watch:sass": "sass './src/scss/styles.scss' './public/styles.css' --watch",
