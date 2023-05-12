@@ -1,4 +1,4 @@
-import ScrollOut from "scroll-out";
+import ScrollOut from 'scroll-out';
 
 ScrollOut({
   once: true,
