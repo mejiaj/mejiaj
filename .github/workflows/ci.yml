@@ -1,8 +1,7 @@
 name: CI
 on: [push]
 jobs:
-  stylelint:
-    name: Linting
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -12,8 +11,8 @@ jobs:
       - name: Install packages
         run: npm i
 
-      - name: Run linting tests
+      - name: Check linting
         run: npm run lint
 
-      - name: Run formatting tests
+      - name: Check formatting
         run: npm run prettier
