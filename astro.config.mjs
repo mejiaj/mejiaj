@@ -9,7 +9,7 @@ export default defineConfig({
     shikiConfig: {
       theme: "github-dark",
       wrap: true,
-    }
+    },
   },
-  integrations: [sitemap()]
+  integrations: [sitemap()],
 });
