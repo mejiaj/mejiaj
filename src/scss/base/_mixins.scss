@@ -1,5 +1,5 @@
-@use 'sass:map';
-@use 'variables' as *;
+@use "sass:map";
+@use "variables" as *;
 
 // Media Queries from _variables.scss
 @mixin mq($breakpoint) {

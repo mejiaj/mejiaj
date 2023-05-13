@@ -34,7 +34,7 @@
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
@@ -50,7 +50,7 @@
   }
 
   &::after {
-    content: '';
+    content: "";
     background-color: $c-black;
     border-bottom: 1px solid;
     height: 100%;

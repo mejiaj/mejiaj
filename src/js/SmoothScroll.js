@@ -1,33 +1,23 @@
-const SmoothScroll = () => {
-  let links = document.querySelectorAll("a[href*='#']");
+const links = document.querySelectorAll("a[href*='#']");
 
-  if (!links.length) {
-    return;
+const scrollToElement = (e) => {
+  e.preventDefault();
+
+  const anchorHash = e.currentTarget.hash;
+  const clickedElement = document.querySelector(`${anchorHash}`);
+
+  if (!clickedElement) {
+    throw new Error(`Element doesn't exist with id ${anchorHash}`);
   }
 
-  const scrollToElement = (e) => {
-    e.preventDefault();
+  clickedElement.scrollIntoView({
+    behavior: "smooth",
+  });
 
-    const anchorHash = e.currentTarget.hash;
-    let clickedElement = document.querySelector(`${anchorHash}`);
-
-    if (!clickedElement) {
-      console.error(`Element doesn't exist with id ${anchorHash}`)
-      return;
-    }
-
-    clickedElement.scrollIntoView({
-      behavior: 'smooth'
-    });
-
-    clickedElement.focus();
-  };
-
-  const init = () => {
-    links.forEach(link => link.addEventListener('click', scrollToElement));
-  };
-
-  return init();
+  clickedElement.focus();
 };
 
-export default SmoothScroll;
+const init = () =>
+  links.forEach((link) => link.addEventListener("click", scrollToElement));
+
+export default init;

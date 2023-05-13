@@ -7,16 +7,16 @@ $colors: (
   "green": #12d178,
   "green-60": #00a676,
   "black": #121619,
-  "white": #c8d3d5
+  "white": #c8d3d5,
 );
 
 $state-colors: (
-  "visited": map.get($colors, "green-60")
+  "visited": map.get($colors, "green-60"),
 );
 
 $theme-colors: (
   "primary": map.get($colors, "green"),
-  "primary-dark": map.get($colors, "green-60")
+  "primary-dark": map.get($colors, "green-60"),
 );
 
 // TODO - Replace these variables with a color function
@@ -44,9 +44,8 @@ $spacing: (
   10: 45px,
   11: 72px,
   12: 75px,
-  13: 120px
+  13: 120px,
 );
-
 
 // ==========================================================================
 // Breakpoints
@@ -73,7 +72,7 @@ $z-layers: (
   layer-2: 2,
   layer-3: 3,
   menu: 100,
-  overlay: 900
+  overlay: 900,
 );
 
 // ==========================================================================
