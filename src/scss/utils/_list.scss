@@ -1,3 +1,9 @@
+@use "../base/" as *;
+
+li::marker {
+  color: $c-primary-dk;
+}
+
 .u-list--unstyled {
   list-style: none;
 }

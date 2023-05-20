@@ -3,7 +3,7 @@
 body {
   background-color: $c-black;
   color: $c-white;
-  font-size: px-to-rem(20);
+  font-size: px-to-rem(21);
   font-family: $font-primary;
   font-weight: 300;
   line-height: 1.5;
@@ -13,7 +13,7 @@ body {
   transition: font-size 0.25s $ease-primary;
 
   @include mq(xl) {
-    font-size: px-to-rem(25);
+    font-size: px-to-rem(24);
   }
 
   @supports (font-size-adjust: 1) {
@@ -22,88 +22,80 @@ body {
 }
 
 h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+h1,
 %h1-style {
+  font-size: px-to-rem(45);
   font-weight: 400;
-  margin-top: px-to-rem(30);
+  line-height: 1.1;
   margin-bottom: units(4);
-  font-size: px-to-rem(61);
-  line-height: 1.47;
+  margin-top: px-to-rem(30);
   transition: font-size 0.25s $ease-primary;
 
-  @include mq(lg) {
-    font-size: px-to-rem(61.03);
+  @include mq(md) {
+    font-size: px-to-rem(57);
   }
 }
 
 h2,
 %h2-style {
+  font-size: px-to-rem(39);
   font-weight: 400;
-  font-size: px-to-rem(48.83);
   line-height: 1.22;
-  margin-top: px-to-rem(30);
   margin-bottom: units(4);
+  margin-top: px-to-rem(30);
   transition: font-size 0.25s $ease-primary;
 
   @include mq(lg) {
-    font-size: px-to-rem(48.82);
+    font-size: px-to-rem(48);
   }
 }
 
 h3 {
+  font-size: px-to-rem(36);
   font-weight: 400;
-  font-size: px-to-rem(39.06);
-  margin-top: px-to-rem(30);
-  margin-bottom: units(4);
   line-height: 1.22;
+  margin-bottom: units(4);
+  margin-top: px-to-rem(30);
   transition: font-size 0.25s $ease-primary;
-
-  @include mq(lg) {
-    font-size: px-to-rem(39.06);
-  }
 }
 
 h4 {
+  font-size: px-to-rem(33);
   font-weight: 400;
-  margin-top: px-to-rem(30);
-  margin-bottom: units(4);
-  font-size: px-to-rem(31.25);
   line-height: 1.22;
+  margin-bottom: units(4);
+  margin-top: px-to-rem(33);
   transition: font-size 0.25s $ease-primary;
-
-  @include mq(lg) {
-    font-size: px-to-rem(31.25);
-  }
 }
 
 h5 {
+  font-size: px-to-rem(30);
   font-weight: 400;
-  margin-top: px-to-rem(30);
-  margin-bottom: units(4);
-  font-size: px-to-rem(25);
   line-height: 1.22;
+  margin-bottom: units(4);
+  margin-top: px-to-rem(30);
   transition: font-size 0.25s $ease-primary;
 
   @include mq(lg) {
-    font-size: px-to-rem(25);
+    font-size: px-to-rem(24);
   }
 }
 
 h6 {
+  font-size: px-to-rem(21);
   font-weight: 400;
-  margin-top: px-to-rem(30);
-  margin-bottom: units(4);
-  font-size: px-to-rem(20);
   line-height: 1.22;
+  margin-bottom: units(4);
+  margin-top: px-to-rem(30);
   transition: font-size 0.25s $ease-primary;
-}
-
-.display {
-  font-size: px-to-rem(48.8);
-  transition: font-size 0.25s $ease-primary;
-
-  @include mq(md) {
-    font-size: px-to-rem(76.3);
-  }
 }
 
 b,
@@ -112,15 +104,19 @@ strong {
 }
 
 p {
-  max-width: 60ch;
-  margin-bottom: px-to-rem(30);
-  line-height: 1.5;
   font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: px-to-rem(30);
+  max-width: 60ch;
   transition: font-size 0.25s $ease-primary;
 }
 
+p:first-of-type {
+  margin-top: units(6);
+}
+
 hr {
-  border: 0;
+  border-bottom: 0;
   border-top: 2px solid #999999;
   height: 0;
   margin: 7.6em auto;
@@ -129,11 +125,9 @@ hr {
 }
 
 .lead-in {
+  font-size: px-to-rem(25);
   margin-top: 0;
 
-  @include mq(md) {
-    font-size: px-to-rem(25);
-  }
   @include mq(lg) {
     font-size: px-to-rem(30);
   }
@@ -197,13 +191,13 @@ a {
     content: "";
     background-color: $c-primary;
     border-bottom: 1px solid;
-    position: absolute;
     bottom: 0;
-    left: px-to-rem(-4);
-    right: px-to-rem(-4);
     height: 100%;
-    transform: scale(1, 0);
+    left: px-to-rem(-4);
+    position: absolute;
+    right: px-to-rem(-4);
     transform-origin: bottom left;
+    transform: scale(1, 0);
     transition: transform 0.2s $ease-primary;
     z-index: z(under);
   }
@@ -222,9 +216,11 @@ a {
 code,
 pre {
   font-family: "Fira code", monospace;
-  font-size: 0.9rem;
+  font-size: px-to-rem(15);
 }
 
 .astro-code {
+  margin-top: 0;
+  margin-bottom: px-to-rem(30);
   padding: units(3);
 }
