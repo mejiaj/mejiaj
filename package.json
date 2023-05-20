@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev & npm run watch:sass",
+    "start": "astro dev",
     "lint": "npm run lint:sass & npm run lint:js",
     "lint:js": "npx eslint './src/**/*.js'",
     "lint:sass": "npx stylelint '**/*.scss'",
@@ -14,7 +14,6 @@
     "prettier:fix:js": "npx prettier --write './src/**/*.js'",
     "prettier:fix:sass": "npx prettier --write '**/*.{sass,scss}'",
     "build:sass": "sass './src/scss/styles.scss' './public/styles.css'",
-    "watch:sass": "sass './src/scss/styles.scss' './public/styles.css' --watch",
     "build": "astro build"
   },
   "devDependencies": {
@@ -32,6 +31,7 @@
     "stylelint": "^15.6.1"
   },
   "dependencies": {
+    "balance-text": "^3.3.1",
     "scroll-out": "^2.2.12"
   }
 }
