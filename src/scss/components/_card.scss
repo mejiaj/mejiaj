@@ -1,6 +1,6 @@
 @use "sass:map";
 
-@use "../base" as *;
+@use "../config" as *;
 
 $card-border-color: rgba(map.get($colors, "white"), 0.6);
 
