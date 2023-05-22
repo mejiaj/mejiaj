@@ -44,7 +44,7 @@
   }
 
   &::before {
-    background-color: $c-primary;
+    background-color: var(--theme-primary-dark);
     top: 0;
     width: 100%;
   }
@@ -61,7 +61,7 @@
   }
 
   @include is-active {
-    color: $c-primary;
+    color: var(--theme-primary-dark);
     font-weight: 400;
     outline: none;
 

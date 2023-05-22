@@ -1,9 +1,9 @@
 @use "../config" as *;
 
 body {
-  background-color: $c-black;
-  color: $c-white;
-  font-size: px-to-rem(21);
+  background-color: var(--theme-bg-color);
+  color: var(--theme-text-color);
+  font-size: var(--space-1);
   font-family: $font-primary;
   font-weight: 300;
   line-height: 1.5;
@@ -35,12 +35,12 @@ h1,
   font-size: px-to-rem(45);
   font-weight: 400;
   line-height: 1.1;
-  margin-bottom: units(4);
-  margin-top: px-to-rem(30);
+  margin-bottom: var(--space-04);
+  margin-top: var(--space-2);
   transition: font-size 0.25s $ease-primary;
 
   @include mq(md) {
-    font-size: px-to-rem(57);
+    font-size: px-to-rem(54);
   }
 }
 
@@ -112,7 +112,7 @@ p {
 }
 
 p:first-of-type {
-  margin-top: units(6);
+  margin-top: var(--space-1);
 }
 
 hr {
@@ -125,7 +125,7 @@ hr {
 }
 
 .lead-in {
-  font-size: px-to-rem(25);
+  font-size: px-to-rem(27);
   margin-top: 0;
 
   @include mq(lg) {
@@ -180,7 +180,7 @@ em {
 }
 
 a {
-  color: $c-primary;
+  color: var(--theme-primary-dark);
   display: inline-block;
   font-weight: 300;
   position: relative;
@@ -189,7 +189,7 @@ a {
 
   &::after {
     content: "";
-    background-color: $c-primary;
+    background-color: var(--theme-primary-dark);
     border-bottom: 1px solid;
     bottom: 0;
     height: 100%;
