@@ -1,5 +1,6 @@
 ---
 import Icons from '../Icons/index.astro';
+import Social from "../data/social.json";
 
 const footerItems = [
   {
@@ -7,24 +8,7 @@ const footerItems = [
     icon: "#up-arrow",
     aria_label: "Return to top of the page",
   },
-  {
-    url: "mailto:me@jmejia.com",
-    icon: "#email",
-    label: "Email",
-    aria_label: "Email link",
-  },
-  {
-    url: "https://codepen.io/mejiaj/",
-    icon: "#social-codepen",
-    label: "Codepen",
-    aria_label: "My codepen profile page",
-  },
-  {
-    url: "https://www.linkedin.com/in/mejiajames/en",
-    icon: "#social-linkedin",
-    label: "LinkedIn",
-    aria_label: "My linkedin profile page",
-  },
+  ...Social
 ]
 ---
 

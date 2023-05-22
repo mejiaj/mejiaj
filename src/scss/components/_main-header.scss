@@ -1,12 +1,9 @@
 @use "../config" as *;
-@use "../global" as *;
 
 // ==========================================================================
 // Header
 // ==========================================================================
 .main-header__name {
-  color: $c-white;
-  line-height: 1.2;
   margin-bottom: 0;
   text-indent: px-to-rem(-3);
 
@@ -17,13 +14,4 @@
 
 .main-header__title {
   margin-top: 0;
-  font-size: px-to-rem(30);
-
-  @include mq(md) {
-    font-size: px-to-rem(39.1);
-  }
-}
-
-.main-header .lead-in {
-  margin-top: px-to-rem(31);
 }

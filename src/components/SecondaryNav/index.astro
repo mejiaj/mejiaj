@@ -1,0 +1,24 @@
+---
+import "./index.scss";
+import Social from "../data/social.json";
+
+---
+
+<ul class="secondary-nav nav nav--inline" aria-label="Contact links">
+  {Social.map(navItem => (
+    <li class="nav__item">
+      <a href={ navItem.url } class="nav__link" aria-label={ navItem.aria_label }>
+
+        <svg
+          role="img"
+          aria-hidden="true"
+          class="header__icon header__icon--no-text icon"
+          height="30"
+          width="30"
+          >
+          <use xlink:href={`${navItem.icon}`}></use>
+        </svg>
+      </a>
+    </li>
+  ))}
+</ul>

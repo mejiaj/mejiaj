@@ -1,0 +1,34 @@
+---
+import "./index.scss";
+import SecondaryNav from "../SecondaryNav/index.astro";
+
+const navItems = [
+  {
+    label: "Home",
+    url: "/",
+  },
+  {
+    label: "Blog",
+    url: "/blog",
+  },
+  {
+    label: "Resume",
+    url: "/resume"
+  },
+]
+---
+
+<nav class="main-nav">
+  <div class="main-nav__inner">
+    <ul id="main-nav" class="js-nav main-nav__menu nav nav--inline">
+      {navItems.map(navItem => (
+        <li class="nav__item">
+          <a href={ navItem.url } class="nav__link">
+            { navItem.label }
+          </a>
+        </li>
+      ))}
+    </ul>
+    <SecondaryNav />
+  </div>
+</nav>
