@@ -1,10 +1,11 @@
-@use "../config" as *;
+@use "../../scss/config" as *;
 
 // ==========================================================================
 // Header
 // ==========================================================================
 .main-header {
-  padding: var(--space-1);
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
 }
 
 .main-header__name {
