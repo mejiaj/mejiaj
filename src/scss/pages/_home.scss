@@ -5,25 +5,21 @@
 // ==========================================================================
 
 .page--home {
-  .main-header {
+  background-image: radial-gradient(
+    at top left,
+    var(--color-green-2),
+    #1f5154 35%,
+    var(--theme-bg-color),
+    var(--theme-bg-color)
+  );
+
+  @include mq(md) {
     background-image: radial-gradient(
       at top left,
-      var(--color-green-2),
-      #1f5154 35%,
+      var(--color-green-2) 5%,
+      #1f5154 38%,
       var(--theme-bg-color),
       var(--theme-bg-color)
     );
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-
-    @include mq(md) {
-      background-image: radial-gradient(
-        at top left,
-        var(--color-green-2) 5%,
-        #1f5154 38%,
-        var(--theme-bg-color),
-        var(--theme-bg-color)
-      );
-    }
   }
 }

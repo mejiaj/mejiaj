@@ -18,17 +18,15 @@ const navItems = [
 ]
 ---
 
-<nav class="main-nav">
-  <div class="main-nav__inner">
-    <ul id="main-nav" class="js-nav main-nav__menu nav nav--inline">
-      {navItems.map(navItem => (
-        <li class="nav__item">
-          <a href={ navItem.url } class="nav__link">
-            { navItem.label }
-          </a>
-        </li>
-      ))}
-    </ul>
-    <SecondaryNav />
-  </div>
+<nav class="main-nav" aria-label="Site navigation">
+  <ul id="main-nav" class="js-nav main-nav__menu nav nav--inline">
+    {navItems.map(navItem => (
+      <li class="nav__item">
+        <a href={ navItem.url } class="nav__link">
+          { navItem.label }
+        </a>
+      </li>
+    ))}
+  </ul>
+  <SecondaryNav />
 </nav>

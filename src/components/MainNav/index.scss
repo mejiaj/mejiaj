@@ -1,8 +1,11 @@
 @use "../../scss/config" as *;
 
 .main-nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
   font-weight: 300;
-  padding: var(--space-1);
 
   ul {
     align-items: center;
@@ -37,13 +40,6 @@
         transform: scale(1);
       }
     }
-  }
-
-  &__inner {
-    align-items: center;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-end;
   }
 
   .nav__link {
