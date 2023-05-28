@@ -12,6 +12,7 @@
     var(--theme-bg-color),
     var(--theme-bg-color)
   );
+  background-repeat: no-repeat;
 
   @include mq(md) {
     background-image: radial-gradient(
