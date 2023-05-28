@@ -10,7 +10,7 @@ body {
   margin: 0;
   padding: 0;
   text-size-adjust: 100%;
-  transition: font-size 0.25s $ease-primary;
+  transition: font-size 0.25s var(--theme-ease-primary);
 
   @include mq(xl) {
     font-size: px-to-rem(24);
@@ -37,7 +37,7 @@ h1,
   line-height: 1.1;
   margin-bottom: var(--space-04);
   margin-top: var(--space-2);
-  transition: font-size 0.25s $ease-primary;
+  transition: font-size 0.25s var(--theme-ease-primary);
 
   @include mq(md) {
     font-size: px-to-rem(54);
@@ -51,7 +51,7 @@ h2,
   line-height: 1.22;
   margin-bottom: units(4);
   margin-top: px-to-rem(30);
-  transition: font-size 0.25s $ease-primary;
+  transition: font-size 0.25s var(--theme-ease-primary);
 
   @include mq(lg) {
     font-size: px-to-rem(48);
@@ -64,7 +64,7 @@ h3 {
   line-height: 1.22;
   margin-bottom: units(4);
   margin-top: px-to-rem(30);
-  transition: font-size 0.25s $ease-primary;
+  transition: font-size 0.25s var(--theme-ease-primary);
 }
 
 h4 {
@@ -73,7 +73,7 @@ h4 {
   line-height: 1.22;
   margin-bottom: units(4);
   margin-top: px-to-rem(33);
-  transition: font-size 0.25s $ease-primary;
+  transition: font-size 0.25s var(--theme-ease-primary);
 }
 
 h5 {
@@ -82,7 +82,7 @@ h5 {
   line-height: 1.22;
   margin-bottom: units(4);
   margin-top: px-to-rem(30);
-  transition: font-size 0.25s $ease-primary;
+  transition: font-size 0.25s var(--theme-ease-primary);
 
   @include mq(lg) {
     font-size: px-to-rem(24);
@@ -95,7 +95,7 @@ h6 {
   line-height: 1.22;
   margin-bottom: units(4);
   margin-top: px-to-rem(30);
-  transition: font-size 0.25s $ease-primary;
+  transition: font-size 0.25s var(--theme-ease-primary);
 }
 
 b,
@@ -108,7 +108,7 @@ p {
   line-height: 1.5;
   margin-bottom: px-to-rem(30);
   max-width: 60ch;
-  transition: font-size 0.25s $ease-primary;
+  transition: font-size 0.25s var(--theme-ease-primary);
 }
 
 p:first-of-type {
@@ -179,13 +179,49 @@ em {
   font-weight: 400;
 }
 
-a {
+a:not(.footer-nav__menu-link) {
+  color: var(--theme-primary-dark);
+  display: inline-block;
+  font-weight: 300;
+  padding-bottom: 2px;
+  position: relative;
+  text-decoration: none;
+  transition: 0.2s var(--theme-ease-primary);
+
+  &::after {
+    content: "";
+    // background-color: var(--theme-primary-dark);
+    background-color: var(--color-gray-3) !important;
+    border-bottom: 1px solid;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    transform-origin: bottom left;
+    // transform: scale(1, 0);
+    transform: scale(0, 1);
+    transition: transform 0.2s;
+    // z-index: z(under);
+  }
+
+  @include is-active {
+    outline: none;
+
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.footer-nav a {
   color: var(--theme-primary-dark);
   display: inline-block;
   font-weight: 300;
   position: relative;
   text-decoration: none;
-  transition: 0.2s $ease-primary;
+  transition: 0.2s var(--theme-ease-primary);
 
   &::after {
     content: "";
@@ -198,7 +234,7 @@ a {
     right: px-to-rem(-4);
     transform-origin: bottom left;
     transform: scale(1, 0);
-    transition: transform 0.2s $ease-primary;
+    transition: transform 0.2s var(--theme-ease-primary);
     z-index: z(under);
   }
 
