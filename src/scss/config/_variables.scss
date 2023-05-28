@@ -49,6 +49,11 @@
   --theme-primary: var(--color-green-1);
   --theme-primary-dark: var(--color-green-2);
   --theme-primary-light: var(--color-green-3);
+
+  // Easing
+  --ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
+
+  --theme-ease-primary: var(--ease-out-cubic);
 }
 
 // ==========================================================================
@@ -133,13 +138,6 @@ $font-size-base: 16;
 
 $ff-serif: Aleo, Georgia, serif;
 $font-primary: $ff-serif;
-
-// ==========================================================================
-// Easings
-// ==========================================================================
-$bezier: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-$ease-primary: $bezier;
 
 // ==========================================================================
 // Misc

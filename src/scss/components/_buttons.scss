@@ -17,7 +17,7 @@
 }
 
 .btn--inverse {
-  transition: 0.3s $ease-primary;
+  transition: 0.3s var(--theme-ease-primary);
 
   @include is-active {
     border-color: $c-primary;
