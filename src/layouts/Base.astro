@@ -12,13 +12,15 @@ const { title, description } = Astro.props;
     <MainHead title={ title } description={ description } />
   </head>
   <body>
-    <a href="#main-content" class="skip-to-content">Skip to content</a>
-    <Header />
-    <main id="main-content">
-      <div class="wrap">
-        <slot />
-      </div>
-    </main>
+    <div class="content-wrapper">
+      <a href="#main-content" class="skip-to-content">Skip to content</a>
+      <Header />
+      <main id="main-content">
+        <div class="wrap">
+          <slot />
+        </div>
+      </main>
+    </div>
     <Footer />
   </body>
 </html>

@@ -31,29 +31,30 @@ let latestPosts = blogPosts.slice(0, 3);
 </head>
 
 <body class="page page--home">
-  <a href="#main-content" class="skip-to-content">Skip to content</a>
-  <Header />
-
-  <main id="main-content">
-    <Hero />
-    <Projects />
-    <section class="blog-section wrap--xl">
-      <h3>Latest posts</h3>
-      <ul class="card-group card-group--thirds">
-        { latestPosts.map((post, index) => (
-          <li class="card-group__item">
-            <Card
-              variant="xs"
-              title={ post.frontmatter.title }
-              url={ post.url }
-              date={ post.frontmatter.date }
-              description={ post.frontmatter.description }
-            />
-          </li>
-        )) }
-      </ul>
-    </section>
-  </main>
+  <div class="content-wrapper">
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+    <Header />
+    <main id="main-content">
+      <Hero />
+      <Projects />
+      <section class="blog-section wrap--xl">
+        <h3>Latest posts</h3>
+        <ul class="card-group card-group--thirds">
+          { latestPosts.map((post, index) => (
+            <li class="card-group__item">
+              <Card
+                variant="xs"
+                title={ post.frontmatter.title }
+                url={ post.url }
+                date={ post.frontmatter.date }
+                description={ post.frontmatter.description }
+              />
+            </li>
+          )) }
+        </ul>
+      </section>
+    </main>
+  </div>
   <Footer />
 </body>
 

@@ -1,6 +1,13 @@
 @use "../config" as *;
 
+html,
 body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
   background-color: var(--theme-bg-color);
   color: var(--theme-text-color);
   font-size: var(--space-1);
@@ -19,6 +26,11 @@ body {
   @supports (font-size-adjust: 1) {
     font-size-adjust: 0.5;
   }
+}
+
+.content-wrapper {
+  flex: 1 0 auto;
+  overflow: hidden;
 }
 
 h1,
