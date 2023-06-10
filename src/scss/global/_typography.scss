@@ -39,6 +39,8 @@ h3,
 h4,
 h5,
 h6 {
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-04);
   text-wrap: balance;
 }
 
@@ -47,8 +49,6 @@ h1,
   font-size: px-to-rem(45);
   font-weight: 400;
   line-height: 1.1;
-  margin-bottom: var(--space-04);
-  margin-top: var(--space-2);
   transition: font-size 0.25s var(--theme-ease-primary);
 
   @include mq(md) {
@@ -61,8 +61,6 @@ h2,
   font-size: px-to-rem(39);
   font-weight: 400;
   line-height: 1.22;
-  margin-bottom: units(4);
-  margin-top: px-to-rem(30);
   transition: font-size 0.25s var(--theme-ease-primary);
 
   @include mq(lg) {
@@ -74,8 +72,6 @@ h3 {
   font-size: px-to-rem(36);
   font-weight: 400;
   line-height: 1.22;
-  margin-bottom: units(4);
-  margin-top: px-to-rem(30);
   transition: font-size 0.25s var(--theme-ease-primary);
 }
 
@@ -83,7 +79,6 @@ h4 {
   font-size: px-to-rem(33);
   font-weight: 400;
   line-height: 1.22;
-  margin-bottom: units(4);
   margin-top: px-to-rem(33);
   transition: font-size 0.25s var(--theme-ease-primary);
 }
@@ -92,8 +87,6 @@ h5 {
   font-size: px-to-rem(30);
   font-weight: 400;
   line-height: 1.22;
-  margin-bottom: units(4);
-  margin-top: px-to-rem(30);
   transition: font-size 0.25s var(--theme-ease-primary);
 
   @include mq(lg) {
@@ -105,8 +98,6 @@ h6 {
   font-size: px-to-rem(21);
   font-weight: 400;
   line-height: 1.22;
-  margin-bottom: units(4);
-  margin-top: px-to-rem(30);
   transition: font-size 0.25s var(--theme-ease-primary);
 }
 
@@ -191,7 +182,7 @@ em {
   font-weight: 400;
 }
 
-a:not(.footer-nav__menu-link) {
+a:not(.footer-nav__menu-link):not(.skip-to-content) {
   color: var(--theme-primary-dark);
   display: inline-block;
   font-weight: 300;
