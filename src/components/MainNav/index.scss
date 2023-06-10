@@ -20,26 +20,10 @@
     &:focus {
       outline: 2px dotted var(--theme-primary-dark);
     }
+  }
 
-    &:hover,
-    &:focus {
-      color: var(--color-black-1);
-    }
-
-    &::after {
-      background-color: var(--theme-primary-dark);
-    }
-
-    &.is-active {
-      &::after {
-        transform: scale(1, 0.06);
-      }
-
-      &:hover::after,
-      &:focus::after {
-        transform: scale(1);
-      }
-    }
+  .nav__item:not(:first-of-type) {
+    margin-left: var(--space-1);
   }
 
   .nav__link {
