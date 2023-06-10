@@ -13,13 +13,13 @@
   align-items: center;
   place-items: center;
   display: grid;
-  grid-column-gap: units(6);
+  grid-column-gap: var(--space-1);
   list-style: none;
   margin-bottom: 0;
-  margin-top: units(4);
+  margin-top: var(--space-03);
 
   &__item {
-    margin-bottom: units(6);
+    margin-bottom: var(--space-1);
     width: 100%;
   }
 

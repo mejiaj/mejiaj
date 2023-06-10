@@ -9,19 +9,14 @@
   font-weight: 400;
   padding: px-to-rem(10) px-to-rem(20);
   text-transform: uppercase;
-
-  @include is-active {
-    color: $c-visited;
-    outline: 3px dotted $c-visited;
-  }
 }
 
 .btn--inverse {
   transition: 0.3s var(--theme-ease-primary);
 
   @include is-active {
-    border-color: $c-primary;
-    color: $c-primary;
+    border-color: var(--theme-primary);
+    color: var(--theme-primary);
     outline: none;
   }
 }

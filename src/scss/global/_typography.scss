@@ -11,7 +11,7 @@ body {
   background-color: var(--theme-bg-color);
   color: var(--theme-text-color);
   font-size: var(--space-1);
-  font-family: $font-primary;
+  font-family: var(--font-serif);
   font-weight: 300;
   line-height: 1.5;
   margin: 0;
@@ -141,7 +141,7 @@ ul,
 ol,
 table,
 blockquote {
-  margin: 0 0 units(8);
+  margin: 0 0 var(--space-105);
 }
 
 ul,
@@ -150,9 +150,9 @@ ol {
 
   ul,
   ol {
-    margin-top: units(4);
-    margin-bottom: units(4);
-    padding-left: units(6);
+    margin-top: var(--space-03);
+    margin-bottom: var(--space-03);
+    padding-left: var(--space-1);
   }
 }
 
@@ -242,7 +242,7 @@ a:not(.footer-nav__menu-link):not(.skip-to-content) {
   }
 
   @include is-active {
-    color: $c-black;
+    color: var(--color-black-1);
     outline: none;
 
     &::after {
@@ -261,5 +261,5 @@ pre {
 .astro-code {
   margin-top: 0;
   margin-bottom: px-to-rem(30);
-  padding: units(3);
+  padding: var(--space-02);
 }

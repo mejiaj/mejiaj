@@ -9,7 +9,7 @@
 // the correct number of rems for the desired size in pixels.
 // ==========================================================================
 @function px-to-rem($number) {
-  $raw: math.div($number, $font-size-base);
+  $raw: math.div($number, 16);
   $rounded: math.div(math.ceil($raw * 1000), 1000);
   @return $rounded * 1rem;
 }
@@ -36,12 +36,4 @@
 // ==========================================================================
 @function strip-units($number) {
   @return math.div($number, ($number * 0 + 1));
-}
-
-// ==========================================================================
-// Spacing
-// ==========================================================================
-@function units($unit) {
-  $unit: strip-units(map.get($spacing, $unit));
-  @return px-to-rem($unit);
 }
