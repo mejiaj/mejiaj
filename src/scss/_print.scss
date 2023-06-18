@@ -2,11 +2,20 @@
   body {
     background: none;
     color: #000000;
-    font-size: 10pt;
+    font-size: 8pt;
     font-weight: 400 !important;
     margin: 0 !important;
     padding: 0 !important;
     width: 100% !important;
+  }
+
+  .main-header,
+  .main-footer {
+    display: none !important;
+  }
+
+  .lead-in p {
+    font-size: 8pt !important;
   }
 
   h1,
@@ -15,6 +24,7 @@
   h4,
   h5,
   h6 {
+    page-break-before: avoid;
     page-break-after: avoid;
   }
 
@@ -26,15 +36,15 @@
   }
 
   h1 {
-    font-size: 20pt;
-  }
-
-  h2 {
     font-size: 18pt;
   }
 
-  h3 {
+  h2 {
     font-size: 16pt;
+  }
+
+  h3 {
+    font-size: 14pt;
   }
 
   h4 {
@@ -42,7 +52,7 @@
   }
 
   h5 {
-    font-size: 14pt;
+    font-size: 10pt;
   }
 
   p {
@@ -63,7 +73,7 @@
     display: flex;
     align-items: first baseline;
     justify-content: space-between;
-    margin-top: 0.25in;
+    margin-top: 0 !important;
   }
 
   .resume__info {

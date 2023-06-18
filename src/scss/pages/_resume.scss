@@ -33,10 +33,6 @@
   margin-bottom: 0;
 }
 
-.resume__header .h2 {
-  margin-top: 0;
-}
-
 //
 // Experience & Skills
 // ==========================================================================
@@ -48,8 +44,7 @@
   }
 }
 
-.resume__history,
-.resume__skills-list {
+.resume__history {
   list-style: none;
 }
 
