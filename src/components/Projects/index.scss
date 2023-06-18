@@ -16,11 +16,19 @@
   grid-column-gap: var(--space-1);
   list-style: none;
   margin-bottom: 0;
-  margin-top: var(--space-03);
+  margin-top: var(--space-3);
 
   &__item {
-    margin-bottom: var(--space-1);
     width: 100%;
+  }
+
+  &__item:where(:not(:first-child)) {
+    margin-top: var(--space-1);
+    width: 100%;
+
+    @include mq(sm) {
+      margin-top: 0;
+    }
   }
 
   @include mq(sm) {

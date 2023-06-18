@@ -6,6 +6,7 @@ $card-border-color: rgba(#f2eeef, 0.3);
 
 .card-group {
   list-style: none;
+  margin-top: var(--space-1);
 
   @include mq(md) {
     align-items: stretch;
