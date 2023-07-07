@@ -28,7 +28,7 @@
     "prettier": "^2.8.8",
     "sass": "^1.62.0",
     "scroll-out": "^2.2.12",
-    "stylelint": "^15.6.1"
+    "stylelint": "^15.10.1"
   },
   "dependencies": {
     "balance-text": "^3.3.1",
