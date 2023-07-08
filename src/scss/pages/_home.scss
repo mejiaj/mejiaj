@@ -1,14 +1,26 @@
+@use "../config/" as *;
+
 // ==========================================================================
 // Homepage
 // ==========================================================================
 
 .page--home {
-  .main-header {
-    background-image: linear-gradient(to top, #121619, transparent),
-      url("../../../img/background.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+  background-image: radial-gradient(
+    at top left,
+    var(--color-green-2),
+    #1f5154 35%,
+    var(--theme-bg-color),
+    var(--theme-bg-color)
+  );
+  background-repeat: no-repeat;
+
+  @include mq(md) {
+    background-image: radial-gradient(
+      at top left,
+      var(--color-green-2) 5%,
+      #1f5154 38%,
+      var(--theme-bg-color),
+      var(--theme-bg-color)
+    );
   }
 }

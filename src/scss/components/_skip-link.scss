@@ -1,11 +1,11 @@
-@use "../base" as *;
+@use "../config" as *;
 
 .skip-to-content {
   position: absolute;
   left: 8.3%;
   top: px-to-rem(62);
   opacity: 0;
-  transition: opacity $ease-primary;
+  transition: opacity var(--theme-ease-primary);
   z-index: 500;
 
   &:focus {

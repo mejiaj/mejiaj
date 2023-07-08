@@ -3,37 +3,17 @@ import MainHead from '../components/MainHead.astro';
 ---
 
 <style lang="scss">
-  html {
-    display: table;
+
+  .absolute-center {
     height: 100%;
+    display: grid;
+    place-items: center;
     text-align: center;
-    width: 100%;
   }
 
-  body {
-    background-color: #14AF6D;
-    color: #333;
-    display: table-cell;
-    font: 1.25em/1.5 "Aleo", sans-serif;
-    font-weight: 400;
-    vertical-align: middle;
-    margin: 1.5em auto;
-  }
-
-  a {
-    color: #333;
-    font-weight: inherit;
-    margin-top: 1.5rem;
-    position: relative;
-    text-decoration: none;
-
-    &::after {
-      background-color: #333;
-    }
-
-    &:hover {
-      color: #14AF6D;
-    }
+  img {
+    margin-right: auto;
+    margin-left: auto;
   }
 
   h1 {
@@ -44,7 +24,7 @@ import MainHead from '../components/MainHead.astro';
   p {
     font-weight: inherit;
     margin: 0 auto;
-    max-width: 461px;
+    max-width: 60ch;
   }
 
   @media only screen and (max-width: 280px) {
@@ -63,12 +43,16 @@ import MainHead from '../components/MainHead.astro';
 
 <html lang="en">
   <head>
-    <MainHead title="Not Found" />
+    <MainHead title="Page not found" />
   </head>
   <body>
-    <img src="/img/bawss.gif" alt="Bulldog on a jetski">
-    <h1>Uh oh.</h1>
-    <p>Yo! The page isn't here right now. Try again later.</p>
-    <a href="/">← Return to Homepage</a>
+    <div class="absolute-center">
+      <div>
+        <img src="/img/bawss.gif" alt="Bulldog on a jetski">
+        <h1>Uh oh.</h1>
+        <p>The page isn't here right now. Try again later.</p>
+        <a href="/">← Return to Homepage</a>
+      </div>
+    </div>
   </body>
 </html>

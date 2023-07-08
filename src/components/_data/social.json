@@ -1,0 +1,20 @@
+[
+  {
+    "url": "mailto:me@jmejia.com",
+    "icon": "#email",
+    "label": "Email",
+    "aria_label": "Email link"
+  },
+  {
+    "url": "https://codepen.io/mejiaj/",
+    "icon": "#social-codepen",
+    "label": "Codepen",
+    "aria_label": "My codepen profile page"
+  },
+  {
+    "url": "https://www.linkedin.com/in/mejiajames/en",
+    "icon": "#social-linkedin",
+    "label": "LinkedIn",
+    "aria_label": "My linkedin profile page"
+  }
+]

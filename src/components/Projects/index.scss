@@ -1,31 +1,46 @@
-@use "../base" as *;
+@use "../../scss/config" as *;
 
 // ==========================================================================
 // Projects
 // ==========================================================================
 
 .projects {
-  margin-bottom: units(12);
+  padding-top: var(--space-5);
+  padding-bottom: var(--space-5);
 }
 
 .project-group {
+  align-items: center;
   place-items: center;
   display: grid;
-  grid-template-columns: repeat(6, minmax(200px, 1fr));
-  grid-column-gap: units(6);
+  grid-column-gap: var(--space-1);
   list-style: none;
   margin-bottom: 0;
-  margin-top: units(4);
+  margin-top: var(--space-3);
 
   &__item {
-    margin-bottom: units(6);
     width: 100%;
+  }
+
+  &__item:where(:not(:first-child)) {
+    margin-top: var(--space-1);
+    width: 100%;
+
+    @include mq(sm) {
+      margin-top: 0;
+    }
+  }
+
+  @include mq(sm) {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: center;
+  }
+  @include mq(lg) {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 .project {
-  display: grid;
-  place-items: center;
   filter: grayscale(1);
   font-size: 75%;
   letter-spacing: 0.5px;
@@ -35,8 +50,6 @@
 
   &:hover,
   &:focus {
-    filter: none;
-
     .project__name {
       opacity: 0.8;
     }
@@ -45,7 +58,11 @@
   &__name {
     line-height: 1.1;
     margin-top: auto;
-    opacity: 0.4;
+    opacity: 0.6;
     transition: opacity 0.25s ease-in-out;
+  }
+
+  &__logo {
+    height: px-to-rem(45);
   }
 }

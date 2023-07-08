@@ -1,7 +1,7 @@
-@use "../base/" as *;
+@use "../config" as *;
 
 li::marker {
-  color: $c-primary-dk;
+  color: var(--theme-primary);
 }
 
 .u-list--unstyled {

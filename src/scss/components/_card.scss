@@ -1,16 +1,17 @@
-@use "sass:map";
+@use "sass:color";
+@use "../config" as *;
 
-@use "../base" as *;
-
-$card-border-color: rgba(map.get($colors, "white"), 0.6);
+// --color-white-1: #f2eeef;
+$card-border-color: rgba(#f2eeef, 0.3);
 
 .card-group {
   list-style: none;
+  margin-top: var(--space-1);
 
   @include mq(md) {
     align-items: stretch;
     display: grid;
-    column-gap: units(8);
+    column-gap: var(--space-105);
   }
 }
 
@@ -21,16 +22,16 @@ $card-border-color: rgba(map.get($colors, "white"), 0.6);
 }
 
 .card {
-  border: 2px solid $card-border-color;
+  border: 3px solid $card-border-color;
   display: flex;
   flex-direction: column;
-  margin-bottom: units(4);
+  margin-bottom: var(--space-03);
   height: 100%;
-  padding: units(4) units(6);
+  padding: var(--space-03) var(--space-1);
 
   &__header {
     min-height: px-to-rem(100);
-    margin-bottom: units(8);
+    margin-bottom: var(--space-105);
   }
 
   &__title {
@@ -39,6 +40,6 @@ $card-border-color: rgba(map.get($colors, "white"), 0.6);
 
   &__footer {
     margin-top: auto;
-    margin-bottom: units(8);
+    margin-bottom: var(--space-105);
   }
 }
