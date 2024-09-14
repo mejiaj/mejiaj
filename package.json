@@ -17,18 +17,16 @@
     "build": "astro build"
   },
   "devDependencies": {
-    "@18f/identity-stylelint-config": "^2.0.0",
+    "@18f/identity-stylelint-config": "^4.1.0",
     "@astrojs/sitemap": "^3.1.6",
+    "@eslint/js": "^9.10.0",
     "astro": "^4.15.6",
-    "eslint": "^8.53.0",
-    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint": "^9.10.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-import": "^2.30.0",
-    "eslint-plugin-promise": "^6.1.1",
+    "globals": "^15.9.0",
     "prettier": "^3.3.3",
     "sass": "^1.78.0",
-    "scroll-out": "^2.2.12",
-    "stylelint": "^15.11.0"
+    "scroll-out": "^2.2.12"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
