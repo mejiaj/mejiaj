@@ -25,8 +25,7 @@
     "eslint-config-prettier": "^9.1.0",
     "globals": "^15.9.0",
     "prettier": "^3.3.3",
-    "sass": "^1.78.0",
-    "scroll-out": "^2.2.12"
+    "sass": "^1.78.0"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
