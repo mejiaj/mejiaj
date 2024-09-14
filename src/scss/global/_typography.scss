@@ -263,3 +263,13 @@ pre {
   margin-bottom: px-to-rem(30);
   padding: var(--space-02);
 }
+
+// Seen on `/colophon`
+.footnotes {
+  line-height: 1;
+}
+
+.footnotes li > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
