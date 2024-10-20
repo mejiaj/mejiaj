@@ -51,12 +51,12 @@
 <span class="line"><span style="color:#BABED8">import Nav from "../components/Nav/index.astro";</span></span>
 <span class="line"><span style="color:#BABED8">import Footer from "../components/Footer/index.astro";</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#BABED8">const </span><span style="color:#89DDFF">{</span><span style="color:#BABED8"> title </span><span style="color:#89DDFF">}</span><span style="color:#BABED8"> = Astro.props;</span></span>
+<span class="line"><span style="color:#BABED8">const { title } = Astro.props;</span></span>
 <span class="line"><span style="color:#BABED8">---</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#89DDFF">&#x3C;</span><span style="color:#F07178">html</span><span style="color:#C792EA"> lang</span><span style="color:#89DDFF">=</span><span style="color:#89DDFF">"</span><span style="color:#C3E88D">en</span><span style="color:#89DDFF">"</span><span style="color:#89DDFF">></span></span>
 <span class="line"><span style="color:#89DDFF">  &#x3C;</span><span style="color:#F07178">head</span><span style="color:#89DDFF">></span></span>
-<span class="line"><span style="color:#89DDFF">    &#x3C;</span><span style="color:#FFCB6B">MainHead</span><span style="color:#C792EA"> title</span><span style="color:#89DDFF">={</span><span style="color:#BABED8"> title </span><span style="color:#89DDFF">} /></span></span>
+<span class="line"><span style="color:#89DDFF">    &#x3C;</span><span style="color:#FFCB6B">MainHead</span><span style="color:#C792EA"> title</span><span style="color:#89DDFF">=</span><span style="color:#C3E88D">{</span><span style="color:#C792EA"> title</span><span style="color:#89DDFF"> } /></span></span>
 <span class="line"><span style="color:#89DDFF">  &#x3C;/</span><span style="color:#F07178">head</span><span style="color:#89DDFF">></span></span>
 <span class="line"><span style="color:#89DDFF">  &#x3C;</span><span style="color:#F07178">body</span><span style="color:#89DDFF">></span></span>
 <span class="line"><span style="color:#89DDFF">    &#x3C;</span><span style="color:#F07178">a</span><span style="color:#C792EA"> href</span><span style="color:#89DDFF">=</span><span style="color:#89DDFF">"</span><span style="color:#C3E88D">#main-content</span><span style="color:#89DDFF">"</span><span style="color:#C792EA"> class</span><span style="color:#89DDFF">=</span><span style="color:#89DDFF">"</span><span style="color:#C3E88D">skip-to-content</span><span style="color:#89DDFF">"</span><span style="color:#89DDFF">></span><span style="color:#BABED8">Skip to content</span><span style="color:#89DDFF">&#x3C;/</span><span style="color:#F07178">a</span><span style="color:#89DDFF">></span></span>
@@ -81,9 +81,9 @@
 <span class="line"><span style="color:#BABED8">---</span></span>
 <span class="line"></span>
 <span class="line"><span style="color:#676E95;font-style:italic">&#x3C;!-- Set a custom page title --></span></span>
-<span class="line"><span style="color:#89DDFF">&#x3C;</span><span style="color:#FFCB6B">Base</span><span style="color:#C792EA"> title</span><span style="color:#89DDFF">={</span><span style="color:#BABED8"> content</span><span style="color:#89DDFF">.</span><span style="color:#BABED8">title </span><span style="color:#89DDFF">}></span></span>
+<span class="line"><span style="color:#89DDFF">&#x3C;</span><span style="color:#FFCB6B">Base</span><span style="color:#C792EA"> title</span><span style="color:#89DDFF">=</span><span style="color:#C3E88D">{</span><span style="color:#C792EA"> content.title</span><span style="color:#89DDFF"> }></span></span>
 <span class="line"><span style="color:#676E95;font-style:italic">  &#x3C;!-- Set the header based on frontmatter title --></span></span>
-<span class="line"><span style="color:#89DDFF">  &#x3C;</span><span style="color:#F07178">h1</span><span style="color:#89DDFF">>{</span><span style="color:#BABED8"> content</span><span style="color:#89DDFF">.</span><span style="color:#BABED8">title </span><span style="color:#89DDFF">}&#x3C;/</span><span style="color:#F07178">h1</span><span style="color:#89DDFF">></span></span>
+<span class="line"><span style="color:#89DDFF">  &#x3C;</span><span style="color:#F07178">h1</span><span style="color:#89DDFF">></span><span style="color:#BABED8">{ content.title }&#x3C;/h1></span></span>
 <span class="line"><span style="color:#676E95;font-style:italic">  &#x3C;!-- Slot is where the rest of the content will fit in --></span></span>
 <span class="line"><span style="color:#89DDFF">  &#x3C;</span><span style="color:#F07178">slot</span><span style="color:#89DDFF"> /></span></span>
 <span class="line"><span style="color:#89DDFF">&#x3C;/</span><span style="color:#FFCB6B">Base</span><span style="color:#89DDFF">></span></span>
@@ -93,13 +93,13 @@
 <span class="line"><span style="color:#BABED8">---</span></span>
 <span class="line"><span style="color:#BABED8">import Base from "./Base.astro";</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#BABED8">const </span><span style="color:#89DDFF">{</span><span style="color:#BABED8"> content </span><span style="color:#89DDFF">}</span><span style="color:#BABED8"> = Astro.props;</span></span>
+<span class="line"><span style="color:#BABED8">const { content } = Astro.props;</span></span>
 <span class="line"><span style="color:#BABED8">let timestamp = new Date(content.date);</span></span>
 <span class="line"><span style="color:#BABED8">---</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#89DDFF">&#x3C;</span><span style="color:#FFCB6B">Base</span><span style="color:#C792EA"> title</span><span style="color:#89DDFF">={</span><span style="color:#BABED8"> content</span><span style="color:#89DDFF">.</span><span style="color:#BABED8">title </span><span style="color:#89DDFF">}></span></span>
-<span class="line"><span style="color:#89DDFF">  &#x3C;</span><span style="color:#F07178">h1</span><span style="color:#89DDFF">>{</span><span style="color:#BABED8"> content</span><span style="color:#89DDFF">.</span><span style="color:#BABED8">title </span><span style="color:#89DDFF">}&#x3C;/</span><span style="color:#F07178">h1</span><span style="color:#89DDFF">></span></span>
-<span class="line"><span style="color:#89DDFF">  &#x3C;</span><span style="color:#F07178">time</span><span style="color:#C792EA"> datetime</span><span style="color:#89DDFF">={</span><span style="color:#BABED8"> timestamp</span><span style="color:#89DDFF">.</span><span style="color:#82AAFF">toISOString</span><span style="color:#BABED8">() </span><span style="color:#89DDFF">}>{</span><span style="color:#BABED8"> content</span><span style="color:#89DDFF">.</span><span style="color:#BABED8">date </span><span style="color:#89DDFF">}&#x3C;/</span><span style="color:#F07178">time</span><span style="color:#89DDFF">></span></span>
+<span class="line"><span style="color:#89DDFF">&#x3C;</span><span style="color:#FFCB6B">Base</span><span style="color:#C792EA"> title</span><span style="color:#89DDFF">=</span><span style="color:#C3E88D">{</span><span style="color:#C792EA"> content.title</span><span style="color:#89DDFF"> }></span></span>
+<span class="line"><span style="color:#89DDFF">  &#x3C;</span><span style="color:#F07178">h1</span><span style="color:#89DDFF">></span><span style="color:#BABED8">{ content.title }&#x3C;/h1></span></span>
+<span class="line"><span style="color:#89DDFF">  &#x3C;</span><span style="color:#F07178">time</span><span style="color:#C792EA"> datetime</span><span style="color:#89DDFF">=</span><span style="color:#C3E88D">{</span><span style="color:#C792EA"> timestamp.toISOString</span><span style="color:#89DDFF">() }></span><span style="color:#BABED8">{ content.date }&#x3C;/time></span></span>
 <span class="line"><span style="color:#89DDFF">  &#x3C;</span><span style="color:#F07178">slot</span><span style="color:#89DDFF"> /></span></span>
 <span class="line"><span style="color:#89DDFF">&#x3C;/</span><span style="color:#FFCB6B">Base</span><span style="color:#89DDFF">></span></span>
 <span class="line"></span></code></pre>
