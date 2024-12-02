@@ -34,7 +34,7 @@ The primary goals are to have a good developer experience and a speedy site that
 - Add web components
 - More automation via GitHub actions
 
-[^1]: https://astro.js
+[^1]: https://astro.build/
 
 [^2]: https://github.com/mejiaj/mejiaj
 
