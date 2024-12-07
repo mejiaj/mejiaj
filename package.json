@@ -13,25 +13,26 @@
     "prettier": "npx prettier --check './src/**/*.{css,scss,sass,js}'",
     "prettier:fix:js": "npx prettier --write './src/**/*.js'",
     "prettier:fix:sass": "npx prettier --write '**/*.{sass,scss}'",
+    "prettier:fix": "npx prettier --write '**/*.{sass,scss,js}'",
     "build:sass": "sass './src/scss/styles.scss' './public/styles.css'",
     "build": "astro build"
   },
   "devDependencies": {
     "@18f/identity-stylelint-config": "^4.1.0",
-    "@astrojs/sitemap": "^3.1.6",
-    "@eslint/js": "^9.10.0",
-    "astro": "^4.16.6",
-    "eslint": "^9.10.0",
+    "@astrojs/sitemap": "^3.2.1",
+    "@eslint/js": "^9.16.0",
+    "astro": "^5.0.3",
+    "eslint": "^9.16.0",
     "eslint-config-prettier": "^9.1.0",
-    "globals": "^15.9.0",
-    "prettier": "^3.3.3",
-    "sass": "^1.78.0",
-    "stylelint": "^16.9.0"
+    "globals": "^15.13.0",
+    "prettier": "^3.4.2",
+    "sass": "^1.82.0",
+    "stylelint": "^16.11.0"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.3",
+    "@astrojs/check": "^0.9.4",
     "balance-text": "^3.3.1",
     "scroll-out": "^2.2.12",
-    "typescript": "^5.6.2"
+    "typescript": "^5.7.2"
   }
 }
