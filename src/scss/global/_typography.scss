@@ -181,7 +181,7 @@ em {
   font-weight: 400;
 }
 
-a:not(.footer-nav__menu-link):not(.skip-to-content) {
+a:not(.footer-nav__menu-link):not(.skip-link) {
   color: var(--theme-primary-dark);
   display: inline-block;
   font-weight: 300;

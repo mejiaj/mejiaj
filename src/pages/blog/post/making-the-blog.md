@@ -87,7 +87,7 @@ const { title } = Astro.props;
     <MainHead title={ title } />
   </head>
   <body>
-    <a href="#main-content" class="skip-to-content">Skip to content</a>
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <header id="top" class="main-header" role="banner">
       <div class="main-header__inner wrap">
         <Nav />
@@ -141,18 +141,18 @@ let timestamp = new Date(content.date);
 `BlogPostBase.astro` allows me to have pure markdown posts, I just need specify what layout I want to use.
 
 ```md
-// pages/blog/post/intro.md
----
+## // pages/blog/post/intro.md
+
 layout: ../../../layouts/BlogPostBase.astro
 title: The blog
 date: June 10, 2022
 description: This is where I'll share things like what I've learned, things I've worked on, and improve my writing skills at the same time.
+
 ---
 
 The reason for creating this is mostly selfish. I want to improve my writing skills, share what I've learned, and things I've worked on.
 
 Plus, writing in markdown is surprisingly fun!
-
 ```
 
 ## Dealing with dates
