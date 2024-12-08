@@ -31,7 +31,6 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "balance-text": "^3.3.1",
     "scroll-out": "^2.2.12",
     "typescript": "^5.7.2"
   }
