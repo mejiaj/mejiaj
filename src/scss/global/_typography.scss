@@ -57,7 +57,7 @@ h1,
 
 h2,
 %h2-style {
-  font-size: px-to-rem(39);
+  font-size: var(--space-105);
   font-weight: 400;
   line-height: 1.22;
   transition: font-size 0.25s var(--theme-ease-primary);

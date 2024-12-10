@@ -18,15 +18,26 @@
   }
 }
 
+.intro {
+  font-weight: 300;
+}
+
 .main-header__name {
+  font-weight: inherit;
   margin-bottom: 0;
-  text-indent: px-to-rem(-3);
+  text-indent: px-to-rem(-4);
+
+  @include mq(sm) {
+    font-size: var(--space-3);
+  }
 
   @include mq(lg) {
-    letter-spacing: -2px;
+    letter-spacing: -3px;
+    font-size: var(--space-5);
   }
 }
 
 .main-header__title {
+  font-weight: inherit;
   margin-top: 0;
 }
