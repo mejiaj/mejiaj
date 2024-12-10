@@ -4,8 +4,18 @@
 // Header
 // ==========================================================================
 .main-header {
-  padding-top: var(--space-2);
-  padding-bottom: var(--space-2);
+  --header-padding: var(--space-1);
+
+  padding-top: var(--header-padding);
+  padding-bottom: var(--header-padding);
+
+  @include mq(sm) {
+    --header-padding: var(--space-4);
+  }
+
+  @include mq(md) {
+    --header-padding: var(--space-2);
+  }
 }
 
 .main-header__name {

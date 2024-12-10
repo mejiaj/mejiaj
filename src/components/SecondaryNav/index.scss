@@ -1,18 +1,35 @@
 @use "../../scss/config" as *;
 
+// ==========================================================================
+// Secondary navigation
+//
+// Includes social nav links.
+// ==========================================================================
+
 .secondary-nav {
-  border-left: 1px solid var(--color-gray-3);
+  border-width: 0;
+  border-style: solid;
+  border-color: var(--color-gray-3);
+  border-top-width: 1px;
   color: var(--theme-primary-dark);
-  margin-left: var(--space-03);
   height: px-to-rem(30);
-  padding-left: var(--space-03);
+  padding-top: var(--space-05);
 
   .nav__item:not(:first-of-type) {
-    margin-left: var(--space-02);
+    margin-left: var(--space-03);
   }
 
   svg {
     display: block;
     fill: currentColor;
+  }
+
+  @include mq(sm) {
+    border-left-width: 1px;
+    border-top: none;
+    margin-left: var(--space-03);
+    margin-bottom: 0;
+    padding-left: var(--space-03);
+    padding-top: 0;
   }
 }

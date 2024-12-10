@@ -1,16 +1,19 @@
 @use "../../scss/config" as *;
 
 .main-nav {
+  align-items: end;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-  align-items: center;
+  flex-direction: column;
   font-weight: 300;
+  justify-content: end;
+  text-align: right;
 
-  ul {
-    align-items: center;
-    margin-top: 0;
-    margin-bottom: 0;
+  @include mq(sm) {
+    flex-flow: row nowrap;
+
+    .nav__item:not(:first-of-type) {
+      margin-left: var(--space-1);
+    }
   }
 
   a {
@@ -22,8 +25,17 @@
     }
   }
 
-  .nav__item:not(:first-of-type) {
-    margin-left: var(--space-1);
+  //
+  // Primary nav
+  // ==========================================================================
+  &__menu {
+    margin-bottom: var(--space-04);
+
+    @include mq(sm) {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 0;
+    }
   }
 
   .nav__link {
