@@ -11,7 +11,6 @@
   --color-gray-2: #354b4a;
   --color-gray-3: #567976;
   --color-white-1: #f2eeef;
-  --color-white-2: #f8f4f2;
 
   // Spacing units - 3px base
   --base-unit: 0.188rem;
@@ -50,7 +49,7 @@
   --font-base-size: 16;
 
   // Theme colors
-  --theme-text-color: var(--color-white-2);
+  --theme-text-color: var(--color-white-1);
   --theme-bg-color: var(--color-gray-1);
   --theme-primary: var(--color-green-1);
   --theme-primary-dark: var(--color-green-2);
