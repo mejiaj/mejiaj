@@ -19,10 +19,6 @@
   a {
     position: relative;
     z-index: 1;
-
-    &:focus {
-      outline: 2px dotted var(--theme-primary-dark);
-    }
   }
 
   //

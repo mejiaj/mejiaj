@@ -181,6 +181,13 @@ em {
   font-weight: 400;
 }
 
+a {
+  &:focus {
+    outline: 2px dotted var(--theme-primary-dark);
+    outline-offset: 4px;
+  }
+}
+
 a:not(.footer-nav__menu-link):not(.skip-link) {
   color: var(--theme-primary-dark);
   display: inline-block;
@@ -209,8 +216,6 @@ a:not(.footer-nav__menu-link):not(.skip-link) {
   }
 
   @include is-active {
-    outline: none;
-
     &::after {
       transform: scaleX(1);
     }
