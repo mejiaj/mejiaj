@@ -50,14 +50,14 @@
   &:hover,
   &:focus {
     .project__name {
-      opacity: 0.8;
+      opacity: 1;
     }
   }
 
   &__name {
     line-height: 1.1;
     margin-top: auto;
-    opacity: 0.6;
+    opacity: 0.8;
     transition: opacity 0.25s ease-in-out;
   }
 
