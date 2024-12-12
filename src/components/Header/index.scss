@@ -18,12 +18,8 @@
   }
 }
 
-.intro {
-  font-weight: 300;
-}
-
 .main-header__name {
-  font-weight: inherit;
+  font-weight: 900;
   margin-bottom: 0;
   text-indent: px-to-rem(-4);
 
@@ -38,6 +34,6 @@
 }
 
 .main-header__title {
-  font-weight: inherit;
+  font-weight: 300;
   margin-top: 0;
 }
