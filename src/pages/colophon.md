@@ -1,6 +1,6 @@
 ---
-layout: ../layouts/Base.astro
-title: Colophon
+layout: "../layouts/Base.astro"
+title: "Colophon"
 ---
 
 # Colophon
