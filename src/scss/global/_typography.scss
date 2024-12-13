@@ -57,7 +57,7 @@ h1,
 
 h2,
 %h2-style {
-  font-size: px-to-rem(39);
+  font-size: var(--space-105);
   font-weight: 400;
   line-height: 1.22;
   transition: font-size 0.25s var(--theme-ease-primary);
@@ -181,7 +181,14 @@ em {
   font-weight: 400;
 }
 
-a:not(.footer-nav__menu-link):not(.skip-to-content) {
+a {
+  &:focus {
+    outline: 2px dotted var(--theme-primary-dark);
+    outline-offset: 4px;
+  }
+}
+
+a:not(.footer-nav__menu-link):not(.skip-link) {
   color: var(--theme-primary-dark);
   display: inline-block;
   font-weight: 300;
@@ -209,8 +216,6 @@ a:not(.footer-nav__menu-link):not(.skip-to-content) {
   }
 
   @include is-active {
-    outline: none;
-
     &::after {
       transform: scaleX(1);
     }

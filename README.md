@@ -12,4 +12,4 @@ All commands are run from the root of the project, from a terminal:
 | :-------------- | :------------------------------------------ |
 | `npm install`   | Installs dependencies                       |
 | `npm run build` | Site builds to `./dist/`                    |
-| `npm start`     | Starts local dev server at `localhost:3000` |
+| `npm start`     | Starts local dev server at `localhost:4321` |

@@ -1,0 +1,35 @@
+@use "../../scss/config" as *;
+
+// ==========================================================================
+// Skiplink
+//
+// Used in layouts `Base.astro` and `pages/index.astro`
+// ==========================================================================
+
+.skip-link {
+  color: inherit;
+  left: var(--space-1);
+  opacity: 0;
+  position: absolute;
+  top: var(--space-1);
+  transition: opacity var(--theme-ease-primary);
+  z-index: 500;
+
+  &:focus {
+    opacity: 1;
+  }
+
+  @include mq(sm) {
+    max-width: fit-content;
+    margin-inline: auto;
+    left: 0;
+    right: 0;
+    padding: var(--space-02) var(--space-1);
+  }
+
+  @include mq(md) {
+    left: var(--space-1);
+    right: auto;
+    top: 2.2rem;
+  }
+}

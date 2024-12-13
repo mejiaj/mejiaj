@@ -1,6 +1,6 @@
 ---
-// Component Imports:
 import MainHead from '../components/MainHead.astro';
+import Skiplink from "../components/Skiplink/index.astro";
 import Header from "../components/Header/index.astro";
 import Hero from '../components/Hero/index.astro';
 import Projects from "../components/Projects/index.astro";
@@ -32,7 +32,7 @@ let latestPosts = blogPosts.slice(0, 3);
 
 <body class="page page--home">
   <div class="content-wrapper">
-    <a href="#main-content" class="skip-to-content">Skip to content</a>
+    <Skiplink />
     <Header />
     <main id="main-content">
       <Hero />
