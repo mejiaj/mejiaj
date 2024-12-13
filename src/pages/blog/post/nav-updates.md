@@ -5,8 +5,6 @@ date: December 12, 2024
 description: Recent site updates. Improvements for header, navigation, performance, and fonts.
 ---
 
-# Release 3.6.0
-
 A few new release worthy improvements:
 
 - Improved mobile header
