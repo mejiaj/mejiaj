@@ -1,17 +1,6 @@
 @use "sass:map";
 
 :root {
-  // Base colors
-  --color-green-1: #12d178;
-  --color-green-2: #00c997;
-  --color-green-3: #00ebbb;
-  --color-black-1: #0b0608;
-  --color-black-2: #121619;
-  --color-gray-1: #1d2928;
-  --color-gray-2: #354b4a;
-  --color-gray-3: #567976;
-  --color-white-1: #f2eeef;
-
   // Spacing units - 3px base
   --base-unit: 0.188rem;
 
@@ -47,6 +36,17 @@
 
   // Font base size
   --font-base-size: 16;
+
+  // Base colors
+  --color-green-1: #12d178;
+  --color-green-2: #00c997;
+  --color-green-3: #00ebbb;
+  --color-black-1: #0b0608;
+  --color-black-2: #121619;
+  --color-gray-1: #1d2928;
+  --color-gray-2: #354b4a;
+  --color-gray-3: #567976;
+  --color-white-1: #f2eeef;
 
   // Theme colors
   --theme-text-color: var(--color-white-1);
