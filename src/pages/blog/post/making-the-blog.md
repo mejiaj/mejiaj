@@ -140,7 +140,7 @@ let timestamp = new Date(content.date);
 
 `BlogPostBase.astro` allows me to have pure markdown posts, I just need specify what layout I want to use.
 
-```md
+```astro
 // pages/blog/post/intro.md
 ---
 layout: ../../../layouts/BlogPostBase.astro
