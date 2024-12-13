@@ -8,7 +8,7 @@ description: Recent site updates. Improvements for header, navigation, performan
 A few new release worthy improvements:
 
 - Improved mobile header
-- Skipnav and conssitent focus link styles
+- Skipnav and consistent focus link styles
 - Variable fonts for flexibility and performance
 - Improved contrast for a11y
 
