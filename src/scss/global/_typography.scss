@@ -222,39 +222,6 @@ main a {
   }
 }
 
-.footer-nav a {
-  color: var(--theme-primary-dark);
-  display: inline-block;
-  font-weight: 300;
-  position: relative;
-  text-decoration: none;
-  transition: 0.2s var(--theme-ease-primary);
-
-  &::after {
-    content: "";
-    background-color: var(--theme-primary-dark);
-    border-bottom: 1px solid;
-    bottom: 0;
-    height: 100%;
-    left: px-to-rem(-4);
-    position: absolute;
-    right: px-to-rem(-4);
-    transform-origin: bottom left;
-    transform: scale(1, 0);
-    transition: transform 0.2s var(--theme-ease-primary);
-    z-index: z(under);
-  }
-
-  @include is-active {
-    color: var(--color-black-1);
-    outline: none;
-
-    &::after {
-      transform: scale(1);
-    }
-  }
-}
-
 .astro-code,
 code,
 pre {
