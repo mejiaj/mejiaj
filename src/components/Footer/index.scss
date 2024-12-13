@@ -11,6 +11,7 @@
 //
 // Generic Styles
 // ==========================================================================
+
 .main-footer a {
   align-items: center;
   color: var(--color-black-1);
@@ -76,12 +77,12 @@
 // Contact Nav
 // ==========================================================================
 .footer-nav__menu {
-  list-style: none;
-  margin-top: 0;
-  margin-bottom: 0;
+  align-items: stretch;
   display: flex;
   flex-flow: row nowrap;
-  align-items: stretch;
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .footer-nav__menu-item {
