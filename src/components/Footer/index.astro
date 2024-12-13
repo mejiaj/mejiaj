@@ -22,13 +22,13 @@ const footerItems = [
           <a
             href={ footerItem.url }
             class="footer-nav__menu-link"
-            aria-label="{ footerItem.aria_label }"
+            aria-label={ footerItem.aria_label }
           >
             <svg
               role="img"
               aria-hidden="true"
               class="footer__icon icon">
-              <use xlink:href={`${footerItem.icon}`}></use>
+              <use xlink:href={ footerItem.icon }></use>
             </svg>
               { footerItem.label }
           </a>
