@@ -22,8 +22,7 @@ and formatting is important. Benefits of doing this:</p>
 <li>@18f/identity-stylelint-config ⏤ I need this one for work, but they’re good rules.</li>
 </ul>
 <p>Install the packages with the following NPM command:</p>
-<pre class="astro-code material-theme-palenight" style="background-color:#292D3E;color:#babed8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#FFCB6B">→</span><span style="color:#C3E88D"> npm</span><span style="color:#C3E88D"> init</span><span style="color:#C3E88D"> @eslint/config@latest</span></span>
-<span class="line"></span></code></pre>
+<pre class="astro-code material-theme-palenight" style="background-color:#292D3E;color:#babed8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#FFCB6B">→</span><span style="color:#C3E88D"> npm</span><span style="color:#C3E88D"> init</span><span style="color:#C3E88D"> @eslint/config@latest</span></span></code></pre>
 <p>Working through the options, I’m going to select <code>problems</code> option with <code>JavaScript modules</code> because I use vanilla JS.</p>
 <pre class="astro-code material-theme-palenight" style="background-color:#292D3E;color:#babed8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#FFCB6B">→</span><span style="color:#C3E88D"> npm</span><span style="color:#C3E88D"> init</span><span style="color:#C3E88D"> @eslint/config@latest</span></span>
 <span class="line"><span style="color:#FFCB6B">  Need</span><span style="color:#C3E88D"> to</span><span style="color:#C3E88D"> install</span><span style="color:#C3E88D"> the</span><span style="color:#C3E88D"> following</span><span style="color:#C3E88D"> packages:</span></span>
@@ -35,13 +34,11 @@ and formatting is important. Benefits of doing this:</p>
 <span class="line"><span style="color:#FFCB6B">  ?</span><span style="color:#C3E88D"> What</span><span style="color:#C3E88D"> type</span><span style="color:#C3E88D"> of</span><span style="color:#C3E88D"> modules</span><span style="color:#C3E88D"> does</span><span style="color:#C3E88D"> your</span><span style="color:#C3E88D"> project</span><span style="color:#C3E88D"> use?</span><span style="color:#C3E88D"> …</span></span>
 <span class="line"><span style="color:#FFCB6B">  ❯</span><span style="color:#C3E88D"> JavaScript</span><span style="color:#C3E88D"> modules</span><span style="color:#BABED8"> (import/export)</span></span>
 <span class="line"><span style="color:#FFCB6B">    CommonJS</span><span style="color:#BABED8"> (require/exports)</span></span>
-<span class="line"><span style="color:#FFCB6B">    None</span><span style="color:#C3E88D"> of</span><span style="color:#C3E88D"> these</span></span>
-<span class="line"></span></code></pre>
+<span class="line"><span style="color:#FFCB6B">    None</span><span style="color:#C3E88D"> of</span><span style="color:#C3E88D"> these</span></span></code></pre>
 <h2 id="create-config-files">Create config files</h2>
 <p>The init command above automatically creates a <code>eslint.config.mjs</code> config for me.</p>
 <p>I’m going to add the ESLint integration for prettier to avoid conflicts between them.</p>
-<pre class="astro-code material-theme-palenight" style="background-color:#292D3E;color:#babed8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#FFCB6B">→</span><span style="color:#C3E88D"> npm</span><span style="color:#C3E88D"> i</span><span style="color:#C3E88D"> -S</span><span style="color:#C3E88D"> -D</span><span style="color:#C3E88D"> eslint-config-prettier</span></span>
-<span class="line"></span></code></pre>
+<pre class="astro-code material-theme-palenight" style="background-color:#292D3E;color:#babed8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#FFCB6B">→</span><span style="color:#C3E88D"> npm</span><span style="color:#C3E88D"> i</span><span style="color:#C3E88D"> -S</span><span style="color:#C3E88D"> -D</span><span style="color:#C3E88D"> eslint-config-prettier</span></span></code></pre>
 <h2 id="adding-scripts">Adding scripts</h2>
 <p>Save yourself some time and write some NPM scripts to quickly test and fix
 issues.</p>
@@ -55,8 +52,7 @@ issues.</p>
 <span class="line"><span style="color:#89DDFF">  "</span><span style="color:#C792EA">prettier</span><span style="color:#89DDFF">"</span><span style="color:#89DDFF">:</span><span style="color:#89DDFF"> "</span><span style="color:#C3E88D">npx prettier --check './src/**/*.{css,scss,sass,js}'</span><span style="color:#89DDFF">"</span><span style="color:#89DDFF">,</span></span>
 <span class="line"><span style="color:#89DDFF">  "</span><span style="color:#C792EA">prettier:fix:js</span><span style="color:#89DDFF">"</span><span style="color:#89DDFF">:</span><span style="color:#89DDFF"> "</span><span style="color:#C3E88D">npx prettier --write './src/**/*.js'</span><span style="color:#89DDFF">"</span><span style="color:#89DDFF">,</span></span>
 <span class="line"><span style="color:#89DDFF">  "</span><span style="color:#C792EA">prettier:fix:sass</span><span style="color:#89DDFF">"</span><span style="color:#89DDFF">:</span><span style="color:#89DDFF"> "</span><span style="color:#C3E88D">npx prettier --write '**/*.{sass,scss}'</span><span style="color:#89DDFF">"</span><span style="color:#89DDFF">,</span></span>
-<span class="line"><span style="color:#89DDFF">}</span></span>
-<span class="line"></span></code></pre>
+<span class="line"><span style="color:#89DDFF">}</span></span></code></pre>
 <p>It might look like a lot, but we’re setting up tests for:</p>
 <ol>
 <li>Linting</li>

@@ -26,8 +26,7 @@
 <p>An example of tokens in SASS</p>
 <pre class="astro-code material-theme-palenight" style="background-color:#292D3E;color:#babed8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="sass"><code><span class="line"><span style="color:#F07178">ul</span><span style="color:#BABED8"> {</span></span>
 <span class="line"><span style="color:#B2CCD6">  margin-top</span><span style="color:#BABED8">: </span><span style="color:#82AAFF">units(</span><span style="color:#F78C6C">4</span><span style="color:#82AAFF">)</span><span style="color:#BABED8">;</span></span>
-<span class="line"><span style="color:#BABED8">}</span></span>
-<span class="line"></span></code></pre>
+<span class="line"><span style="color:#BABED8">}</span></span></code></pre>
 <p>This gets a value from a predefined list of spacing units, strips the <code>px</code> unit, and finally converts it to <code>rem</code> units. So now my spacing and sizing is consistent.</p>
 <h3 id="creating-the-blog-sections">Creating the blog sections</h3>
 <p>With a working environment and some solid basic styles in place, I was excited to start creating the blog. I knew I needed to create two pages.</p>
@@ -71,8 +70,7 @@
 <span class="line"><span style="color:#89DDFF">    &#x3C;/</span><span style="color:#F07178">main</span><span style="color:#89DDFF">></span></span>
 <span class="line"><span style="color:#89DDFF">    &#x3C;</span><span style="color:#FFCB6B">Footer</span><span style="color:#89DDFF"> /></span></span>
 <span class="line"><span style="color:#89DDFF">  &#x3C;/</span><span style="color:#F07178">body</span><span style="color:#89DDFF">></span></span>
-<span class="line"><span style="color:#89DDFF">&#x3C;/</span><span style="color:#F07178">html</span><span style="color:#89DDFF">></span></span>
-<span class="line"></span></code></pre>
+<span class="line"><span style="color:#89DDFF">&#x3C;/</span><span style="color:#F07178">html</span><span style="color:#89DDFF">></span></span></code></pre>
 <p>And you can re-use in another astro component like so:</p>
 <pre class="astro-code material-theme-palenight" style="background-color:#292D3E;color:#babed8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="astro"><code><span class="line"><span style="color:#BABED8">// Example template</span></span>
 <span class="line"><span style="color:#BABED8">---</span></span>
@@ -85,8 +83,7 @@
 <span class="line"><span style="color:#89DDFF">  &#x3C;</span><span style="color:#F07178">h1</span><span style="color:#89DDFF">></span><span style="color:#BABED8">{ content.title }&#x3C;/h1></span></span>
 <span class="line"><span style="color:#676E95;font-style:italic">  &#x3C;!-- Slot is where the rest of the content will fit in --></span></span>
 <span class="line"><span style="color:#89DDFF">  &#x3C;</span><span style="color:#F07178">slot</span><span style="color:#89DDFF"> /></span></span>
-<span class="line"><span style="color:#89DDFF">&#x3C;/</span><span style="color:#FFCB6B">Base</span><span style="color:#89DDFF">></span></span>
-<span class="line"></span></code></pre>
+<span class="line"><span style="color:#89DDFF">&#x3C;/</span><span style="color:#FFCB6B">Base</span><span style="color:#89DDFF">></span></span></code></pre>
 <p>Thanks to layouts I was able to reuse page markup to create a simple layout for individual blog posts.</p>
 <pre class="astro-code material-theme-palenight" style="background-color:#292D3E;color:#babed8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="astro"><code><span class="line"><span style="color:#BABED8">// layouts/BlogPostBase.astro</span></span>
 <span class="line"><span style="color:#BABED8">---</span></span>
@@ -100,8 +97,7 @@
 <span class="line"><span style="color:#89DDFF">  &#x3C;</span><span style="color:#F07178">h1</span><span style="color:#89DDFF">></span><span style="color:#BABED8">{ content.title }&#x3C;/h1></span></span>
 <span class="line"><span style="color:#89DDFF">  &#x3C;</span><span style="color:#F07178">time</span><span style="color:#C792EA"> datetime</span><span style="color:#89DDFF">=</span><span style="color:#C3E88D">{</span><span style="color:#C792EA"> timestamp.toISOString</span><span style="color:#89DDFF">() }></span><span style="color:#BABED8">{ content.date }&#x3C;/time></span></span>
 <span class="line"><span style="color:#89DDFF">  &#x3C;</span><span style="color:#F07178">slot</span><span style="color:#89DDFF"> /></span></span>
-<span class="line"><span style="color:#89DDFF">&#x3C;/</span><span style="color:#FFCB6B">Base</span><span style="color:#89DDFF">></span></span>
-<span class="line"></span></code></pre>
+<span class="line"><span style="color:#89DDFF">&#x3C;/</span><span style="color:#FFCB6B">Base</span><span style="color:#89DDFF">></span></span></code></pre>
 <p><code>BlogPostBase.astro</code> allows me to have pure markdown posts, I just need specify what layout I want to use.</p>
 <pre class="astro-code material-theme-palenight" style="background-color:#292D3E;color:#babed8; overflow-x: auto; white-space: pre-wrap; word-wrap: break-word;" tabindex="0" data-language="astro"><code><span class="line"><span style="color:#BABED8">// pages/blog/post/intro.md</span></span>
 <span class="line"><span style="color:#BABED8">---</span></span>
@@ -114,8 +110,7 @@
 <span class="line"></span>
 <span class="line"><span style="color:#BABED8">The reason for creating this is mostly selfish. I want to improve my writing skills, share what I've learned, and things I've worked on.</span></span>
 <span class="line"></span>
-<span class="line"><span style="color:#BABED8">Plus, writing in markdown is surprisingly fun!</span></span>
-<span class="line"></span></code></pre>
+<span class="line"><span style="color:#BABED8">Plus, writing in markdown is surprisingly fun!</span></span></code></pre>
 <h2 id="dealing-with-dates">Dealing with dates</h2>
 <p>If you look at the example above you’ll see a date entry. That’s used in blog listings and posts in a <code>&#x3C;time /></code> element. This is intentional and is part of the push for more semantic markup on the site. It was also a good refresher on working with dates with native javascript.</p>
 <p>The <code>&#x3C;time /></code> represents a specific point in time. You can have a human readable date inside, but you need to specify a valid timestamp in the <code>datetime</code> attribute.</p>
