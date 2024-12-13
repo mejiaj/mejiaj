@@ -188,7 +188,8 @@ a {
   }
 }
 
-a:not(.footer-nav__menu-link):not(.skip-link) {
+header a,
+main a {
   color: var(--theme-primary-dark);
   display: inline-block;
   font-weight: 300;
@@ -199,7 +200,6 @@ a:not(.footer-nav__menu-link):not(.skip-link) {
 
   &::after {
     content: "";
-    // background-color: var(--theme-primary-dark);
     background-color: var(--color-gray-3) !important;
     border-bottom: 1px solid;
     left: 0;
