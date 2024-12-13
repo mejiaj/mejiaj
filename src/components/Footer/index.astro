@@ -15,22 +15,21 @@ const footerItems = [
 ---
 
 <footer class="main-footer" role="contentinfo" id="contact">
-  <nav class="nav footer-nav" aria-label="Footer menu">
-    <ul class="footer-nav__menu">
+  <nav class="footer-nav nav" aria-label="Footer menu">
+    <ul class="footer-nav__items">
       {footerItems.map((footerItem, index) => (
-        <li class="footer-nav__menu-item">
+        <li class="footer-nav__item">
           <a
             href={ footerItem.url }
-            class="footer-nav__menu-link"
+            class="footer-nav__link"
             aria-label={ footerItem.aria_label }
           >
             <svg
               role="img"
               aria-hidden="true"
-              class="footer__icon icon">
+              class="footer-nav__icon icon">
               <use xlink:href={ footerItem.icon }></use>
             </svg>
-              { footerItem.label }
           </a>
         </li>
       ))}
