@@ -21,7 +21,7 @@
     "@18f/identity-stylelint-config": "^4.1.0",
     "@astrojs/sitemap": "^3.2.1",
     "@eslint/js": "^9.16.0",
-    "astro": "^5.0.5",
+    "astro": "^5.0.8",
     "eslint": "^9.16.0",
     "eslint-config-prettier": "^9.1.0",
     "globals": "^15.13.0",
