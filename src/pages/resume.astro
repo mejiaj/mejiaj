@@ -3,21 +3,12 @@ import Base from "../layouts/Base.astro";
 ---
 
 <Base title="Resume" description="James Mejia - Resume">
-  <header class="resume__header">
-    <div class="h-card">
-      <div class="h-card__intro" id="about">
-        <h1 class="h-card__name">James Mejia</h1>
-        <div class="h-card__title">Designer & Front-End Developer</div>
-      </div>
-      <div class="h-card__contact">
-        <a
-          href="mailto:me@jmejia.com"
-          class="h-card__email"
-        >
-          me@jmejia.com
-        </a>
-      </div>
+  <header class="resume__header" itemscope itemtype="https://schema.org/Person">
+    <h1 class="h-card__name" itemprop="name">James Mejia</h1>
+    <div class="h-card__title" itemprop="jobTitle">
+      Designer & Front-End Developer
     </div>
+    <a href="mailto:me@jmejia.com" itemprop="email">me@jmejia.com</a>
   </header>
   <div class="resume__greeting">
     <h2>Hi!</h2>
@@ -93,6 +84,14 @@ import Base from "../layouts/Base.astro";
         <li>JavaScript</li>
         <li>UI/UX design</li>
         <li>Typography</li>
+      </ul>
+      <h3>Outreach</h3>
+      <ul>
+        <li>Drupal GovCon Training 2024</li>
+        <li>Drupal GovCon Presentation & Training 2023</li>
+        <li>Drupal4Gov Training 2023</li>
+        <li>Drupal GovCon 2021</li>
+        <li>Getting Started with USWDS, Drupal NoVA</li>
       </ul>
     </section>
   </div>
