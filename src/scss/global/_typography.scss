@@ -100,6 +100,16 @@ h6 {
   transition: font-size 0.25s var(--theme-ease-primary);
 }
 
+dt {
+  color: var(--theme-primary-light);
+  font-weight: 700;
+}
+
+dd {
+  margin-left: 0;
+  margin-bottom: var(--space-04);
+}
+
 b,
 strong {
   font-weight: 400;
