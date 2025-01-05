@@ -100,6 +100,16 @@ h6 {
   transition: font-size 0.25s var(--theme-ease-primary);
 }
 
+dt {
+  color: var(--theme-primary-light);
+  font-weight: 700;
+}
+
+dd {
+  margin-left: 0;
+  margin-bottom: var(--space-04);
+}
+
 b,
 strong {
   font-weight: 400;
@@ -109,8 +119,9 @@ p {
   font-weight: 300;
   line-height: 1.5;
   margin-bottom: px-to-rem(30);
-  max-width: 60ch;
+  max-width: 63ch;
   transition: font-size 0.25s var(--theme-ease-primary);
+  text-wrap-style: pretty;
 }
 
 p:first-of-type {

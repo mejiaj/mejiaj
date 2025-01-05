@@ -9,37 +9,12 @@
 }
 
 //
-// Header
-// ==========================================================================
-.resume__header .h-card {
-  margin-top: px-to-rem(50);
-  order: 2;
-  width: 100%;
-
-  @include mq("md") {
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-  }
-}
-
-.resume__header .h-card__contact {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.resume__header h1 {
-  margin-bottom: 0;
-}
-
-//
 // Experience & Skills
 // ==========================================================================
 .resume__info {
   @include mq(md) {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 5fr 3fr;
     grid-column-gap: 2rem;
   }
 }

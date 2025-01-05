@@ -3,21 +3,12 @@ import Base from "../layouts/Base.astro";
 ---
 
 <Base title="Resume" description="James Mejia - Resume">
-  <header class="resume__header">
-    <div class="h-card">
-      <div class="h-card__intro" id="about">
-        <h1 class="h-card__name">James Mejia</h1>
-        <div class="h-card__title">Designer & Front-End Developer</div>
-      </div>
-      <div class="h-card__contact">
-        <a
-          href="mailto:me@jmejia.com"
-          class="h-card__email"
-        >
-          me@jmejia.com
-        </a>
-      </div>
+  <header class="resume__header" itemscope itemtype="https://schema.org/Person">
+    <h1 class="h-card__name" itemprop="name">James Mejia</h1>
+    <div class="h-card__title" itemprop="jobTitle">
+      Designer & Front-End Developer
     </div>
+    <a href="mailto:me@jmejia.com" itemprop="email">me@jmejia.com</a>
   </header>
   <div class="resume__greeting">
     <h2>Hi!</h2>
@@ -79,12 +70,12 @@ import Base from "../layouts/Base.astro";
       </ol>
     </section>
     <section class="resume__skills">
-      <h3>Languages</h3>
+      <h5>Languages</h5>
       <ul>
         <li>English</li>
         <li>Spanish</li>
       </ul>
-      <h3>Skills</h3>
+      <h5>Skills</h5>
       <ul class="resume__skills-list">
         <li>Drupal 8 certified themer</li>
         <li>Accessibility</li>
@@ -94,6 +85,17 @@ import Base from "../layouts/Base.astro";
         <li>UI/UX design</li>
         <li>Typography</li>
       </ul>
+      <h5>Outreach</h5>
+      <dl>
+        <dt>Drupal GovCon 2024</dt>
+        <dd>Instructor</dd>
+        <dt>Drupal GovCon 2023</dt>
+        <dd>Co-presenter & Instructor</dd>
+        <dt>Drupal4Gov 2023</dt>
+        <dd>Instructor</dd>
+        <dt>Drupal NoVA 2019</dt>
+        <dd>Getting Started with USWDS</dd>
+      </dl>
     </section>
   </div>
 </Base>
