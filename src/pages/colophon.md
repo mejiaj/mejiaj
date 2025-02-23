@@ -27,6 +27,11 @@ The primary goals are to have a good developer experience and a speedy site that
 - SASS for mixins and extends
 - CSS custom properties (CSS variables)
 
+## Accessibility
+
+- Baseline is WCAG 2.2 AA
+- Testing with Deque Axe plugin
+
 ## Future goals
 
 - Prototype lightning CSS
