@@ -67,6 +67,12 @@ h2,
   }
 }
 
+h2 a {
+  &::after {
+    bottom: 4px;
+  }
+}
+
 h3 {
   font-size: px-to-rem(36);
   font-weight: 400;
@@ -200,7 +206,7 @@ a {
 }
 
 header a,
-main a {
+:where(main a) {
   color: var(--theme-primary-dark);
   display: inline-block;
   font-weight: 300;
@@ -220,7 +226,6 @@ main a {
     width: 100%;
     position: absolute;
     transform-origin: bottom left;
-    // transform: scale(1, 0);
     transform: scale(0, 1);
     transition: transform 0.2s;
     // z-index: z(under);
