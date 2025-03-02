@@ -58,7 +58,7 @@ I'd recommend saving the command as a ZSH alias so you don't have to think about
 
 Here's how I've added it to mine:
 
-```rc
+```
 # ~/.zshrc
 alias npmu="npx npm-check-updates -i --format group || -y"
 ```
