@@ -6,3 +6,4 @@ My name is James Mejia, pronounced _Meh • Hee • Yah_. I'm a front-end engine
 
 - **Portfolio**: https://jmejia.com
 - **Resume**: https://jmejia.com/resume
+- **My personal README**: https://jmejia.com/personal-readme
