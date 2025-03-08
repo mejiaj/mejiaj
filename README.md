@@ -1,3 +1,9 @@
-Hey there! My name is James Mejia (pronounced Meh • hee • yah). I'm a front-end developer based in the Midwest.
+# 👋 Hello!
 
-My portfolio site is available at https://www.jmejia.com/.
+My name is James Mejia, pronounced _Meh • Hee • Yah_. I'm a front-end engineer and designer based in the Midwest.
+
+## 🚀 Links
+
+- **Portfolio**: https://jmejia.com
+- **Resume**: https://jmejia.com/resume
+- **My personal README**: https://jmejia.com/personal-readme

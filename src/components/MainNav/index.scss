@@ -9,11 +9,13 @@
   text-align: right;
 
   @include mq(sm) {
-    flex-flow: row nowrap;
-
     .nav__item:not(:first-of-type) {
       margin-left: var(--space-1);
     }
+  }
+
+  @include mq(md) {
+    flex-flow: row wrap;
   }
 
   a {
@@ -30,6 +32,9 @@
     @include mq(sm) {
       display: flex;
       flex-direction: row;
+    }
+
+    @include mq(md) {
       margin-bottom: 0;
     }
   }

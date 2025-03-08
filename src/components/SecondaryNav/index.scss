@@ -25,11 +25,14 @@
   }
 
   @include mq(sm) {
-    border-left-width: 1px;
-    border-top: none;
-    margin-left: var(--space-03);
     margin-bottom: 0;
-    padding-left: var(--space-03);
+  }
+
+  @include mq(md) {
+    border-top: none;
+    border-left-width: 1px;
     padding-top: 0;
+    margin-left: var(--space-03);
+    padding-left: var(--space-03);
   }
 }
