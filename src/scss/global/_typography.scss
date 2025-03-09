@@ -39,13 +39,13 @@ h4,
 h5,
 h6 {
   margin-top: var(--space-2);
-  margin-bottom: 0;
+  margin-bottom: var(--space-02);
   text-wrap: balance;
 }
 
 h1,
 %h1-style {
-  font-size: px-to-rem(45);
+  font-size: var(--space-3);
   font-weight: 400;
   line-height: 1.1;
   transition: font-size 0.25s var(--theme-ease-primary);
@@ -57,7 +57,7 @@ h1,
 
 h2,
 %h2-style {
-  font-size: var(--space-105);
+  font-size: var(--space-2);
   font-weight: 400;
   line-height: 1.22;
   transition: font-size 0.25s var(--theme-ease-primary);
@@ -74,22 +74,30 @@ h2 a {
 }
 
 h3 {
-  font-size: px-to-rem(36);
+  font-size: var(--space-105);
   font-weight: 400;
   line-height: 1.22;
   transition: font-size 0.25s var(--theme-ease-primary);
+
+  @include mq(lg) {
+    font-size: px-to-rem(36);
+  }
 }
 
 h4 {
-  font-size: px-to-rem(33);
+  font-size: var(--space-1);
   font-weight: 400;
   line-height: 1.22;
   margin-top: px-to-rem(33);
   transition: font-size 0.25s var(--theme-ease-primary);
+
+  @include mq(lg) {
+    font-size: px-to-rem(33);
+  }
 }
 
 h5 {
-  font-size: px-to-rem(30);
+  font-size: var(--space-1);
   font-weight: 400;
   line-height: 1.22;
   transition: font-size 0.25s var(--theme-ease-primary);
@@ -100,10 +108,13 @@ h5 {
 }
 
 h6 {
-  font-size: px-to-rem(21);
   font-weight: 400;
   line-height: 1.22;
   transition: font-size 0.25s var(--theme-ease-primary);
+
+  @include mq(lg) {
+    font-size: px-to-rem(21);
+  }
 }
 
 dt {
@@ -119,6 +130,10 @@ dd {
 b,
 strong {
   font-weight: 400;
+}
+
+.smol {
+  font-size: px-to-rem(8);
 }
 
 p {
@@ -193,8 +208,6 @@ code {
 }
 
 em {
-  border-bottom: 2px solid;
-  font-style: normal;
   font-weight: 400;
 }
 

@@ -59,7 +59,7 @@ I enjoy writing semantic code with a focus on accessibility and performance. I e
 - Being rigid or unwilling to learn
 - Accessibility and performance as an afterthought
 - Repetitive or bloated code
-- Tiny fonts
+- <span class="smol">Tiny fonts</span>
 
 ## Scheduling
 

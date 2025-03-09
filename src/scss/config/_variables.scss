@@ -1,8 +1,15 @@
 @use "sass:map";
 
+// Spacing units - 3px base
+// This function is created to avoid using calc() for performance.
+@function spacing-multiple($multiplier: 1) {
+  $base-unit: 0.1875; // 3px
+
+  @return ($base-unit * $multiplier) + 0rem;
+}
+
 :root {
-  // Spacing units - 3px base
-  --base-unit: 0.188rem;
+  --base-unit: #{spacing-multiple()};
 
   // 3px
   --space-01: var(--base-unit);
