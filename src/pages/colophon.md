@@ -16,7 +16,7 @@ The primary goals are to have a good developer experience and a speedy site that
 ### Typefaces
 
 - **Main font - Aleo[^3]:** is a variable font, which helps with performance. It also boasts a large variety of weights and styles, which makes it flexible for headings and body text.
-- **Code examples - Fira Code[^4]:** One of my favorite fonts! I love humanist typefaces in general, which feel more personal. The creator, Erik Spiekermann is also a big personal design inspiration.
+- **Code examples - Fira Code[^4]:** Fira Sans is one of my favorite typefaces! I love humanist typefaces in general, which feel more personal. This is the monospace version of it. The creator, Erik Spiekermann is also a big personal design inspiration.
 
 ## Technology
 
