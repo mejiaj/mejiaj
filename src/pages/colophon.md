@@ -15,29 +15,29 @@ The primary goals are to have a good developer experience and a speedy site that
 
 ### Typefaces
 
-- **Main font:** Aleo[^3]
-- **Code examples:** Fira Code[^4]
+- **Main font - Aleo[^3]:** is a variable font, which helps with performance. It also boasts a large variety of weights and styles, which makes it flexible for headings and body text.
+- **Code examples - Fira Code[^4]:** One of my favorite fonts! I love humanist typefaces in general, which feel more personal. The creator, Erik Spiekermann is also a big personal design inspiration.
 
 ## Technology
 
-- Code written with Visual Studio Code
-- Powered by AstroJS
-- Markdown for long form writing
-- Vanilla JavaScript for interactive elements
-- SASS for mixins and extends
-- CSS custom properties (CSS variables)
+- **Visual Studio Code.** My current editor of choice. I've tried Atom, Sublime Text, WebStorm, Macromedia Dreamweaver, and even notepad++!
+- **AstroJS for powering the site.** Easy to setup, fast, and supports all sorts of integrations. The developer experience and documentation are _awesome_.
+- Markdown for long form writing, it's fun once you get the hang of it!
+- **Vanilla JavaScript.** jQuery was nice, but modern JS is so nice these days. Plus, you don't need to build/bundle anything with ES Modules. The performance is unbeatable too.
+- **SASS for styling.** I've been using SASS for a **long** time and when I created this site, many modern features didn't exist or had little cross-browser support. I needed variables, functions, mixins, and the ability to manipulate colors.
+- **CSS custom properties (CSS variables).** I started experimenting and once it started getting baseline support. I hope to use much more advanced techniques to create themeable components and a light theme.
 
 ## Accessibility
 
-- Baseline is WCAG 2.2 AA
-- Testing with Deque Axe plugin
+- Baseline is WCAG 2.2 AA. This is what we used in the U.S. Web Design System.
+- The Deque Axe plugin is used for testing
 
 ## Future goals
 
-- Prototype lightning CSS
-- Use native CSS in favor of SASS
-- Add web components
-- More automation via GitHub actions
+- **Prototype lightning CSS**. It's fast, light, and supports new native CSS features.
+- **More native CSS**. SASS is great, but would like to rely less on compiled and bundled assets.
+- **Add web components**. I've experimented with native, StencilJS, and Lit web components. I love how it makes component based designs easier to use and are platform agnostic. For example, you can use web components in many JS frameworks and different CMS's, like Drupal.
+- **More automation**. I'd like to add more GitHub actions that check for formatting, linting, and deploy previews.
 
 [^1]: https://astro.build/
 
