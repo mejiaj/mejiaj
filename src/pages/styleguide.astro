@@ -1,5 +1,5 @@
 ---
-import MainHead from '../components/MainHead.astro';
+import Base from "../layouts/Base.astro";
 
 import Button from '../components/Button/index.astro';
 ---
@@ -22,123 +22,213 @@ import Button from '../components/Button/index.astro';
   );
 
   .sizing-units {
+    color: var(--color-green-10);
     list-style: none;
     padding-left: 0;
   }
 
   .sizing-units__item {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: start;
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    align-items: center;
     column-gap: 12px;
     margin-bottom: 30px;
   }
 
   .sizing-units__preview {
     display: block;
-    background-color: rgba(white, 0.2);
-    border: 1px solid rgba(white, 0.4);
+    background-color: var(--color-green-80);
+    border: 1px solid var(--color-green-70);
     width: 30px;
-  }
-
-  .sizing-units__label {
-    line-height: 1;
   }
 
   @each $spacing_unit, $spacing_value in $sizes {
     .sizing__#{$spacing_unit} .sizing-units__preview {
+      display: block;
       height: #{$spacing_value};
+      width: #{$spacing_value};
     }
+  }
+
+  .color-swatch {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  .color-swatch__item {
+    display: flex;
+    align: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100px;
+    height: 100px;
+    margin: 0 12px 12px 0;
+    padding: 12px;
+    text-align: center;
   }
 </style>
 
-<html lang="en">
-  <head>
-    <MainHead title="Styleguide" />
-  </head>
-  <body>
-    <div class="wrap">
-      <h1>Styleguide</h1>
-
-      <section class="tokens" id="tokens">
-        <h2>Tokens</h2>
-
-        <section id="sizing" class="tokens tokens__sizing">
-          <h3>Sizing Units</h3>
-          <ul class="sizing-units">
-            <li class="sizing-units__item sizing__01">
-              <span class="sizing-units__preview"></span>
-              <span class="sizing-units__label">3px | 0.1875rem</span>
-            </li>
-            <li class="sizing-units__item sizing__02">
-              <span class="sizing-units__preview"></span>
-              <span class="sizing-units__label">4px | 0.25rem</span>
-            </li>
-            <li class="sizing-units__item sizing__03">
-              <span class="sizing-units__preview"></span>
-              <span class="sizing-units__label">6px | 0.375rem</span>
-            </li>
-            <li class="sizing-units__item sizing__04">
-              <span class="sizing-units__preview"></span>
-              <span class="sizing-units__label">9px | 0.5625rem</span>
-            </li>
-            <li class="sizing-units__item sizing__05">
-              <span class="sizing-units__preview"></span>
-              <span class="sizing-units__label">12px | 0.75rem</span>
-            </li>
-            <li class="sizing-units__item sizing__06">
-              <span class="sizing-units__preview"></span>
-              <span class="sizing-units__label">20px | 1.25rem</span>
-            </li>
-            <li class="sizing-units__item sizing__07">
-              <span class="sizing-units__preview"></span>
-              <span class="sizing-units__label">24px | 1.5rem</span>
-            </li>
-            <li class="sizing-units__item sizing__08">
-              <span class="sizing-units__preview"></span>
-              <span class="sizing-units__label">27px | 1.6875rem</span>
-            </li>
-            <li class="sizing-units__item sizing__09">
-              <span class="sizing-units__preview"></span>
-              <span class="sizing-units__label">30px | 1.875rem</span>
-            </li>
-            <li class="sizing-units__item sizing__10">
-              <span class="sizing-units__preview"></span>
-              <span class="sizing-units__label">45px | 2.8125rem</span>
-            </li>
-            <li class="sizing-units__item sizing__11">
-              <span class="sizing-units__preview"></span>
-              <span class="sizing-units__label">72px | 4.5rem</span>
-            </li>
-            <li class="sizing-units__item sizing__12">
-              <span class="sizing-units__preview"></span>
-              <span class="sizing-units__label">75px | 4.6875rem</span>
-            </li>
-            <li class="sizing-units__item sizing__13">
-              <span class="sizing-units__preview"></span>
-              <span class="sizing-units__label">120px | 7.5rem</span>
-            </li>
-          </ul>
-
-          <blockquote>
-            <p>
-              A blockquote.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque rerum obcaecati sapiente, magni architecto labore sunt nostrum doloremque provident consectetur?
-            </p>
-          </blockquote>
-          <p>
-            Base size 20px @ 1.5 ratio.
-          </p>
-        </section>
-
-        <div id="colors" class="tokens tokens__colors">
-          <h3>Colors</h3>
+<Base title="Styleguide" description="Site styleguide" wrapSize="wrap--xl">
+  <h1>Styleguide</h1>
+  <section class="tokens" id="tokens">
+    <h2>Tokens</h2>
+    <section id="sizing" class="tokens tokens__sizing">
+      <h3>Sizing Units</h3>
+      <p>
+        Base size 20px @ 1.5 ratio.
+      </p>
+      <ul class="sizing-units">
+        <li class="sizing-units__item sizing__01">
+          <div class="sizing-units__preview"></div>
+          <div class="sizing-units__label">3px | 0.1875rem</div>
+        </li>
+        <li class="sizing-units__item sizing__02">
+          <div class="sizing-units__preview"></div>
+          <div class="sizing-units__label">4px | 0.25rem</div>
+        </li>
+        <li class="sizing-units__item sizing__03">
+          <div class="sizing-units__preview"></div>
+          <div class="sizing-units__label">6px | 0.375rem</div>
+        </li>
+        <li class="sizing-units__item sizing__04">
+          <div class="sizing-units__preview"></div>
+          <div class="sizing-units__label">9px | 0.5625rem</div>
+        </li>
+        <li class="sizing-units__item sizing__05">
+          <div class="sizing-units__preview"></div>
+          <div class="sizing-units__label">12px | 0.75rem</div>
+        </li>
+        <li class="sizing-units__item sizing__06">
+          <div class="sizing-units__preview"></div>
+          <div class="sizing-units__label">20px | 1.25rem</div>
+        </li>
+        <li class="sizing-units__item sizing__07">
+          <div class="sizing-units__preview"></div>
+          <div class="sizing-units__label">24px | 1.5rem</div>
+        </li>
+        <li class="sizing-units__item sizing__08">
+          <div class="sizing-units__preview"></div>
+          <div class="sizing-units__label">27px | 1.6875rem</div>
+        </li>
+        <li class="sizing-units__item sizing__09">
+          <div class="sizing-units__preview"></div>
+          <div class="sizing-units__label">30px | 1.875rem</div>
+        </li>
+        <li class="sizing-units__item sizing__10">
+          <div class="sizing-units__preview"></div>
+          <div class="sizing-units__label">45px | 2.8125rem</div>
+        </li>
+        <li class="sizing-units__item sizing__11">
+          <div class="sizing-units__preview"></div>
+          <div class="sizing-units__label">72px | 4.5rem</div>
+        </li>
+        <li class="sizing-units__item sizing__12">
+          <div class="sizing-units__preview"></div>
+          <div class="sizing-units__label">75px | 4.6875rem</div>
+        </li>
+        <li class="sizing-units__item sizing__13">
+          <div class="sizing-units__preview"></div>
+          <div class="sizing-units__label">120px | 7.5rem</div>
+        </li>
+      </ul>
+    </section>
+    <hr>
+    <section id="colors" class="tokens tokens__colors">
+      <h3>Old Colors</h3>
+      <div class="color-swatch">
+        <div class="color-swatch__item" style="background-color: var(--color-green-1);"></div>
+        <div class="color-swatch__item" style="background-color: var(--color-green-2);"></div>
+        <div class="color-swatch__item" style="background-color: var(--color-green-3);"></div>
+        <div class="color-swatch__item" style="background-color: var(--color-green-4);"></div>
+        <div class="color-swatch__item" style="background-color: var(--color-black-1);"></div>
+        <div class="color-swatch__item" style="background-color: var(--color-gray-1);"></div>
+        <div class="color-swatch__item" style="background-color: var(--color-gray-2);"></div>
+        <div class="color-swatch__item" style="background-color: var(--color-gray-3);"></div>
+      </div>
+      <h2>Green</h2>
+      <div class="color-swatch">
+        <div class="grid-item">
+          green 10
+          <div class="color-swatch__item" style="background-color: var(--color-green-10);"></div>
         </div>
-      </section>
-
+        <div class="grid-item">
+          green 20
+          <div class="color-swatch__item" style="background-color: var(--color-green-20);"></div>
+        </div>
+        <div class="grid-item">
+          green 30
+          <div class="color-swatch__item" style="background-color: var(--color-green-30);"></div>
+        </div>
+        <div class="grid-item">
+          green 40
+          <div class="color-swatch__item" style="background-color: var(--color-green-40);"></div>
+        </div>
+        <div class="grid-item">
+          green 50
+          <div class="color-swatch__item" style="background-color: var(--color-green-50);"></div>
+        </div>
+        <div class="grid-item">
+          green 60
+          <div class="color-swatch__item" style="background-color: var(--color-green-60);"></div>
+        </div>
+        <div class="grid-item">
+          green 70
+          <div class="color-swatch__item" style="background-color: var(--color-green-70);"></div>
+        </div>
+        <div class="grid-item">
+          green 80
+          <div class="color-swatch__item" style="background-color: var(--color-green-80);"></div>
+        </div>
+        <div class="grid-item">
+          green 90
+          <div class="color-swatch__item" style="background-color: var(--color-green-90);"></div>
+        </div>
+      </div>
+      <h2>Gray</h2>
+      <div class="color-swatch">
+        <div class="grid-item">
+          gray 10
+          <div class="color-swatch__item" style="background-color: var(--color-gray-10);"></div>
+        </div>
+        <div class="grid-item">
+          gray 20
+          <div class="color-swatch__item" style="background-color: var(--color-gray-20);"></div>
+        </div>
+        <div class="grid-item">
+          gray 30
+          <div class="color-swatch__item" style="background-color: var(--color-gray-30);"></div>
+        </div>
+        <div class="grid-item">
+          gray 40
+          <div class="color-swatch__item" style="background-color: var(--color-gray-40);"></div>
+        </div>
+        <div class="grid-item">
+          gray 50
+          <div class="color-swatch__item" style="background-color: var(--color-gray-50);"></div>
+        </div>
+        <div class="grid-item">
+          gray 60
+          <div class="color-swatch__item" style="background-color: var(--color-gray-60);"></div>
+        </div>
+        <div class="grid-item">
+          gray 70
+          <div class="color-swatch__item" style="background-color: var(--color-gray-70);"></div>
+        </div>
+        <div class="grid-item">
+          gray 80
+          <div class="color-swatch__item" style="background-color: var(--color-gray-80);"></div>
+        </div>
+        <div class="grid-item">
+          gray 90
+          <div class="color-swatch__item" style="background-color: var(--color-gray-90);"></div>
+        </div>
+      </div>
+    </section>
+    <hr>
+    <section id="typography" class="tokens tokens__typography">
       <h2>Typography</h2>
+      <h1 class="display">Header 1 Display</h1>
       <h1>Header 1</h1>
       <h2>Header 2</h2>
       <h3>Header 3</h3>
@@ -146,11 +236,19 @@ import Button from '../components/Button/index.astro';
       <h5>Header 5</h5>
       <h6>Header 6</h6>
       <p class="lead-in">
-        This is a lead-in paragraph. Used in intro. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, eligendi.
+        This is a lead-in paragraph. Used in intro. Synergize scalable paradigms to empower seamless innovation. Leverage agile frameworks to provide a robust synopsis for high-level overviews. Iterate approaches to corporate strategy fostering collaborative thinking to further the overall value proposition.
       </p>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, et pariatur. Architecto aperiam suscipit, provident, repellat accusamus aut alias amet numquam ut et enim laborum!
       </p>
+      <blockquote>
+        <p>
+          A blockquote.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque rerum obcaecati sapiente, magni architecto labore sunt nostrum doloremque provident consectetur?
+        </p>
+      </blockquote>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia sunt, autem numquam ad quae, eius provident voluptate nisi voluptates repellat facere commodi molestiae possimus error expedita! Reprehenderit neque modi voluptatum!
       </p>
@@ -187,10 +285,8 @@ import Button from '../components/Button/index.astro';
         <li>Ordered item 5</li>
         <li>Ordered item 6</li>
       </ol>
-
       <h2>Links</h2>
       <a href="javascript:void(0)">Default link</a>
-
       <h2>Buttons</h2>
       <Button>
         Default Button
@@ -198,6 +294,6 @@ import Button from '../components/Button/index.astro';
       <Button variant="btn--inverse">
         Inverse variant
       </Button>
-    </div>
-  </body>
-</html>
+    </section>
+  </section>
+</Base>
