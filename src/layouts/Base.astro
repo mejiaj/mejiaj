@@ -4,7 +4,7 @@ import MainHead from "../components/MainHead.astro";
 import Header from "../components/Header/index.astro";
 import Footer from "../components/Footer/index.astro";
 
-const { title, description } = Astro.props;
+const { title, description, wrapSize } = Astro.props;
 
 ---
 
@@ -17,7 +17,7 @@ const { title, description } = Astro.props;
       <Skiplink />
       <Header />
       <main id="main-content">
-        <div class="wrap">
+        <div class={wrapSize ? wrapSize : "wrap"}>
           <slot />
         </div>
       </main>
