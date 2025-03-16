@@ -1,6 +1,5 @@
 import Nav from "./MainNav";
 import SmoothScroll from "./SmoothScroll";
-import ScrollOut from "./ScrollOut";
 
 document.addEventListener("DOMContentLoaded", () => {
   const mainMenu = document.querySelector(".js-nav");
@@ -8,5 +7,4 @@ document.addEventListener("DOMContentLoaded", () => {
   if (mainMenu) Nav();
 
   SmoothScroll();
-  ScrollOut();
 });
