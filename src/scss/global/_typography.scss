@@ -175,6 +175,22 @@ blockquote {
   margin: 0 0 var(--space-105);
 }
 
+table {
+  border-collapse: collapse;
+  color: var(--theme-base-lighter);
+}
+
+thead {
+  background-color: var(--theme-base-darkest);
+  color: var(--theme-base-lightest);
+}
+
+th,
+td {
+  border: 1px solid var(--theme-base-darker);
+  padding: var(--space-02) var(--space-04);
+}
+
 ul,
 ol {
   padding-left: 0;
