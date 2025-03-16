@@ -46,6 +46,7 @@
 
   // ==========================================================================
   // Old colors
+  // ⚠️ Don't use these colors in new projects.
   // ==========================================================================
   // Base colors
   --color-green-1: #12d178;
@@ -95,16 +96,28 @@
   // For example:
   // --color-white-1: oklch(97.02% 0 0 / 0.9); // Equals #F5F5F5
   // --color-white-alpha-1: oklch(from var(--color-white-1) l c h / 0.2);
-  // --color-white-1: var(--color-gray-10);
+
+  // ==========================================================================
   // Theme colors
-  --theme-text-color: var(--color-white-1);
-  --theme-bg-color: var(--color-gray-1);
-  --theme-primary: var(--color-green-1);
-  --theme-primary-dark: var(--color-green-2);
-  --theme-primary-light: var(--color-green-3);
-  --theme-base: var(--color-black-1);
-  --theme-base-light: var(--color-gray-2);
-  --theme-base-lighter: var(--color-gray-3);
+  // ==========================================================================
+  --theme-primary-lightest: var(--color-green-10);
+  --theme-primary-lighter: var(--color-green-30);
+  --theme-primary-light: var(--color-green-40);
+  --theme-primary: var(--color-green-50);
+  --theme-primary-dark: var(--color-green-60);
+  --theme-primary-darker: var(--color-green-70);
+  --theme-primary-darkest: var(--color-green-90);
+
+  --theme-base-lightest: var(--color-gray-20);
+  --theme-base-lighter: var(--color-gray-30);
+  --theme-base-light: var(--color-gray-40);
+  --theme-base: var(--color-gray-50);
+  --theme-base-dark: var(--color-gray-60);
+  --theme-base-darker: var(--color-gray-70);
+  --theme-base-darkest: var(--color-gray-90);
+
+  --theme-text-color: var(--color-gray-10);
+  --theme-bg-color: var(--color-green-90);
 
   // Easing
   --ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
