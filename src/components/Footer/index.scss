@@ -4,7 +4,7 @@
 // Footer
 // ==========================================================================
 .main-footer {
-  background-color: var(--theme-primary-dark);
+  background-color: var(--theme-primary);
   margin-top: var(--space-5);
   flex-shrink: 0;
 }
@@ -40,7 +40,7 @@
   z-index: z(default);
 
   @include is-active {
-    color: var(--theme-primary-dark);
+    color: var(--theme-primary);
     outline: none;
 
     &::after {

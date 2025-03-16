@@ -37,9 +37,9 @@
     @include mq(md) {
       margin-bottom: 0;
     }
-  }
 
-  .nav__link {
-    color: var(--theme-primary-dark);
+    .nav__link {
+      color: var(--theme-primary);
+    }
   }
 }
