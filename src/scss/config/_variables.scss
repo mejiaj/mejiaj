@@ -44,16 +44,58 @@
   // Font base size
   --font-base-size: 16;
 
+  // ==========================================================================
+  // Old colors
+  // ==========================================================================
   // Base colors
   --color-green-1: #12d178;
   --color-green-2: #00c997;
   --color-green-3: #00ebbb;
+
+  --color-green-1: oklch(85% 0.15 168);
+  --color-green-2: oklch(75% 0.15 168);
+  --color-green-3: oklch(65% 0.15 168);
+  --color-green-4: oklch(55% 0.15 168);
+
   --color-black-1: #0b0608;
   --color-gray-1: #1d2928;
   --color-gray-2: #354b4a;
   --color-gray-3: #567976;
   --color-white-1: #f2eeef;
 
+  // ==========================================================================
+  // New colors
+  // ==========================================================================
+
+  // Colors from color palette
+  // https://tinyurl.com/mejia-colors
+  // https://tinyurl.com/2cqvurff
+  --color-green-10: oklch(97.03% 0.042 168);
+  --color-green-20: oklch(92.59% 0.112 167);
+  --color-green-30: oklch(83.83% 0.146 168);
+  --color-green-40: oklch(79.33% 0.146 168);
+  --color-green-50: oklch(74.18% 0.152 167);
+  --color-green-60: oklch(64.11% 0.13 167);
+  --color-green-70: oklch(49.64% 0.101 167);
+  --color-green-80: oklch(34.35% 0.069 168);
+  --color-green-90: oklch(20.87% 0.042 167);
+
+  // Gray
+  --color-gray-10: oklch(95.88% 0.009 247.93);
+  --color-gray-20: oklch(92.88% 0.013 255.51);
+  --color-gray-30: oklch(86.87% 0.019 250.61);
+  --color-gray-40: oklch(74.57% 0.03 254.72);
+  --color-gray-50: oklch(59.56% 0.038 257);
+  --color-gray-60: oklch(44.74% 0.034 261.32);
+  --color-gray-70: oklch(33.51% 0.033 260.91);
+  --color-gray-80: oklch(24.33% 0.025 263.95);
+  --color-gray-90: oklch(21.61% 0.02 275.8);
+
+  // You can use oklch() to modify alpha channel.
+  // For example:
+  // --color-white-1: oklch(97.02% 0 0 / 0.9); // Equals #F5F5F5
+  // --color-white-alpha-1: oklch(from var(--color-white-1) l c h / 0.2);
+  // --color-white-1: var(--color-gray-10);
   // Theme colors
   --theme-text-color: var(--color-white-1);
   --theme-bg-color: var(--color-gray-1);
