@@ -7,7 +7,7 @@ description: I'm excited to dive into the new Oklab color space for the site _an
 
 Over time, this site's color tokens have become a mix of my favorite colors from past themes. Some colors look similar to others and others are barnacles that have stuck around from years ago. I've wanted to improve this, but hesitated because the old styles relied heavily on SASS, a dependency I've been working to reduce. It hasn't been possible, until now!
 
-The OKLab color space is relatively new and the `okchl()` CSS function became baseline in May 2023[^1]. Its supposed to allow more accurate, consistent, and accessible colors for the web.
+The OKLab color space is relatively new and the `oklch()` CSS function became baseline in May 2023[^1]. Its supposed to allow more accurate, consistent, and accessible colors for the web.
 
 ## The problem with colors
 
@@ -39,7 +39,7 @@ _I know Safari introduced `color-contrast()` to help with accessible color combi
 
 ## Discovering OKLab
 
-For the website, I just need a cohesive color palette, for now. Below is a screenshot of what I had before (the first row) and what I came up with using `okchl()` (the second row):
+For the website, I just need a cohesive color palette, for now. Below is a screenshot of what I had before (the first row) and what I came up with using `oklch()` (the second row):
 
 ![Two rows of colors, old colors first a mix of greens and grays and below is a row of matching shades of green](</public/assets/greens-2025-03-15 at 14.13.57@2x.webp>)
 
@@ -65,7 +65,7 @@ In the first row shows a diverse range of colors. Some are from the latest redes
 }
 ```
 
-Now the second row, with only green, I've made from the previous primary green and made it the medium, `50` value. Then, I used `okchl()` to create visually consistent shades and tints.
+Now the second row, with only green, I've made from the previous primary green and made it the medium, `50` value. Then, I used `oklch()` to create visually consistent shades and tints.
 
 This had a few problems because:
 
@@ -75,7 +75,7 @@ This had a few problems because:
 
 ### Implementing OKLab
 
-The `okchl()` function allows you to set colors in a way that's similar to HSLA or RGBA, but more intuitive. The setup is:
+The `oklch()` function allows you to set colors in a way that's similar to HSLA or RGBA, but more intuitive. The setup is:
 
 1. **Lightness**: number or percentage.
 1. **Chroma**: number or percentage, the amount of color.
