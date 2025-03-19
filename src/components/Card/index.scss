@@ -1,5 +1,6 @@
 @use "sass:color";
-@use "../config" as *;
+
+@use "../../scss/config" as *;
 
 $card-border-color: rgba(#f2eeef, 0.3);
 
