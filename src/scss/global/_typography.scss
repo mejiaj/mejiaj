@@ -10,7 +10,7 @@ body {
   flex-direction: column;
   background-color: var(--theme-bg-color);
   color: var(--theme-text-color);
-  font-size: var(--space-1);
+  font-size: var(--space-105);
   font-family: var(--font-serif);
   font-weight: 300;
   line-height: 1.5;
@@ -20,7 +20,7 @@ body {
   transition: font-size 0.25s var(--theme-ease-primary);
 
   @include mq(xl) {
-    font-size: px-to-rem(24);
+    font-size: var(--space-2);
   }
 
   @supports (font-size-adjust: 1) {
@@ -103,7 +103,7 @@ h5 {
   transition: font-size 0.25s var(--theme-ease-primary);
 
   @include mq(lg) {
-    font-size: px-to-rem(24);
+    font-size: var(--space-105);
   }
 }
 
@@ -124,7 +124,7 @@ dt {
 
 dd {
   margin-left: 0;
-  margin-bottom: var(--space-04);
+  margin-bottom: var(--space-05);
 }
 
 b,
@@ -189,7 +189,7 @@ thead {
 th,
 td {
   border: 1px solid var(--theme-base-darker);
-  padding: var(--space-02) var(--space-04);
+  padding: var(--space-02) var(--space-05);
 }
 
 ul,
@@ -198,8 +198,8 @@ ol {
 
   ul,
   ol {
-    margin-top: var(--space-03);
-    margin-bottom: var(--space-03);
+    margin-top: var(--space-05);
+    margin-bottom: var(--space-05);
     padding-left: var(--space-1);
   }
 }

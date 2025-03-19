@@ -62,7 +62,8 @@
   }
 
   &__logo {
-    margin-bottom: var(--space-04);
+    aspect-ratio: 2.5 / 1;
+    margin-bottom: var(--space-05);
     height: px-to-rem(45);
   }
 }

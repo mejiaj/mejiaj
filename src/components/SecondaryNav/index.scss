@@ -15,7 +15,7 @@
   padding-top: var(--space-05);
 
   .nav__item:not(:first-of-type) {
-    margin-left: var(--space-03);
+    margin-left: var(--space-05);
   }
 
   svg {
@@ -31,7 +31,7 @@
     border-top: none;
     border-left-width: 1px;
     padding-top: 0;
-    margin-left: var(--space-03);
-    padding-left: var(--space-03);
+    margin-left: var(--space-1);
+    padding-left: var(--space-1);
   }
 }

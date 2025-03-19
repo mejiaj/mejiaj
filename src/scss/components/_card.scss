@@ -24,9 +24,9 @@ $card-border-color: rgba(#f2eeef, 0.3);
   border: 3px solid $card-border-color;
   display: flex;
   flex-direction: column;
-  margin-bottom: var(--space-03);
+  margin-bottom: var(--space-05);
   height: 100%;
-  padding: var(--space-03) var(--space-1);
+  padding: var(--space-05) var(--space-1);
 
   &__header {
     min-height: px-to-rem(100);
