@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "lint": "npm run lint:sass & npm run lint:js",
+    "lint": "npm run lint:sass && npm run lint:js",
     "lint:js": "npx eslint './src/**/*.js'",
     "lint:sass": "npx stylelint '**/*.scss'",
     "lint:fix:sass": "npx stylelint --fix '**/*.{sass,scss}'",

@@ -10,12 +10,13 @@
 }
 
 .project-group {
-  place-items: center;
   display: grid;
   grid-column-gap: var(--space-1);
+  justify-content: center;
   list-style: none;
   margin-bottom: 0;
-  margin-top: var(--space-3);
+  margin-top: var(--space-5);
+  place-items: center;
 
   &__item {
     width: 100%;
@@ -25,16 +26,12 @@
     margin-top: var(--space-1);
     width: 100%;
 
-    @include mq(sm) {
+    @include mq(md) {
       margin-top: 0;
     }
   }
 
-  @include mq(sm) {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    justify-content: center;
-  }
-  @include mq(lg) {
+  @include mq(md) {
     grid-template-columns: repeat(4, 1fr);
   }
 }
@@ -62,7 +59,8 @@
   }
 
   &__logo {
-    margin-bottom: var(--space-04);
+    aspect-ratio: 2.5 / 1;
+    margin-bottom: var(--space-05);
     height: px-to-rem(45);
   }
 }

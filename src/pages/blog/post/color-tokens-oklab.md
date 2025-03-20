@@ -2,7 +2,7 @@
 layout: ../../../layouts/BlogPostBase.astro
 title: Color tokens and oklab
 date: March 15, 2025
-description: I'm excited to dive into the new Oklab color space for the site _and_ improve my color tokens. This new feature allows for more consistent and accessible colors. You should notice more cohesive colors on the site now.
+description: Diving into the new Oklab color space for the site _and_ improve my color tokens. This new feature allows for more consistent and accessible colors.
 ---
 
 Over time, this site's color tokens have become a mix of my favorite colors from past themes. Some colors look similar to others and others are barnacles that have stuck around from years ago. I've wanted to improve this, but hesitated because the old styles relied heavily on SASS, a dependency I've been working to reduce. It hasn't been possible, until now!
