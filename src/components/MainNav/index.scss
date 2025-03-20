@@ -8,12 +8,6 @@
   justify-content: end;
   text-align: right;
 
-  @include mq(sm) {
-    .nav__item:not(:first-of-type) {
-      margin-left: var(--space-1);
-    }
-  }
-
   @include mq(md) {
     flex-flow: row wrap;
   }
@@ -27,6 +21,7 @@
   // Primary nav
   // ==========================================================================
   &__menu {
+    column-gap: var(--space-105);
     margin-bottom: var(--space-05);
 
     @include mq(sm) {
