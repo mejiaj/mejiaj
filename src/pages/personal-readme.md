@@ -3,6 +3,8 @@ layout: "../layouts/Base.astro"
 title: "Personal README"
 ---
 
+# Personal readme
+
 ## Who am I?
 
 **Name pronunciation:** Mejia | Meh ∙ Hee ∙ Ya
@@ -59,7 +61,7 @@ I enjoy writing semantic code with a focus on accessibility and performance. I e
 - Being rigid or unwilling to learn
 - Accessibility and performance as an afterthought
 - Repetitive or bloated code
-- <span class="smol">Tiny fonts</span>
+- <span class="smol">Tiny text</span>
 
 ## Scheduling
 
