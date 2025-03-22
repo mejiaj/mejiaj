@@ -4,12 +4,15 @@ import MainHead from "../components/MainHead.astro";
 import Header from "../components/Header/index.astro";
 import Footer from "../components/Footer/index.astro";
 
-const { title, description, wrapSize } = Astro.props;
+const { title, description, wrapSize, frontmatter } = Astro.props;
 
+let pageTitle = title ? title : frontmatter.title;
 ---
 
+
 <html lang="en">
-  <MainHead title={ title } description={ description } />
+  <MainHead title={ pageTitle } description={ description } />
+
   <body>
     <div class="content-wrapper">
       <Skiplink />
