@@ -1,7 +1,38 @@
+<style lang="scss">
+  @use "../../scss/config" as *;
+
+  .intro {
+    &__name {
+      font-weight: 900;
+      font-kerning: auto;
+      line-height: 1;
+
+      @include mq(lg) {
+        font-size: var(--font-size-21);
+      }
+    }
+
+    &__subtitle {
+      font-weight: 700;
+      font-size: var(--font-size-4);
+      line-height: 1;
+      margin-bottom: var(--space-1);
+
+      @include mq(md) {
+        font-size: var(--font-size-6);
+      }
+
+      @include mq(lg) {
+        font-size: var(--font-size-10);
+      }
+    }
+  }
+</style>
+
 <div class="intro">
   <div class="wrap wrap--xl">
-    <h1 class="display main-header__name">James Mejia</h1>
-    <div class="main-header__subtitle subtitle">Design & Development</div>
+    <h1 class="display intro__name">James Mejia</h1>
+    <div class="intro__subtitle subtitle">Design & Development</div>
     <p class="lead-in" id="about">
       I create user-friendly, accessible websites and apps that scale.
     </p>

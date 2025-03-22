@@ -102,7 +102,7 @@ h4 {
   transition: font-size 0.25s var(--theme-ease-primary);
 
   @include mq(md) {
-    // font-size: var(--font-size-6);
+    font-size: var(--font-size-5);
   }
 }
 
@@ -119,7 +119,6 @@ h5 {
 }
 
 h6 {
-  font-weight: 400;
   font-size: var(--font-size-1);
   line-height: 1.22;
   transition: font-size 0.25s var(--theme-ease-primary);
@@ -129,14 +128,9 @@ h6 {
   }
 }
 
-.subtitle {
-  font-size: var(--font-size-4);
-  font-weight: 400;
-}
-
 dt {
   color: var(--theme-primary-light);
-  font-weight: 700;
+  font-weight: 400;
 }
 
 dd {
