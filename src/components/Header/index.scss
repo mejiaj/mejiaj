@@ -1,9 +1,9 @@
 @use "../../scss/config" as *;
 
 // ==========================================================================
-// Header
+// Site header
 // ==========================================================================
-.main-header {
+.site-header {
   --header-padding: var(--space-1);
 
   padding-top: var(--header-padding);
@@ -11,5 +11,80 @@
 
   @include mq(sm) {
     --header-padding: var(--space-3);
+  }
+}
+
+.site-nav {
+  align-items: end;
+  display: flex;
+  font-size: var(--font-size-3);
+  flex-direction: column;
+  font-weight: 300;
+  justify-content: end;
+  text-align: right;
+
+  @include mq(md) {
+    flex-flow: row wrap;
+    align-items: anchor-center;
+  }
+
+  a {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+// ==========================================================================
+// Primary nav
+// ==========================================================================
+.primary-nav {
+  column-gap: var(--space-105);
+  margin-bottom: var(--space-05);
+
+  @include mq(sm) {
+    display: flex;
+    flex-direction: row;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .nav__link {
+    color: var(--theme-primary);
+  }
+}
+
+// ==========================================================================
+// Secondary Nav
+// ==========================================================================
+.secondary-nav {
+  border-width: 0;
+  border-style: solid;
+  border-color: var(--color-gray-3);
+  border-top-width: 1px;
+  height: px-to-rem(30);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: var(--space-05);
+
+  .nav__item:not(:first-of-type) {
+    margin-left: var(--space-05);
+  }
+
+  svg {
+    display: block;
+    fill: currentColor;
+  }
+
+  @include mq(sm) {
+    margin-top: var(--space-05);
+  }
+
+  @include mq(md) {
+    margin-top: 0;
+    border-top: none;
+    border-left-width: 1px;
+    padding-top: 0;
+    margin-left: var(--space-1);
+    padding-left: var(--space-1);
   }
 }

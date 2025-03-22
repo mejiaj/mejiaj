@@ -1,10 +1,15 @@
 ---
 import "./index.scss";
-import Nav from '../MainNav/index.astro';
+
+import MainNav from '../MainNav/index.astro';
+import SecondaryNav from "../SecondaryNav/index.astro";
 ---
 
-<header id="top" class="main-header">
-  <div class="main-header__inner wrap wrap--xl">
-    <Nav />
+<header id="top" class="site-header">
+  <div class="site-header__inner wrap wrap--xl">
+    <nav class="site-nav">
+      <MainNav />
+      <SecondaryNav />
+    </nav>
   </div>
 </header>

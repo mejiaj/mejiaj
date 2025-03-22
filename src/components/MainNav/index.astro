@@ -1,7 +1,4 @@
 ---
-import "./index.scss";
-import SecondaryNav from "../SecondaryNav/index.astro";
-
 const navItems = [
   {
     label: "Home",
@@ -26,15 +23,12 @@ const navItems = [
 ]
 ---
 
-<nav class="main-nav" aria-label="Site navigation">
-  <ul id="main-nav" class="js-nav main-nav__menu nav">
-    {navItems.map(navItem => (
-      <li class="nav__item">
-        <a href={ navItem.url } class="nav__link">
-          { navItem.label }
-        </a>
-      </li>
-    ))}
-  </ul>
-  <SecondaryNav />
-</nav>
+<ul id="primary-nav" class="js-nav primary-nav nav">
+  {navItems.map(navItem => (
+    <li class="primary-nav__item nav__item">
+      <a href={ navItem.url } class="primary-nav__link nav__link">
+        { navItem.label }
+      </a>
+    </li>
+  ))}
+</ul>
