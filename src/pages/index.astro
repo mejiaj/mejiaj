@@ -66,6 +66,8 @@ let latestPosts = blogPosts.slice(0, 3);
       <Hero />
       <Projects />
       <section class="blog-section wrap wrap--xl">
+        <div>
+          <h2>Latest posts</h2>
           <ul class="card-group card-group--thirds">
             { latestPosts.map((post, index) => (
               <li class="card-group__item">
@@ -82,6 +84,7 @@ let latestPosts = blogPosts.slice(0, 3);
           <a href="/blog">
             View all the things I've written <span aria-hidden="true">→</span>
           </a>
+        </div>
       </section>
     </main>
   </div>
