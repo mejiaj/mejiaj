@@ -7,3 +7,10 @@ li::marker {
 .u-list--unstyled {
   list-style: none;
 }
+
+// Task lists
+.contains-task-list {
+  li {
+    list-style: none;
+  }
+}

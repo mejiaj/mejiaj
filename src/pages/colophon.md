@@ -7,9 +7,16 @@ title: "Colophon"
 
 Colophon is a fancy word I'm using to describe how this site was built. This website was designed and built by me. It's a playground to test new technology and write out thoughts.
 
-It's been built with static HTML, static site generators such as Jekyll and Gatsby, and finally AstroJS[^1].
+This site has evolved from static HTML, to static site generators such as Jekyll, Gatsby, and finally now AstroJS[^1].
 
-The primary goals are to have a good developer experience and a speedy site that would allow me to quickly and easily write content. Everything is open source and hosted on GitHub[^2], so feel free to check it out.
+**Site requirements**
+
+- [x] Fast
+- [x] Open source
+- [x] Good developer experience
+- [x] Has Markdown and syntax highlighting
+
+Everything is publicly available and hosted on GitHub[^2], so feel free to check it out.
 
 ## Design
 
