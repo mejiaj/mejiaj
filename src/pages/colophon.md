@@ -9,7 +9,8 @@ Colophon is a fancy word I'm using to describe how this site was built. This web
 
 This site has evolved from static HTML, to static site generators such as Jekyll, Gatsby, and finally now AstroJS[^1].
 
-**Site requirements**
+**Site requirements** <br>
+Minimum requirements to selecting a framework.
 
 - [x] Fast
 - [x] Open source
