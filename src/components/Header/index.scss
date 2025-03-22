@@ -10,30 +10,6 @@
   padding-bottom: var(--header-padding);
 
   @include mq(sm) {
-    --header-padding: var(--space-4);
+    --header-padding: var(--space-3);
   }
-
-  @include mq(md) {
-    --header-padding: var(--space-2);
-  }
-}
-
-.main-header__name {
-  font-weight: 900;
-  margin-bottom: 0;
-  text-indent: px-to-rem(-4);
-
-  @include mq(sm) {
-    font-size: var(--space-3);
-  }
-
-  @include mq(lg) {
-    letter-spacing: -3px;
-    font-size: var(--space-5);
-  }
-}
-
-.main-header__title {
-  font-weight: 300;
-  margin-top: 0;
 }
