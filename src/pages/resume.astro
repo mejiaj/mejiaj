@@ -2,7 +2,46 @@
 import Base from "../layouts/Base.astro";
 ---
 
-<Base title="Resume" description="James Mejia - Resume">
+<style lang="scss">
+@use "../scss/config" as *;
+
+.page--resume {
+  border-top: 15px solid var(--theme-primary);
+  padding-top: 1.5rem;
+}
+
+.resume__info {
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    grid-column-gap: 2rem;
+  }
+}
+
+.resume__history {
+  list-style: none;
+}
+
+.history__item {
+  margin-bottom: var(--space-3);
+}
+
+// Experience
+.resume__employment-title {
+  margin-bottom: 0;
+}
+
+.resume__role {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.resume__time-spent {
+  font-size: 85%;
+}
+</style>
+
+<Base title="Resume" description="James Mejia - Resume" wrapSize="wrap wrap--lg">
   <header class="resume__header" itemscope itemtype="https://schema.org/Person">
     <h1 class="h-card__name" itemprop="name">James Mejia</h1>
     <div class="h-card__title" itemprop="jobTitle">
@@ -22,14 +61,17 @@ import Base from "../layouts/Base.astro";
       <ol class="resume__history history">
         <li class="history__item">
           <h4 class="resume__employment-title">Bixal</h4>
+          <h5 class="resume__role">Principal Front-End Engineer</h5>
+          <div class="resume__time-spent">October 2024 - Present</div>
+          <p>
+            As a principal engineer, I lead teams to deliver accessible, fast, and user-friendly digital products. When I'm not diving into code, I'll be collaborating with stakeholders to meet goals, promote code standards, removing blockers, and ensure we're thoroughly documenting things.
+          </p>
+          <h5 class="resume__role">Front-End Engineer</h5>
           <h5 class="resume__role">Lead Front-End Engineer</h5>
-          <div class="resume__time-spent">February 2023 - Present</div>
+          <div class="resume__time-spent">February 2023 - October 2024</div>
           <p>
             As tech lead my role involves finding practical long-term solutions to engineering problems while keeping performance and accessibility in mind. I also help set standards & best practices to ensure our work is high quality and robust.
           </p>
-        </li>
-        <li class="history__item">
-          <h4 class="resume__employment-title">Bixal</h4>
           <h5 class="resume__role">Front-End Engineer</h5>
           <div class="resume__time-spent">September 2018 - February 2023</div>
           <p>
@@ -90,9 +132,11 @@ import Base from "../layouts/Base.astro";
         <dt>Drupal GovCon 2024</dt>
         <dd>Instructor</dd>
         <dt>Drupal GovCon 2023</dt>
-        <dd>Co-presenter & Instructor</dd>
+        <dd>Presenter & Instructor</dd>
         <dt>Drupal4Gov 2023</dt>
         <dd>Instructor</dd>
+        <dt>Drupal GovCon 2021</dt>
+        <dd>Presenter</dd>
         <dt>Drupal NoVA 2019</dt>
         <dd>Getting Started with USWDS</dd>
       </dl>
