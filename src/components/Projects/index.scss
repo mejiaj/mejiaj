@@ -3,10 +3,11 @@
 // ==========================================================================
 // Projects
 // ==========================================================================
-
 .projects {
-  padding-top: var(--space-5);
-  padding-bottom: var(--space-5);
+  --vertical-padding: var(--space-3);
+
+  padding-top: var(--vertical-padding);
+  padding-bottom: var(--vertical-padding);
 }
 
 .project-group {
@@ -15,34 +16,21 @@
   justify-content: center;
   list-style: none;
   margin-bottom: 0;
-  margin-top: var(--space-5);
+  margin-top: var(--space-1);
   place-items: center;
-
-  &__item {
-    width: 100%;
-  }
-
-  &__item:where(:not(:first-child)) {
-    margin-top: var(--space-1);
-    width: 100%;
-
-    @include mq(md) {
-      margin-top: 0;
-    }
-  }
 
   @include mq(md) {
     grid-template-columns: repeat(4, 1fr);
+    margin-bottom: var(--space-3);
   }
 }
 
 .project {
   filter: grayscale(1);
-  font-size: 75%;
+  font-size: var(--font-size-2);
   letter-spacing: 0.5px;
   min-height: px-to-rem(100);
   text-align: center;
-  transition: 0.26s ease-in-out;
 
   &:hover,
   &:focus {
@@ -52,8 +40,6 @@
   }
 
   &__name {
-    line-height: 1.1;
-    margin-top: auto;
     opacity: 0.8;
     transition: opacity 0.25s ease-in-out;
   }
