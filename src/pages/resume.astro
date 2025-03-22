@@ -39,6 +39,17 @@ import Base from "../layouts/Base.astro";
 .resume__time-spent {
   font-size: 85%;
 }
+
+.resume__skills {
+  @include mq(md) {
+    margin-top: px-to-rem(28);
+    font-size: var(--font-size-3);
+  }
+
+  h5:first-of-type {
+    margin-top: 0;
+  }
+}
 </style>
 
 <Base title="Resume" description="James Mejia - Resume" wrapSize="wrap wrap--lg">
