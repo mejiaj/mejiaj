@@ -65,8 +65,7 @@ let latestPosts = blogPosts.slice(0, 3);
     <main id="main-content">
       <Hero />
       <Projects />
-      <section class="blog-section wrap--xl">
-        <h3>Latest posts</h3>
+      <section class="blog-section wrap wrap--xl">
           <ul class="card-group card-group--thirds">
             { latestPosts.map((post, index) => (
               <li class="card-group__item">
