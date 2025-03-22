@@ -5,19 +5,19 @@
 $card-border-color: rgba(#f2eeef, 0.3);
 
 .card-group {
+  display: grid;
   list-style: none;
-  margin-top: var(--space-1);
+  margin-top: var(--space-05);
+  gap: var(--space-1);
 
-  @include mq(md) {
+  @include mq(lg) {
     align-items: stretch;
-    display: grid;
-    column-gap: var(--space-105);
   }
-}
 
-.card-group--thirds {
-  @include mq(md) {
-    grid-template-columns: repeat(3, 1fr);
+  &--thirds {
+    @include mq(lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
 
@@ -25,21 +25,17 @@ $card-border-color: rgba(#f2eeef, 0.3);
   border: 3px solid $card-border-color;
   display: flex;
   flex-direction: column;
-  margin-bottom: var(--space-05);
   height: 100%;
+  margin-bottom: var(--space-05);
   padding: var(--space-05) var(--space-1);
 
-  &__header {
-    min-height: px-to-rem(100);
-    margin-bottom: var(--space-105);
-  }
-
-  &__title {
-    font-size: px-to-rem(31.25);
+  &__date {
+    font-size: var(--font-size-3);
   }
 
   &__footer {
+    min-height: px-to-rem(60);
     margin-top: auto;
-    margin-bottom: var(--space-105);
+    margin-bottom: var(--space-05);
   }
 }

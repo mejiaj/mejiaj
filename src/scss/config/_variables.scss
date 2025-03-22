@@ -25,6 +25,29 @@
   --space-9: #{spacing-multiple(9, 1.125)}; // 162px
   --space-10: #{spacing-multiple(10, 1.125)}; // 180px
 
+  // Font size
+  --font-size-1: #{spacing-multiple(4)}; // 12px
+  --font-size-2: #{spacing-multiple(5)}; // 15px
+  --font-size-3: #{spacing-multiple(6)}; // 18px
+  --font-size-4: #{spacing-multiple(7)}; // 21px
+  --font-size-5: #{spacing-multiple(8)}; // 24px
+  --font-size-6: #{spacing-multiple(9)}; // 27px
+  --font-size-7: #{spacing-multiple(10)}; // 30px
+  --font-size-8: #{spacing-multiple(11)}; // 33px
+  --font-size-9: #{spacing-multiple(12)}; // 36px
+  --font-size-10: #{spacing-multiple(13)}; // 39px
+  --font-size-11: #{spacing-multiple(14)}; // 42px
+  --font-size-12: #{spacing-multiple(15)}; // 45px
+  --font-size-13: #{spacing-multiple(16)}; // 48px
+  --font-size-14: #{spacing-multiple(17)}; // 51px
+  --font-size-15: #{spacing-multiple(18)}; // 54px
+  --font-size-16: #{spacing-multiple(19)}; // 57px
+  --font-size-17: #{spacing-multiple(20)}; // 60px
+  --font-size-18: #{spacing-multiple(21)}; // 63px
+  --font-size-19: #{spacing-multiple(22)}; // 66px
+  --font-size-20: #{spacing-multiple(23)}; // 69px
+  --font-size-21: #{spacing-multiple(24)}; // 72px
+
   // Font family
   --font-serif: Aleo, serif;
 
@@ -77,7 +100,6 @@
   // You can use oklch() to modify alpha channel.
   // For example:
   // --color-white-1: oklch(97.02% 0 0 / 0.9); // Equals #F5F5F5
-  // --color-white-alpha-1: oklch(from var(--color-white-1) l c h / 0.2);
 
   // ==========================================================================
   // Theme colors
@@ -110,12 +132,11 @@
 // ==========================================================================
 // Breakpoints
 // ==========================================================================
+/* prettier-ignore */
 $breakpoints: (
-  xs: 21.875em,
-  sm: 30.625em,
-  // 490px
-  md: 46.875em,
-  // 750px
+  xs: 21.875em, // 350px
+  sm: 30.625em, // 490px
+  md: 46.875em, // 750px
   lg: 56.25em, // 900px
 );
 

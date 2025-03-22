@@ -6,35 +6,37 @@ const {
 } = Astro.props;
 ---
 
-<!-- Meta -->
-<meta charset="UTF-8">
-<meta name="description" content={ description } />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="msvalidate.01" content="78F25BA9CB8A744B0E3C891CE2F772E8" />
-<!-- /Meta -->
+<head>
+  <!-- Meta -->
+  <meta charset="UTF-8">
+  <meta name="description" content={ description } />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="msvalidate.01" content="78F25BA9CB8A744B0E3C891CE2F772E8" />
+  <!-- /Meta -->
 
-<!-- Title -->
-<title>{title}</title>
-<!-- /Title -->
+  <!-- Title -->
+  <title>{title}</title>
+  <!-- /Title -->
 
-<!-- Sitemap -->
-<link rel="sitemap" href="/sitemap-index.xml">
+  <!-- Sitemap -->
+  <link rel="sitemap" href="/sitemap-index.xml">
 
-<!-- Variable fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- Variable fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-<!-- /Styles -->
+  <!-- /Styles -->
 
-<!-- Scripts -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-50373766-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { dataLayer.push(arguments); }
-  gtag('js', new Date());
+  <!-- Scripts -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-50373766-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'UA-50373766-1');
-</script>
-<!-- /Scripts -->
+    gtag('config', 'UA-50373766-1');
+  </script>
+  <!-- /Scripts -->
+</head>

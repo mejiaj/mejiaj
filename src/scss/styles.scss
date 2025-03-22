@@ -1,7 +1,6 @@
 @use "config" as *;
 @use "global";
 @use "components";
-@use "pages";
 @use "print";
 
 @forward "utils";
@@ -29,22 +28,27 @@ html {
 }
 
 .wrap {
+  --_container-width: var(--container-width, 57ch);
+
   display: grid;
   grid-column-gap: var(--space-2);
   grid-template-columns:
     1fr
-    min(63ch, calc(100% - 90px))
+    min(var(--_container-width), calc(100% - 90px))
     1fr;
   position: relative;
 
   > * {
     grid-column: 2;
   }
-}
 
-.wrap--xl {
-  padding-left: 6vw;
-  padding-right: 6vw;
+  &--lg {
+    --container-width: 80ch;
+  }
+
+  &--xl {
+    --container-width: 80%;
+  }
 }
 
 .full-bleed {

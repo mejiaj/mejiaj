@@ -13,23 +13,18 @@
   position: absolute;
   top: var(--space-1);
   transition: opacity var(--theme-ease-primary);
-  z-index: 500;
+  z-index: z(under);
 
   &:focus {
     opacity: 1;
+    z-index: z(default);
   }
 
   @include mq(sm) {
-    max-width: fit-content;
-    margin-inline: auto;
     left: 0;
-    right: 0;
+    margin-inline: auto;
+    max-width: fit-content;
     padding: var(--space-02) var(--space-1);
-  }
-
-  @include mq(md) {
-    left: var(--space-1);
-    right: auto;
-    top: 2.2rem;
+    right: 0;
   }
 }
