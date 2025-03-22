@@ -7,7 +7,7 @@ posts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontma
 let firstPage = posts.slice(0, 2);
 ---
 
-<Base title="Blog" description="James Mejia - front-end thoughts and learnings">
+<Base title="Blog" description="James Mejia - Frontend thoughts and learnings">
   <h1>Posts</h1>
   <ul class="posts u-list--unstyled">
     {posts.map((post) => {

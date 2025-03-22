@@ -3,7 +3,7 @@
 
 # AUTHOR
 
-    James Mejia -- Designer/Developer
+    James Mejia -- Designer/Engineer
 
 # THANKS
 

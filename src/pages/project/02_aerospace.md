@@ -1,7 +1,7 @@
 ---
 # layout: ../../layouts/project.astro
 title: Aerospace
-role: Front-end, Theming
+role: Frontend, Theming
 id: aerospace
 img:
   mobile: /img/webp/aero_750.webp

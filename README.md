@@ -1,6 +1,6 @@
 # 👋 Hello!
 
-My name is James Mejia, pronounced _Meh • Hee • Yah_. I'm a front-end engineer and designer based in the Midwest.
+My name is James Mejia, pronounced _Meh • Hee • Yah_. I'm a frontend engineer and designer based in the Midwest.
 
 ## 🚀 Links
 

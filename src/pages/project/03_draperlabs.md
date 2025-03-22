@@ -1,7 +1,7 @@
 ---
 # layout: ../../layouts/project.astro
 title: Draperlabs
-role: Drupal 8, Front-end, Theming
+role: Drupal 8, Frontend, Theming
 id: draperlabs
 img:
   mobile: /img/webp/draper_750.webp
