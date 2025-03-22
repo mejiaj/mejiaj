@@ -10,17 +10,23 @@ body {
   flex-direction: column;
   background-color: var(--theme-bg-color);
   color: var(--theme-text-color);
-  font-size: var(--space-105);
+  // font-size: var(--space-105);
+  font-size: var(--font-size-3);
   font-family: var(--font-serif);
   font-weight: 300;
-  line-height: 1.5;
+  line-height: 1.4;
   margin: 0;
   padding: 0;
   text-size-adjust: 100%;
   transition: font-size 0.25s var(--theme-ease-primary);
 
+  @include mq(md) {
+    font-size: var(--font-size-4);
+  }
+
   @include mq(xl) {
     font-size: var(--space-2);
+    font-size: var(--font-size-9);
   }
 
   @supports (font-size-adjust: 1) {
@@ -39,82 +45,93 @@ h4,
 h5,
 h6 {
   margin-top: var(--space-2);
-  margin-bottom: var(--space-02);
+  margin-bottom: var(--space-01);
   text-wrap: balance;
 }
 
-h1,
-%h1-style {
-  font-size: var(--space-3);
+h1 {
+  font-size: var(--font-size-10);
   font-weight: 400;
   line-height: 1.1;
   transition: font-size 0.25s var(--theme-ease-primary);
 
   @include mq(md) {
-    font-size: px-to-rem(54);
+    font-size: var(--font-size-14);
   }
 }
 
-h2,
-%h2-style {
+h2 {
   font-size: var(--space-2);
+  font-size: var(--font-size-8);
   font-weight: 400;
   line-height: 1.22;
   transition: font-size 0.25s var(--theme-ease-primary);
 
-  @include mq(lg) {
-    font-size: px-to-rem(48);
+  @include mq(md) {
+    font-size: var(--font-size-10);
   }
-}
 
-h2 a {
-  &::after {
+  // @include mq(lg) {
+  //   font-size: px-to-rem(48);
+  // }
+
+  a::after {
     bottom: 4px;
   }
 }
 
 h3 {
   font-size: var(--space-105);
+  font-size: var(--font-size-6);
   font-weight: 400;
   line-height: 1.22;
+  margin-top: var(--space-1);
   transition: font-size 0.25s var(--theme-ease-primary);
 
-  @include mq(lg) {
-    font-size: px-to-rem(36);
+  @include mq(md) {
+    font-size: var(--font-size-8);
   }
 }
 
 h4 {
   font-size: var(--space-1);
+  font-size: var(--font-size-4);
   font-weight: 400;
   line-height: 1.22;
   margin-top: px-to-rem(33);
   transition: font-size 0.25s var(--theme-ease-primary);
 
-  @include mq(lg) {
-    font-size: px-to-rem(33);
+  @include mq(md) {
+    // font-size: var(--font-size-6);
   }
 }
 
 h5 {
   font-size: var(--space-1);
+  font-size: var(--font-size-2);
   font-weight: 400;
   line-height: 1.22;
   transition: font-size 0.25s var(--theme-ease-primary);
 
-  @include mq(lg) {
-    font-size: var(--space-105);
+  @include mq(md) {
+    font-size: var(--font-size-4);
   }
 }
 
 h6 {
   font-weight: 400;
+  font-size: var(--font-size-1);
   line-height: 1.22;
   transition: font-size 0.25s var(--theme-ease-primary);
 
   @include mq(lg) {
-    font-size: px-to-rem(21);
+    font-size: var(--font-size-2);
   }
+}
+
+.subtitle {
+  font-size: var(--font-size-4);
+  font-weight: 400;
 }
 
 dt {
@@ -138,15 +155,10 @@ strong {
 
 p {
   font-weight: 300;
-  line-height: 1.5;
-  margin-bottom: px-to-rem(30);
-  max-width: 59ch;
+  margin-top: var(--space-1);
+  margin-bottom: var(--space-2);
   transition: font-size 0.25s var(--theme-ease-primary);
   text-wrap-style: pretty;
-}
-
-p:first-of-type {
-  margin-top: var(--space-1);
 }
 
 hr {
@@ -159,20 +171,29 @@ hr {
 }
 
 .lead-in {
-  font-size: px-to-rem(27);
+  font-size: var(--space-105);
+  font-size: var(--font-size-4);
   margin-top: 0;
 
   @include mq(lg) {
     font-size: px-to-rem(30);
+    font-size: var(--font-size-6);
   }
 }
 
-p,
-ul,
-ol,
-table,
-blockquote {
-  margin: 0 0 var(--space-105);
+main {
+  ul,
+  ol,
+  dl,
+  table,
+  blockquote {
+    margin: 0 0 var(--space-105);
+  }
+
+  li,
+  dd {
+    margin-bottom: var(--space-02);
+  }
 }
 
 table {
@@ -279,13 +300,12 @@ header a,
 code,
 pre {
   font-family: "Fira code", monospace;
-  font-size: px-to-rem(15);
+  font-size: var(--font-size-3);
 }
 
 .astro-code {
   border: 1px solid rgba(white, 0.15);
   margin-top: 0;
-  margin-bottom: px-to-rem(30);
   padding: var(--space-1);
 }
 
