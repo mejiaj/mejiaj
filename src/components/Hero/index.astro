@@ -3,6 +3,28 @@
   @use "../../scss/config" as *;
 
   .intro {
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(6rem);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    > * {
+      animation-name: fadeUp;
+      animation-duration:  0.75s;
+    }
+
+    :nth-child(2) {
+      animation-delay: 0.05s;
+    }
+    :nth-child(3) {
+      animation-delay: 0.10s;
+    }
+
     &__name {
       font-weight: 900;
       font-kerning: auto;
@@ -30,8 +52,8 @@
   }
 </style>
 
-<div class="intro">
-  <div class="wrap wrap--xl">
+<div class="wrap wrap--xl">
+  <div class="intro">
     <h1 class="display intro__name">James Mejia</h1>
     <div class="intro__subtitle subtitle">Designer & Frontend Engineer</div>
     <p class="lead-in" id="about">
