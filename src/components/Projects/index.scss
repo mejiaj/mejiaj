@@ -37,6 +37,10 @@
     .project__name {
       opacity: 1;
     }
+
+    .project__logo {
+      transform: rotate3d(0, 1, 0, 360deg);
+    }
   }
 
   &__name {
@@ -48,5 +52,6 @@
     aspect-ratio: 2.5 / 1;
     margin-bottom: var(--space-05);
     height: px-to-rem(45);
+    transition: transform 0.5s cubic-bezier(0.87, 0, 0.13, 1);
   }
 }
