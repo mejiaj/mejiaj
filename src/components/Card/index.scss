@@ -7,8 +7,8 @@ $card-border-color: rgba(#f2eeef, 0.3);
 .card-group {
   display: grid;
   list-style: none;
-  margin-top: var(--space-05);
-  gap: var(--space-1);
+  margin-block: var(--space-1);
+  gap: var(--space-05);
 
   @include mq(lg) {
     align-items: stretch;
@@ -23,19 +23,23 @@ $card-border-color: rgba(#f2eeef, 0.3);
 
 .card {
   border: 3px solid $card-border-color;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  margin-bottom: var(--space-05);
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: auto / span 4;
+  margin-block-end: var(--space-05);
   padding: var(--space-05) var(--space-1);
+
+  &__header {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: auto / span 2;
+  }
 
   &__date {
     font-size: var(--font-size-3);
   }
 
   &__footer {
-    min-height: px-to-rem(60);
-    margin-top: auto;
-    margin-bottom: var(--space-05);
+    margin-block-end: var(--space-05);
   }
 }

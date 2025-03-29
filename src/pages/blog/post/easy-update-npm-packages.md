@@ -1,6 +1,6 @@
 ---
 layout: ../../../layouts/BlogPostBase.astro
-title: "Quick tip: Easy npm updates"
+title: "Easy npm updates"
 date: March 2, 2025
 description: A quick tip to easily update npm packages.
 ---
