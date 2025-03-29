@@ -52,7 +52,7 @@ Here's a snippet of the styles that make this work:
 
 Here's an after screenshot of the cards on the homepage.
 
-![Three cards with aligned title, date, and body text](/public/img/blog/cards-after.webp)
+![Three cards with aligned title, date, and body text](/img/blog/cards-after.webp)
 
 ## Conclusion
 
