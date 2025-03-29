@@ -26,13 +26,14 @@ You can see a full live demo on the homepage or in this codepen prototype:
 </p>
 <script async src="https://public.codepenassets.com/embed/index.js"></script>
 
-Once your create your grid columns for individual cards; each individual card will have subgrid so that they're placed correctly.
+Once you create your grid columns for individual cards; each card will have subgrid so that inner elements are aligned correctly.
 
-The important thing is to make sure each individual card has these styles:
+Here's a snippet of the styles that make this work:
 
 ```css
 /* index.css */
 
+/* Parent must have grid. */
 .card-group {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -55,4 +56,4 @@ Here's an after screenshot of the cards on the homepage.
 
 ## Conclusion
 
-Subgrid can seem confusing at first, but I hope you can take the demo code to improve your components too.
+Subgrid can seem confusing at first, but I hope you can take the demo's code to improve your components too. I'm excited to see what else this feature can do and share that too.
