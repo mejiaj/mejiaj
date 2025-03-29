@@ -1,6 +1,6 @@
 ---
 layout: ../../../layouts/BlogPostBase.astro
-title: Better cards with CSS subgrid
+title: Improving cards with CSS subgrid
 date: March 28, 2025
 description: Using CSS subgrid to improve alignment in card elements.
 ---
