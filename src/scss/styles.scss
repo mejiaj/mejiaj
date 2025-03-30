@@ -60,8 +60,14 @@ html {
   grid-column: 1 / -1;
 }
 
+// New image reset from Harry Roberts.
+// @todo implement low-res feature:
+// https://csswizardry.com/2023/09/the-ultimate-lqip-lcp-technique/
 img {
+  font-style: italic;
+  height: auto;
   max-width: 100%;
+  vertical-align: middle;
 }
 
 article,
