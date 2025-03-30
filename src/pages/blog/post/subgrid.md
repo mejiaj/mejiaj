@@ -11,7 +11,7 @@ Card content naturally gets misaligned when you have long titles or copy. Before
 
 Below, you can see a screenshot of the title, date, and body mismatching (_outlined in yellow and orange_).
 
-![A screenshot of the before, with misaligned card title, date, and body](/img/blog/cards-before.webp)
+![A screenshot of the before, with misaligned card title, date, and body](../../../images/blog/cards-before.webp)
 
 ### The fix
 
@@ -52,7 +52,7 @@ Here's a snippet of the styles that make this work:
 
 Here's an after screenshot of the cards on the homepage.
 
-![Three cards with aligned title, date, and body text](/img/blog/cards-after.webp)
+![Three cards with aligned title, date, and body text](../../../images/blog/cards-after.webp)
 
 ## Conclusion
 

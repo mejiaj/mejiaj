@@ -1,43 +1,17 @@
 ---
+import { Image } from "astro:assets";
+import "../scss/global/_typography.scss";
 import MainHead from '../components/MainHead.astro';
+
+import bulldogImage from "../images/bawss.gif";
 ---
 
 <style lang="scss">
-
   .absolute-center {
     height: 100%;
     display: grid;
     place-items: center;
     text-align: center;
-  }
-
-  img {
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  h1 {
-    font-weight: bold;
-    font-size: 2.5rem;
-  }
-
-  p {
-    font-weight: inherit;
-    margin: 0 auto;
-    max-width: 63ch;
-  }
-
-  @media only screen and (max-width: 280px) {
-
-    body, p {
-      width: 95%;
-    }
-
-    h1 {
-      font-size: 1.5em;
-      margin: 0 0 0.3em;
-    }
-
   }
 </style>
 
@@ -45,12 +19,15 @@ import MainHead from '../components/MainHead.astro';
   <MainHead title="Page not found" />
   <body>
     <div class="absolute-center">
-      <div>
-        <img src="/img/bawss.gif" alt="Bulldog on a jetski">
-        <h1>Uh oh.</h1>
-        <p>The page isn't here right now. Try again later.</p>
+      <main>
+        <Image src={ bulldogImage } alt="Bulldog on a jetski looking for your page" />
+        <h1>Uh oh</h1>
+        <p>
+          We couldn't find the page you're looking for. <br>
+          Try double-checking the url.
+        </p>
         <a href="/">← Return to Homepage</a>
-      </div>
+      </main>
     </div>
   </body>
 </html>

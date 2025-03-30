@@ -41,7 +41,7 @@ _I know Safari introduced `color-contrast()` to help with accessible color combi
 
 For the website, I just need a cohesive color palette, for now. Below is a screenshot of what I had before (the first row) and what I came up with using `oklch()` (the second row):
 
-![Two rows of colors, old colors first a mix of greens and grays and below is a row of matching shades of green](</public/assets/greens-2025-03-15 at 14.13.57@2x.webp>)
+![Two rows of colors, old colors first a mix of greens and grays and below is a row of matching shades of green](../../../images/blog/greens-2025-03-15@2x.webp)
 
 In the first row shows a diverse range of colors. Some are from the latest redesign, some are unused, and others are from old themes. This assortment is made up of hex colors and sass color functions to light and darken. A bit of a mess, I know.
 
@@ -121,7 +121,7 @@ It was so easy, I was able to use a color palette tool to generate grays that fi
 
 The new harmonious and more flexible color palette:
 
-![Two rows of the new color palette, green first and then grays](</assets/Styleguide-2025-03-15 at 22.48.40@2x.webp>)
+![Two rows of the new color palette, green first and then grays](../../../images/blog/Styleguide-2025-03-15@2x.webp)
 
 I highly recommend you use `oklch()` in your next project! You can see the colors and more live in the [styleguide page](/styleguide).
 
