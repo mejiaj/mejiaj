@@ -2,6 +2,7 @@ name: Bug
 description: File a bug/issue
 title: "Bug: <title>"
 labels: ["Bug"]
+assignees: "mejiaj"
 body:
   - type: checkboxes
     attributes:
