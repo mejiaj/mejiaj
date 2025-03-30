@@ -53,18 +53,18 @@ h1 {
   line-height: 1.1;
   transition: font-size 0.25s var(--theme-ease-primary);
 
-  @include mq(md) {
+  @include mq(lg) {
     font-size: var(--font-size-14);
   }
 }
 
 h2 {
-  font-size: var(--space-2);
+  font-size: var(--font-size-8);
   font-weight: 400;
   line-height: 1.22;
   transition: font-size 0.25s var(--theme-ease-primary);
 
-  @include mq(md) {
+  @include mq(lg) {
     font-size: var(--font-size-10);
   }
 
@@ -80,7 +80,7 @@ h3 {
   margin-top: var(--space-1);
   transition: font-size 0.25s var(--theme-ease-primary);
 
-  @include mq(md) {
+  @include mq(lg) {
     font-size: var(--font-size-8);
   }
 }
@@ -92,7 +92,7 @@ h4 {
   margin-top: px-to-rem(33);
   transition: font-size 0.25s var(--theme-ease-primary);
 
-  @include mq(md) {
+  @include mq(lg) {
     font-size: var(--font-size-5);
   }
 }
@@ -103,7 +103,7 @@ h5 {
   line-height: 1.22;
   transition: font-size 0.25s var(--theme-ease-primary);
 
-  @include mq(md) {
+  @include mq(lg) {
     font-size: var(--font-size-4);
   }
 }
