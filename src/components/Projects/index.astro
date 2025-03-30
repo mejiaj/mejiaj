@@ -1,25 +1,30 @@
 ---
+import uswdsLogo from "../../images/project-logos/uswds-white.svg";
+import digitalGovLogo from "../../images/project-logos/dg-white.svg";
+import aerospaceLogo from "../../images/project-logos/aerospace-logo.svg";
+import bdLogo from "../../images/project-logos/bd-white.svg";
+
 import "./index.scss";
 
 const projects = [
   {
     name: "US Web Design System",
-    logo: "uswds-white",
+    logo: uswdsLogo,
     abbrev: "uswds"
   },
   {
     name: "Digital.Gov",
-    logo: "dg-white",
+    logo: digitalGovLogo,
     abbrev: "dg"
   },
   {
     name: "Aerospace",
-    logo: "aerospace-logo",
+    logo: aerospaceLogo,
     abbrev: "aero"
   },
   {
     name: "Black+Decker",
-    logo: "bd-white",
+    logo: bdLogo,
     abbrev: "bd"
   },
 ]
@@ -35,12 +40,10 @@ const projects = [
       projects.map((project) => (
         <li class="project-group__item">
           <div class=`project project--${ project.abbrev }`>
-            <img
-              src=`./assets/img/project-logos/${project.logo}.svg`
-              alt=""
-              loading="lazy"
-              class="project__logo"
-            >
+            <img src={project.logo.src}
+            class="project__logo"
+            loading="lazy"
+            alt=""  />
             <div class="project__name">{project.name}</div>
           </div>
         </li>
