@@ -6,8 +6,7 @@
 .site-header {
   --header-padding: var(--space-1);
 
-  padding-top: var(--header-padding);
-  padding-bottom: var(--header-padding);
+  padding-block: var(--header-padding);
 
   @include mq(sm) {
     --header-padding: var(--space-3);
@@ -39,13 +38,12 @@
 // ==========================================================================
 .primary-nav {
   column-gap: var(--space-105);
-  margin-bottom: var(--space-05);
+  margin-block-end: var(--space-05);
 
   @include mq(sm) {
     display: flex;
     flex-direction: row;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-block: 0;
   }
 
   .nav__link {
@@ -61,30 +59,24 @@
   border-style: solid;
   border-color: var(--color-gray-3);
   border-top-width: 1px;
-  height: px-to-rem(30);
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: var(--space-05);
+  line-height: 1;
+  gap: var(--space-05);
+  margin-block: var(--space-05);
+  padding-block-start: px-to-rem(15);
 
-  .nav__item:not(:first-of-type) {
-    margin-left: var(--space-05);
-  }
-
-  svg {
-    display: block;
-    fill: currentColor;
+  ion-icon {
+    color: currentColor;
   }
 
   @include mq(sm) {
-    margin-top: var(--space-05);
+    margin-inline-start: var(--space-05);
   }
 
   @include mq(md) {
-    margin-top: 0;
+    margin-inline-start: var(--space-1);
     border-top: none;
     border-left-width: 1px;
-    padding-top: 0;
-    margin-left: var(--space-1);
-    padding-left: var(--space-1);
+    padding-block-start: 0;
+    padding-inline-start: var(--space-1);
   }
 }

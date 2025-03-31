@@ -1,21 +1,15 @@
 ---
 import Social from "../_data/social.json";
+
+// Styles found in header:
+// ./src/components/Header/index.scss
 ---
 
-<ul class="secondary-nav nav nav--inline" aria-label="Contact links">
+<ul class="secondary-nav nav nav--inline" aria-label="Social links">
   {Social.map(navItem => (
     <li class="nav__item">
       <a href={ navItem.url } class="nav__link" aria-label={ navItem.aria_label }>
-
-        <svg
-          role="img"
-          aria-hidden="true"
-          class="header__icon header__icon--no-text icon"
-          height="24"
-          width="24"
-          >
-          <use href={`${navItem.icon}`}></use>
-        </svg>
+        <ion-icon name={navItem.icon}></ion-icon>
       </a>
     </li>
   ))}

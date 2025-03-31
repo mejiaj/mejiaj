@@ -55,6 +55,12 @@ let latestPosts = blogPosts.slice(0, 3);
   }
 }
 
+.link-has-icon  {
+  display: inline-flex;
+  column-gap: var(--space-02);
+  align-items: center;
+}
+
 </style>
 
 <body class="page page--home">
@@ -78,8 +84,8 @@ let latestPosts = blogPosts.slice(0, 3);
               />
             )) }
           </section>
-          <a href="/blog">
-            View more things I've written <span aria-hidden="true">→</span>
+          <a href="/blog" class="link-has-icon">
+            View more things I've written <ion-icon name="arrow-forward-outline"></ion-icon>
           </a>
         </div>
       </section>

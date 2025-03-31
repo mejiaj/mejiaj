@@ -9,8 +9,5 @@
 .nav--inline {
   display: flex;
   flex-flow: row wrap;
-
-  .nav__item:not(:first-of-type) {
-    margin-left: var(--space-05);
-  }
+  column-gap: var(--space-02);
 }

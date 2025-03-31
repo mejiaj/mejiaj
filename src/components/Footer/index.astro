@@ -7,7 +7,7 @@ import Social from "../_data/social.json";
 const footerItems = [
   {
     url: "#top",
-    icon: "#up-arrow",
+    icon: "arrow-up-outline",
     aria_label: "Return to top of the page",
   },
   ...Social
@@ -24,12 +24,10 @@ const footerItems = [
             class="footer-nav__link"
             aria-label={ footerItem.aria_label }
           >
-            <svg
-              role="img"
-              aria-hidden="true"
-              class="footer-nav__icon icon">
-              <use href={ footerItem.icon }></use>
-            </svg>
+            <ion-icon
+              class="footer-nav__icon icon"
+              name={ footerItem.icon }>
+            </ion-icon>
           </a>
         </li>
       ))}
