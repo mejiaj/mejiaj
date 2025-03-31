@@ -66,14 +66,9 @@
 .footer-nav__icon {
   --icon-size: var(--space-105);
 
-  display: inline-block;
-  fill: currentColor;
-  height: var(--icon-size);
-  width: var(--icon-size);
-  vertical-align: middle;
+  font-size: var(--icon-size);
 
   @include mq(md) {
     --icon-size: var(--space-2);
-    margin-right: var(--space-02);
   }
 }
