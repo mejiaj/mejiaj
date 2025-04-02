@@ -2,13 +2,11 @@
 
 @use "../../scss/config" as *;
 
-$card-border-color: rgba(#f2eeef, 0.3);
-
 .card-group {
   display: grid;
   list-style: none;
   margin-block: var(--space-1);
-  gap: var(--space-05);
+  gap: var(--space-1);
 
   @include mq(lg) {
     align-items: stretch;
@@ -22,12 +20,18 @@ $card-border-color: rgba(#f2eeef, 0.3);
 }
 
 .card {
-  border: 3px solid $card-border-color;
+  --card-border-color: oklch(from var(--theme-base) l c h / 0.4);
+
+  border: 2px solid var(--card-border-color);
   display: grid;
   grid-template-rows: subgrid;
   grid-row: auto / span 4;
   margin-block-end: var(--space-05);
-  padding: var(--space-05) var(--space-1);
+  padding: var(--space-105);
+
+  @include mq(lg) {
+    padding: var(--space-2);
+  }
 
   &__header {
     display: grid;
@@ -35,11 +39,11 @@ $card-border-color: rgba(#f2eeef, 0.3);
     grid-row: auto / span 2;
   }
 
-  &__date {
-    font-size: var(--font-size-3);
+  &__title {
+    margin-block: 0;
   }
 
-  &__footer {
-    margin-block-end: var(--space-05);
+  &__date {
+    font-size: var(--font-size-3);
   }
 }

@@ -23,10 +23,6 @@ body {
     font-size: var(--font-size-4);
   }
 
-  @include mq(xl) {
-    font-size: var(--font-size-9);
-  }
-
   @supports (font-size-adjust: 1) {
     font-size-adjust: 0.5;
   }

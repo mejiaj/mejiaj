@@ -6,52 +6,85 @@
 .projects {
   --vertical-padding: var(--space-3);
 
-  padding-top: var(--vertical-padding);
-  padding-bottom: var(--vertical-padding);
+  padding-block: var(--vertical-padding);
 }
 
-.project-group {
+.projects-list {
+  --var-column-width: 29ch;
+
   display: grid;
-  grid-column-gap: var(--space-1);
+  grid-column-gap: var(--space-105);
   justify-content: center;
   list-style: none;
-  margin-bottom: 0;
-  margin-top: var(--space-1);
+  margin-block-end: 0;
+  margin-block-start: var(--space-1);
   place-items: center;
 
   @include mq(md) {
-    grid-template-columns: repeat(4, 1fr);
-    margin-bottom: var(--space-3);
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(100%, var(--var-column-width)), 1fr)
+    );
+    margin-block-end: var(--space-3);
+  }
+
+  @include mq(xl) {
+    --var-column-width: 20ch;
   }
 }
 
 .project {
-  filter: grayscale(1);
-  font-size: var(--font-size-2);
-  letter-spacing: 0.5px;
-  min-height: px-to-rem(100);
+  border: 2px solid oklch(from var(--theme-primary) l c h / 0.2);
+  background: oklch(from var(--theme-primary-darker) l c h / 0.1);
+  padding: 2rem 1rem;
+
+  display: grid;
+  grid-row: auto / span 4;
+  justify-content: center;
+  grid-template-rows: subgrid;
+  margin-block-end: var(--space-1);
   text-align: center;
+  width: 100%;
 
-  &:hover,
-  &:focus {
-    .project__name {
-      opacity: 1;
-    }
-
+  &:is(:hover, :focus-within) {
     .project__logo {
       transform: rotate3d(0, 1, 0, 360deg);
     }
-  }
 
-  &__name {
-    opacity: 0.8;
-    transition: opacity 0.25s ease-in-out;
+    .project__skills {
+      color: var(--theme-primary-lighter);
+    }
   }
 
   &__logo {
-    aspect-ratio: 2.5 / 1;
-    margin-bottom: var(--space-05);
+    aspect-ratio: 3.25 / 1;
+    margin: auto;
     height: px-to-rem(45);
     transition: transform 0.5s cubic-bezier(0.87, 0, 0.13, 1);
   }
+
+  &__name {
+    font-weight: 400;
+    margin-block: var(--space-1) 0;
+    transition: opacity 0.25s ease-in-out;
+  }
+
+  :is(.project__skills, .project__description) {
+    font-size: var(--font-size-2);
+  }
+
+  &__description {
+    margin-block-start: 0;
+  }
+
+  &__skills {
+    color: var(--theme-primary-dark);
+    margin-block: var(--space-05);
+    transition: color 0.26s ease-in-out;
+  }
+}
+
+.project--aero .project__logo {
+  position: relative;
+  top: 5px;
 }

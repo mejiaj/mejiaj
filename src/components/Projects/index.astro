@@ -8,23 +8,31 @@ import "./index.scss";
 
 const projects = [
   {
-    name: "US Web Design System",
     logo: uswdsLogo,
+    name: "US Web Design System",
+    description: "Using modern web features to improve federal government sites.",
+    skills: ["Accessibility", "CI/CD", "JavaScript", "SASS", "StorybookJS", "Web Components"],
     abbrev: "uswds"
   },
   {
-    name: "Digital.Gov",
     logo: digitalGovLogo,
+    name: "Digital.Gov",
+    description: "Guidance for creating excellent digital experiences for the federal government.",
+    skills: ["Accessibility", "Component-based design", "Hugo", "SASS"],
     abbrev: "dg"
   },
   {
-    name: "Aerospace",
     logo: aerospaceLogo,
+    name: "Aerospace",
+    description: "A component based approach to build a unique and mobile-friendly experience in Drupal.",
+    skills: ["Drupal 8", "Mobile-first design", "SASS", "Performance"],
     abbrev: "aero"
   },
   {
-    name: "Black+Decker",
     logo: bdLogo,
+    name: "Black+Decker",
+    description: "Design and building intuitive e-commerce experiences for over a dozen brands.",
+    skills: ["Design Systems", "Ecommerce", "Mobile-first design" , "SASS"],
     abbrev: "bd"
   },
 ]
@@ -35,17 +43,21 @@ const projects = [
   <p>
     A few select projects I've worked on.
   </p>
-  <ul class="project-group">
+  <ul class="projects-list">
     {
       projects.map((project) => (
-        <li class="project-group__item">
-          <div class=`project project--${ project.abbrev }`>
-            <img src={project.logo.src}
-            class="project__logo"
-            loading="lazy"
-            alt=""  />
-            <div class="project__name">{project.name}</div>
-          </div>
+        <li class=`projects-list__item project project--${ project.abbrev }`>
+          <img src={project.logo.src}
+          class="project__logo"
+          loading="lazy"
+          alt=""  />
+          <div class="project__name">{project.name}</div>
+          { project.description && <div class="project__description">{project.description}</div> }
+          {project.skills && (
+            <div class="project__skills">
+              {project.skills.map((skill) => skill).join(` • `)}
+            </div>
+          )}
         </li>
       ))
     }
