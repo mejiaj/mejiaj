@@ -29,6 +29,10 @@
   margin-block-end: var(--space-05);
   padding: var(--space-105);
 
+  @include mq(lg) {
+    padding: var(--space-2);
+  }
+
   &__header {
     display: grid;
     grid-template-rows: subgrid;
