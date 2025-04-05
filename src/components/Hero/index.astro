@@ -26,12 +26,17 @@
     }
 
     &__name {
+      font-size: var(--font-size-10);
       font-weight: 900;
       font-kerning: auto;
       line-height: 1;
 
+      @include mq(md) {
+        font-size: var(--font-size-14);
+      }
+
       @include mq(lg) {
-        font-size: var(--font-size-21);
+        font-size: var(--font-size-20);
       }
     }
 
@@ -42,11 +47,11 @@
       margin-bottom: var(--space-1);
 
       @include mq(md) {
-        font-size: var(--font-size-6);
+        font-size: var(--font-size-8);
       }
 
       @include mq(lg) {
-        font-size: var(--font-size-10);
+        font-size: var(--font-size-12);
       }
     }
   }
