@@ -14,7 +14,7 @@ import Base from "../layouts/Base.astro";
   @include mq(md) {
     display: grid;
     grid-template-columns: 5fr 3fr;
-    grid-column-gap: 2rem;
+    grid-column-gap: var(--space-3);
   }
 }
 
@@ -52,7 +52,7 @@ import Base from "../layouts/Base.astro";
 }
 </style>
 
-<Base title="Resume" description="James Mejia - Resume" wrapSize="wrap wrap--lg">
+<Base title="Resume" description="James Mejia - Resume" wrapSize="wrap wrap--xl">
   <header class="resume__header" itemscope itemtype="https://schema.org/Person">
     <h1 class="h-card__name" itemprop="name">James Mejia</h1>
     <div class="h-card__title" itemprop="jobTitle">
