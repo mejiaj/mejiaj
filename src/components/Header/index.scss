@@ -24,7 +24,7 @@
 
   @include mq(md) {
     flex-flow: row wrap;
-    align-items: anchor-center;
+    align-items: center;
   }
 
   a {
@@ -37,12 +37,18 @@
 // Primary nav
 // ==========================================================================
 .primary-nav {
-  column-gap: var(--space-105);
+  display: flex;
+  flex-flow: column;
   margin-block-end: var(--space-05);
+  row-gap: var(--space-05);
 
   @include mq(sm) {
-    display: flex;
+    column-gap: var(--space-105);
     flex-direction: row;
+    margin-block: 0 var(--space-05);
+  }
+
+  @include mq(md) {
     margin-block: 0;
   }
 
@@ -73,9 +79,10 @@
   }
 
   @include mq(md) {
-    margin-inline-start: var(--space-1);
-    border-top: none;
     border-left-width: 1px;
+    border-top: none;
+    margin-block: 0;
+    margin-inline-start: var(--space-1);
     padding-block-start: 0;
     padding-inline-start: var(--space-1);
   }
