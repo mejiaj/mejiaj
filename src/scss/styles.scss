@@ -38,7 +38,7 @@ html {
   grid-column-gap: var(--space-2);
   grid-template-columns:
     1fr
-    [content-start] min(var(--_container-width), calc(100% - 90px))
+    [content-start] min(var(--_container-width), px-to-rem(1300))
     [content-end]
     1fr;
   position: relative;
