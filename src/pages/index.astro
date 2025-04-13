@@ -70,6 +70,79 @@ let latestPosts = blogPosts.slice(0, 3);
     <main id="main-content">
       <Hero />
       <Projects />
+
+
+      <style lang="scss">
+        @use "../scss/config" as *;
+
+        .quote {
+          padding-inline: var(--space-3);
+        }
+
+        .quote {
+          // font-size: var(--font-size-8);
+        }
+
+          .quote__body {
+            display: grid;
+            grid-template-columns: [gutter-start] var(--space-3) [content-start] 1fr [content-end] var(--space-3) [gutter-end];
+
+            & > * {
+              grid-column: content;
+            }
+          }
+
+          .quote__body::before,
+          .quote__body::after {
+
+
+            color: var(--theme-primary-light);
+            font-size: var(--font-size-21);
+            font-weight: 700;
+            line-height: 1;
+            height: 0.5cap;
+            justify-self: center;
+          }
+
+          .quote__body::before {
+            content: "\201C";
+            grid-column: gutter-start;
+          }
+
+          .quote__body::after {
+            align-self: end;
+            content: "\201D";
+          }
+
+        .quote__footer {
+          padding-inline: var(--space-3);
+          text-align: center;
+        }
+      </style>
+
+      <section id="recommendations" class="projects">
+        <div class="wrap wrap--xl">
+          <h2>Recommendations</h2>
+          <p>
+            Nice things that kind people have said about me.
+          </p>
+
+          <blockquote class="quote">
+            <div class="quote__body">
+              <p>
+                James and I have worked together at two separate agencies (after I recruited him to the second). I've been privileged to watch him grow from an independent contributor with a great eye for design and CSS, into a capable leader who can wrangle anything from Drupal to React while managing entire teams and projects. (And he still has that great eye for design and CSS)!
+              </p>
+              <p>
+                He's the rare trifecta of a talented developer who stays on top of the latest advancements and technology, has the tact and strategic mindset to liaise with clients, and the patience and empathy to coach junior developers. Any project or team would be lucky to count him among its members, and I sincerely hope I have the opportunity to work with him again in the future.
+              </p>
+            </div>
+            <div class="quote__footer">
+              <b>Abby M</b>, Senior Frontend Engineer
+            </div>
+          </blockquote>
+        </div>
+      </section>
+
       <section class="blog-section wrap wrap--xl">
         <div>
           <h2>Latest posts</h2>
