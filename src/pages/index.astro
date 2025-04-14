@@ -4,6 +4,7 @@ import Skiplink from "../components/Skiplink/index.astro";
 import Header from "../components/Header/index.astro";
 import Hero from '../components/Hero/index.astro';
 import Projects from "../components/Projects/index.astro";
+import Quotes from "../components/Quotes/index.astro";
 import Card from "../components/Card/index.astro"
 import Footer from '../components/Footer/index.astro';
 
@@ -21,6 +22,8 @@ let latestPosts = blogPosts.slice(0, 3);
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
+
+
 
 <html lang="en">
 
@@ -70,134 +73,7 @@ let latestPosts = blogPosts.slice(0, 3);
     <main id="main-content">
       <Hero />
       <Projects />
-
-
-      <style lang="scss">
-        @use "../scss/config" as *;
-
-        .quotes {
-          width: 975px;
-          overflow: hidden;
-          margin-inline: auto;
-        }
-
-        .quotes__inner {
-          display: flex;
-          overflow-x: auto;
-          scroll-snap-type: x mandatory;
-          scroll-behavior: smooth;
-        }
-
-        .quote {
-          width: 975px;
-          flex-shrink: 0;
-
-          padding-inline: var(--space-3);
-        }
-
-        .quote {
-          // font-size: var(--font-size-8);
-        }
-
-          .quote__body {
-            display: grid;
-            grid-template-columns: [gutter-start] var(--space-3) [content-start] 1fr [content-end] var(--space-3) [gutter-end];
-
-            & > * {
-              grid-column: content;
-            }
-          }
-
-          .quote__body::before,
-          .quote__body::after {
-
-
-            color: var(--theme-primary-light);
-            font-size: var(--font-size-21);
-            font-weight: 700;
-            line-height: 1;
-            height: 0.5cap;
-            justify-self: center;
-          }
-
-          .quote__body::before {
-            content: "\201C";
-            grid-column: gutter-start;
-            margin-block-start: var(--space-05);
-          }
-
-          .quote__body::after {
-            align-self: end;
-            content: "\201D";
-            margin-block-end: var(--space-2);
-          }
-
-        .quote__footer {
-          padding-inline: var(--space-3);
-          text-align: center;
-        }
-      </style>
-
-      <section id="recommendations" class="projects">
-        <div class="wrap wrap--xl">
-          <h2>Recommendations</h2>
-          <p>
-            Nice things that kind people have said about me.
-          </p>
-
-          <div class="quotes">
-            <div class="quotes__inner">
-              <blockquote id="one" class="quote">
-                <div class="quote__body">
-                  <p>
-                    James is a rare breed of front end developers in that not only does he keep up to date on current features and capabilities of the tools of the trade (HTML, CSS, JS), but he makes a concerted effort to disseminate that news to his entire team, especially designers, in a warm and empathic manner.
-                  </p>
-                  <p>
-                    More over, James has the unique ability to read and write aesthetic even while wearing a developer's hat. He has a sharp visual eye, able to detect when UX/UI practices are not being met or a brand is being ignored by a designer's over-zealous hand. While working together at Third & Grove, James even served as a designer for many tasks, sometimes even filling in for print design duties.
-                  </p>
-                  <p>
-                    Beyond his great professional, documenting, and development skills James is a great personality to be around. He brings the warmest energy to any room, project, or meeting; with a great sense of humor and camaraderie even in the face of a room full of tension. I would go so far as to suggest James as a host to any shy-stricken developers convention.
-                  </p>
-                </div>
-                <div class="quote__footer">
-                  <b>Dan A</b> - Design Lead
-                </div>
-              </blockquote>
-              <blockquote  id="two" class="quote">
-                <div class="quote__body">
-                  <p>
-                    James and I have worked together at two separate agencies (after I recruited him to the second). I've been privileged to watch him grow from an independent contributor with a great eye for design and CSS, into a capable leader who can wrangle anything from Drupal to React while managing entire teams and projects. (And he still has that great eye for design and CSS)!
-                  </p>
-                  <p>
-                    He's the rare trifecta of a talented developer who stays on top of the latest advancements and technology, has the tact and strategic mindset to liaise with clients, and the patience and empathy to coach junior developers. Any project or team would be lucky to count him among its members, and I sincerely hope I have the opportunity to work with him again in the future.
-                  </p>
-                </div>
-                <div class="quote__footer">
-                  <b>Abby M</b> - Senior Frontend Engineer
-                </div>
-              </blockquote>
-              <blockquote id="three" class="quote">
-                <div class="quote__body">
-                  <p>
-                    James has a dedication to the craft of web design that you rarely see. While I had the pleasure of working with James I was continually impressed with his designs and progression. He is knowledgeable and proficient with current design trends but balances this with a deep understanding of typography, spacing, and hierarchy.
-                  </p>
-                </div>
-                <div class="quote__footer">
-                  <b>Andrew F</b> - Senior Web Developer
-                </div>
-              </blockquote>
-            </div>
-          </div>
-
-          <nav class="">
-            <ul>
-              <li><a href="#one">One</a></li>
-              <li><a href="#two">Two</a></li>
-              <li><a href="#three">Three</a></li>
-            </ul>
-          </nav>
-        </div>
-      </section>
+      <Quotes />
 
       <section class="blog-section wrap wrap--xl">
         <div>
