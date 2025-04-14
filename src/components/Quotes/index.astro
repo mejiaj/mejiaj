@@ -1,59 +1,35 @@
 <script>
-  const quotes = document.querySelector(".quotes__inner");
-  const quotesNav = document.querySelector(".quotes__nav");
+  const quoteContainer = document.querySelector(".quotes");
+  const quotes = document.querySelectorAll(".quote");
 
-  function setQuoteHeight(element) {
-    // element.style.overflowY = "hidden";
-    // element.style.height = `${event?.snapTargetInline.offsetHeight + 40}px`;
+  const progressBar = document.createElement("div");
+  progressBar.classList.add("progress-bar");
+
+  quoteContainer.appendChild(progressBar);
+
+  function getRandomItem(array) {
+    return array[Math.floor(Math.random() * array.length)];
   }
 
-  // Init
-  quotes.style.overflowY = "hidden";
-  quotes.style.height = `${quotes.firstElementChild.offsetHeight + 40}px`;
+  function hideAllQuotes(quotes) {
+    quotes.forEach(quote => quote.hidden = true);
+  }
 
-  // On change
-  quotes.addEventListener("scrollsnapchange", (event) => {
-    quotes.style.height = `${event.snapTargetInline.offsetHeight + 40}px`;
-    setQuoteHeight(event)
-  });
+  function showRandomQuote(quotes) {
+    hideAllQuotes(quotes);
+    const randomQuote = getRandomItem(quotes);
+    randomQuote.hidden = false;
+  }
 
-  // Check on resize too
-  // const resizeObserver = new ResizeObserver((entries) => {
-  //   entries.forEach(entry => {
-  //     console.log(entry);
-  //   });
-  // });
+  showRandomQuote(quotes);
 
-  // resizeObserver.observe(quotes);
+  // Rotate quotes every 5 seconds
+  // setInterval(() => showRandomQuote(quotes), 10000);
+
 </script>
 
 <style lang="scss">
   @use "../../scss/config" as *;
-
-  .quotes {
-    width: 100%;
-    overflow: hidden;
-    margin-inline: auto;
-  }
-
-  .quotes__inner {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    align-items: flex-start;
-    scrollbar-color: var(--theme-primary-light) var(--theme-base-darker);
-    scrollbar-width: thin;
-    transition: height 0.26s ease-in-out;
-  }
-
-  .quote {
-    scroll-snap-align: start;
-    width: 100%;
-    flex-shrink: 0;
-
-    padding-inline: var(--space-3);
-  }
 
     .quote__body {
       display: grid;
@@ -98,51 +74,49 @@
   <div class="wrap wrap--xl">
     <h2>Recommendations</h2>
     <p>
-      Nice things that kind people have said about me.
+      Nice things someone has said about me.
     </p>
 
-    <div class="quotes">
-      <div class="quotes__inner">
-        <blockquote  id="one" class="quote">
-          <div class="quote__body">
-            <p>
-              James and I have worked together at two separate agencies (after I recruited him to the second). I've been privileged to watch him grow from an independent contributor with a great eye for design and CSS, into a capable leader who can wrangle anything from Drupal to React while managing entire teams and projects. (And he still has that great eye for design and CSS)!
-            </p>
-            <p>
-              He's the rare trifecta of a talented developer who stays on top of the latest advancements and technology, has the tact and strategic mindset to liaise with clients, and the patience and empathy to coach junior developers. Any project or team would be lucky to count him among its members, and I sincerely hope I have the opportunity to work with him again in the future.
-            </p>
-          </div>
-          <div class="quote__footer">
-            <b>Abby M</b> - Senior Frontend Engineer
-          </div>
-        </blockquote>
-        <blockquote id="two" class="quote">
-          <div class="quote__body">
-            <p>
-              James is a rare breed of front end developers in that not only does he keep up to date on current features and capabilities of the tools of the trade (HTML, CSS, JS), but he makes a concerted effort to disseminate that news to his entire team, especially designers, in a warm and empathic manner.
-            </p>
-            <p>
-              More over, James has the unique ability to read and write aesthetic even while wearing a developer's hat. He has a sharp visual eye, able to detect when UX/UI practices are not being met or a brand is being ignored by a designer's over-zealous hand. While working together at Third & Grove, James even served as a designer for many tasks, sometimes even filling in for print design duties.
-            </p>
-            <p>
-              Beyond his great professional, documenting, and development skills James is a great personality to be around. He brings the warmest energy to any room, project, or meeting; with a great sense of humor and camaraderie even in the face of a room full of tension. I would go so far as to suggest James as a host to any shy-stricken developers convention.
-            </p>
-          </div>
-          <div class="quote__footer">
-            <b>Dan A</b> - Design Lead
-          </div>
-        </blockquote>
-        <blockquote id="three" class="quote">
-          <div class="quote__body">
-            <p>
-              James has a dedication to the craft of web design that you rarely see. While I had the pleasure of working with James I was continually impressed with his designs and progression. He is knowledgeable and proficient with current design trends but balances this with a deep understanding of typography, spacing, and hierarchy.
-            </p>
-          </div>
-          <div class="quote__footer">
-            <b>Andrew F</b> - Senior Web Developer
-          </div>
-        </blockquote>
-      </div>
-    </div>
+    <section class="quotes" aria-live="polite">
+      <blockquote class="quote">
+        <div class="quote__body">
+          <p>
+            James and I have worked together at two separate agencies (after I recruited him to the second). I've been privileged to watch him grow from an independent contributor with a great eye for design and CSS, into a capable leader who can wrangle anything from Drupal to React while managing entire teams and projects. (And he still has that great eye for design and CSS)!
+          </p>
+          <p>
+            He's the rare trifecta of a talented developer who stays on top of the latest advancements and technology, has the tact and strategic mindset to liaise with clients, and the patience and empathy to coach junior developers. Any project or team would be lucky to count him among its members, and I sincerely hope I have the opportunity to work with him again in the future.
+          </p>
+        </div>
+        <div class="quote__footer">
+          <b>Abby M</b> - Senior Frontend Engineer
+        </div>
+      </blockquote>
+      <blockquote class="quote">
+        <div class="quote__body">
+          <p>
+            James is a rare breed of front end developers in that not only does he keep up to date on current features and capabilities of the tools of the trade (HTML, CSS, JS), but he makes a concerted effort to disseminate that news to his entire team, especially designers, in a warm and empathic manner.
+          </p>
+          <p>
+            More over, James has the unique ability to read and write aesthetic even while wearing a developer's hat. He has a sharp visual eye, able to detect when UX/UI practices are not being met or a brand is being ignored by a designer's over-zealous hand. While working together at Third & Grove, James even served as a designer for many tasks, sometimes even filling in for print design duties.
+          </p>
+          <p>
+            Beyond his great professional, documenting, and development skills James is a great personality to be around. He brings the warmest energy to any room, project, or meeting; with a great sense of humor and camaraderie even in the face of a room full of tension. I would go so far as to suggest James as a host to any shy-stricken developers convention.
+          </p>
+        </div>
+        <div class="quote__footer">
+          <b>Dan A</b> - Design Lead
+        </div>
+      </blockquote>
+      <blockquote class="quote">
+        <div class="quote__body">
+          <p>
+            James has a dedication to the craft of web design that you rarely see. While I had the pleasure of working with James I was continually impressed with his designs and progression. He is knowledgeable and proficient with current design trends but balances this with a deep understanding of typography, spacing, and hierarchy.
+          </p>
+        </div>
+        <div class="quote__footer">
+          <b>Andrew F</b> - Senior Web Developer
+        </div>
+      </blockquote>
+    </section>
   </div>
 </section>
