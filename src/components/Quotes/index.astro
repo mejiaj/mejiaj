@@ -31,6 +31,11 @@
 <style lang="scss">
   @use "../../scss/config" as *;
 
+    .recommendations {
+      --vertical-padding: var(--space-3);
+      padding-block: var(--vertical-padding);
+    }
+
     .quote__body {
       display: grid;
       grid-template-columns: [gutter-start] var(--space-3) [content-start] 1fr [content-end] var(--space-3) [gutter-end];
@@ -42,8 +47,6 @@
 
     .quote__body::before,
     .quote__body::after {
-
-
       color: var(--theme-primary-light);
       font-size: var(--font-size-21);
       font-weight: 700;
@@ -70,14 +73,14 @@
   }
 </style>
 
-<section id="recommendations" class="projects">
+<section id="recommendations" class="recommendations">
   <div class="wrap wrap--xl">
     <h2>Recommendations</h2>
     <p>
       Nice things someone has said about me.
     </p>
 
-    <section class="quotes" aria-live="polite">
+    <section class="quotes">
       <blockquote class="quote">
         <div class="quote__body">
           <p>
