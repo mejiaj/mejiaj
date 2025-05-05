@@ -8,8 +8,8 @@ import Quotes from "../components/Quotes/index.astro";
 import Card from "../components/Card/index.astro"
 import Footer from '../components/Footer/index.astro';
 
-// Data Fetching: List all blog posts
-const blogPosts = await Astro.glob('./blog/post/*.md');
+// Fetch all blog posts.
+const blogPosts = Object.values(import.meta.glob('./blog/post/*.md', { eager: true }));
 
 blogPosts.sort(
   (a, b) => (
