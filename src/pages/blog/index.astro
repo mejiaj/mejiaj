@@ -2,15 +2,17 @@
 import Base from "../../layouts/Base.astro";
 import PostPreview from "../../components/PostPreview/PostPreview.astro";
 
-const posts = await Astro.glob('./post/*.md');
-posts.sort((a, b) => new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf());
-let firstPage = posts.slice(0, 2);
+const posts = Object.values(import.meta.glob('./post/*.md', { eager: true }));
+
+posts.sort((a: any, b: any) => (
+  new Date(b.frontmatter.date).valueOf() - new Date(a.frontmatter.date).valueOf())
+);
 ---
 
 <Base title="Blog" description="James Mejia - Frontend thoughts and learnings">
   <h1>Posts</h1>
   <ul class="posts u-list--unstyled">
-    {posts.map((post) => {
+    {posts.map((post: any) => {
       if (!post.frontmatter.draft) {
         return (
         <li class="posts__item">

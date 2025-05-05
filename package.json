@@ -2,6 +2,7 @@
   "name": "@mejiaj/portfolio",
   "version": "0.0.1",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -19,15 +20,15 @@
   },
   "devDependencies": {
     "@18f/identity-stylelint-config": "4.1.0",
-    "@astrojs/sitemap": "3.3.0",
-    "@eslint/js": "9.24.0",
-    "astro": "5.6.1",
-    "eslint": "9.24.0",
+    "@astrojs/sitemap": "3.3.1",
+    "@eslint/js": "9.26.0",
+    "astro": "5.7.10",
+    "eslint": "9.26.0",
     "eslint-config-prettier": "10.1.2",
     "globals": "16.0.0",
     "prettier": "3.5.3",
-    "sass": "1.86.3",
-    "stylelint": "16.18.0"
+    "sass": "1.87.0",
+    "stylelint": "16.19.1"
   },
   "dependencies": {
     "@astrojs/check": "0.9.4",
