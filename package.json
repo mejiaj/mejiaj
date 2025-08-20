@@ -22,7 +22,7 @@
     "@18f/identity-stylelint-config": "4.1.0",
     "@astrojs/sitemap": "3.4.0",
     "@eslint/js": "9.27.0",
-    "astro": "5.8.0",
+    "astro": "5.13.1",
     "eslint": "9.27.0",
     "eslint-config-prettier": "10.1.5",
     "globals": "16.2.0",
