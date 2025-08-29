@@ -153,7 +153,7 @@ hr {
 .lead-in {
   font-size: var(--font-size-4);
   margin-top: 0;
-  max-width: 60ch;
+  text-wrap-style: balance;
 
   @include mq(lg) {
     font-size: var(--font-size-6);
