@@ -13,15 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v5
-
-      - name: Setup node
-        uses: actions/setup-node@v5
-        with:
-          cache: "npm"
-          node-version-file: ".nvmrc"
-
+      - uses: actions/checkout@v5
+      - uses: ./.github/actions/setup
       - name: Install packages
         run: npm clean-install
 
@@ -33,17 +26,7 @@ jobs:
     needs: format
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v5
-
-      - name: Setup node
-        uses: actions/setup-node@v5
-        with:
-          cache: "npm"
-          node-version-file: ".nvmrc"
-
-      - name: Install packages
-        run: npm clean-install
-
+      - uses: actions/checkout@v5
+      - uses: ./.github/actions/setup
       - name: Check linting
         run: npm run lint
