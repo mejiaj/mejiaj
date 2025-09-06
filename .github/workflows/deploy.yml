@@ -3,6 +3,8 @@ name: Deploy to GitHub pages
 on:
   push:
     branches: [main]
+  # Allow manual deploys from actions tab.
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -13,10 +15,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v5
+      - uses: ./.github/actions/setup
       - name: Install, build, and upload site
-        uses: withastro/action@v3
+        uses: withastro/action@v4
 
   deploy:
     needs: build

@@ -1,18 +1,44 @@
 name: CI
-on: [push]
+on:
+  push:
+    paths-ignore:
+      - ".github/**"
+      - ".nvmrc"
+      - ".npmrc"
+      - ".gitignore"
+      - "public/**"
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: ./.github/actions/setup
+      - name: Build site & styles
+        run: npm run build && npm run build:sass
+
+  format:
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
+      - uses: actions/checkout@v5
+      - uses: ./.github/actions/setup
       - name: Install packages
-        run: npm i
-
-      - name: Check linting
-        run: npm run lint
+        run: npm clean-install
 
       - name: Check formatting
         run: npm run prettier
+
+  lint:
+    runs-on: ubuntu-latest
+    needs: format
+
+    steps:
+      - uses: actions/checkout@v5
+      - uses: ./.github/actions/setup
+      - name: Check linting
+        run: npm run lint
