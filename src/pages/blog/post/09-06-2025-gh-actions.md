@@ -1,38 +1,48 @@
 ---
 layout: ../../../layouts/BlogPostBase.astro
-title: Revisiting Github Actions
+title: "Github Action Improvements"
 date: September 06, 2025
-description: TK
+description: A walkthrough of how I updated my GitHub Actions to improve code quality, speed up workflows, and make maintenance easier by using composite actions and smarter triggers.
 ---
 
 ## Intro
 
-I originally added GitHub actions on this site _2 years ago_ in [PR#47](https://github.com/mejiaj/mejiaj/pull/47)! Even though I'm the only developer for this site, I wanted to learn how to setup actions and add some checks to make sure I was being kept honest on code quality, so future me wouldn't have to pay for past me's actions.
+Two years ago, I added GitHub Actions to this site (in [PR#47](https://github.com/mejiaj/mejiaj/pull/47))! I'm the only developer here, but at the time I wanted to learn how to set up actions and add checks to keep myself honest on code quality.
+
+This way my future self wouldn't have to pay for my past self's actions.
 
 ![Original pull request for adding GitHub actions with formatting and linting checks](../../../images/blog/gh-actions-og.webp)
+<small>_I've also enabled verified commits since then._</small>
 
 ## Why I did this
 
-Since then I've become a little more comfortable with writing actions and I wanted to apply what I've learned to refresh and improve the old ones. The old workflows were also getting dated, cluttered, and difficult to maintain.
+Since then I'm more comfortable writing actions. I also wanted to apply what I've learned to refresh and improve the old ones. The old workflows were also getting outdated, cluttered, and difficult to maintain.
 
-### Goals
+### My goals
 
-1. **Add clarity to tests:** Show in actions what's running specifically and improve readability in the scripts themselves.
-1. **Improve performance:** Avoid duplicate runs and avoid running when something unrelated was updated (like config files).
-1. **Learn about composite actions (bonus):** If everything went well, I wanted to push a little further and learn about composite actions to improve readability of the scripts.
+1. Make tests clearer and easier to read.
+1. Skip unnecessary runs and avoid duplicates.
+1. Learn about composite actions to make scripts easier to read.
 
-## What I did
+## What changed
 
-Formatting and linting actions were running _all_ the time on both push and pull requests. So when I created draft PR's, duplicates were running. They also ran when I changed files that weren't related, so there was plenty of room for improvement.
+Before, formatting and linting actions were running _all_ the time on every push and pull request. They ran even when unrelated files changed, so there was plenty of room for improvement.
 
-Here's a basic breakdown of what I did:
+What changed:
 
-- Only run on push **and** ignore if unrelated files changed.
-- Use concurrency to avoid running duplicate actions and improve the experience for quick follow-up pushes.
-- Improve readability of the script by using a composite action—this was also a learning goal for me!
-- Improve readability of actions so I know what's running in the GitHub interface, so "Check linting", "Check formatting", etc. instead of a generic "Run tests" action.
+- Actions only run on push **and** skip if unrelated files changed.
+- Concurrency stops duplicate actions and cancels old runs for quick follow-up updates.
+- Composite actions simplify steps and I learned about reusable actions.
+- Actions now have clear names like "Check linting" and "Check formatting" instead of generic ones.
 
 ## Before and after
+
+The new setup is easier to read and maintain, plus doesn't run unnecessary checks. Here's a summary of the main changes:
+
+- Ignore changes to files that don’t affect tests.
+- Add concurrency to cancel duplicate runs.
+- Split the build, format, and lint steps into separate jobs.
+- Use a composite action for setup.
 
 Here's the full diff to compare the before and after:
 
@@ -53,7 +63,7 @@ name: CI
 +
 # 3. Add concurrency so that builds can be cancelled and there aren't duplicates.
 + concurrency:
-# This checks to make sure the same job isn't running.
+# Make sure the same job isn't running.
 +   group: ci-${{ github.ref }}
 +   cancel-in-progress: true
 
@@ -100,19 +110,19 @@ jobs:
 
 ## Highlights/results
 
-Now it's much clearer on what's being run, actions aren't run if unrelated files are changed, and I got to add a composite action to save two steps for setting up and installing node.
+Now, it's much clearer on what each action does, unrelated changes don't trigger tests, and the composite action saves two steps for setting up and installing node.
 
 ## What I learned
 
-Composite actions were trickier than I expected and I wish the docs had more realistic examples, but it was worth the effort.
+Composite actions were trickier to setup than I expected. I wish the docs had more realistic examples. Still, it was worth the effort to add concurrency and composite actions.
 
 Concurrency and ignoring unrelated files is something that I'll look into more of my future scripts because that could save a lot of time and resources over time.
 
 ## Conclusion
 
-I'm happy I got to update my actions, improve performance and readability, and learn about composite actions.
+Updating the GitHub actions made them faster and easier to read. I learned a lot about composite actions and workflow performance.
 
-Here's the final file action below if you want to use it as a reference:
+I've added the final workflow below if you want to use it as a reference:
 
 ```yml
 # .github/workflows/ci.yml
