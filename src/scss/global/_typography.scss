@@ -278,6 +278,7 @@ header a,
 .astro-code,
 code,
 pre {
+  background-color: var(--theme-off-black) !important;
   font-family: "Fira code", monospace;
   font-size: var(--font-size-3);
 }
