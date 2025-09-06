@@ -1,5 +1,12 @@
 name: CI
-on: [push]
+on:
+  push:
+    paths-ignore:
+      - ".github/**"
+      - ".nvmrc"
+      - ".npmrc"
+      - ".gitignore"
+      - "public/**"
 
 concurrency:
   group: ci-${{ github.ref }}
