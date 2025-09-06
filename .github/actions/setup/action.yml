@@ -1,0 +1,15 @@
+name: Setup Node & Install
+description: Checkout repository, setup Node with npm cache, install dependencies
+runs:
+  using: composite
+  steps:
+    - name: Checkout
+      uses: actions/checkout@v5
+    - name: Setup Node
+      uses: actions/setup-node@v5
+      with:
+        node-version-file: .nvmrc
+        cache: npm
+    - name: Install dependencies
+      run: npm ci
+      shell: bash
