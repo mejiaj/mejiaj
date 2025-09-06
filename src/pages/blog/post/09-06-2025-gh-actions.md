@@ -16,7 +16,7 @@ This way my future self wouldn't have to pay for my past self's actions.
 
 ## Why I did this
 
-Since then I'm more comfortable writing actions. I also wanted to apply what I've learned to refresh and improve the old ones. The old workflows were also getting outdated, cluttered, and difficult to maintain.
+Since then I've learned more about writing actions. I wanted to apply what I've learned to refresh and improve the old ones. The old workflows were also getting outdated, cluttered, and difficult to maintain.
 
 ### My goals
 
@@ -114,7 +114,7 @@ Now, it's much clearer on what each action does, unrelated changes don't trigger
 
 ## What I learned
 
-Composite actions were trickier to setup than I expected. I wish the docs had more realistic examples. Still, it was worth the effort to add concurrency and composite actions.
+Setting up composite actions were trickier than I expected. I wish the docs had more realistic examples. Still, it was worth the effort to add concurrency and composite actions.
 
 Concurrency and ignoring unrelated files is something that I'll look into more of my future scripts because that could save a lot of time and resources over time.
 
