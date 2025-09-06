@@ -7,7 +7,7 @@ export default defineConfig({
   markdown: {
     drafts: true,
     shikiConfig: {
-      theme: "houston",
+      theme: "github-dark-dimmed",
       wrap: true,
     },
   },
