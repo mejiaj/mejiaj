@@ -11,9 +11,10 @@
     "lint:sass": "npx stylelint '**/*.scss'",
     "lint:fix:sass": "npx stylelint --fix '**/*.{sass,scss}'",
     "lint:fix:js": "npx eslint --fix './src/**/*.js'",
-    "prettier": "npx prettier --check '*.md' './src/**/*.{css,scss,sass,js}'",
+    "prettier": "npx prettier --check '*.{md,mdx}' './src/**/*.{css,scss,sass,js}'",
     "prettier:fix:js": "npx prettier --write './src/**/*.js'",
     "prettier:fix:sass": "npx prettier --write '**/*.{sass,scss}'",
+    "prettier:fix:md": "npx prettier --write '**/*.{md,mdx}'",
     "prettier:fix": "npx prettier --write '**/*.{sass,scss,js,md}'",
     "build:sass": "sass './src/scss/styles.scss' './public/styles.css'",
     "build": "astro build"
