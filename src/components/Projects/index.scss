@@ -78,7 +78,7 @@
   }
 
   &__skills {
-    color: var(--theme-primary-dark);
+    color: oklch(from var(--theme-primary-darker) calc(l + 0.3) c h);
     margin-block: var(--space-05);
     transition: color 0.26s ease-in-out;
   }

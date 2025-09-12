@@ -8,8 +8,8 @@ import Social from "../_data/social.json";
 <ul class="secondary-nav nav nav--inline" aria-label="Social links">
   {Social.map(navItem => (
     <li class="nav__item">
-      <a href={ navItem.url } class="nav__link" aria-label={ navItem.aria_label }>
-        <ion-icon name={navItem.icon}></ion-icon>
+      <a href={ navItem.url } class="nav__link">
+        <ion-icon name={navItem.icon} aria-label={ navItem.aria_label }></ion-icon>
       </a>
     </li>
   ))}
