@@ -1,0 +1,30 @@
+name: Accessibility Test
+on:
+  push:
+    # paths:
+    #   - "**/*.astro"
+    #   - "**/*.html"
+    #   - "**/*.scss"
+    #   - "**/*.css"
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: ./.github/actions/setup
+      - name: Run preview
+        run: npm run preview
+
+  pa11y:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+      - uses: ./.github/actions/setup
+      - name: Run pa11y
+        run: npm run pa11y
