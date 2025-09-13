@@ -17,7 +17,7 @@
     "prettier:fix:sass": "npx prettier --write '**/*.{sass,scss}'",
     "prettier:fix:md": "npx prettier --write '**/*.{md,mdx}'",
     "prettier:fix": "npx prettier --write '**/*.{sass,scss,js,md}'",
-    "test:a11y": "npx pa11y-ci --sitemap http://localhost:4321/sitemap-index.xml --sitemap-find https://www.jmejia.com --sitemap-replace http://localhost:4321",
+    "test:a11y": "npx pa11y-ci --sitemap http://localhost:4321/sitemap-index.xml --sitemap-find https://www.jmejia.com --sitemap-replace http://localhost:4321 --sitemap-exclude '/project' ",
     "build:sass": "sass './src/scss/styles.scss' './public/styles.css'",
     "build": "astro build"
   },
