@@ -141,6 +141,6 @@ I highly recommend you use `oklch()` in your next project! You can see the color
 The images shown above are using WebP image extension, which allows significant savings! Checkout the table below for specifics.
 
 | Image                  | Before (`JPG`) | After (`WEBP`) |
-| :--------------------- | :------------- | :------------- |
+| ---------------------- | -------------- | -------------- |
 | Green comparison       | 128KB          | 57KB           |
 | Styleguide new palette | 151KB          | 75KB           |
