@@ -23,7 +23,7 @@ jobs:
       - name: Run build
         run: npm run build
       # Runs the preview in the background.
-      - name: Run preview
+      - name: Test a11y
         run: |
           npm run preview &
           PREVIEW_PID=$!              # Save the PID of the preview script.
