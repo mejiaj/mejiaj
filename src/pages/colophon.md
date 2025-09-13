@@ -10,12 +10,12 @@ Colophon is a fancy word to describe how this site was made. I designed and deve
 The site has evolved from static HTML to static site generators such as Jekyll, Gatsby, and finally now AstroJS[^1].
 
 **Site requirements** <br>
-My minimum requirements to selecting a framework.
+My minimum requirements to selecting a framework:
 
-- [x] Fast
-- [x] Open source
-- [x] Good developer experience
-- [x] Has Markdown and syntax highlighting
+- Fast
+- Open source
+- Good developer experience
+- Has Markdown and syntax highlighting
 
 Everything is publicly available and hosted on GitHub[^2], so feel free to check it out.
 
