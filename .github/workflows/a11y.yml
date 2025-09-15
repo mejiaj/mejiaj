@@ -1,0 +1,32 @@
+name: Accessibility Test
+on:
+  pull_request:
+    # paths:
+    #   - "**/*.astro"
+    #   - "**/*.html"
+    #   - "**/*.scss"
+    #   - "**/*.css"
+
+concurrency:
+  group: a11y-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  pa11y:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: ./.github/actions/setup
+      - name: Run build
+        run: npm run build
+      # Runs the preview in the background.
+      - name: Test a11y
+        run: |
+          npm run preview &
+          PREVIEW_PID=$!              # Save the PID of the preview script.
+          sleep 8                     # Wait in case the server is slow.
+          npm run test:a11y
+          kill "$PREVIEW_PID" || true # Stop the server with PID or exit in general.

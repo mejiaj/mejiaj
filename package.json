@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
+    "preview": "astro preview",
     "start": "astro dev",
     "lint": "npm run lint:sass && npm run lint:js",
     "lint:js": "npx eslint './src/**/*.js'",
@@ -16,6 +17,7 @@
     "prettier:fix:sass": "npx prettier --write '**/*.{sass,scss}'",
     "prettier:fix:md": "npx prettier --write '**/*.{md,mdx}'",
     "prettier:fix": "npx prettier --write '**/*.{sass,scss,js,md}'",
+    "test:a11y": "npx pa11y-ci --sitemap http://localhost:4321/sitemap-index.xml --sitemap-find https://www.jmejia.com --sitemap-replace http://localhost:4321 --sitemap-exclude '/project' ",
     "build:sass": "sass './src/scss/styles.scss' './public/styles.css'",
     "build": "astro build"
   },
@@ -27,6 +29,7 @@
     "eslint": "9.34.0",
     "eslint-config-prettier": "10.1.8",
     "globals": "16.3.0",
+    "pa11y-ci": "4.0.1",
     "prettier": "3.6.2",
     "sass": "1.91.0",
     "stylelint": "16.23.1"
