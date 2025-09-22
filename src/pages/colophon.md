@@ -37,7 +37,7 @@ Everything is publicly available and hosted on GitHub[^2], so feel free to check
 
 ## Accessibility
 
-The baseline for accessibility is **WCAG 2.2 AA**. This is what we used in the U.S. Web Design System. I also use the Deque Axe plugin[^5] for testing.
+Accessibility is a priority. My baseline is **WCAG 2.2 AA** and use the Deque Axe plugin[^5] for testing. In 2025, I added automated checks with pa11y. If you want to learn more about it, checkout my blog post [Automated accessibility testing in Astro with Pa11y CI](/blog/post/09-15-2025-astro-a11y).
 
 ## Future goals
 
