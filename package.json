@@ -19,13 +19,14 @@
     "prettier:fix": "npx prettier --write '**/*.{sass,scss,js,md}'",
     "test:a11y": "npx pa11y-ci --sitemap http://localhost:4321/sitemap-index.xml --sitemap-find https://www.jmejia.com --sitemap-replace http://localhost:4321 --sitemap-exclude '/project' ",
     "build:sass": "sass './src/scss/styles.scss' './public/styles.css'",
-    "build": "astro build"
+    "build": "astro build",
+    "astro:update": "npx @astrojs/upgrade"
   },
   "devDependencies": {
     "@18f/identity-stylelint-config": "4.1.0",
     "@astrojs/sitemap": "3.6.0",
     "@eslint/js": "9.37.0",
-    "astro": "5.14.4",
+    "astro": "5.15.1",
     "eslint": "9.37.0",
     "eslint-config-prettier": "10.1.8",
     "globals": "16.4.0",
@@ -35,7 +36,7 @@
     "stylelint": "16.25.0"
   },
   "dependencies": {
-    "@astrojs/check": "0.9.4",
+    "@astrojs/check": "0.9.5",
     "typescript": "5.9.3"
   }
 }
