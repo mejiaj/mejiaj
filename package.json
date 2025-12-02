@@ -26,17 +26,17 @@
     "@18f/identity-stylelint-config": "4.1.0",
     "@astrojs/sitemap": "3.6.0",
     "@eslint/js": "9.39.1",
-    "astro": "5.16.0",
+    "astro": "5.16.3",
     "eslint": "9.39.1",
     "eslint-config-prettier": "10.1.8",
     "globals": "16.5.0",
     "pa11y-ci": "4.0.1",
-    "prettier": "3.6.2",
+    "prettier": "3.7.3",
     "sass": "1.94.2",
-    "stylelint": "16.25.0"
+    "stylelint": "16.26.1"
   },
   "dependencies": {
-    "@astrojs/check": "0.9.5",
+    "@astrojs/check": "0.9.6",
     "typescript": "5.9.3"
   }
 }
