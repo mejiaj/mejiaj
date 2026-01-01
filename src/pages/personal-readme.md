@@ -125,4 +125,4 @@ Feedback is always welcome, especially if it's honest and direct. Any form is fi
 
 ---
 
-If you'd like to give feedback on this page, you can email me at me@jmejia.com or submit a [GitHub issue](https://github.com/mejiaj/mejiaj/issues/new/choose).
+If you'd like to give feedback on this page, you can email me at hi@mejiaj.mozmail.com or submit a [GitHub issue](https://github.com/mejiaj/mejiaj/issues/new/choose).
