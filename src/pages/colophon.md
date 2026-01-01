@@ -58,7 +58,7 @@ I use the Deque Axe plugin[^5] and later added automated checks with pa11y. If y
 ## Changelog
 
 | Date       | Description                       |
-| :--------- | :-------------------------------- |
+| ---------- | --------------------------------- |
 | 01-01-2026 | Formatting updates and new goals. |
 
 [^1]: https://astro.build/
