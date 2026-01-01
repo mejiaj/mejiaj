@@ -28,10 +28,7 @@ Everything is publicly available and hosted on GitHub[^2], so feel free to check
 
 ## Technology
 
-- **Visual Studio Code.** My current editor. I've tried everything from: Atom, Sublime Text, WebStorm, Macromedia Dreamweaver, Zed, and even notepad++!
-
-  A good editor needs to be fast, have themes with good contrast, and plugins that are actively maintained.
-
+- **Visual Studio Code.** My current editor. I like to experiment and know what's out there. A good editor needs to be fast, have themes with good contrast, and plugins that are actively maintained.
 - **AstroJS.** Used to build the website. It's easy to setup, really fast, and offers a lot of flexibility with other frameworks and tools.
 - **Markdown.** For long form writing, it's fun once you get the hang of it!
 - **Vanilla JavaScript.** Modern JS is so nice these days. Plus, you can skip the build/bundle process with ES Modules. The performance is unbeatable too.
