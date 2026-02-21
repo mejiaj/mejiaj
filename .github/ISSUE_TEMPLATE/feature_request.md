@@ -10,7 +10,7 @@ assignees: ["mejiaj"]
 
 A clear and concise description of what the problem is.
 
-_I'm always frustrated when ..._
+_I'm always frustrated when…_
 
 ### Describe the solution you'd like
 
