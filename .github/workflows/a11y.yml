@@ -1,11 +1,13 @@
 name: Accessibility Test
 on:
   pull_request:
-    # paths:
-    #   - "**/*.astro"
-    #   - "**/*.html"
-    #   - "**/*.scss"
-    #   - "**/*.css"
+    paths:
+      - '**/*.astro'
+      - '**/*.html'
+      - '**/*.md'
+      - '**/*.js'
+      - '**/*.scss'
+      - '**/*.css'
 
 concurrency:
   group: a11y-${{ github.ref }}
