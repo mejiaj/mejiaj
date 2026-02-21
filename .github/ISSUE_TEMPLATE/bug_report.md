@@ -26,6 +26,7 @@ A concise description of what you expected to happen.
 ### Environment
 
 - **OS**:
+- **Browser**:
 - **Node**:
 - **npm**:
 
