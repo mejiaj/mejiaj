@@ -29,8 +29,6 @@ A concise description of what you expected to happen.
 - **Node**:
 - **npm**:
 
-### Anything else?
+### Additional Context
 
-Links? References? Anything that will give us more context about the issue you are encountering!
-
-Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in.
+Any links, logs, or details that help explain the issue.
