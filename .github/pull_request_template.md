@@ -2,6 +2,7 @@
 <!--
   Prefix title with the following:
   Feature:
+  Chore:
   Post:
   Security:
   Hotfix:
@@ -17,14 +18,15 @@ Any additional information that's relevant to the changes.
 
 <!--
 
-## Dependencies
+## Dependency Updates
 
-Dependency updates (if any).
+Dev dependencies, unless otherwise noted.
 
-| Dependency |  Old  |  New  |
-| :--------- | :---: | :---: |
-| Added      |   —   | 0.0.0 |
-| Removed    | 0.0.0 |   —   |
-| Updated    | 0.0.0 | 1.1.1 |
+| Dependency    |   Old |   New |
+| :------------ | ----: | ----: |
+| Added         |     — | 0.0.0 |
+| Removed       | 0.0.0 |     — |
+| Updated       | 0.0.0 | 1.1.1 |
+| Updated (dep) | 0.0.0 | 1.1.1 |
 
 -->
