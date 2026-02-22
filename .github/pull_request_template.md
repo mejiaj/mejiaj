@@ -3,6 +3,7 @@
   Prefix title with the following:
   Feature:
   Chore:
+  Docs:
   Post:
   Security:
   Hotfix:
