@@ -120,6 +120,11 @@
   --theme-base-darker: var(--color-gray-70);
   --theme-base-darkest: var(--color-gray-90);
 
+  --theme-font-size-xs: var(--font-size-1);
+  --theme-font-size-sm: var(--font-size-2);
+  --theme-font-size-md: var(--font-size-3);
+  --theme-font-size-lg: var(--font-size-4);
+
   --theme-off-black: oklch(
     from var(--theme-primary-darkest) calc(l - 0.06) c h
   );

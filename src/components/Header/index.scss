@@ -16,7 +16,7 @@
 .site-nav {
   align-items: end;
   display: flex;
-  font-size: var(--font-size-3);
+  font-size: var(--theme-font-size-md);
   flex-direction: column;
   font-weight: 300;
   justify-content: end;
@@ -39,12 +39,14 @@
 .primary-nav {
   display: flex;
   flex-flow: column;
+  font-size: var(--theme-font-size-sm);
   margin-block-end: var(--space-05);
-  row-gap: var(--space-05);
+  row-gap: var(--space-1);
 
   @include mq(sm) {
     column-gap: var(--space-105);
     flex-direction: row;
+    font-size: unset;
     margin-block: 0 var(--space-05);
   }
 
