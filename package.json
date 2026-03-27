@@ -27,7 +27,7 @@
     "@astrojs/sitemap": "3.7.1",
     "@eslint/js": "10.0.1",
     "astro": "6.0.4",
-    "eslint": "10.0.3",
+    "eslint": "10.1.0",
     "eslint-config-prettier": "10.1.8",
     "globals": "17.4.0",
     "pa11y-ci": "4.1.0",
