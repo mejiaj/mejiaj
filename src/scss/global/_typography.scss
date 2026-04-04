@@ -49,7 +49,7 @@ h1 {
   line-height: 1.1;
   transition: font-size 0.25s var(--theme-ease-primary);
 
-  @include mq(md) {
+  @include mq(sm) {
     font-size: var(--font-size-10);
   }
 
@@ -64,7 +64,7 @@ h2 {
   line-height: 1.1;
   transition: font-size 0.25s var(--theme-ease-primary);
 
-  @include mq(md) {
+  @include mq(sm) {
     font-size: var(--font-size-8);
   }
 
@@ -151,7 +151,7 @@ hr {
   margin-block-start: 0;
   text-wrap-style: balance;
 
-  @include mq(lg) {
+  @include mq(md) {
     font-size: var(--font-size-6);
   }
 }
