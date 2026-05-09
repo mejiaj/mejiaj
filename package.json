@@ -35,7 +35,7 @@
     "stylelint": "17.11.0"
   },
   "dependencies": {
-    "@astrojs/check": "0.9.7",
+    "@astrojs/check": "0.9.8",
     "typescript": "5.9.3"
   }
 }
