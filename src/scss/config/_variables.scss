@@ -3,7 +3,7 @@
 // Spacing units - 3px base
 // This function is created to avoid using calc() for performance.
 @function spacing-multiple($multiplier: 1, $base-unit: 0.1875) {
-  @return ($base-unit * $multiplier) + 0;
+  @return ($base-unit * $multiplier) * 1rem;
 }
 
 :root {
