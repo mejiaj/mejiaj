@@ -23,17 +23,18 @@
     "astro:update": "npx @astrojs/upgrade"
   },
   "devDependencies": {
-    "@18f/identity-stylelint-config": "4.1.0",
-    "@astrojs/sitemap": "3.7.1",
+    "@astrojs/sitemap": "3.7.2",
     "@eslint/js": "10.0.1",
-    "astro": "6.0.4",
-    "eslint": "10.0.3",
+    "astro": "6.3.1",
+    "eslint": "10.3.0",
     "eslint-config-prettier": "10.1.8",
-    "globals": "17.4.0",
+    "globals": "17.6.0",
     "pa11y-ci": "4.1.0",
-    "prettier": "3.8.1",
-    "sass": "1.98.0",
-    "stylelint": "17.4.0"
+    "prettier": "3.8.3",
+    "sass": "1.99.0",
+    "stylelint": "17.11.0",
+    "stylelint-config-standard-scss": "17.0.0",
+    "stylelint-config-two-dash-bem": "1.0.0"
   },
   "dependencies": {
     "@astrojs/check": "0.9.8",
