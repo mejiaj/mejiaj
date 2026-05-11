@@ -1,7 +1,7 @@
 @media print {
   body {
     background: none;
-    color: #000000;
+    color: #000;
     font-size: 8pt;
     font-weight: 400 !important;
     margin: 0 !important;
@@ -24,8 +24,8 @@
   h4,
   h5,
   h6 {
-    page-break-before: avoid;
-    page-break-after: avoid;
+    break-before: avoid;
+    break-after: avoid;
   }
 
   p,

@@ -11,6 +11,7 @@
 @function px-to-rem($number) {
   $raw: math.div($number, 16);
   $rounded: math.div(math.ceil($raw * 1000), 1000);
+
   @return $rounded * 1rem;
 }
 
@@ -25,6 +26,7 @@
     // Preventing the linter from interpretting this as a warning just
     // beacuse it exists in this file, haha.
     @warn "No layer found for `#{$layer}` in $z-layers map.";
+
     // sass-lint:enable no-warn
   }
 

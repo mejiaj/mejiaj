@@ -38,8 +38,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-block-start: var(--space-2);
-  margin-block-end: var(--space-05);
+  margin-block: var(--space-2) var(--space-05);
   text-wrap: balance;
 }
 
@@ -131,15 +130,14 @@ strong {
 }
 
 p {
-  margin-block-start: var(--space-1);
-  margin-block-end: var(--space-2);
+  margin-block: var(--space-1) var(--space-2);
   transition: font-size 0.25s var(--theme-ease-primary);
   text-wrap-style: pretty;
 }
 
 hr {
   border-bottom: 0;
-  border-top: 2px solid #999999;
+  border-top: 2px solid #999;
   height: 0;
   margin: 7.6em auto;
   position: relative;
@@ -195,8 +193,7 @@ ol {
 
   ul,
   ol {
-    margin-block-start: var(--space-05);
-    margin-block-end: var(--space-05);
+    margin-block: var(--space-05) var(--space-05);
     padding-left: var(--space-1);
   }
 }
@@ -278,13 +275,13 @@ pre {
 }
 
 .astro-code {
-  border: 1px solid rgba(white, 0.15);
+  border: 1px solid rgb(white, 0.15);
   margin-block-start: 0;
   padding: var(--space-1);
 }
 
 p code {
-  border: 1px solid rgba(white, 0.15);
+  border: 1px solid rgb(white, 0.15);
   display: inline-block;
   padding: 2px 3px;
   white-space: nowrap;
@@ -296,6 +293,5 @@ p code {
 }
 
 .footnotes li > p {
-  margin-block-start: 0;
-  margin-block-end: 0;
+  margin-block: 0;
 }

@@ -1,5 +1,4 @@
 @use "sass:color";
-
 @use "../../scss/config" as *;
 
 .card-group {
@@ -20,7 +19,7 @@
 }
 
 .card {
-  --card-border-color: oklch(from var(--theme-base) l c h / 0.4);
+  --card-border-color: oklch(from var(--theme-base) l c h / 40%);
 
   border: 2px solid var(--card-border-color);
   display: grid;

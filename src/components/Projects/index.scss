@@ -13,11 +13,10 @@
   --var-column-width: 29ch;
 
   display: grid;
-  grid-column-gap: var(--space-105);
+  column-gap: var(--space-105);
   justify-content: center;
   list-style: none;
-  margin-block-end: 0;
-  margin-block-start: var(--space-1);
+  margin-block: var(--space-1) 0;
   place-items: center;
 
   @include mq(md) {
@@ -34,10 +33,9 @@
 }
 
 .project {
-  border: 2px solid oklch(from var(--theme-primary) l c h / 0.2);
-  background: oklch(from var(--theme-primary-darker) l c h / 0.1);
+  border: 2px solid oklch(from var(--theme-primary) l c h / 20%);
+  background: oklch(from var(--theme-primary-darker) l c h / 10%);
   padding: 2rem 1rem;
-
   display: grid;
   grid-row: auto / span 4;
   justify-content: center;

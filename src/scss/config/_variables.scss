@@ -3,16 +3,14 @@
 // Spacing units - 3px base
 // This function is created to avoid using calc() for performance.
 @function spacing-multiple($multiplier: 1, $base-unit: 0.1875) {
-  @return ($base-unit * $multiplier) + 0rem;
+  @return ($base-unit * $multiplier) + 0;
 }
 
 :root {
   --base-unit: #{spacing-multiple()};
-
   --space-01: var(--base-unit); // 3px
   --space-02: #{spacing-multiple(2)}; // 6px
   --space-05: #{spacing-multiple(3)}; // 9px
-
   --space-1: #{spacing-multiple(6)}; // 18px
   --space-105: #{spacing-multiple(7)}; // 21px
   --space-2: #{spacing-multiple(2, 1.125)}; // 36px @ 1.125rem/18px
@@ -49,7 +47,7 @@
   --font-size-21: #{spacing-multiple(24)}; // 72px
 
   // Font family
-  --font-serif: Aleo, serif;
+  --font-serif: aleo, serif;
 
   // Font base size
   --font-base-size: 16;
@@ -62,7 +60,6 @@
   --color-green-1: #12d178;
   --color-green-2: #00c997;
   --color-green-3: #00ebbb;
-
   --color-black-1: #0b0608;
   --color-gray-1: #1d2928;
   --color-gray-2: #354b4a;
@@ -76,26 +73,26 @@
   // Colors from color palette
   // https://tinyurl.com/mejia-colors
   // https://tinyurl.com/2cqvurff
-  --color-green-10: oklch(97.03% 0.042 168);
-  --color-green-20: oklch(92.59% 0.112 167);
-  --color-green-30: oklch(83.83% 0.146 168);
-  --color-green-40: oklch(79.33% 0.146 168);
-  --color-green-50: oklch(74.18% 0.152 167);
-  --color-green-60: oklch(64.11% 0.13 167);
-  --color-green-70: oklch(49.64% 0.101 167);
-  --color-green-80: oklch(34.35% 0.069 168);
-  --color-green-90: oklch(20.87% 0.042 167);
+  --color-green-10: oklch(97.03% 0.042 168deg);
+  --color-green-20: oklch(92.59% 0.112 167deg);
+  --color-green-30: oklch(83.83% 0.146 168deg);
+  --color-green-40: oklch(79.33% 0.146 168deg);
+  --color-green-50: oklch(74.18% 0.152 167deg);
+  --color-green-60: oklch(64.11% 0.13 167deg);
+  --color-green-70: oklch(49.64% 0.101 167deg);
+  --color-green-80: oklch(34.35% 0.069 168deg);
+  --color-green-90: oklch(20.87% 0.042 167deg);
 
   // Gray
-  --color-gray-10: oklch(95.88% 0.009 247.93);
-  --color-gray-20: oklch(92.88% 0.013 255.51);
-  --color-gray-30: oklch(86.87% 0.019 250.61);
-  --color-gray-40: oklch(74.57% 0.03 254.72);
-  --color-gray-50: oklch(59.56% 0.038 257);
-  --color-gray-60: oklch(44.74% 0.034 261.32);
-  --color-gray-70: oklch(33.51% 0.033 260.91);
-  --color-gray-80: oklch(24.33% 0.025 263.95);
-  --color-gray-90: oklch(21.61% 0.02 275.8);
+  --color-gray-10: oklch(95.88% 0.009 247.93deg);
+  --color-gray-20: oklch(92.88% 0.013 255.51deg);
+  --color-gray-30: oklch(86.87% 0.019 250.61deg);
+  --color-gray-40: oklch(74.57% 0.03 254.72deg);
+  --color-gray-50: oklch(59.56% 0.038 257deg);
+  --color-gray-60: oklch(44.74% 0.034 261.32deg);
+  --color-gray-70: oklch(33.51% 0.033 260.91deg);
+  --color-gray-80: oklch(24.33% 0.025 263.95deg);
+  --color-gray-90: oklch(21.61% 0.02 275.8deg);
 
   // You can use oklch() to modify alpha channel.
   // For example:
@@ -111,7 +108,6 @@
   --theme-primary-dark: var(--color-green-70);
   --theme-primary-darker: var(--color-green-80);
   --theme-primary-darkest: var(--color-green-90);
-
   --theme-base-lightest: var(--color-gray-20);
   --theme-base-lighter: var(--color-gray-30);
   --theme-base-light: var(--color-gray-40);
@@ -119,12 +115,10 @@
   --theme-base-dark: var(--color-gray-60);
   --theme-base-darker: var(--color-gray-70);
   --theme-base-darkest: var(--color-gray-90);
-
   --theme-font-size-xs: var(--font-size-1);
   --theme-font-size-sm: var(--font-size-2);
   --theme-font-size-md: var(--font-size-3);
   --theme-font-size-lg: var(--font-size-4);
-
   --theme-off-black: oklch(
     from var(--theme-primary-darkest) calc(l - 0.06) c h
   );
@@ -133,13 +127,13 @@
 
   // Easing
   --ease-out-cubic: cubic-bezier(0.33, 1, 0.68, 1);
-
   --theme-ease-primary: var(--ease-out-cubic);
 }
 
 // ==========================================================================
 // Breakpoints
 // ==========================================================================
+
 /* prettier-ignore */
 $breakpoints: (
   xs: 21.875em, // 350px
