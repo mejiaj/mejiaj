@@ -4,8 +4,7 @@
 
 // ==========================================================================
 // px-to-rem
-//
-// px-to-rem() takes an number (without units) as a parameter and calculates
+// Takes an number (without units) as a parameter and calculates
 // the correct number of rems for the desired size in pixels.
 // ==========================================================================
 @function px-to-rem($number) {
