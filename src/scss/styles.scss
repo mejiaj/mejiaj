@@ -32,6 +32,10 @@ html {
   box-sizing: inherit;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 // stylelint-disable
 .wrap {
   --_container-width: var(--container-width, 80%);
