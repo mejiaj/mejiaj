@@ -2,16 +2,44 @@
 @use "variables" as *;
 
 // Media Queries from _variables.scss
+// Prefer breakpoints, but support custom mq's too.
+/// @param {String | Number} $breakpoint - Breakpoint key or custom min-width value.
+/// @content Styles to render at and above the breakpoint.
+/// @example
+///   @include mq(lg) {
+///     display: flex;
+///   }
+///
+///   @include mq(460px) {
+///     display: flex;
+///   }
 @mixin mq($breakpoint) {
   @if map.has-key($breakpoints, $breakpoint) {
     // Goes to $breakpoints map and gets the $breakpoint value
     @media only screen and ( min-width: #{map.get( $breakpoints, $breakpoint )} ) {
       @content;
     }
+  } @else {
+    @media only screen and ( min-width: #{$breakpoint} ) {
+      @content;
+    }
   }
 }
 
-// Active states
+/// Active state helper
+/// Used for links and controls.
+/// @content Active, focus, hover state styles.
+/// @example
+///   @include is-active {
+///     outline: 2px dotted blue;
+///   }
+///
+///   &.is-active,
+///   &:focus,
+///   &:active,
+///   &:hover {
+///     outline: 2px dotted blue;
+///   }
 @mixin is-active {
   &.is-active,
   &:focus,
