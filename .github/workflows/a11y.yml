@@ -29,6 +29,8 @@ jobs:
         run: npm run build
       # Runs the preview in the background.
       - name: Test a11y
+        env:
+          PUPPETEER_EXECUTABLE_PATH: ${{ steps.setup-chrome.outputs.chrome-path }}
         run: |
           npm run preview &
           PREVIEW_PID=$!              # Save the PID of the preview script.
