@@ -7,11 +7,18 @@ import SecondaryNav from "../SecondaryNav/index.astro";
 
 <header id="top" class="site-header">
   <div class="site-header__inner wrap wrap--xl">
-    <nav class="site-nav">
+    <button
+      class="site-nav__toggle btn--link"
+      type="button"
+      aria-label="Site menu"
+      aria-expanded="false"
+      data-site-nav-toggle>
+      <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      <ion-icon name="close-outline" aria-hidden="true" hidden></ion-icon>
+    </button>
+    <nav class="site-nav" data-site-nav>
       <MainNav />
       <SecondaryNav />
     </nav>
   </div>
 </header>
-
-<script src="../../js/main.js"></script>
