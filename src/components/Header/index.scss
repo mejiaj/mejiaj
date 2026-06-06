@@ -18,8 +18,8 @@
   color: var(--theme-primary);
   display: inline-flex;
   justify-self: end;
-  font-size: var(--font-size-4);
-  padding: var(--space-2);
+  font-size: var(--font-size-6);
+  padding: var(--space-05);
 }
 
 .site-nav__toggle[aria-expanded="true"] {
@@ -44,12 +44,13 @@
   text-align: right;
   padding: var(--space-01) var(--space-05);
   position: absolute;
-  top: var(--space-2);
+  top: var(--space-3);
   right: 0;
   z-index: 1;
   width: var(--space-7);
 
   @include mq(sm) {
+    background-color: unset;
     box-shadow: none;
     flex-flow: row wrap;
     align-items: center;
