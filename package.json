@@ -37,7 +37,7 @@
     "stylelint-config-two-dash-bem": "1.0.0"
   },
   "dependencies": {
-    "@astrojs/check": "0.9.8",
+    "@astrojs/check": "0.9.9",
     "typescript": "5.9.3"
   }
 }
