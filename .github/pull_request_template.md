@@ -1,12 +1,12 @@
 <!-- PR title -->
 <!--
-  Prefix title with the following:
-  Feature:
-  Chore:
-  Docs:
-  Post:
-  Security:
-  Hotfix:
+Title prefixes:
+- Feature:
+- Chore:
+- Docs:
+- Post:
+- Security:
+- Hotfix:
 -->
 
 # Description
@@ -21,8 +21,6 @@ Any additional information that's relevant to the changes.
 
 ## Dependency Updates
 
-Dev dependencies, unless otherwise noted.
-
 | Dependency    |   Old |   New |
 | :------------ | ----: | ----: |
 | Added         |     — | 0.0.0 |
@@ -30,4 +28,17 @@ Dev dependencies, unless otherwise noted.
 | Updated       | 0.0.0 | 1.1.1 |
 | Updated (dep) | 0.0.0 | 1.1.1 |
 
+### NPM Audit
+
+Vulnerabilities before/after.
+
+**Before**
+```sh
+
+```
+
+**After**
+```sh
+
+```
 -->
