@@ -11,6 +11,24 @@ This is a small appreciation post for how far the web has gotten better thanks t
 
 Three years ago I wrote some JS to smooth scroll once a link is clicked. The script was about **25-lines** total and was an MVP for what I needed at the time, smooth scrolling _without_ a library. Today, that (and a few other features) have been replaced with CSS-only methods.
 
+<video
+alt="Smooth scroll effect going to the top of the page"
+src="/images/smooth-scroll.webm"
+autoplay
+playsinline
+loop></video>
+
+<small>Smooth scroll in action with the "Back to Top" link.</small>
+
+Without smooth scroll the default behavior jumps instantly to the content.
+
+<video
+alt="Without smooth scroll the link jumps directly to target"
+src="/images/smooth-scroll-missing.webm"
+autoplay
+playsinline
+loop></video>
+
 **Before**
 
 The 500 byte script below got all the hash links on the page and made it so you could smooth scroll the content into view. It's not perfect, but the previous library I used was 23KB+, which was a problem as I was trying to keep the site under 1MB.
