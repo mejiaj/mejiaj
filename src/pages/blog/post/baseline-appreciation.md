@@ -75,7 +75,7 @@ html {
 }
 ```
 
-Using more baseline features, like the `scroll-margin-block-start` you can even control where exactly you want the viewport to appear.
+Using more baseline features, like the `scroll-margin-block-start` you can even control where exactly you want the content to start.
 
 ```css
 /* When a quote link is clicked, scroll to the top of the quote with space above. */
