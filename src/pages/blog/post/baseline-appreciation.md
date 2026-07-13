@@ -9,6 +9,8 @@ description: A small appreciation for the web baseline effort.
 
 This is a small appreciation post for how far the web has gotten better thanks to the [web platform baseline [web.dev]](https://web.dev/baseline) effort.
 
+## Adding Smooth Scroll
+
 Three years ago I wrote some JS to smooth scroll once a link is clicked. The script was about **25-lines** total and was an MVP for what I needed at the time, smooth scrolling _without_ a library. Today, that (and a few other features) have been replaced with CSS-only methods.
 
 <video
@@ -88,6 +90,8 @@ Using more baseline features, like the `scroll-margin-block-start` you can even 
   }
 }
 ```
+
+## Conclusion
 
 That's it, no libraries, dependencies, or bundles to worry about. I went from 23KB~ to 500 bytes to a **single line**.
 
